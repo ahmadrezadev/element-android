@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <attr format="color|reference" name="emojiBackgroundColor"/>
+    <attr format="color|reference" name="emojiDividerColor"/>
+    <attr format="dimension" name="emojiSize"/>
+    <attr format="color|reference" name="emojiTextColor"/>
+    <attr format="color|reference" name="emojiTextSecondaryColor"/>
+    <color name="emoji_background_color">@color/emoji_white</color>
+    <color name="emoji_black">#ff000000</color>
+    <color name="emoji_divider_color">#ffcccccc</color>
+    <color name="emoji_primary_color">#FF9800</color>
+    <color name="emoji_secondary_color">#673AB7</color>
+    <color name="emoji_text_color">@color/emoji_black</color>
+    <color name="emoji_text_secondary_color">#99000000</color>
+    <color name="emoji_white">#ffffffff</color>
+    <dimen name="emoji_grid_view_column_width">36dp</dimen>
+    <dimen name="emoji_grid_view_spacing">6dp</dimen>
+    <dimen name="emoji_search_max_height">300dp</dimen>
+    <dimen name="emoji_search_spacing">16dp</dimen>
+    <string name="emoji_backspace">Backspace</string>
+    <string name="emoji_category_recent">Recent</string>
+    <string name="emoji_language_code">en</string>
+    <string name="emoji_search">Search</string>
+    <style name="emoji_fade_animation_style" ns1:ignore="UnusedResources">
+    <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+    <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+  </style>
+    <declare-styleable name="EmojiAutoCompleteTextView">
+    <attr name="emojiSize"/>
+  </declare-styleable>
+    <declare-styleable name="EmojiButton">
+    <attr name="emojiSize"/>
+  </declare-styleable>
+    <declare-styleable name="EmojiCheckBox">
+    <attr name="emojiSize"/>
+  </declare-styleable>
+    <declare-styleable name="EmojiEditText">
+    <attr name="emojiSize"/>
+  </declare-styleable>
+    <declare-styleable name="EmojiMultiAutoCompleteTextView">
+    <attr name="emojiSize"/>
+  </declare-styleable>
+    <declare-styleable name="EmojiTextView">
+    <attr name="emojiSize"/>
+  </declare-styleable>
+</resources>

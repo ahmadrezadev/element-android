@@ -25,7 +25,6 @@ import im.vector.app.features.login.SignMode
 import im.vector.app.features.login.SocialLoginButtonsView.Mode
 import im.vector.app.features.login.render
 import im.vector.app.features.onboarding.OnboardingAction
-import im.vector.app.features.onboarding.OnboardingFlow
 import im.vector.app.features.onboarding.OnboardingViewState
 import im.vector.lib.strings.CommonStrings
 import org.matrix.android.sdk.api.auth.SSOAction
@@ -80,7 +79,7 @@ class FtueAuthSignUpSignInSelectionFragment :
                             redirectUrl = SSORedirectRouterActivity.VECTOR_REDIRECT_URL,
                             deviceId = state.deviceId,
                             provider = provider,
-                            action = if (state.signMode == SignMode.SignUp) SSOAction.REGISTER else SSOAction.LOGIN
+                            action = SSOAction.LOGIN
                     )
                             ?.let { openInCustomTab(it) }
                 }
@@ -107,13 +106,12 @@ class FtueAuthSignUpSignInSelectionFragment :
                 // change to only one button that is sign in with sso
                 views.loginSignupSigninSubmit.text =
                         getString(if (state.selectedHomeserver.hasOidcCompatibilityFlow) CommonStrings.login_continue else CommonStrings.login_signin_sso)
-                views.loginSignupSigninSignIn.isVisible = false
             }
             else -> {
-                views.loginSignupSigninSubmit.text = getString(CommonStrings.login_signup)
-                views.loginSignupSigninSignIn.isVisible = true
+                views.loginSignupSigninSubmit.text = getString(CommonStrings.login_signin)
             }
         }
+        views.loginSignupSigninSignIn.isVisible = false
     }
 
     private fun submit() = withState(viewModel) { state ->
@@ -122,11 +120,11 @@ class FtueAuthSignUpSignInSelectionFragment :
                     redirectUrl = SSORedirectRouterActivity.VECTOR_REDIRECT_URL,
                     deviceId = state.deviceId,
                     provider = null,
-                    action = if (state.onboardingFlow == OnboardingFlow.SignUp) SSOAction.REGISTER else SSOAction.LOGIN
+                    action = SSOAction.LOGIN
             )
                     ?.let { openInCustomTab(it) }
         } else {
-            viewModel.handle(OnboardingAction.UpdateSignMode(SignMode.SignUp))
+            viewModel.handle(OnboardingAction.UpdateSignMode(SignMode.SignIn))
         }
     }
 

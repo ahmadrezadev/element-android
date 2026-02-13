@@ -151,11 +151,7 @@ class FtueAuthVariant(
             is OnboardingViewEvents.OnServerSelectionDone -> onServerSelectionDone(viewEvents)
             is OnboardingViewEvents.OnSignModeSelected -> onSignModeSelected(viewEvents)
             is OnboardingViewEvents.OnLoginFlowRetrieved ->
-                activity.addFragmentToBackstack(
-                        views.loginFragmentContainer,
-                        FtueAuthSignUpSignInSelectionFragment::class.java,
-                        option = commonOption
-                )
+                onboardingViewModel.handle(OnboardingAction.UpdateSignMode(SignMode.SignIn))
             is OnboardingViewEvents.OnWebLoginError -> onWebLoginError(viewEvents)
             is OnboardingViewEvents.OnForgetPasswordClicked ->
                 when {

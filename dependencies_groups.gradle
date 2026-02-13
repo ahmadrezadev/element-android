@@ -148,6 +148,7 @@ ext.groups = [
                         'io.github.detekt.sarif4k',
                         'io.github.microutils',
                         'io.github.reactivecircus.flowbinding',
+                        'io.github.tim06',
                         'io.gitlab.arturbosch.detekt',
                         'io.grpc',
                         'io.jsonwebtoken',

@@ -10,17 +10,22 @@ package im.vector.app.features
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.net.VpnService
 import android.os.Bundle
 import android.os.Parcelable
 import android.view.View
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import com.airbnb.mvrx.viewModel
 import com.bumptech.glide.Glide
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.tim.basevpn.state.ConnectionState
 import dagger.hilt.android.AndroidEntryPoint
+import im.vector.app.R
 import im.vector.app.core.extensions.startSyncing
 import im.vector.app.core.extensions.vectorStore
 import im.vector.app.core.platform.VectorBaseActivity
@@ -47,9 +52,17 @@ import im.vector.app.features.start.StartAppViewModel
 import im.vector.app.features.start.StartAppViewState
 import im.vector.app.features.themes.ActivityOtherThemes
 import im.vector.app.features.ui.UiStateRepository
+import im.vector.app.features.vpn.VpnBootstrapCoordinator
+import im.vector.app.features.vpn.VpnConnectionStatusTracker
+import im.vector.app.features.vpn.VpnConnectionUiState
+import im.vector.app.features.vpn.VpnPermissionRequiredException
+import im.vector.app.features.vpn.formatVpnSpeed
+import im.vector.app.features.vpn.toLocalizedString
 import im.vector.lib.core.utils.compat.getParcelableExtraCompat
 import im.vector.lib.strings.CommonStrings
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlinx.parcelize.Parcelize
@@ -122,6 +135,19 @@ class MainActivity : VectorBaseActivity<ActivityMainBinding>(), UnlockedActivity
     }
 
     private val startAppViewModel: StartAppViewModel by viewModel()
+    private var hasHandledAppStart = false
+    private var hasStartedNavigation = false
+    private var hasRequestedVpnPermission = false
+    private var vpnBootstrapJob: Job? = null
+
+    private val vpnPermissionLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+        if (VpnService.prepare(this) == null) {
+            maybeEnsureVpnThenContinue(forceReconnect = true)
+        } else {
+            vpnConnectionStatusTracker.onPermissionRequired(vpnConnectionStatusTracker.uiState.value.serverName)
+            renderVpnActionButton(ConnectionState.PERMISSION_NOT_GRANTED)
+        }
+    }
 
     override fun getBinding() = ActivityMainBinding.inflate(layoutInflater)
 
@@ -136,11 +162,18 @@ class MainActivity : VectorBaseActivity<ActivityMainBinding>(), UnlockedActivity
     @Inject lateinit var popupAlertManager: PopupAlertManager
     @Inject lateinit var vectorAnalytics: VectorAnalytics
     @Inject lateinit var lockScreenKeyRepository: LockScreenKeyRepository
+    @Inject lateinit var vpnBootstrapCoordinator: VpnBootstrapCoordinator
+    @Inject lateinit var vpnConnectionStatusTracker: VpnConnectionStatusTracker
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         shortcutsHandler.updateShortcutsWithPreviousIntent()
+        observeVpnStatus()
+
+        views.vpnStatusActionButton.setOnClickListener {
+            maybeEnsureVpnThenContinue(forcePermissionRequest = true, forceReconnect = true)
+        }
 
         startAppViewModel.onEach {
             renderState(it)
@@ -175,6 +208,108 @@ class MainActivity : VectorBaseActivity<ActivityMainBinding>(), UnlockedActivity
     }
 
     private fun handleAppStarted() {
+        hasHandledAppStart = true
+        maybeEnsureVpnThenContinue()
+    }
+
+    private fun maybeEnsureVpnThenContinue(
+            forcePermissionRequest: Boolean = false,
+            forceReconnect: Boolean = false,
+    ) {
+        if (!hasHandledAppStart || hasStartedNavigation) return
+        if (vpnBootstrapJob?.isActive == true && !forceReconnect) return
+
+        val prepareIntent = VpnService.prepare(this)
+        if (prepareIntent != null) {
+            vpnConnectionStatusTracker.onPermissionRequired(vpnConnectionStatusTracker.uiState.value.serverName)
+            renderVpnActionButton(ConnectionState.PERMISSION_NOT_GRANTED)
+            if (!hasRequestedVpnPermission || forcePermissionRequest) {
+                hasRequestedVpnPermission = true
+                vpnPermissionLauncher.launch(prepareIntent)
+            }
+            return
+        }
+
+        vpnBootstrapJob?.cancel()
+        vpnBootstrapJob = lifecycleScope.launch {
+            runCatching {
+                vpnBootstrapCoordinator.ensureVpnAndResolveHomeserver().getOrThrow()
+            }.fold(
+                    onSuccess = {
+                        continueAppStartupAfterVpn()
+                    },
+                    onFailure = { failure ->
+                        if (failure is VpnPermissionRequiredException) {
+                            vpnConnectionStatusTracker.onPermissionRequired(vpnConnectionStatusTracker.uiState.value.serverName)
+                            renderVpnActionButton(ConnectionState.PERMISSION_NOT_GRANTED)
+                        } else {
+                            vpnConnectionStatusTracker.onFailed(
+                                    vpnConnectionStatusTracker.uiState.value.serverName,
+                                    failure.localizedMessage
+                            )
+                            renderVpnActionButton(ConnectionState.DISCONNECTED)
+                        }
+                    }
+            )
+        }
+    }
+
+    private fun observeVpnStatus() {
+        lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.STARTED) {
+                vpnConnectionStatusTracker.uiState.collect { renderVpnStatus(it) }
+            }
+        }
+    }
+
+    private fun renderVpnStatus(status: VpnConnectionUiState) {
+        val shouldShowStatus = hasHandledAppStart && !hasStartedNavigation &&
+                (status.isVisible || status.connectionState != ConnectionState.CONNECTED || vpnBootstrapJob?.isActive == true)
+
+        views.vpnStatusGroup.isVisible = shouldShowStatus
+        if (!shouldShowStatus) return
+
+        views.vpnStatusServerValue.text = status.serverName ?: getString(R.string.vpn_status_server_unknown)
+        views.vpnStatusStateValue.text = buildString {
+            append(status.connectionState.toLocalizedString(this@MainActivity))
+            status.details
+                    ?.takeIf { it.isNotBlank() }
+                    ?.let {
+                        append('\n')
+                        append(it)
+                    }
+        }
+        views.vpnStatusSpeedValue.text = getString(
+                R.string.vpn_status_speed_value,
+                formatVpnSpeed(status.downloadBytesPerSecond),
+                formatVpnSpeed(status.uploadBytesPerSecond)
+        )
+        views.vpnStatusProgress.isVisible = when (status.connectionState) {
+            ConnectionState.CONNECTING,
+            ConnectionState.READYFORCONNECT,
+            ConnectionState.IDLE -> true
+            else -> vpnBootstrapJob?.isActive == true
+        }
+        renderVpnActionButton(status.connectionState)
+    }
+
+    private fun renderVpnActionButton(connectionState: ConnectionState) {
+        when (connectionState) {
+            ConnectionState.PERMISSION_NOT_GRANTED -> {
+                views.vpnStatusActionButton.isVisible = true
+                views.vpnStatusActionButton.text = getString(R.string.vpn_status_action_allow)
+            }
+            ConnectionState.DISCONNECTED -> {
+                views.vpnStatusActionButton.isVisible = true
+                views.vpnStatusActionButton.text = getString(R.string.vpn_status_action_retry)
+            }
+            else -> {
+                views.vpnStatusActionButton.isVisible = false
+            }
+        }
+    }
+
+    private fun continueAppStartupAfterVpn() {
         // On the first run with rust crypto this would be false
         if (!vectorPreferences.isOnRustCrypto()) {
             if (activeSessionHolder.hasActiveSession()) {
@@ -383,6 +518,7 @@ class MainActivity : VectorBaseActivity<ActivityMainBinding>(), UnlockedActivity
     }
 
     private fun startIntentAndFinish(intent: Intent?) {
+        hasStartedNavigation = true
         intent?.let { startActivity(it) }
         finish()
     }

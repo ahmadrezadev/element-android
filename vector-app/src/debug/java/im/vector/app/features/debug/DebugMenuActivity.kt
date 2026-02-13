@@ -7,23 +7,23 @@
 
 package im.vector.app.features.debug
 
+import android.Manifest
 import android.app.Activity
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.os.Build
 import android.view.View
+import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.NotificationCompat
 import androidx.core.app.Person
+import androidx.core.content.ContextCompat
 import androidx.core.content.getSystemService
 import dagger.hilt.android.AndroidEntryPoint
 import im.vector.app.R
-import im.vector.app.core.extensions.registerStartForActivityResult
 import im.vector.app.core.platform.VectorBaseActivity
-import im.vector.app.core.utils.PERMISSIONS_FOR_TAKING_PHOTO
-import im.vector.app.core.utils.checkPermissions
-import im.vector.app.core.utils.registerForPermissionsResult
-import im.vector.app.core.utils.toast
 import im.vector.app.features.debug.analytics.DebugAnalyticsActivity
 import im.vector.app.features.debug.features.DebugFeaturesSettingsActivity
 import im.vector.app.features.debug.jitsi.DebugJitsiActivity
@@ -229,13 +229,15 @@ class DebugMenuActivity : VectorBaseActivity<ActivityDebugMenuBinding>() {
     }
 
     private fun scanQRCode() {
-        if (checkPermissions(PERMISSIONS_FOR_TAKING_PHOTO, this, permissionCameraLauncher)) {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
             doScanQRCode()
+        } else {
+            permissionCameraLauncher.launch(Manifest.permission.CAMERA)
         }
     }
 
-    private val permissionCameraLauncher = registerForPermissionsResult { allGranted, _ ->
-        if (allGranted) {
+    private val permissionCameraLauncher = registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted ->
+        if (isGranted) {
             doScanQRCode()
         }
     }
@@ -244,12 +246,14 @@ class DebugMenuActivity : VectorBaseActivity<ActivityDebugMenuBinding>() {
         QrCodeScannerActivity.startForResult(this, qrStartForActivityResult)
     }
 
-    private val qrStartForActivityResult = registerStartForActivityResult { activityResult ->
+    private val qrStartForActivityResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { activityResult ->
         if (activityResult.resultCode == Activity.RESULT_OK) {
-            toast(
+            Toast.makeText(
+                    this,
                     "QrCode: " + QrCodeScannerActivity.getResultText(activityResult.data) +
-                            " is QRCode: " + QrCodeScannerActivity.getResultIsQrCode(activityResult.data)
-            )
+                            " is QRCode: " + QrCodeScannerActivity.getResultIsQrCode(activityResult.data),
+                    Toast.LENGTH_SHORT
+            ).show()
 
             // Also update the current QR Code (reverse operation)
             // renderQrCode(QrCodeScannerActivity.getResultText(data) ?: "")

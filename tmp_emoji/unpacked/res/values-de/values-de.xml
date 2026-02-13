@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="emoji_backspace">Rücktaste</string>
+    <string name="emoji_category_recent">Zuletzt benutzt</string>
+    <string name="emoji_language_code">de</string>
+    <string name="emoji_search">Suche</string>
+</resources>

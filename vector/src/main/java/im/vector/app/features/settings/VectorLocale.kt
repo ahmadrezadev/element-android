@@ -7,17 +7,9 @@
 
 package im.vector.app.features.settings
 
-import android.content.Context
 import android.content.SharedPreferences
-import android.content.res.Configuration
 import androidx.core.content.edit
 import im.vector.app.core.di.DefaultPreferences
-import im.vector.app.core.resources.BuildMeta
-import im.vector.lib.strings.CommonStrings
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
-import timber.log.Timber
-import java.util.IllformedLocaleException
 import java.util.Locale
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -27,8 +19,6 @@ import javax.inject.Singleton
  */
 @Singleton
 class VectorLocale @Inject constructor(
-        private val context: Context,
-        private val buildMeta: BuildMeta,
         @DefaultPreferences
         private val preferences: SharedPreferences,
 ) {
@@ -40,12 +30,12 @@ class VectorLocale @Inject constructor(
         private const val ISO_15924_LATN = "Latn"
     }
 
-    private val defaultLocale = Locale("en", "US")
+    private val defaultLocale = Locale("fa", "IR")
 
     /**
      * The cache of supported application languages.
      */
-    private val supportedLocales = mutableListOf<Locale>()
+    private val supportedLocales = listOf(defaultLocale)
 
     /**
      * Provides the current application locale.
@@ -57,131 +47,48 @@ class VectorLocale @Inject constructor(
      * Init this singleton.
      */
     fun init() {
-        if (preferences.contains(APPLICATION_LOCALE_LANGUAGE_KEY)) {
-            applicationLocale = Locale(
-                    preferences.getString(APPLICATION_LOCALE_LANGUAGE_KEY, "")!!,
-                    preferences.getString(APPLICATION_LOCALE_COUNTRY_KEY, "")!!,
-                    preferences.getString(APPLICATION_LOCALE_VARIANT_KEY, "")!!
-            )
-        } else {
-            applicationLocale = Locale.getDefault()
-
-            // detect if the default language is used
-            val defaultStringValue = getString(context, defaultLocale, CommonStrings.resources_country_code)
-            if (defaultStringValue == getString(context, applicationLocale, CommonStrings.resources_country_code)) {
-                applicationLocale = defaultLocale
-            }
-
-            saveApplicationLocale(applicationLocale)
-        }
+        // Force the application locale to Persian.
+        saveApplicationLocale(defaultLocale)
     }
 
     /**
      * Save the new application locale.
      */
     fun saveApplicationLocale(locale: Locale) {
-        applicationLocale = locale
+        val resolvedLocale = locale.takeIf {
+            it.language == defaultLocale.language && it.country == defaultLocale.country
+        } ?: defaultLocale
+        applicationLocale = resolvedLocale
 
         preferences.edit {
-            val language = locale.language
+            val language = resolvedLocale.language
             if (language.isEmpty()) {
                 remove(APPLICATION_LOCALE_LANGUAGE_KEY)
             } else {
                 putString(APPLICATION_LOCALE_LANGUAGE_KEY, language)
             }
 
-            val country = locale.country
+            val country = resolvedLocale.country
             if (country.isEmpty()) {
                 remove(APPLICATION_LOCALE_COUNTRY_KEY)
             } else {
                 putString(APPLICATION_LOCALE_COUNTRY_KEY, country)
             }
 
-            val variant = locale.variant
+            val variant = resolvedLocale.variant
             if (variant.isEmpty()) {
                 remove(APPLICATION_LOCALE_VARIANT_KEY)
             } else {
                 putString(APPLICATION_LOCALE_VARIANT_KEY, variant)
             }
 
-            val script = locale.script
+            val script = resolvedLocale.script
             if (script.isEmpty()) {
                 remove(APPLICATION_LOCALE_SCRIPT_KEY)
             } else {
                 putString(APPLICATION_LOCALE_SCRIPT_KEY, script)
             }
         }
-    }
-
-    /**
-     * Get String from a locale.
-     *
-     * @param context the context
-     * @param locale the locale
-     * @param resourceId the string resource id
-     * @return the localized string
-     */
-    private fun getString(context: Context, locale: Locale, resourceId: Int): String {
-        val config = Configuration(context.resources.configuration)
-        config.setLocale(locale)
-        return try {
-            context.createConfigurationContext(config).getText(resourceId).toString()
-        } catch (e: Exception) {
-            Timber.e(e, "## getString() failed")
-            // use the default one
-            context.getString(resourceId)
-        }
-    }
-
-    /**
-     * Init the supported application locales list.
-     */
-    private fun initApplicationLocales() {
-        val knownLocalesSet = HashSet<Triple<String, String, String>>()
-
-        try {
-            val availableLocales = Locale.getAvailableLocales()
-
-            for (locale in availableLocales) {
-                knownLocalesSet.add(
-                        Triple(
-                                getString(context, locale, CommonStrings.resources_language),
-                                getString(context, locale, CommonStrings.resources_country_code),
-                                getString(context, locale, CommonStrings.resources_script)
-                        )
-                )
-            }
-        } catch (e: Exception) {
-            Timber.e(e, "## getApplicationLocales() : failed")
-            knownLocalesSet.add(
-                    Triple(
-                            context.getString(CommonStrings.resources_language),
-                            context.getString(CommonStrings.resources_country_code),
-                            context.getString(CommonStrings.resources_script)
-                    )
-            )
-        }
-
-        val list = knownLocalesSet.mapNotNull { (language, country, script) ->
-            try {
-                Locale.Builder()
-                        .setLanguage(language)
-                        .setRegion(country)
-                        .setScript(script)
-                        .build()
-            } catch (exception: IllformedLocaleException) {
-                if (buildMeta.isDebug) {
-                    throw exception
-                }
-                // Ignore this locale in production
-                null
-            }
-        }
-                // sort by human display names
-                .sortedBy { localeToLocalisedString(it).lowercase(it) }
-
-        supportedLocales.clear()
-        supportedLocales.addAll(list)
     }
 
     /**
@@ -231,12 +138,6 @@ class VectorLocale @Inject constructor(
     }
 
     suspend fun getSupportedLocales(): List<Locale> {
-        if (supportedLocales.isEmpty()) {
-            // init the known locales in background
-            withContext(Dispatchers.IO) {
-                initApplicationLocales()
-            }
-        }
         return supportedLocales
     }
 }

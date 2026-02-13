@@ -82,6 +82,7 @@ import org.webrtc.VideoTrack
 import timber.log.Timber
 import java.lang.ref.WeakReference
 import java.util.concurrent.CopyOnWriteArrayList
+import java.util.concurrent.atomic.AtomicBoolean
 import javax.inject.Provider
 import kotlin.coroutines.CoroutineContext
 
@@ -167,6 +168,7 @@ class WebRtcCall(
     }
 
     private var inviteTimeout: Deferred<Unit>? = null
+    private val isTerminating = AtomicBoolean(false)
 
     // Mute status
     var micMuted = false
@@ -829,9 +831,13 @@ class WebRtcCall(
         videoCapturer?.dispose()
         videoCapturer = null
         remoteIceCandidateJob?.cancel()
+        remoteIceCandidateJob = null
         localIceCandidateJob?.cancel()
-        peerConnection?.close()
-        peerConnection?.dispose()
+        localIceCandidateJob = null
+        val activePeerConnection = peerConnection
+        peerConnection = null
+        activePeerConnection?.close()
+        activePeerConnection?.dispose()
         localAudioSource?.dispose()
         localVideoSource?.dispose()
         localAudioSource = null
@@ -895,9 +901,12 @@ class WebRtcCall(
     }
 
     private suspend fun terminate(reason: EndCallReason? = null, rejected: Boolean = false) = withContext(dispatcher) {
+        if (!isTerminating.compareAndSet(false, true)) return@withContext
+        if (mxCall.state is CallState.Ended) return@withContext
+
         // Close tracks ASAP
         localVideoTrack?.setEnabled(false)
-        localVideoTrack?.setEnabled(false)
+        localAudioTrack?.setEnabled(false)
         cameraAvailabilityCallback?.let { cameraAvailabilityCallback ->
             val cameraManager = context.getSystemService<CameraManager>()!!
             cameraManager.unregisterAvailabilityCallback(cameraAvailabilityCallback)

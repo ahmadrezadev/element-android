@@ -168,6 +168,9 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
+        // Keep only Persian locale resources in the packaged app.
+        resConfigs "fa"
+
         // Keep abiFilter for the universalApk
         ndk {
             abiFilters "armeabi-v7a", "x86", 'arm64-v8a', 'x86_64'

@@ -1,0 +1,436 @@
+Compiled from "EmojiManager.kt"
+public final class com.vanniktech.emoji.EmojiManager {
+  public static final com.vanniktech.emoji.EmojiManager INSTANCE;
+
+  private static final int GUESSED_UNICODE_AMOUNT;
+
+  private static final int GUESSED_TOTAL_PATTERN_LENGTH;
+
+  private static final java.util.Map<java.lang.String, com.vanniktech.emoji.Emoji> emojiMap;
+
+  private static com.vanniktech.emoji.EmojiProvider emojiProvider;
+
+  private static com.vanniktech.emoji.EmojiCategory[] categories;
+
+  private static kotlin.text.Regex emojiPattern;
+
+  private static kotlin.text.Regex emojiRepetitivePattern;
+
+  private com.vanniktech.emoji.EmojiManager();
+    Code:
+       0: aload_0
+       1: invokespecial #8                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public final kotlin.text.Regex getEmojiRepetitivePattern$emoji_release();
+    Code:
+       0: getstatic     #17                 // Field emojiRepetitivePattern:Lkotlin/text/Regex;
+       3: areturn
+
+  public final void setEmojiRepetitivePattern$emoji_release(kotlin.text.Regex);
+    Code:
+       0: aload_1
+       1: putstatic     #17                 // Field emojiRepetitivePattern:Lkotlin/text/Regex;
+       4: return
+
+  public final com.vanniktech.emoji.EmojiCategory[] categories$emoji_release();
+    Code:
+       0: aload_0
+       1: invokevirtual #26                 // Method verifyInstalled$emoji_release:()V
+       4: getstatic     #30                 // Field categories:[Lcom/vanniktech/emoji/EmojiCategory;
+       7: dup
+       8: invokestatic  #36                 // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;)V
+      11: areturn
+
+  public final com.vanniktech.emoji.EmojiProvider emojiProvider$emoji_release();
+    Code:
+       0: aload_0
+       1: invokevirtual #26                 // Method verifyInstalled$emoji_release:()V
+       4: getstatic     #42                 // Field emojiProvider:Lcom/vanniktech/emoji/EmojiProvider;
+       7: dup
+       8: invokestatic  #36                 // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;)V
+      11: areturn
+
+  public final java.util.List<com.vanniktech.emoji.EmojiRange> findAllEmojis$emoji_release(java.lang.CharSequence);
+    Code:
+       0: aload_0
+       1: invokevirtual #26                 // Method verifyInstalled$emoji_release:()V
+       4: aload_1
+       5: ifnull        72
+       8: aload_1
+       9: invokeinterface #51,  1           // InterfaceMethod java/lang/CharSequence.length:()I
+      14: ifle          21
+      17: iconst_1
+      18: goto          22
+      21: iconst_0
+      22: ifeq          72
+      25: getstatic     #54                 // Field emojiPattern:Lkotlin/text/Regex;
+      28: astore_2
+      29: aload_2
+      30: ifnull        59
+      33: aload_2
+      34: aload_1
+      35: iconst_0
+      36: iconst_2
+      37: aconst_null
+      38: invokestatic  #60                 // Method kotlin/text/Regex.findAll$default:(Lkotlin/text/Regex;Ljava/lang/CharSequence;IILjava/lang/Object;)Lkotlin/sequences/Sequence;
+      41: astore_3
+      42: aload_3
+      43: ifnull        59
+      46: aload_3
+      47: getstatic     #66                 // Field com/vanniktech/emoji/EmojiManager$findAllEmojis$1.INSTANCE:Lcom/vanniktech/emoji/EmojiManager$findAllEmojis$1;
+      50: checkcast     #68                 // class kotlin/jvm/functions/Function1
+      53: invokestatic  #74                 // Method kotlin/sequences/SequencesKt.mapNotNull:(Lkotlin/sequences/Sequence;Lkotlin/jvm/functions/Function1;)Lkotlin/sequences/Sequence;
+      56: goto          60
+      59: aconst_null
+      60: dup
+      61: ifnonnull     68
+      64: pop
+      65: invokestatic  #78                 // Method kotlin/sequences/SequencesKt.emptySequence:()Lkotlin/sequences/Sequence;
+      68: invokestatic  #82                 // Method kotlin/sequences/SequencesKt.toList:(Lkotlin/sequences/Sequence;)Ljava/util/List;
+      71: areturn
+      72: invokestatic  #88                 // Method kotlin/collections/CollectionsKt.emptyList:()Ljava/util/List;
+      75: areturn
+
+  public final com.vanniktech.emoji.Emoji findEmoji$emoji_release(java.lang.CharSequence);
+    Code:
+       0: aload_1
+       1: ldc           #96                 // String candidate
+       3: invokestatic  #100                // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+       6: aload_0
+       7: invokevirtual #26                 // Method verifyInstalled$emoji_release:()V
+      10: getstatic     #104                // Field emojiMap:Ljava/util/Map;
+      13: aload_1
+      14: invokevirtual #108                // Method java/lang/Object.toString:()Ljava/lang/String;
+      17: invokeinterface #114,  2          // InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+      22: checkcast     #116                // class com/vanniktech/emoji/Emoji
+      25: areturn
+
+  public final void verifyInstalled$emoji_release();
+    Code:
+       0: getstatic     #30                 // Field categories:[Lcom/vanniktech/emoji/EmojiCategory;
+       3: dup
+       4: ifnonnull     25
+       7: pop
+       8: iconst_0
+       9: istore_1
+      10: ldc           #118                // String Please install an EmojiProvider through the EmojiManager.install() method first.
+      12: astore_1
+      13: new           #120                // class java/lang/IllegalStateException
+      16: dup
+      17: aload_1
+      18: invokevirtual #108                // Method java/lang/Object.toString:()Ljava/lang/String;
+      21: invokespecial #123                // Method java/lang/IllegalStateException."<init>":(Ljava/lang/String;)V
+      24: athrow
+      25: pop
+      26: return
+
+  public static final void install(com.vanniktech.emoji.EmojiProvider);
+    Code:
+       0: aload_0
+       1: ldc           #131                // String provider
+       3: invokestatic  #100                // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+       6: ldc           #2                  // class com/vanniktech/emoji/EmojiManager
+       8: astore_1
+       9: aload_1
+      10: monitorenter
+      11: nop
+      12: iconst_0
+      13: istore_2
+      14: getstatic     #133                // Field INSTANCE:Lcom/vanniktech/emoji/EmojiManager;
+      17: pop
+      18: aload_0
+      19: invokeinterface #138,  1          // InterfaceMethod com/vanniktech/emoji/EmojiProvider.getCategories:()[Lcom/vanniktech/emoji/EmojiCategory;
+      24: putstatic     #30                 // Field categories:[Lcom/vanniktech/emoji/EmojiCategory;
+      27: getstatic     #133                // Field INSTANCE:Lcom/vanniktech/emoji/EmojiManager;
+      30: pop
+      31: aload_0
+      32: putstatic     #42                 // Field emojiProvider:Lcom/vanniktech/emoji/EmojiProvider;
+      35: getstatic     #104                // Field emojiMap:Ljava/util/Map;
+      38: invokeinterface #141,  1          // InterfaceMethod java/util/Map.clear:()V
+      43: new           #143                // class java/util/ArrayList
+      46: dup
+      47: sipush        3000
+      50: invokespecial #146                // Method java/util/ArrayList."<init>":(I)V
+      53: checkcast     #148                // class java/util/List
+      56: astore_3
+      57: aload_0
+      58: invokeinterface #138,  1          // InterfaceMethod com/vanniktech/emoji/EmojiProvider.getCategories:()[Lcom/vanniktech/emoji/EmojiCategory;
+      63: arraylength
+      64: istore        4
+      66: iconst_0
+      67: istore        5
+      69: iload         5
+      71: iload         4
+      73: if_icmpge     247
+      76: aload_0
+      77: invokeinterface #138,  1          // InterfaceMethod com/vanniktech/emoji/EmojiProvider.getCategories:()[Lcom/vanniktech/emoji/EmojiCategory;
+      82: iload         5
+      84: aaload
+      85: invokeinterface #153,  1          // InterfaceMethod com/vanniktech/emoji/EmojiCategory.getEmojis:()Ljava/util/List;
+      90: astore        6
+      92: aload         6
+      94: invokeinterface #156,  1          // InterfaceMethod java/util/List.size:()I
+      99: istore        7
+     101: iconst_0
+     102: istore        8
+     104: iload         8
+     106: iload         7
+     108: if_icmpge     241
+     111: aload         6
+     113: iload         8
+     115: invokeinterface #159,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+     120: checkcast     #116                // class com/vanniktech/emoji/Emoji
+     123: astore        9
+     125: aload         9
+     127: invokeinterface #162,  1          // InterfaceMethod com/vanniktech/emoji/Emoji.getUnicode:()Ljava/lang/String;
+     132: astore        10
+     134: aload         9
+     136: invokeinterface #165,  1          // InterfaceMethod com/vanniktech/emoji/Emoji.getVariants:()Ljava/util/List;
+     141: astore        11
+     143: getstatic     #104                // Field emojiMap:Ljava/util/Map;
+     146: aload         10
+     148: aload         9
+     150: invokeinterface #169,  3          // InterfaceMethod java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+     155: pop
+     156: aload_3
+     157: aload         10
+     159: invokeinterface #173,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     164: pop
+     165: iconst_0
+     166: istore        12
+     168: aload         11
+     170: invokeinterface #156,  1          // InterfaceMethod java/util/List.size:()I
+     175: istore        13
+     177: iload         12
+     179: iload         13
+     181: if_icmpge     235
+     184: aload         11
+     186: iload         12
+     188: invokeinterface #159,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+     193: checkcast     #116                // class com/vanniktech/emoji/Emoji
+     196: astore        14
+     198: aload         14
+     200: invokeinterface #162,  1          // InterfaceMethod com/vanniktech/emoji/Emoji.getUnicode:()Ljava/lang/String;
+     205: astore        15
+     207: getstatic     #104                // Field emojiMap:Ljava/util/Map;
+     210: aload         15
+     212: aload         14
+     214: invokeinterface #169,  3          // InterfaceMethod java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+     219: pop
+     220: aload_3
+     221: aload         15
+     223: invokeinterface #173,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     228: pop
+     229: iinc          12, 1
+     232: goto          177
+     235: iinc          8, 1
+     238: goto          104
+     241: iinc          5, 1
+     244: goto          69
+     247: aload_3
+     248: checkcast     #175                // class java/util/Collection
+     251: invokeinterface #179,  1          // InterfaceMethod java/util/Collection.isEmpty:()Z
+     256: ifne          263
+     259: iconst_1
+     260: goto          264
+     263: iconst_0
+     264: ifne          287
+     267: iconst_0
+     268: istore        6
+     270: ldc           #181                // String Your EmojiProvider must at least have one category with at least one emoji.
+     272: astore        6
+     274: new           #183                // class java/lang/IllegalArgumentException
+     277: dup
+     278: aload         6
+     280: invokevirtual #108                // Method java/lang/Object.toString:()Ljava/lang/String;
+     283: invokespecial #184                // Method java/lang/IllegalArgumentException."<init>":(Ljava/lang/String;)V
+     286: athrow
+     287: aload_3
+     288: getstatic     #189                // Field com/vanniktech/emoji/EmojiManager$install$1$2.INSTANCE:Lcom/vanniktech/emoji/EmojiManager$install$1$2;
+     291: checkcast     #191                // class kotlin/jvm/functions/Function2
+     294: invokedynamic #209,  0            // InvokeDynamic #0:compare:(Lkotlin/jvm/functions/Function2;)Ljava/util/Comparator;
+     299: invokestatic  #213                // Method kotlin/collections/CollectionsKt.sortWith:(Ljava/util/List;Ljava/util/Comparator;)V
+     302: new           #215                // class java/lang/StringBuilder
+     305: dup
+     306: sipush        12000
+     309: invokespecial #216                // Method java/lang/StringBuilder."<init>":(I)V
+     312: astore        5
+     314: aload_3
+     315: invokeinterface #156,  1          // InterfaceMethod java/util/List.size:()I
+     320: istore        6
+     322: iconst_0
+     323: istore        7
+     325: iload         7
+     327: iload         6
+     329: if_icmpge     366
+     332: aload         5
+     334: getstatic     #220                // Field kotlin/text/Regex.Companion:Lkotlin/text/Regex$Companion;
+     337: aload_3
+     338: iload         7
+     340: invokeinterface #159,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+     345: checkcast     #222                // class java/lang/String
+     348: invokevirtual #228                // Method kotlin/text/Regex$Companion.escape:(Ljava/lang/String;)Ljava/lang/String;
+     351: invokevirtual #232                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     354: bipush        124
+     356: invokevirtual #235                // Method java/lang/StringBuilder.append:(C)Ljava/lang/StringBuilder;
+     359: pop
+     360: iinc          7, 1
+     363: goto          325
+     366: aload         5
+     368: aload         5
+     370: invokevirtual #236                // Method java/lang/StringBuilder.length:()I
+     373: iconst_1
+     374: isub
+     375: invokevirtual #240                // Method java/lang/StringBuilder.deleteCharAt:(I)Ljava/lang/StringBuilder;
+     378: invokevirtual #241                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+     381: dup
+     382: ldc           #243                // String patternBuilder.deleteCha…er.length - 1).toString()
+     384: invokestatic  #246                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+     387: astore        7
+     389: getstatic     #133                // Field INSTANCE:Lcom/vanniktech/emoji/EmojiManager;
+     392: pop
+     393: new           #56                 // class kotlin/text/Regex
+     396: dup
+     397: aload         7
+     399: getstatic     #252                // Field kotlin/text/RegexOption.IGNORE_CASE:Lkotlin/text/RegexOption;
+     402: invokespecial #255                // Method kotlin/text/Regex."<init>":(Ljava/lang/String;Lkotlin/text/RegexOption;)V
+     405: putstatic     #54                 // Field emojiPattern:Lkotlin/text/Regex;
+     408: getstatic     #133                // Field INSTANCE:Lcom/vanniktech/emoji/EmojiManager;
+     411: pop
+     412: new           #56                 // class kotlin/text/Regex
+     415: dup
+     416: new           #215                // class java/lang/StringBuilder
+     419: dup
+     420: invokespecial #256                // Method java/lang/StringBuilder."<init>":()V
+     423: bipush        40
+     425: invokevirtual #235                // Method java/lang/StringBuilder.append:(C)Ljava/lang/StringBuilder;
+     428: aload         7
+     430: invokevirtual #232                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     433: ldc_w         #258                // String )+
+     436: invokevirtual #232                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     439: invokevirtual #241                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+     442: getstatic     #252                // Field kotlin/text/RegexOption.IGNORE_CASE:Lkotlin/text/RegexOption;
+     445: invokespecial #255                // Method kotlin/text/Regex."<init>":(Ljava/lang/String;Lkotlin/text/RegexOption;)V
+     448: putstatic     #17                 // Field emojiRepetitivePattern:Lkotlin/text/Regex;
+     451: nop
+     452: getstatic     #263                // Field kotlin/Unit.INSTANCE:Lkotlin/Unit;
+     455: astore_2
+     456: aload_1
+     457: monitorexit
+     458: goto          466
+     461: astore_2
+     462: aload_1
+     463: monitorexit
+     464: aload_2
+     465: athrow
+     466: return
+    Exception table:
+       from    to  target type
+          11   456   461   any
+         461   462   461   any
+
+  public static final void destroy();
+    Code:
+       0: ldc           #2                  // class com/vanniktech/emoji/EmojiManager
+       2: astore_0
+       3: aload_0
+       4: monitorenter
+       5: nop
+       6: iconst_0
+       7: istore_1
+       8: invokestatic  #292                // Method release:()V
+      11: getstatic     #104                // Field emojiMap:Ljava/util/Map;
+      14: invokeinterface #141,  1          // InterfaceMethod java/util/Map.clear:()V
+      19: getstatic     #133                // Field INSTANCE:Lcom/vanniktech/emoji/EmojiManager;
+      22: pop
+      23: aconst_null
+      24: putstatic     #42                 // Field emojiProvider:Lcom/vanniktech/emoji/EmojiProvider;
+      27: getstatic     #133                // Field INSTANCE:Lcom/vanniktech/emoji/EmojiManager;
+      30: pop
+      31: aconst_null
+      32: putstatic     #30                 // Field categories:[Lcom/vanniktech/emoji/EmojiCategory;
+      35: getstatic     #133                // Field INSTANCE:Lcom/vanniktech/emoji/EmojiManager;
+      38: pop
+      39: aconst_null
+      40: putstatic     #54                 // Field emojiPattern:Lkotlin/text/Regex;
+      43: getstatic     #133                // Field INSTANCE:Lcom/vanniktech/emoji/EmojiManager;
+      46: pop
+      47: aconst_null
+      48: putstatic     #17                 // Field emojiRepetitivePattern:Lkotlin/text/Regex;
+      51: nop
+      52: getstatic     #263                // Field kotlin/Unit.INSTANCE:Lkotlin/Unit;
+      55: astore_1
+      56: aload_0
+      57: monitorexit
+      58: goto          66
+      61: astore_1
+      62: aload_0
+      63: monitorexit
+      64: aload_1
+      65: athrow
+      66: return
+    Exception table:
+       from    to  target type
+           5    56    61   any
+          61    62    61   any
+
+  public static final void release();
+    Code:
+       0: ldc           #2                  // class com/vanniktech/emoji/EmojiManager
+       2: astore_0
+       3: aload_0
+       4: monitorenter
+       5: nop
+       6: iconst_0
+       7: istore_1
+       8: getstatic     #42                 // Field emojiProvider:Lcom/vanniktech/emoji/EmojiProvider;
+      11: dup
+      12: ifnull        26
+      15: invokeinterface #294,  1          // InterfaceMethod com/vanniktech/emoji/EmojiProvider.release:()V
+      20: getstatic     #263                // Field kotlin/Unit.INSTANCE:Lkotlin/Unit;
+      23: goto          28
+      26: pop
+      27: aconst_null
+      28: astore_1
+      29: aload_0
+      30: monitorexit
+      31: goto          39
+      34: astore_1
+      35: aload_0
+      36: monitorexit
+      37: aload_1
+      38: athrow
+      39: return
+    Exception table:
+       from    to  target type
+           5    29    34   any
+          34    35    34   any
+
+  private static final int install$lambda$3$lambda$2(kotlin.jvm.functions.Function2, java.lang.Object, java.lang.Object);
+    Code:
+       0: aload_0
+       1: ldc_w         #297                // String $tmp0
+       4: invokestatic  #100                // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+       7: aload_0
+       8: aload_1
+       9: aload_2
+      10: invokeinterface #300,  3          // InterfaceMethod kotlin/jvm/functions/Function2.invoke:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+      15: checkcast     #302                // class java/lang/Number
+      18: invokevirtual #305                // Method java/lang/Number.intValue:()I
+      21: ireturn
+
+  static {};
+    Code:
+       0: new           #2                  // class com/vanniktech/emoji/EmojiManager
+       3: dup
+       4: invokespecial #311                // Method "<init>":()V
+       7: putstatic     #133                // Field INSTANCE:Lcom/vanniktech/emoji/EmojiManager;
+      10: new           #313                // class java/util/LinkedHashMap
+      13: dup
+      14: sipush        3000
+      17: invokespecial #314                // Method java/util/LinkedHashMap."<init>":(I)V
+      20: checkcast     #110                // class java/util/Map
+      23: putstatic     #104                // Field emojiMap:Ljava/util/Map;
+      26: return
+}

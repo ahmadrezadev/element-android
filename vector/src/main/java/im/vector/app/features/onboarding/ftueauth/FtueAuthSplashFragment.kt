@@ -16,7 +16,6 @@ import androidx.core.view.isVisible
 import dagger.hilt.android.AndroidEntryPoint
 import im.vector.app.core.resources.BuildMeta
 import im.vector.app.databinding.FragmentFtueAuthSplashBinding
-import im.vector.app.features.VectorFeatures
 import im.vector.app.features.onboarding.OnboardingAction
 import im.vector.app.features.onboarding.OnboardingFlow
 import im.vector.app.features.settings.VectorPreferences
@@ -31,7 +30,6 @@ class FtueAuthSplashFragment :
         AbstractFtueAuthFragment<FragmentFtueAuthSplashBinding>() {
 
     @Inject lateinit var vectorPreferences: VectorPreferences
-    @Inject lateinit var vectorFeatures: VectorFeatures
     @Inject lateinit var buildMeta: BuildMeta
 
     override fun getBinding(inflater: LayoutInflater, container: ViewGroup?): FragmentFtueAuthSplashBinding {
@@ -44,14 +42,12 @@ class FtueAuthSplashFragment :
     }
 
     private fun setupViews() {
-        val isAlreadyHaveAccountEnabled = vectorFeatures.isOnboardingAlreadyHaveAccountSplashEnabled()
         views.loginSplashSubmit.apply {
-            setText(if (isAlreadyHaveAccountEnabled) CommonStrings.login_splash_create_account else CommonStrings.login_splash_submit)
-            debouncedClicks { splashSubmit(isAlreadyHaveAccountEnabled) }
+            setText(CommonStrings.login_splash_submit)
+            debouncedClicks { splashSubmit() }
         }
         views.loginSplashAlreadyHaveAccount.apply {
-            isVisible = vectorFeatures.isOnboardingAlreadyHaveAccountSplashEnabled()
-            debouncedClicks { alreadyHaveAnAccount() }
+            isVisible = false
         }
 
         if (buildMeta.isDebug || vectorPreferences.developerMode()) {
@@ -63,13 +59,8 @@ class FtueAuthSplashFragment :
         }
     }
 
-    private fun splashSubmit(isAlreadyHaveAccountEnabled: Boolean) {
-        val getStartedFlow = if (isAlreadyHaveAccountEnabled) OnboardingFlow.SignUp else OnboardingFlow.SignInSignUp
-        viewModel.handle(OnboardingAction.SplashAction.OnGetStarted(onboardingFlow = getStartedFlow))
-    }
-
-    private fun alreadyHaveAnAccount() {
-        viewModel.handle(OnboardingAction.SplashAction.OnIAlreadyHaveAnAccount(onboardingFlow = OnboardingFlow.SignIn))
+    private fun splashSubmit() {
+        viewModel.handle(OnboardingAction.SplashAction.OnGetStarted(onboardingFlow = OnboardingFlow.SignIn))
     }
 
     override fun resetViewModel() {

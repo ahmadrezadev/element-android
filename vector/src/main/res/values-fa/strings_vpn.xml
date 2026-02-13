@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vpn_status_title">وضعیت VPN</string>
+    <string name="vpn_status_server_label">سرور</string>
+    <string name="vpn_status_state_label">وضعیت</string>
+    <string name="vpn_status_speed_label">سرعت</string>
+    <string name="vpn_status_server_unknown">نامشخص</string>
+    <string name="vpn_status_speed_value">%1$s ↓ / %2$s ↑</string>
+    <string name="vpn_status_state_connecting">در حال اتصال</string>
+    <string name="vpn_status_state_connected">متصل</string>
+    <string name="vpn_status_state_disconnected">قطع شده</string>
+    <string name="vpn_status_state_disconnecting">در حال قطع اتصال</string>
+    <string name="vpn_status_state_permission_required">نیازمند مجوز VPN</string>
+    <string name="vpn_status_state_ready">آماده برای اتصال</string>
+    <string name="vpn_status_state_idle">بیکار</string>
+
+    <string name="vpn_settings_title">VPN</string>
+    <string name="vpn_settings_entry_summary">انتخاب سرور، وضعیت و سرعت اتصال</string>
+    <string name="vpn_settings_connection_category">اتصال</string>
+    <string name="vpn_settings_server_category">سرورها</string>
+    <string name="vpn_settings_routing_category">مسیر ترافیک</string>
+    <string name="vpn_settings_active_server_title">سرور فعال</string>
+    <string name="vpn_settings_selected_server_title">سرور ترجیحی</string>
+    <string name="vpn_settings_reconnect_title">اتصال مجدد</string>
+    <string name="vpn_settings_reconnect_summary">VPN با اولویت سرور انتخابی دوباره متصل می‌شود.</string>
+    <string name="vpn_settings_full_tunnel_title">حالت ترافیک</string>
+    <string name="vpn_settings_full_tunnel_summary">حالت فول‌تانل فعال است و هنگام اتصال، ترافیک دستگاه از VPN عبور می‌کند.</string>
+    <string name="vpn_settings_server_not_selected">سروری انتخاب نشده است</string>
+    <string name="vpn_settings_no_servers_available">هیچ سرور VPN در دسترس نیست.</string>
+    <string name="vpn_settings_select_server_title">انتخاب سرور VPN</string>
+    <string name="vpn_settings_reconnect_success">به %1$s متصل شد</string>
+    <string name="vpn_settings_speed_default_value">0 B/s ↓ / 0 B/s ↑</string>
+    <string name="vpn_settings_server_load_error">بارگذاری سرورهای VPN ناموفق بود</string>
+    <string name="vpn_status_action_allow">اجازه VPN</string>
+    <string name="vpn_status_action_retry">اتصال مجدد</string>
+</resources>

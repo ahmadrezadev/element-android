@@ -17,6 +17,7 @@
 package im.vector.app.features.call.audio
 
 import android.content.Intent
+import android.content.pm.ServiceInfo
 import android.os.Binder
 import android.os.IBinder
 import dagger.hilt.android.AndroidEntryPoint
@@ -24,6 +25,7 @@ import im.vector.app.core.extensions.startForegroundCompat
 import im.vector.app.core.services.VectorAndroidService
 import im.vector.app.features.notifications.NotificationUtils
 import im.vector.lib.core.utils.timer.Clock
+import timber.log.Timber
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -32,21 +34,40 @@ class MicrophoneAccessService : VectorAndroidService() {
     @Inject lateinit var notificationUtils: NotificationUtils
     @Inject lateinit var clock: Clock
     private val binder = LocalBinder()
+    private var hasStartedForeground = false
+
+    override fun onCreate() {
+        super.onCreate()
+        ensureForegroundNotification()
+    }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        showMicrophoneAccessNotification()
+        ensureForegroundNotification()
 
         return START_STICKY
     }
 
-    private fun showMicrophoneAccessNotification() {
-        val notificationId = clock.epochMillis().toInt()
+    private fun ensureForegroundNotification() {
+        if (hasStartedForeground) return
+        val notificationId = (clock.epochMillis() and Int.MAX_VALUE.toLong()).toInt()
         val notification = notificationUtils.buildMicrophoneAccessNotification()
-        startForegroundCompat(notificationId, notification)
+        runCatching {
+            startForegroundCompat(notificationId, notification) {
+                ServiceInfo.FOREGROUND_SERVICE_TYPE_MICROPHONE
+            }
+            hasStartedForeground = true
+        }.onFailure {
+            Timber.e(it, "Failed to start microphone foreground service notification")
+        }
     }
 
     override fun onBind(intent: Intent?): IBinder {
         return binder
+    }
+
+    override fun onDestroy() {
+        runCatching { stopForegroundCompat() }
+        super.onDestroy()
     }
 
     inner class LocalBinder : Binder() {

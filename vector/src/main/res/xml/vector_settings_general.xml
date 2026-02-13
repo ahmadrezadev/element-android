@@ -91,6 +91,12 @@
             tools:summary="https://homeserver.org" />
 
         <im.vector.app.core.preference.VectorPreference
+            android:key="SETTINGS_VPN_SETTINGS_KEY"
+            android:summary="@string/vpn_settings_entry_summary"
+            android:title="@string/vpn_settings_title"
+            app:fragment="im.vector.app.features.settings.vpn.VectorSettingsVpnFragment" />
+
+        <im.vector.app.core.preference.VectorPreference
             android:key="SETTINGS_IDENTITY_SERVER_PREFERENCE_KEY"
             android:title="@string/settings_identity_server"
             tools:summary="https://identity.server.url" />

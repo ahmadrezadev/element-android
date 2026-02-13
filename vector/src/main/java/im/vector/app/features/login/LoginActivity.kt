@@ -10,17 +10,23 @@ package im.vector.app.features.login
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
+import android.net.VpnService
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.view.ViewCompat
 import androidx.core.view.children
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import com.airbnb.mvrx.viewModel
 import com.airbnb.mvrx.withState
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.tim.basevpn.state.ConnectionState
 import dagger.hilt.android.AndroidEntryPoint
 import im.vector.app.R
 import im.vector.app.core.extensions.POP_BACK_STACK_EXCLUSIVE
@@ -36,13 +42,20 @@ import im.vector.app.features.login.terms.LoginTermsFragment
 import im.vector.app.features.login.terms.LoginTermsFragmentArgument
 import im.vector.app.features.onboarding.AuthenticationDescription
 import im.vector.app.features.pin.UnlockedActivity
+import im.vector.app.features.vpn.VpnConnectionStatusTracker
+import im.vector.app.features.vpn.VpnConnectionUiState
+import im.vector.app.features.vpn.formatVpnSpeed
+import im.vector.app.features.vpn.toLocalizedString
 import im.vector.lib.core.utils.compat.getParcelableExtraCompat
 import im.vector.lib.strings.CommonStrings
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.launch
 import org.matrix.android.sdk.api.auth.SSOAction
 import org.matrix.android.sdk.api.auth.registration.FlowResult
 import org.matrix.android.sdk.api.auth.registration.Stage
 import org.matrix.android.sdk.api.auth.toLocalizedLoginTerms
 import org.matrix.android.sdk.api.extensions.tryOrNull
+import javax.inject.Inject
 
 /**
  * The LoginActivity manages the fragment navigation and also display the loading View.
@@ -51,6 +64,13 @@ import org.matrix.android.sdk.api.extensions.tryOrNull
 open class LoginActivity : VectorBaseActivity<ActivityLoginBinding>(), UnlockedActivity {
 
     private val loginViewModel: LoginViewModel by viewModel()
+    @Inject lateinit var vpnConnectionStatusTracker: VpnConnectionStatusTracker
+    private var hasInitializedUiAndData = false
+    private var firstCreationAtInit = false
+
+    private val vpnPermissionLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+        completeInitUiAndData()
+    }
 
     private val enterAnim = R.anim.enter_fade_in
     private val exitAnim = R.anim.exit_fade_out
@@ -80,9 +100,27 @@ open class LoginActivity : VectorBaseActivity<ActivityLoginBinding>(), UnlockedA
         get() = views.coordinatorLayout
 
     override fun initUiAndData() {
+        firstCreationAtInit = isFirstCreation()
+        maybeRequestVpnPermissionThenInit()
+    }
+
+    private fun maybeRequestVpnPermissionThenInit() {
+        if (hasInitializedUiAndData) return
+        val prepareIntent = VpnService.prepare(this)
+        if (prepareIntent == null) {
+            completeInitUiAndData()
+        } else {
+            vpnPermissionLauncher.launch(prepareIntent)
+        }
+    }
+
+    private fun completeInitUiAndData() {
+        if (hasInitializedUiAndData) return
+        hasInitializedUiAndData = true
+
         analyticsScreenName = MobileScreen.ScreenName.Login
 
-        if (isFirstCreation()) {
+        if (firstCreationAtInit) {
             addFirstFragment()
         }
 
@@ -91,10 +129,11 @@ open class LoginActivity : VectorBaseActivity<ActivityLoginBinding>(), UnlockedA
         }
 
         loginViewModel.observeViewEvents { handleLoginViewEvents(it) }
+        observeVpnStatus()
 
         // Get config extra
         val loginConfig = intent.getParcelableExtraCompat<LoginConfig?>(EXTRA_CONFIG)
-        if (isFirstCreation()) {
+        if (firstCreationAtInit) {
             loginViewModel.handle(LoginAction.InitWith(loginConfig))
         }
     }
@@ -150,11 +189,7 @@ open class LoginActivity : VectorBaseActivity<ActivityLoginBinding>(), UnlockedA
             is LoginViewEvents.OnServerSelectionDone -> onServerSelectionDone(loginViewEvents)
             is LoginViewEvents.OnSignModeSelected -> onSignModeSelected(loginViewEvents)
             is LoginViewEvents.OnLoginFlowRetrieved ->
-                addFragmentToBackstack(
-                        views.loginFragmentContainer,
-                        LoginSignUpSignInSelectionFragment::class.java,
-                        option = commonOption
-                )
+                loginViewModel.handle(LoginAction.UpdateSignMode(SignMode.SignIn))
             is LoginViewEvents.OnWebLoginError -> onWebLoginError(loginViewEvents)
             is LoginViewEvents.OnForgetPasswordClicked ->
                 addFragmentToBackstack(
@@ -226,6 +261,41 @@ open class LoginActivity : VectorBaseActivity<ActivityLoginBinding>(), UnlockedA
 
         // Loading
         views.loginLoading.isVisible = loginViewState.isLoading()
+    }
+
+    private fun observeVpnStatus() {
+        lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.STARTED) {
+                vpnConnectionStatusTracker.uiState.collect { renderVpnStatus(it) }
+            }
+        }
+    }
+
+    private fun renderVpnStatus(status: VpnConnectionUiState) {
+        views.vpnStatusGroup.isVisible = status.isVisible
+        if (!status.isVisible) return
+
+        views.vpnStatusServerValue.text = status.serverName ?: getString(R.string.vpn_status_server_unknown)
+        views.vpnStatusStateValue.text = buildString {
+            append(status.connectionState.toLocalizedString(this@LoginActivity))
+            status.details
+                    ?.takeIf { it.isNotBlank() }
+                    ?.let {
+                        append('\n')
+                        append(it)
+                    }
+        }
+        views.vpnStatusSpeedValue.text = getString(
+                R.string.vpn_status_speed_value,
+                formatVpnSpeed(status.downloadBytesPerSecond),
+                formatVpnSpeed(status.uploadBytesPerSecond)
+        )
+        views.vpnStatusProgress.isVisible = when (status.connectionState) {
+            ConnectionState.CONNECTING,
+            ConnectionState.READYFORCONNECT,
+            ConnectionState.IDLE -> true
+            else -> false
+        }
     }
 
     private fun inferAuthDescription(loginViewState: LoginViewState) = when (loginViewState.signMode) {

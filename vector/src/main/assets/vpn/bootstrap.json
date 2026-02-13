@@ -1,0 +1,15 @@
+{
+  "matrix_homeserver_url": "https://tavanaict.net/",
+  "vpn_servers": [
+    {
+      "id": "server-primary",
+      "priority": 1,
+      "active": true,
+      "connection_timeout_ms": 10000,
+      "ovpn_asset": "vpn/server_primary.ovpn",
+      "username": "test01",
+      "password": "test01",
+      "private_key_password": "123456789"
+    }
+  ]
+}

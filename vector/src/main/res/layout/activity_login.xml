@@ -46,6 +46,104 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/vpnStatusGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="vpnStatusTouchArea,vpnStatusCard"
+            tools:visibility="visible" />
+
+        <View
+            android:id="@+id/vpnStatusTouchArea"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="?vctr_waiting_background_color"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/vpnStatusCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/vpnStatusTitle"
+                    style="@style/Widget.Vector.TextView.Title.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vpn_status_title" />
+
+                <ProgressBar
+                    android:id="@+id/vpnStatusProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:id="@+id/vpnStatusServerLabel"
+                    style="@style/Widget.Vector.TextView.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vpn_status_server_label" />
+
+                <TextView
+                    android:id="@+id/vpnStatusServerValue"
+                    style="@style/Widget.Vector.TextView.Subtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    tools:text="server-primary" />
+
+                <TextView
+                    android:id="@+id/vpnStatusStateLabel"
+                    style="@style/Widget.Vector.TextView.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vpn_status_state_label" />
+
+                <TextView
+                    android:id="@+id/vpnStatusStateValue"
+                    style="@style/Widget.Vector.TextView.Subtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    tools:text="Connecting" />
+
+                <TextView
+                    android:id="@+id/vpnStatusSpeedLabel"
+                    style="@style/Widget.Vector.TextView.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vpn_status_speed_label" />
+
+                <TextView
+                    android:id="@+id/vpnStatusSpeedValue"
+                    style="@style/Widget.Vector.TextView.Subtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="0 B/s ↓ / 0 B/s ↑" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

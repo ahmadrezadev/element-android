@@ -38,14 +38,10 @@ class VectorSettingsPreferencesFragment :
     @Inject lateinit var vectorPreferences: VectorPreferences
     @Inject lateinit var fontScalePreferences: FontScalePreferences
     @Inject lateinit var vectorFeatures: VectorFeatures
-    @Inject lateinit var vectorLocale: VectorLocale
 
     override var titleRes = CommonStrings.settings_preferences
     override val preferenceXmlRes = R.xml.vector_settings_preferences
 
-    private val selectedLanguagePreference by lazy {
-        findPreference<VectorPreference>(VectorPreferences.SETTINGS_INTERFACE_LANGUAGE_PREFERENCE_KEY)!!
-    }
     private val textSizePreference by lazy {
         findPreference<VectorPreference>(VectorPreferences.SETTINGS_INTERFACE_TEXT_SIZE_KEY)!!
     }
@@ -190,9 +186,6 @@ class VectorSettingsPreferencesFragment :
     // ==============================================================================================================
 
     private fun setUserInterfacePreferences() {
-        // Selected language
-        selectedLanguagePreference.summary = vectorLocale.localeToLocalisedString(vectorLocale.applicationLocale)
-
         // Text size
         textSizePreference.summary = getString(fontScalePreferences.getResolvedFontScaleValue().nameResId)
 

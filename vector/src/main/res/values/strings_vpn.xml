@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vpn_status_title">VPN Status</string>
+    <string name="vpn_status_server_label">Server</string>
+    <string name="vpn_status_state_label">Status</string>
+    <string name="vpn_status_speed_label">Speed</string>
+    <string name="vpn_status_server_unknown">Unknown</string>
+    <string name="vpn_status_speed_value">%1$s ↓ / %2$s ↑</string>
+    <string name="vpn_status_state_connecting">Connecting</string>
+    <string name="vpn_status_state_connected">Connected</string>
+    <string name="vpn_status_state_disconnected">Disconnected</string>
+    <string name="vpn_status_state_disconnecting">Disconnecting</string>
+    <string name="vpn_status_state_permission_required">VPN permission required</string>
+    <string name="vpn_status_state_ready">Ready to connect</string>
+    <string name="vpn_status_state_idle">Idle</string>
+
+    <string name="vpn_settings_title">VPN</string>
+    <string name="vpn_settings_entry_summary">Server selection, status, and connection speed</string>
+    <string name="vpn_settings_connection_category">Connection</string>
+    <string name="vpn_settings_server_category">Servers</string>
+    <string name="vpn_settings_routing_category">Routing</string>
+    <string name="vpn_settings_active_server_title">Active server</string>
+    <string name="vpn_settings_selected_server_title">Preferred server</string>
+    <string name="vpn_settings_reconnect_title">Reconnect now</string>
+    <string name="vpn_settings_reconnect_summary">Reconnect the VPN using the selected server priority.</string>
+    <string name="vpn_settings_full_tunnel_title">Traffic mode</string>
+    <string name="vpn_settings_full_tunnel_summary">Full tunnel is enabled. Device traffic is routed through the VPN while connected.</string>
+    <string name="vpn_settings_server_not_selected">No server selected</string>
+    <string name="vpn_settings_no_servers_available">No VPN servers are available.</string>
+    <string name="vpn_settings_select_server_title">Choose VPN server</string>
+    <string name="vpn_settings_reconnect_success">Connected to %1$s</string>
+    <string name="vpn_settings_speed_default_value">0 B/s ↓ / 0 B/s ↑</string>
+    <string name="vpn_settings_server_load_error">Failed to load VPN servers</string>
+    <string name="vpn_status_action_allow">Allow VPN</string>
+    <string name="vpn_status_action_retry">Retry connection</string>
+</resources>

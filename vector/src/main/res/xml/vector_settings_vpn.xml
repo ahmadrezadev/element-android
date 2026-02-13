@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <im.vector.app.core.preference.VectorPreferenceCategory
+        android:title="@string/vpn_settings_connection_category">
+
+        <im.vector.app.core.preference.VectorPreference
+            android:key="SETTINGS_VPN_ACTIVE_SERVER_KEY"
+            android:summary="@string/vpn_status_server_unknown"
+            android:title="@string/vpn_settings_active_server_title"
+            app:iconSpaceReserved="false" />
+
+        <im.vector.app.core.preference.VectorPreference
+            android:key="SETTINGS_VPN_CONNECTION_STATUS_KEY"
+            android:summary="@string/vpn_status_state_idle"
+            android:title="@string/vpn_status_state_label"
+            app:iconSpaceReserved="false" />
+
+        <im.vector.app.core.preference.VectorPreference
+            android:key="SETTINGS_VPN_SPEED_KEY"
+            android:summary="@string/vpn_settings_speed_default_value"
+            android:title="@string/vpn_status_speed_label"
+            app:iconSpaceReserved="false" />
+
+    </im.vector.app.core.preference.VectorPreferenceCategory>
+
+    <im.vector.app.core.preference.VectorPreferenceCategory
+        android:title="@string/vpn_settings_server_category">
+
+        <im.vector.app.core.preference.VectorPreference
+            android:key="SETTINGS_VPN_SELECTED_SERVER_KEY"
+            android:summary="@string/vpn_settings_server_not_selected"
+            android:title="@string/vpn_settings_selected_server_title"
+            app:iconSpaceReserved="false" />
+
+        <im.vector.app.core.preference.VectorPreference
+            android:key="SETTINGS_VPN_RECONNECT_KEY"
+            android:summary="@string/vpn_settings_reconnect_summary"
+            android:title="@string/vpn_settings_reconnect_title"
+            app:iconSpaceReserved="false" />
+
+    </im.vector.app.core.preference.VectorPreferenceCategory>
+
+    <im.vector.app.core.preference.VectorPreferenceCategory
+        android:title="@string/vpn_settings_routing_category">
+
+        <im.vector.app.core.preference.VectorPreference
+            android:key="SETTINGS_VPN_ROUTING_INFO_KEY"
+            android:persistent="false"
+            android:selectable="false"
+            android:summary="@string/vpn_settings_full_tunnel_summary"
+            android:title="@string/vpn_settings_full_tunnel_title"
+            app:iconSpaceReserved="false" />
+
+    </im.vector.app.core.preference.VectorPreferenceCategory>
+
+</androidx.preference.PreferenceScreen>

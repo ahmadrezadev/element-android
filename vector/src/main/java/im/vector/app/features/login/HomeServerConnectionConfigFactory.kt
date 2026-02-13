@@ -7,21 +7,30 @@
 
 package im.vector.app.features.login
 
+import im.vector.app.features.vpn.MatrixGatewayStore
 import org.matrix.android.sdk.api.auth.data.HomeServerConnectionConfig
 import org.matrix.android.sdk.api.network.ssl.Fingerprint
 import timber.log.Timber
 import javax.inject.Inject
 
-class HomeServerConnectionConfigFactory @Inject constructor() {
+class HomeServerConnectionConfigFactory @Inject constructor(
+        private val matrixGatewayStore: MatrixGatewayStore,
+) {
 
     fun create(url: String?, fingerprints: List<Fingerprint>? = null): HomeServerConnectionConfig? {
-        if (url == null) {
+        val pinnedHomeserverUrl = matrixGatewayStore.getMatrixHomeserverUrl()
+        if (pinnedHomeserverUrl == null) {
+            Timber.w("Pinned homeserver URL is missing")
             return null
+        }
+
+        if (url != null && !url.isSameHomeserverAs(pinnedHomeserverUrl)) {
+            Timber.w("Ignoring non-pinned homeserver URL: $url")
         }
 
         return try {
             HomeServerConnectionConfig.Builder()
-                    .withHomeServerUri(url)
+                    .withHomeServerUri(pinnedHomeserverUrl)
                     .withAllowedFingerPrints(fingerprints)
                     .build()
         } catch (t: Throwable) {
@@ -29,4 +38,8 @@ class HomeServerConnectionConfigFactory @Inject constructor() {
             null
         }
     }
+}
+
+private fun String.isSameHomeserverAs(other: String): Boolean {
+    return trim().trimEnd('/').equals(other.trim().trimEnd('/'), ignoreCase = true)
 }

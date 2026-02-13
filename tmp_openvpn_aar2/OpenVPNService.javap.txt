@@ -1,0 +1,482 @@
+Compiled from "OpenVPNService.kt"
+public final class com.tim.openvpn.service.OpenVPNService extends com.tim.basevpn.singleProcess.ProtocolsVpnService implements android.os.Handler$Callback,com.tim.openvpn.service.IOpenVPNService {
+  public static final com.tim.openvpn.service.OpenVPNService$Companion Companion;
+
+  public static final java.lang.String CONFIGURATION_KEY;
+
+  public com.tim.openvpn.service.OpenVPNService();
+    Code:
+       0: aload_0
+       1: invokespecial #12                 // Method com/tim/basevpn/singleProcess/ProtocolsVpnService."<init>":()V
+       4: aload_0
+       5: new           #14                 // class java/util/ArrayList
+       8: dup
+       9: invokespecial #15                 // Method java/util/ArrayList."<init>":()V
+      12: checkcast     #17                 // class java/util/List
+      15: putfield      #21                 // Field dnsList:Ljava/util/List;
+      18: aload_0
+      19: new           #23                 // class com/tim/openvpn/utils/NetworkSpace
+      22: dup
+      23: invokespecial #24                 // Method com/tim/openvpn/utils/NetworkSpace."<init>":()V
+      26: putfield      #28                 // Field mRoutes:Lcom/tim/openvpn/utils/NetworkSpace;
+      29: aload_0
+      30: new           #23                 // class com/tim/openvpn/utils/NetworkSpace
+      33: dup
+      34: invokespecial #24                 // Method com/tim/openvpn/utils/NetworkSpace."<init>":()V
+      37: putfield      #31                 // Field mRoutesv6:Lcom/tim/openvpn/utils/NetworkSpace;
+      40: return
+
+  public boolean handleMessage(android.os.Message);
+    Code:
+       0: aload_1
+       1: ldc           #38                 // String msg
+       3: invokestatic  #44                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+       6: aload_1
+       7: invokevirtual #50                 // Method android/os/Message.getCallback:()Ljava/lang/Runnable;
+      10: astore_2
+      11: aload_2
+      12: ifnull        25
+      15: aload_2
+      16: invokeinterface #55,  1           // InterfaceMethod java/lang/Runnable.run:()V
+      21: iconst_1
+      22: goto          26
+      25: iconst_0
+      26: ireturn
+
+  public void onRevoke();
+    Code:
+       0: aload_0
+       1: invokespecial #62                 // Method endVpnService:()V
+       4: aload_0
+       5: invokespecial #64                 // Method com/tim/basevpn/singleProcess/ProtocolsVpnService.onRevoke:()V
+       8: return
+
+  public void prepare(android.content.Intent);
+    Code:
+       0: aload_1
+       1: ldc           #68                 // String intent
+       3: invokestatic  #44                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+       6: aload_0
+       7: aload_1
+       8: invokestatic  #74                 // Method com/tim/openvpn/parser/ConfigurationKt.parseConfiguration:(Landroid/content/Intent;)Lcom/tim/openvpn/configuration/OpenVPNConfig;
+      11: putfield      #78                 // Field config:Lcom/tim/openvpn/configuration/OpenVPNConfig;
+      14: return
+
+  public void start();
+    Code:
+       0: aload_0
+       1: invokespecial #83                 // Method startOpenVPN:()V
+       4: return
+
+  public void stop();
+    Code:
+       0: aload_0
+       1: invokespecial #87                 // Method stopOpenVPN:()V
+       4: return
+
+  public void onDestroy();
+    Code:
+       0: aload_0
+       1: invokespecial #92                 // Method com/tim/basevpn/singleProcess/ProtocolsVpnService.onDestroy:()V
+       4: aload_0
+       5: checkcast     #94                 // class android/content/Context
+       8: invokestatic  #100                // Method com/tim/basevpn/utils/ProcessKt.currentProcess:(Landroid/content/Context;)Ljava/lang/String;
+      11: checkcast     #102                // class java/lang/CharSequence
+      14: ldc           #104                // String openvpn
+      16: checkcast     #102                // class java/lang/CharSequence
+      19: iconst_1
+      20: invokestatic  #110                // Method kotlin/text/StringsKt.contains:(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+      23: ifeq          40
+      26: iconst_0
+      27: invokestatic  #116                // Method java/lang/System.exit:(I)V
+      30: new           #118                // class java/lang/RuntimeException
+      33: dup
+      34: ldc           #120                // String System.exit returned normally, while it was supposed to halt JVM.
+      36: invokespecial #123                // Method java/lang/RuntimeException."<init>":(Ljava/lang/String;)V
+      39: athrow
+      40: aload_0
+      41: astore_1
+      42: nop
+      43: getstatic     #129                // Field kotlin/Result.Companion:Lkotlin/Result$Companion;
+      46: pop
+      47: aload_1
+      48: checkcast     #2                  // class com/tim/openvpn/service/OpenVPNService
+      51: astore_2
+      52: iconst_0
+      53: istore_3
+      54: aload_2
+      55: invokevirtual #132                // Method stopSelf:()V
+      58: getstatic     #138                // Field kotlin/Unit.INSTANCE:Lkotlin/Unit;
+      61: invokestatic  #142                // Method kotlin/Result."constructor-impl":(Ljava/lang/Object;)Ljava/lang/Object;
+      64: astore_2
+      65: goto          81
+      68: astore_3
+      69: getstatic     #129                // Field kotlin/Result.Companion:Lkotlin/Result$Companion;
+      72: pop
+      73: aload_3
+      74: invokestatic  #148                // Method kotlin/ResultKt.createFailure:(Ljava/lang/Throwable;)Ljava/lang/Object;
+      77: invokestatic  #142                // Method kotlin/Result."constructor-impl":(Ljava/lang/Object;)Ljava/lang/Object;
+      80: astore_2
+      81: return
+    Exception table:
+       from    to  target type
+          42    65    68   Class java/lang/Throwable
+
+  public void setMtu(int);
+    Code:
+       0: aload_0
+       1: iload_1
+       2: invokestatic  #607                // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+       5: putfield      #384                // Field mtu:Ljava/lang/Integer;
+       8: return
+
+  public void addDNS(java.lang.String);
+    Code:
+       0: aload_1
+       1: dup
+       2: ifnull        22
+       5: astore_2
+       6: iconst_0
+       7: istore_3
+       8: aload_0
+       9: getfield      #21                 // Field dnsList:Ljava/util/List;
+      12: aload_2
+      13: invokeinterface #610,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+      18: pop
+      19: goto          24
+      22: pop
+      23: nop
+      24: return
+
+  public void addRoute(com.tim.openvpn.model.CIDRIP, boolean);
+    Code:
+       0: aload_0
+       1: getfield      #28                 // Field mRoutes:Lcom/tim/openvpn/utils/NetworkSpace;
+       4: aload_1
+       5: iload_2
+       6: invokevirtual #615                // Method com/tim/openvpn/utils/NetworkSpace.addIP:(Lcom/tim/openvpn/model/CIDRIP;Z)V
+       9: return
+
+  public void addRoute(java.lang.String, java.lang.String, java.lang.String, java.lang.String);
+    Code:
+       0: new           #258                // class com/tim/openvpn/model/CIDRIP
+       3: dup
+       4: aload_1
+       5: dup
+       6: invokestatic  #300                // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;)V
+       9: aload_2
+      10: dup
+      11: invokestatic  #300                // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;)V
+      14: invokespecial #619                // Method com/tim/openvpn/model/CIDRIP."<init>":(Ljava/lang/String;Ljava/lang/String;)V
+      17: astore        5
+      19: aload_0
+      20: aload         4
+      22: invokespecial #623                // Method isAndroidTunDevice:(Ljava/lang/String;)Z
+      25: istore        6
+      27: new           #410                // class com/tim/openvpn/utils/NetworkSpace$IpAddress
+      30: dup
+      31: new           #258                // class com/tim/openvpn/model/CIDRIP
+      34: dup
+      35: aload_3
+      36: dup
+      37: invokestatic  #300                // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;)V
+      40: bipush        32
+      42: invokespecial #417                // Method com/tim/openvpn/model/CIDRIP."<init>":(Ljava/lang/String;I)V
+      45: iconst_0
+      46: invokespecial #420                // Method com/tim/openvpn/utils/NetworkSpace$IpAddress."<init>":(Lcom/tim/openvpn/model/CIDRIP;Z)V
+      49: astore        7
+      51: aload_0
+      52: getfield      #253                // Field localIp:Lcom/tim/openvpn/model/CIDRIP;
+      55: ifnonnull     68
+      58: ldc_w         #271                // String OpenVPNService
+      61: ldc_w         #625                // String Local IP address unset and received. Neither pushed server config nor local config specifies an IP addresses. Opening tun device is most likely going to fail.
+      64: invokestatic  #292                // Method com/tim/openvpn/log/OpenVPNLogger.e:(Ljava/lang/String;Ljava/lang/String;)V
+      67: return
+      68: new           #410                // class com/tim/openvpn/utils/NetworkSpace$IpAddress
+      71: dup
+      72: aload_0
+      73: getfield      #253                // Field localIp:Lcom/tim/openvpn/model/CIDRIP;
+      76: iconst_1
+      77: invokespecial #420                // Method com/tim/openvpn/utils/NetworkSpace$IpAddress."<init>":(Lcom/tim/openvpn/model/CIDRIP;Z)V
+      80: astore        8
+      82: aload         8
+      84: aload         7
+      86: invokevirtual #425                // Method com/tim/openvpn/utils/NetworkSpace$IpAddress.containsNet:(Lcom/tim/openvpn/utils/NetworkSpace$IpAddress;)Z
+      89: ifeq          95
+      92: iconst_1
+      93: istore        6
+      95: aload_3
+      96: ldc_w         #627                // String 255.255.255.255
+      99: invokevirtual #630                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+     102: ifeq          108
+     105: iconst_1
+     106: istore        6
+     108: aload         5
+     110: invokevirtual #265                // Method com/tim/openvpn/model/CIDRIP.getLen:()I
+     113: bipush        32
+     115: if_icmpne     135
+     118: aload_2
+     119: ldc_w         #627                // String 255.255.255.255
+     122: invokevirtual #630                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+     125: ifne          135
+     128: ldc_w         #271                // String OpenVPNService
+     131: aload_1
+     132: invokestatic  #292                // Method com/tim/openvpn/log/OpenVPNLogger.e:(Ljava/lang/String;Ljava/lang/String;)V
+     135: aload         5
+     137: invokevirtual #633                // Method com/tim/openvpn/model/CIDRIP.normalise:()Z
+     140: ifeq          152
+     143: ldc_w         #271                // String OpenVPNService
+     146: ldc_w         #635                // String normalise(): dest, route.len, route.mIp
+     149: invokestatic  #292                // Method com/tim/openvpn/log/OpenVPNLogger.e:(Ljava/lang/String;Ljava/lang/String;)V
+     152: aload_0
+     153: getfield      #28                 // Field mRoutes:Lcom/tim/openvpn/utils/NetworkSpace;
+     156: aload         5
+     158: iload         6
+     160: invokevirtual #615                // Method com/tim/openvpn/utils/NetworkSpace.addIP:(Lcom/tim/openvpn/model/CIDRIP;Z)V
+     163: return
+
+  public void addRoutev6(java.lang.String, java.lang.String);
+    Code:
+       0: aload_0
+       1: aload_2
+       2: invokespecial #623                // Method isAndroidTunDevice:(Ljava/lang/String;)Z
+       5: istore_3
+       6: aload_1
+       7: dup
+       8: ifnull        25
+      11: astore        4
+      13: iconst_0
+      14: istore        5
+      16: aload_0
+      17: aload_1
+      18: iload_3
+      19: invokevirtual #546                // Method addRoutev6:(Ljava/lang/String;Z)V
+      22: goto          27
+      25: pop
+      26: nop
+      27: return
+
+  public final void addRoutev6(java.lang.String, boolean);
+    Code:
+       0: aload_1
+       1: ldc_w         #645                // String network
+       4: invokestatic  #44                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+       7: aload_1
+       8: checkcast     #102                // class java/lang/CharSequence
+      11: astore        4
+      13: new           #302                // class kotlin/text/Regex
+      16: dup
+      17: ldc_w         #304                // String /
+      20: invokespecial #305                // Method kotlin/text/Regex."<init>":(Ljava/lang/String;)V
+      23: astore        5
+      25: iconst_0
+      26: istore        6
+      28: aload         5
+      30: aload         4
+      32: iload         6
+      34: invokevirtual #309                // Method kotlin/text/Regex.split:(Ljava/lang/CharSequence;I)Ljava/util/List;
+      37: astore        4
+      39: nop
+      40: iconst_0
+      41: istore        5
+      43: aload         4
+      45: invokeinterface #313,  1          // InterfaceMethod java/util/List.isEmpty:()Z
+      50: ifne          136
+      53: aload         4
+      55: aload         4
+      57: invokeinterface #316,  1          // InterfaceMethod java/util/List.size:()I
+      62: invokeinterface #320,  2          // InterfaceMethod java/util/List.listIterator:(I)Ljava/util/ListIterator;
+      67: astore        6
+      69: aload         6
+      71: invokeinterface #325,  1          // InterfaceMethod java/util/ListIterator.hasPrevious:()Z
+      76: ifeq          136
+      79: aload         6
+      81: invokeinterface #329,  1          // InterfaceMethod java/util/ListIterator.previous:()Ljava/lang/Object;
+      86: checkcast     #234                // class java/lang/String
+      89: astore        7
+      91: iconst_0
+      92: istore        8
+      94: aload         7
+      96: checkcast     #102                // class java/lang/CharSequence
+      99: invokeinterface #332,  1          // InterfaceMethod java/lang/CharSequence.length:()I
+     104: ifne          111
+     107: iconst_1
+     108: goto          112
+     111: iconst_0
+     112: nop
+     113: ifne          69
+     116: aload         4
+     118: checkcast     #334                // class java/lang/Iterable
+     121: aload         6
+     123: invokeinterface #337,  1          // InterfaceMethod java/util/ListIterator.nextIndex:()I
+     128: iconst_1
+     129: iadd
+     130: invokestatic  #343                // Method kotlin/collections/CollectionsKt.take:(Ljava/lang/Iterable;I)Ljava/util/List;
+     133: goto          139
+     136: invokestatic  #347                // Method kotlin/collections/CollectionsKt.emptyList:()Ljava/util/List;
+     139: checkcast     #349                // class java/util/Collection
+     142: astore        4
+     144: nop
+     145: iconst_0
+     146: istore        5
+     148: aload         4
+     150: astore        6
+     152: aload         6
+     154: iconst_0
+     155: anewarray     #234                // class java/lang/String
+     158: invokeinterface #353,  2          // InterfaceMethod java/util/Collection.toArray:([Ljava/lang/Object;)[Ljava/lang/Object;
+     163: checkcast     #355                // class "[Ljava/lang/String;"
+     166: astore_3
+     167: nop
+     168: aload_3
+     169: iconst_0
+     170: aaload
+     171: invokestatic  #651                // Method java/net/InetAddress.getAllByName:(Ljava/lang/String;)[Ljava/net/InetAddress;
+     174: iconst_0
+     175: aaload
+     176: dup
+     177: ldc_w         #653                // String null cannot be cast to non-null type java.net.Inet6Address
+     180: invokestatic  #655                // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
+     183: checkcast     #657                // class java/net/Inet6Address
+     186: astore        4
+     188: aload_3
+     189: iconst_1
+     190: aaload
+     191: invokestatic  #361                // Method java/lang/Integer.parseInt:(Ljava/lang/String;)I
+     194: istore        5
+     196: aload_0
+     197: getfield      #31                 // Field mRoutesv6:Lcom/tim/openvpn/utils/NetworkSpace;
+     200: aload         4
+     202: iload         5
+     204: iload_2
+     205: invokevirtual #661                // Method com/tim/openvpn/utils/NetworkSpace.addIPv6:(Ljava/net/Inet6Address;IZ)V
+     208: goto          226
+     211: astore        4
+     213: ldc_w         #271                // String OpenVPNService
+     216: aload         4
+     218: invokedynamic #666,  0            // InvokeDynamic #4:makeConcatWithConstants:(Ljava/net/UnknownHostException;)Ljava/lang/String;
+     223: invokestatic  #292                // Method com/tim/openvpn/log/OpenVPNLogger.e:(Ljava/lang/String;Ljava/lang/String;)V
+     226: return
+    Exception table:
+       from    to  target type
+         167   208   211   Class java/net/UnknownHostException
+
+  public void setDomain(java.lang.String);
+    Code:
+       0: aload_1
+       1: dup
+       2: ifnull        16
+       5: astore_2
+       6: iconst_0
+       7: istore_3
+       8: aload_0
+       9: aload_2
+      10: putfield      #462                // Field domain:Ljava/lang/String;
+      13: goto          18
+      16: pop
+      17: nop
+      18: return
+
+  public boolean addHttpProxy(java.lang.String, int);
+    Code:
+       0: iconst_0
+       1: ireturn
+
+  public boolean protectFd(int);
+    Code:
+       0: aload_0
+       1: iload_1
+       2: invokevirtual #681                // Method protect:(I)Z
+       5: ireturn
+
+  public android.os.ParcelFileDescriptor openTun();
+    Code:
+       0: aload_0
+       1: invokespecial #685                // Method startTun:()Landroid/os/ParcelFileDescriptor;
+       4: areturn
+
+  public void setLocalIP(com.tim.openvpn.model.CIDRIP);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: putfield      #253                // Field localIp:Lcom/tim/openvpn/model/CIDRIP;
+       5: return
+
+  public void setLocalIPv6(java.lang.String);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: putfield      #296                // Field mLocalIPv6:Ljava/lang/String;
+       5: return
+
+  public void trigger_sso(java.lang.String);
+    Code:
+       0: return
+
+  public android.content.ContentResolver getCtResolver();
+    Code:
+       0: aload_0
+       1: invokevirtual #697                // Method getContentResolver:()Landroid/content/ContentResolver;
+       4: dup
+       5: ldc_w         #699                // String getContentResolver(...)
+       8: invokestatic  #702                // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+      11: areturn
+
+  public android.net.ConnectivityManager getConnectivityManager();
+    Code:
+       0: aload_0
+       1: ldc_w         #704                // String connectivity
+       4: invokevirtual #708                // Method getSystemService:(Ljava/lang/String;)Ljava/lang/Object;
+       7: dup
+       8: ldc_w         #710                // String null cannot be cast to non-null type android.net.ConnectivityManager
+      11: invokestatic  #655                // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
+      14: checkcast     #712                // class android/net/ConnectivityManager
+      17: areturn
+
+  public void openvpnStopped();
+    Code:
+       0: aload_0
+       1: invokevirtual #716                // Method stopNotification:()V
+       4: aload_0
+       5: getfield      #229                // Field job:Lkotlinx/coroutines/Job;
+       8: dup
+       9: ifnull        21
+      12: aconst_null
+      13: iconst_1
+      14: aconst_null
+      15: invokestatic  #722                // Method kotlinx/coroutines/Job$DefaultImpls.cancel$default:(Lkotlinx/coroutines/Job;Ljava/util/concurrent/CancellationException;ILjava/lang/Object;)V
+      18: goto          22
+      21: pop
+      22: aload_0
+      23: aconst_null
+      24: putfield      #229                // Field job:Lkotlinx/coroutines/Job;
+      27: aload_0
+      28: aconst_null
+      29: putfield      #192                // Field management:Lcom/tim/openvpn/OpenVPNThreadv3;
+      32: return
+
+  public void updateStateThread(com.tim.basevpn.state.ConnectionState);
+    Code:
+       0: aload_1
+       1: ldc_w         #728                // String state
+       4: invokestatic  #44                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+       7: aload_0
+       8: aload_1
+       9: invokevirtual #731                // Method updateState:(Lcom/tim/basevpn/state/ConnectionState;)V
+      12: return
+
+  public static final com.tim.openvpn.OpenVPNThreadv3 access$getManagement$p(com.tim.openvpn.service.OpenVPNService);
+    Code:
+       0: aload_0
+       1: getfield      #192                // Field management:Lcom/tim/openvpn/OpenVPNThreadv3;
+       4: areturn
+
+  static {};
+    Code:
+       0: new           #747                // class com/tim/openvpn/service/OpenVPNService$Companion
+       3: dup
+       4: aconst_null
+       5: invokespecial #750                // Method com/tim/openvpn/service/OpenVPNService$Companion."<init>":(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+       8: putstatic     #753                // Field Companion:Lcom/tim/openvpn/service/OpenVPNService$Companion;
+      11: return
+}

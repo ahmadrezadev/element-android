@@ -1,0 +1,1 @@
+int drawable ic_key 0x0

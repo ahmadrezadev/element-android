@@ -24,6 +24,9 @@ import im.vector.app.core.platform.VectorViewModel
 import im.vector.app.core.resources.StringProvider
 import im.vector.app.core.session.ConfigureAndStartSessionUseCase
 import im.vector.app.core.utils.ensureTrailingSlash
+import im.vector.app.features.vpn.VpnBootstrapCoordinator
+import im.vector.app.features.vpn.VpnConnectionFailedException
+import im.vector.app.features.vpn.VpnPermissionRequiredException
 import im.vector.lib.strings.CommonStrings
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
@@ -58,6 +61,7 @@ class LoginViewModel @AssistedInject constructor(
         private val stringProvider: StringProvider,
         private val homeServerHistoryService: HomeServerHistoryService,
         private val configureAndStartSessionUseCase: ConfigureAndStartSessionUseCase,
+        private val vpnBootstrapCoordinator: VpnBootstrapCoordinator,
 ) : VectorViewModel<LoginViewState, LoginAction, LoginViewEvents>(initialState) {
 
     @AssistedFactory
@@ -111,7 +115,7 @@ class LoginViewModel @AssistedInject constructor(
             is LoginAction.UpdateServerType -> handleUpdateServerType(action)
             is LoginAction.UpdateSignMode -> handleUpdateSignMode(action)
             is LoginAction.InitWith -> handleInitWith(action)
-            is LoginAction.UpdateHomeServer -> handleUpdateHomeserver(action).also { lastAction = action }
+            is LoginAction.UpdateHomeServer -> handleUpdateHomeserver().also { lastAction = action }
             is LoginAction.LoginOrRegister -> handleLoginOrRegister(action).also { lastAction = action }
             is LoginAction.LoginWithToken -> handleLoginWithToken(action)
             is LoginAction.WebLoginSuccess -> handleWebLoginSuccess(action)
@@ -130,21 +134,7 @@ class LoginViewModel @AssistedInject constructor(
         if (action.resetLoginConfig) {
             loginConfig = null
         }
-
-        val configUrl = loginConfig?.homeServerUrl?.takeIf { it.isNotEmpty() }
-        if (configUrl != null) {
-            // Use config from uri
-            val homeServerConnectionConfig = homeServerConnectionConfigFactory.create(configUrl)
-            if (homeServerConnectionConfig == null) {
-                // Url is invalid, in this case, just use the regular flow
-                Timber.w("Url from config url was invalid: $configUrl")
-                _viewEvents.post(LoginViewEvents.OpenServerSelection)
-            } else {
-                getLoginFlow(homeServerConnectionConfig, ServerType.Other)
-            }
-        } else {
-            _viewEvents.post(LoginViewEvents.OpenServerSelection)
-        }
+        resolveProvisionedHomeServerAndGetLoginFlow()
     }
 
     private fun handleUserAcceptCertificate(action: LoginAction.UserAcceptCertificate) {
@@ -336,15 +326,8 @@ class LoginViewModel @AssistedInject constructor(
         }
     }
 
-    private fun handleRegisterWith(action: LoginAction.LoginOrRegister) {
-        reAuthHelper.data = action.password
-        currentJob = executeRegistrationStep {
-            it.createAccount(
-                    action.username,
-                    action.password,
-                    action.initialDeviceName
-            )
-        }
+    private fun handleRegisterWith(@Suppress("UNUSED_PARAMETER") action: LoginAction.LoginOrRegister) {
+        _viewEvents.post(LoginViewEvents.Failure(Throwable("Registration is disabled")))
     }
 
     private fun handleCaptchaDone(action: LoginAction.CaptchaDone) {
@@ -415,16 +398,22 @@ class LoginViewModel @AssistedInject constructor(
     }
 
     private fun handleUpdateSignMode(action: LoginAction.UpdateSignMode) {
+        val resolvedSignMode = when (action.signMode) {
+            SignMode.SignUp -> SignMode.SignIn
+            SignMode.SignInWithMatrixId -> SignMode.SignIn
+            else -> action.signMode
+        }
+
         setState {
             copy(
-                    signMode = action.signMode
+                    signMode = resolvedSignMode
             )
         }
 
-        when (action.signMode) {
+        when (resolvedSignMode) {
             SignMode.SignUp -> startRegistrationFlow()
             SignMode.SignIn -> startAuthenticationFlow()
-            SignMode.SignInWithMatrixId -> _viewEvents.post(LoginViewEvents.OnSignModeSelected(SignMode.SignInWithMatrixId))
+            SignMode.SignInWithMatrixId -> Unit
             SignMode.Unknown -> Unit
         }
     }
@@ -562,7 +551,7 @@ class LoginViewModel @AssistedInject constructor(
             SignMode.Unknown -> error("Developer error, invalid sign mode")
             SignMode.SignIn -> handleLogin(action)
             SignMode.SignUp -> handleRegisterWith(action)
-            SignMode.SignInWithMatrixId -> handleDirectLogin(action, null)
+            SignMode.SignInWithMatrixId -> _viewEvents.post(LoginViewEvents.Failure(Throwable("Direct matrix-id login is disabled")))
         }
     }
 
@@ -754,13 +743,31 @@ class LoginViewModel @AssistedInject constructor(
         }
     }
 
-    private fun handleUpdateHomeserver(action: LoginAction.UpdateHomeServer) {
-        val homeServerConnectionConfig = homeServerConnectionConfigFactory.create(action.homeServerUrl)
-        if (homeServerConnectionConfig == null) {
-            // This is invalid
-            _viewEvents.post(LoginViewEvents.Failure(Throwable("Unable to create a HomeServerConnectionConfig")))
-        } else {
-            getLoginFlow(homeServerConnectionConfig)
+    private fun handleUpdateHomeserver() {
+        resolveProvisionedHomeServerAndGetLoginFlow()
+    }
+
+    private fun resolveProvisionedHomeServerAndGetLoginFlow() {
+        viewModelScope.launch {
+            setState { copy(asyncHomeServerLoginFlowRequest = Loading()) }
+
+            vpnBootstrapCoordinator.ensureVpnAndResolveHomeserver().fold(
+                    onSuccess = { homeServerUrl ->
+                        val homeServerConnectionConfig = homeServerConnectionConfigFactory.create(homeServerUrl)
+                        if (homeServerConnectionConfig == null) {
+                            setState { copy(asyncHomeServerLoginFlowRequest = Uninitialized) }
+                            _viewEvents.post(LoginViewEvents.Failure(Throwable("Unable to create a HomeServerConnectionConfig")))
+                        } else {
+                            getLoginFlow(homeServerConnectionConfig, ServerType.Other)
+                        }
+                    },
+                    onFailure = { failure ->
+                        setState { copy(asyncHomeServerLoginFlowRequest = Uninitialized) }
+                        if (failure !is VpnConnectionFailedException && failure !is VpnPermissionRequiredException) {
+                            _viewEvents.post(LoginViewEvents.Failure(failure))
+                        }
+                    }
+            )
         }
     }
 

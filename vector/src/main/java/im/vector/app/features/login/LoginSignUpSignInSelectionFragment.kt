@@ -73,7 +73,7 @@ class LoginSignUpSignInSelectionFragment :
                             redirectUrl = SSORedirectRouterActivity.VECTOR_REDIRECT_URL,
                             deviceId = state.deviceId,
                             providerId = provider?.id,
-                            action = if (state.signMode == SignMode.SignUp) SSOAction.REGISTER else SSOAction.LOGIN
+                            action = SSOAction.LOGIN
                     )
                             ?.let { openInCustomTab(it) }
                 }
@@ -91,13 +91,12 @@ class LoginSignUpSignInSelectionFragment :
             is LoginMode.Sso -> {
                 // change to only one button that is sign in with sso
                 views.loginSignupSigninSubmit.text = getString(CommonStrings.login_signin_sso)
-                views.loginSignupSigninSignIn.isVisible = false
             }
             else -> {
-                views.loginSignupSigninSubmit.text = getString(CommonStrings.login_signup)
-                views.loginSignupSigninSignIn.isVisible = true
+                views.loginSignupSigninSubmit.text = getString(CommonStrings.login_signin)
             }
         }
+        views.loginSignupSigninSignIn.isVisible = false
     }
 
     private fun submit() = withState(loginViewModel) { state ->
@@ -106,11 +105,11 @@ class LoginSignUpSignInSelectionFragment :
                     redirectUrl = SSORedirectRouterActivity.VECTOR_REDIRECT_URL,
                     deviceId = state.deviceId,
                     providerId = null,
-                    action = if (state.signMode == SignMode.SignUp) SSOAction.REGISTER else SSOAction.LOGIN
+                    action = SSOAction.LOGIN
             )
                     ?.let { openInCustomTab(it) }
         } else {
-            loginViewModel.handle(LoginAction.UpdateSignMode(SignMode.SignUp))
+            loginViewModel.handle(LoginAction.UpdateSignMode(SignMode.SignIn))
         }
     }
 

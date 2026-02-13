@@ -7,12 +7,6 @@
         android:key="SETTINGS_USER_INTERFACE_KEY"
         android:title="@string/settings_user_interface">
 
-        <im.vector.app.core.preference.VectorPreference
-            android:key="SETTINGS_INTERFACE_LANGUAGE_PREFERENCE_KEY"
-            android:persistent="false"
-            android:title="@string/settings_interface_language"
-            app:fragment="im.vector.app.features.settings.locale.LocalePickerFragment" />
-
         <im.vector.app.core.preference.VectorListPreference
             android:defaultValue="system"
             android:entries="@array/theme_entries"
