@@ -88,10 +88,10 @@ open class VectorPreference : Preference {
             val summary = holder.findViewById(android.R.id.summary) as? TextView
             if (title != null) {
                 title.isSingleLine = false
-                title.setTypeface(null, mTypeface)
+                title.setTypeface(title.typeface, mTypeface)
             }
 
-            summary?.setTypeface(null, mTypeface)
+            summary?.setTypeface(summary.typeface, mTypeface)
 
             if (tintIcon) {
                 // Tint icons (See #1786)

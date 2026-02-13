@@ -13,8 +13,8 @@ import android.net.VpnService
 import android.os.SystemClock
 import android.util.Log
 import com.tim.basevpn.state.ConnectionState
-import im.vector.app.features.home.HomeActivity
 import im.vector.app.features.vpn.openvpn.ElementOpenVpnService
+import im.vector.app.features.vpn.openvpn.ElementVpnServiceNotification
 import im.vector.app.features.vpn.openvpn.ElementOpenVpnServiceConnection
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -138,7 +138,7 @@ class OpenVpnTunnelManager @Inject constructor(
             ElementOpenVpnService.startService(
                     context = appContext,
                     config = preparedConfig,
-                    notificationClass = HomeActivity::class.java.name,
+                    notificationClass = ElementVpnServiceNotification::class.java.name,
                     username = server.username,
                     password = server.password,
                     privateKeyPassword = privateKeyPasswordForService,

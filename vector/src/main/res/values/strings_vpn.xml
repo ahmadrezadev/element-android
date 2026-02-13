@@ -34,6 +34,7 @@
     <string name="vpn_settings_reconnect_success">Connected to %1$s</string>
     <string name="vpn_settings_speed_default_value">0 B/s ↓ / 0 B/s ↑</string>
     <string name="vpn_settings_server_load_error">Failed to load VPN servers</string>
+    <string name="vpn_status_action_stop">Stop VPN</string>
     <string name="vpn_status_action_allow">Allow VPN</string>
     <string name="vpn_status_action_retry">Retry connection</string>
     <string name="a11y_open_vpn_settings">Open VPN settings</string>
