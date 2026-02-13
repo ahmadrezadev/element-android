@@ -29,16 +29,16 @@
     <!-- main text -->
     <style name="TextAppearance.Vector.Widget.ActionBarTitle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
         <item name="android:textColor">?vctr_content_primary</item>
-        <item name="android:fontFamily">sans-serif-medium</item>
-        <item name="fontFamily">sans-serif-medium</item>
+        <item name="android:fontFamily">@font/iran_yekan_x_medium</item>
+        <item name="fontFamily">@font/iran_yekan_x_medium</item>
         <item name="android:textSize">18sp</item>
     </style>
 
     <!-- sub text -->
     <style name="TextAppearance.Vector.Widget.ActionBarSubTitle" parent="TextAppearance.AppCompat.Widget.ActionBar.Subtitle">
         <item name="android:textColor">?vctr_content_secondary</item>
-        <item name="android:fontFamily">sans-serif</item>
-        <item name="fontFamily">sans-serif</item>
+        <item name="android:fontFamily">@font/iran_yekan_x_regular</item>
+        <item name="fontFamily">@font/iran_yekan_x_regular</item>
         <item name="android:textSize">12sp</item>
     </style>
 

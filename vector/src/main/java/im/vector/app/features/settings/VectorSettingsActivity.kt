@@ -25,6 +25,7 @@ import im.vector.app.features.discovery.DiscoverySettingsFragment
 import im.vector.app.features.navigation.SettingsActivityPayload
 import im.vector.app.features.settings.devices.VectorSettingsDevicesFragment
 import im.vector.app.features.settings.notifications.VectorSettingsNotificationFragment
+import im.vector.app.features.settings.vpn.VectorSettingsVpnFragment
 import im.vector.app.features.settings.threepids.ThreePidsSettingsFragment
 import im.vector.lib.core.utils.compat.getParcelableExtraCompat
 import im.vector.lib.strings.CommonStrings
@@ -90,6 +91,8 @@ class VectorSettingsActivity : VectorBaseActivity<ActivityVectorSettingsBinding>
                     requestHighlightPreferenceKeyOnResume(VectorPreferences.SETTINGS_ENABLE_THIS_DEVICE_PREFERENCE_KEY)
                     replaceFragment(views.vectorSettingsPage, VectorSettingsNotificationFragment::class.java, null, FRAGMENT_TAG)
                 }
+                SettingsActivityPayload.Vpn ->
+                    replaceFragment(views.vectorSettingsPage, VectorSettingsVpnFragment::class.java, null, FRAGMENT_TAG)
                 is SettingsActivityPayload.DiscoverySettings -> {
                     replaceFragment(views.vectorSettingsPage, DiscoverySettingsFragment::class.java, payload, FRAGMENT_TAG)
                 }
@@ -174,6 +177,7 @@ class VectorSettingsActivity : VectorBaseActivity<ActivityVectorSettingsBinding>
             EXTRA_DIRECT_ACCESS_SECURITY_PRIVACY_MANAGE_SESSIONS -> SettingsActivityPayload.SecurityPrivacyManageSessions
             EXTRA_DIRECT_ACCESS_GENERAL -> SettingsActivityPayload.General
             EXTRA_DIRECT_ACCESS_NOTIFICATIONS -> SettingsActivityPayload.Notifications
+            EXTRA_DIRECT_ACCESS_VPN -> SettingsActivityPayload.Vpn
             EXTRA_DIRECT_ACCESS_DISCOVERY_SETTINGS -> SettingsActivityPayload.DiscoverySettings()
             else -> {
                 Timber.w("Unknown directAccess: $directAccess defaulting to Root")
@@ -192,6 +196,7 @@ class VectorSettingsActivity : VectorBaseActivity<ActivityVectorSettingsBinding>
         const val EXTRA_DIRECT_ACCESS_GENERAL = 4
         const val EXTRA_DIRECT_ACCESS_NOTIFICATIONS = 5
         const val EXTRA_DIRECT_ACCESS_DISCOVERY_SETTINGS = 6
+        const val EXTRA_DIRECT_ACCESS_VPN = 7
 
         private const val FRAGMENT_TAG = "VectorSettingsPreferencesFragment"
     }

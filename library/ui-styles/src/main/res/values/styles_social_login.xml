@@ -3,7 +3,7 @@
 
     <style name="Widget.Vector.Button.Outlined.SocialLogin">
         <item name="android:textAllCaps">false</item>
-        <item name="fontFamily">sans-serif-medium</item>
+        <item name="fontFamily">@font/iran_yekan_x_medium</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="iconGravity">start</item>

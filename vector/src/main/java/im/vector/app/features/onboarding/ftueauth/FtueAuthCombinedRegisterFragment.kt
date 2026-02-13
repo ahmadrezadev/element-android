@@ -45,7 +45,6 @@ import im.vector.app.features.login.SocialLoginButtonsView
 import im.vector.app.features.login.render
 import im.vector.app.features.onboarding.OnboardingAction
 import im.vector.app.features.onboarding.OnboardingAction.AuthenticateAction
-import im.vector.app.features.onboarding.OnboardingViewEvents
 import im.vector.app.features.onboarding.OnboardingViewState
 import im.vector.lib.strings.CommonStrings
 import kotlinx.coroutines.flow.combine
@@ -76,7 +75,6 @@ class FtueAuthCombinedRegisterFragment :
         super.onViewCreated(view, savedInstanceState)
         setupSubmitButton()
         views.createAccountRoot.realignPercentagesToParent()
-        views.editServerButton.debouncedClicks { viewModel.handle(OnboardingAction.PostViewEvent(OnboardingViewEvents.EditServerSelection)) }
         views.createAccountPasswordInput.setOnImeDoneListener {
             if (canSubmit(views.createAccountInput.content(), views.createAccountPasswordInput.content())) {
                 submit()

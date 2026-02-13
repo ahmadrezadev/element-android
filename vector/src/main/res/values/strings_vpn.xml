@@ -19,6 +19,9 @@
     <string name="vpn_settings_connection_category">Connection</string>
     <string name="vpn_settings_server_category">Servers</string>
     <string name="vpn_settings_routing_category">Routing</string>
+    <string name="vpn_settings_use_vpn_title">Use VPN</string>
+    <string name="vpn_settings_use_vpn_summary_on">VPN is enabled</string>
+    <string name="vpn_settings_use_vpn_summary_off">VPN is disabled</string>
     <string name="vpn_settings_active_server_title">Active server</string>
     <string name="vpn_settings_selected_server_title">Preferred server</string>
     <string name="vpn_settings_reconnect_title">Reconnect now</string>
@@ -33,4 +36,5 @@
     <string name="vpn_settings_server_load_error">Failed to load VPN servers</string>
     <string name="vpn_status_action_allow">Allow VPN</string>
     <string name="vpn_status_action_retry">Retry connection</string>
+    <string name="a11y_open_vpn_settings">Open VPN settings</string>
 </resources>

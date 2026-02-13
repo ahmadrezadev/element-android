@@ -14,10 +14,12 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.preference.Preference
+import com.tim.basevpn.state.ConnectionState
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import dagger.hilt.android.AndroidEntryPoint
 import im.vector.app.R
 import im.vector.app.core.preference.VectorPreference
+import im.vector.app.core.preference.VectorSwitchPreference
 import im.vector.app.features.settings.VectorSettingsBaseFragment
 import im.vector.app.features.vpn.OpenVpnTunnelManager
 import im.vector.app.features.vpn.ProvisionedOpenVpnServer
@@ -29,6 +31,7 @@ import im.vector.app.features.vpn.displayName
 import im.vector.app.features.vpn.formatVpnSpeed
 import im.vector.app.features.vpn.toLocalizedString
 import im.vector.lib.strings.CommonStrings
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -43,6 +46,9 @@ class VectorSettingsVpnFragment : VectorSettingsBaseFragment() {
     override var titleRes: Int = R.string.vpn_settings_title
     override val preferenceXmlRes: Int = R.xml.vector_settings_vpn
 
+    private val enabledPreference by lazy {
+        findPreference<VectorSwitchPreference>(KEY_VPN_ENABLED)!!
+    }
     private val activeServerPreference by lazy {
         findPreference<VectorPreference>(KEY_VPN_ACTIVE_SERVER)!!
     }
@@ -73,6 +79,16 @@ class VectorSettingsVpnFragment : VectorSettingsBaseFragment() {
     }
 
     override fun bindPref() {
+        enabledPreference.onPreferenceChangeListener = Preference.OnPreferenceChangeListener { _, newValue ->
+            val shouldEnable = newValue as? Boolean ?: return@OnPreferenceChangeListener false
+            if (shouldEnable) {
+                reconnectVpn()
+            } else {
+                openVpnTunnelManager.stop()
+                vpnConnectionStatusTracker.onConnectionStateChanged(ConnectionState.DISCONNECTED)
+            }
+            true
+        }
         selectedServerPreference.onPreferenceClickListener = Preference.OnPreferenceClickListener {
             showServerPicker()
             true
@@ -180,6 +196,18 @@ class VectorSettingsVpnFragment : VectorSettingsBaseFragment() {
     }
 
     private fun renderVpnStatus(state: VpnConnectionUiState) {
+        val isEnabled = when (state.connectionState) {
+            ConnectionState.CONNECTED,
+            ConnectionState.CONNECTING,
+            ConnectionState.READYFORCONNECT,
+            ConnectionState.DISCONNECTING -> true
+            else -> false
+        }
+        enabledPreference.isChecked = isEnabled
+        enabledPreference.summary = getString(
+                if (isEnabled) R.string.vpn_settings_use_vpn_summary_on else R.string.vpn_settings_use_vpn_summary_off
+        )
+
         val selectedServer = availableServers.firstOrNull { it.id == vpnServerSelectionStore.getSelectedServerId() }
         activeServerPreference.summary = state.serverName
                 ?: selectedServer?.displayName()
@@ -203,6 +231,7 @@ class VectorSettingsVpnFragment : VectorSettingsBaseFragment() {
     }
 
     private companion object {
+        private const val KEY_VPN_ENABLED = "SETTINGS_VPN_ENABLED_KEY"
         private const val KEY_VPN_ACTIVE_SERVER = "SETTINGS_VPN_ACTIVE_SERVER_KEY"
         private const val KEY_VPN_CONNECTION_STATUS = "SETTINGS_VPN_CONNECTION_STATUS_KEY"
         private const val KEY_VPN_SPEED = "SETTINGS_VPN_SPEED_KEY"

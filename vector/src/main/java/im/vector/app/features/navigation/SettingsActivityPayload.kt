@@ -18,6 +18,7 @@ sealed interface SettingsActivityPayload : Parcelable {
     @Parcelize object SecurityPrivacyManageSessions : SettingsActivityPayload
     @Parcelize object General : SettingsActivityPayload
     @Parcelize object Notifications : SettingsActivityPayload
+    @Parcelize object Vpn : SettingsActivityPayload
 
     @Parcelize
     data class DiscoverySettings(val expandIdentityPolicies: Boolean = false) : SettingsActivityPayload

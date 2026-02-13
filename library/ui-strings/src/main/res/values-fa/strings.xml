@@ -291,7 +291,7 @@
     </plurals>
     <string name="room_participants_leave_prompt_title">ترک اتاق</string>
     <string name="room_participants_leave_prompt_msg">آیا از ترک این اتاق اطمینان دارید؟</string>
-    <string name="room_participants_header_direct_chats">گپ‌های مستقیم</string>
+    <string name="room_participants_header_direct_chats">گفتگو‌های مستقیم</string>
     <string name="room_participants_action_invite">دعوت</string>
     <string name="action_download">بارگیری</string>
     <string name="action_skip">رد شدن</string>
@@ -625,8 +625,8 @@
     <string name="settings_system_preferences_summary">گزینش رنگ چراغ، لرزش، صدا و…</string>
     <string name="settings_containing_my_display_name">پیام‌های شامل نام نمایشی</string>
     <string name="settings_containing_my_user_name">پیام‌های شامل نام کاربری</string>
-    <string name="settings_messages_in_one_to_one">پیام‌ها در گپ‌های یک‌به‌یک</string>
-    <string name="settings_messages_in_group_chat">پیام‌ها در گپ‌های گروهی</string>
+    <string name="settings_messages_in_one_to_one">پیام‌ها در گفتگو‌های یک‌به‌یک</string>
+    <string name="settings_messages_in_group_chat">پیام‌ها در گفتگو‌های گروهی</string>
     <string name="settings_invited_to_room">هنگام دعوت شدن به یک اتاق</string>
     <string name="settings_call_invitations">دعوت‌های تماس</string>
     <string name="settings_messages_sent_by_bot">پیام‌های ارسالی از بات‌ها</string>
@@ -1086,16 +1086,16 @@
     <string name="direct_room_created_summary_item">%s پیوست.</string>
     <string name="room_created_summary_item_by_you">اتاق را ساخته و پیکربندی کردید.</string>
     <string name="encryption_not_enabled">رمزنگاری به کار نیفتاده</string>
-    <string name="direct_room_encryption_enabled_tile_description">پیام‌های این گپ، رمزنگاری سرتاسری دارند.</string>
+    <string name="direct_room_encryption_enabled_tile_description">پیام‌های این گفتگو، رمزنگاری سرتاسری دارند.</string>
     <string name="encryption_enabled_tile_description">پیام‌های این اتاق رمزنگاری سرتاسری دارند. در نمایهٔ کاربران تأییدشان کرده و بیش‌تر بیاموزید.</string>
     <string name="encryption_enabled">رمزنگاری به کار افتاد</string>
     <string name="settings_when_rooms_are_upgraded">هنگام ارتقای اتاق‌ها</string>
-    <string name="settings_messages_in_e2e_group_chat">پیام‌های رمزشده در گپ‌های گروهی</string>
-    <string name="settings_messages_in_e2e_one_to_one">پیام‌های رمزشده در گپ‌های یک‌به‌یک</string>
+    <string name="settings_messages_in_e2e_group_chat">پیام‌های رمزشده در گفتگو‌های گروهی</string>
+    <string name="settings_messages_in_e2e_one_to_one">پیام‌های رمزشده در گفتگو‌های یک‌به‌یک</string>
     <string name="settings_messages_at_room">پیام‌های شامل ‪@room‬</string>
     <string name="auth_invalid_login_deactivated_account">این حساب از کار افتاده است.</string>
     <string name="bootstrap_enter_recovery">برای ادامه %sتان را وارد کنید</string>
-    <string name="security_prompt_text">خوتان و دیگران را برای امن نگه داشتن گپ‌هایتان تأیید کنید</string>
+    <string name="security_prompt_text">خوتان و دیگران را برای امن نگه داشتن گفتگو‌هایتان تأیید کنید</string>
     <string name="enter_secret_storage_passphrase_or_key">برای ادامه از %1$s یا %2$sتان استفاده کنید.</string>
     <string name="command_description_discard_session_not_handled">پشتیبانی‌شده فقط در اتاق‌های رمزشده</string>
     <string name="use_latest_app">از آخرین نگارش المنت روی دیگر افزاره‌تان استفاده کنید:</string>
@@ -1108,7 +1108,7 @@
     <string name="identity_server_set_default_submit">استفاده از %1$s</string>
     <string name="a11y_unmute_microphone">ناخموش کردن میکروفون</string>
     <string name="a11y_mute_microphone">خموش کردن میکروفون</string>
-    <string name="a11y_open_chat">گشودن گپ</string>
+    <string name="a11y_open_chat">گشودن گفتگو</string>
     <string name="power_level_title">نقش</string>
     <string name="power_level_edit_title">تنظیم نقش</string>
     <string name="identity_server_set_alternative_submit">ثبت</string>
@@ -1423,7 +1423,7 @@
     <string name="login_splash_submit">شروع کنید</string>
     <string name="login_splash_text3">تجربه‌هایتان را گسترش داده و شخصی‌سازی کنید</string>
     <string name="login_splash_text2">گفتگوهای خصوصی خود را با رمزگذاری محافظت کنید</string>
-    <string name="login_splash_text1">با افراد به صورت مستقیم و یا در قالب گروه گپ بزنید</string>
+    <string name="login_splash_text1">با افراد به صورت مستقیم و یا در قالب گروه گفتگو بزنید</string>
     <string name="login_splash_title">صاحب گفتگوهای خود باشید.</string>
     <string name="timeline_unread_messages">پیام‌های خوانده نشده</string>
     <string name="direct_room_join_rules_invite_by_you">شما اتاق را به گونه‌ای تنظیم کردید که تنها افراد با دعوت بتوانند به اتاق بپیوندند.</string>
@@ -1698,7 +1698,7 @@
     <string name="identity_server_error_terms_not_signed">لطفاً نخست شرایط کارساز هویت را در تنظیمات بپذیرید.</string>
     <string name="identity_server_error_no_identity_server_configured">لطفاً نخست کارساز هویتی را پیکربندی کنید.</string>
     <string name="identity_server_error_outdated_identity_server">کارساز هویت منقضی شده اسن. المنت تنها نگارش ۲ از API را پشتیبانی می‌کند.</string>
-    <string name="user_code_info_text">این رمز را افراد هم‌رسانی کرده تا بتوانند برای افزودنتان و شروع گپ، بپویندش.</string>
+    <string name="user_code_info_text">این رمز را افراد هم‌رسانی کرده تا بتوانند برای افزودنتان و شروع گفتگو، بپویندش.</string>
     <string name="user_code_my_code">رمزم</string>
     <string name="user_code_share">هم‌رسانی رمزم</string>
     <string name="user_code_scan">پویش یک رمز QR</string>
@@ -1730,7 +1730,7 @@
     <string name="add_by_qr_code">افزودن با رمز QR</string>
     <string name="permissions_denied_add_contact">دادن اجازهٔ دسترسی به آشنایانتان.</string>
     <string name="permissions_denied_qr_code">برای پویش یک رمز QR نیاز است دسترسی به دوربین را مجاز کنید.</string>
-    <string name="start_chatting">آغاز به گپ</string>
+    <string name="start_chatting">آغاز به گفتگو</string>
     <string name="settings_export_trail">برون‌ریزی بازرسی</string>
     <string name="create_room_disable_federation_description">اگر اتاق فقط برای تعامل با گروه‌های داخلی روی کارساز خانگیتان است، این قابلیت را به کار بیندازید. بعداُ قابل تغییر نیست.</string>
     <string name="bottom_sheet_setup_secure_backup_security_key_subtitle">یک کلید امنیتی ایجاد کنید تا در مکانی امن مانند سامانه مدیریت رمز عبور یا گاوصندوق آن را ذخیره کنید.</string>
@@ -1773,7 +1773,7 @@
     <string name="room_alias_publish_to_directory">انتشار این اتاق برای عموم در شاخهٔ اتاق %1$s؟</string>
     <string name="room_alias_local_address_subtitle">تنظیم نشانی‌ها برای این اتاق تا کاربران بتوانند از طریق کارساز خانگیتان (%1$s) بیابندش</string>
     <string name="system_theme">پیش‌گزیدهٔ سامانه</string>
-    <string name="settings_chat_effects_title">نمایش جلوه‌های گپ</string>
+    <string name="settings_chat_effects_title">نمایش جلوه‌های گفتگو</string>
     <string name="settings_chat_effects_description">استفاده از دستور ‪/confetti‬ یا فرستادن پیام‌هایی با ❄️ یا 🎉</string>
     <string name="room_participants_leave_private_warning">این اتاق عمومی نیست. نخواهید توانست بدون دعوت، دوباره بپیوندید.</string>
     <string name="room_settings_permissions_title">اجازه‌های اتاق</string>
@@ -2358,7 +2358,7 @@
     <string name="ftue_auth_use_case_option_two">گروه‌ها</string>
     <string name="ftue_auth_use_case_option_one">دوستان و خانواده</string>
     <string name="ftue_auth_use_case_subtitle">کمکتان می‌کنیم وصل بمانید</string>
-    <string name="ftue_auth_use_case_title">بیش‌تر با چه‌کسی گپ می‌زنید؟</string>
+    <string name="ftue_auth_use_case_title">بیش‌تر با چه‌کسی گفتگو می‌زنید؟</string>
     <string name="navigate_to_thread_when_already_in_the_thread">هم‌اکنون دارید این رشته را می‌بینید!</string>
     <string name="view_in_room">دیدن در اتاق</string>
     <string name="reply_in_thread">پاسخ در رشته</string>
@@ -2514,8 +2514,8 @@
     <string name="poll_undisclosed_not_ended">هنگام پایان نظرسنجی، نتایج نمایان خواهند شد</string>
     <string name="labs_enable_msc3061_share_history_desc">هنگام دعوت به اتاقی رمزشده که تاریخچه‌ای هم‌رسانده دارد، تاریخچهٔ رمز شده نمایان خواهد بود.</string>
     <string name="labs_enable_msc3061_share_history">MSC3061: هم‌رسانی کلیدهای اتاق برای پیام‌های گذشته</string>
-    <string name="send_your_first_msg_to_invite">نخستین پیامتان را برای دعوت %s به گپ بفرستید</string>
-    <string name="direct_room_encryption_enabled_tile_description_future">پیام‌های این گپ رمزنگاری سرتاسری خواهند شد.</string>
+    <string name="send_your_first_msg_to_invite">نخستین پیامتان را برای دعوت %s به گفتگو بفرستید</string>
+    <string name="direct_room_encryption_enabled_tile_description_future">پیام‌های این گفتگو رمزنگاری سرتاسری خواهند شد.</string>
     <string name="create_room_action_go">رفتن</string>
     <string name="settings_troubleshoot_test_endpoint_registration_failed">شکست در ثبت ژتون نقطهٔ پایانی روی کارساز خانگی:
 \n%1$s</string>
@@ -2592,7 +2592,7 @@
     <string name="location_share_loading_map_error">ناتوان در بار کردن نقشه
 \nشاید این کارساز خانگی برای نمایش نقشه‌ها پیکربندی نشده باشد.</string>
     <string name="a11y_open_settings">گشودن تنظیمات</string>
-    <string name="all_chats">تمامی گپ‌ها</string>
+    <string name="all_chats">تمامی گفتگو‌ها</string>
     <string name="device_manager_sessions_other_description">برای امنیت بیش‌تر، نشست‌هایتان را تأیید و از هر نشستی که تشخیصش نمی‌دهید یا دیگر استفاده نمی‌کنید خارج شوید.</string>
     <string name="device_manager_sessions_other_title">دیگر نشست‌ها</string>
     <string name="settings_sessions_list">نشست‌ها</string>
@@ -2610,7 +2610,7 @@
     <string name="home_layout_preferences">ترجیحات چینش</string>
     <string name="explore_rooms">کاوش اتاق‌ها</string>
     <string name="create_room">ایجاد اتاق</string>
-    <string name="start_chat">آغاز گپ</string>
+    <string name="start_chat">آغاز گفتگو</string>
     <string name="device_manager_other_sessions_description_unverified">تأیید نشده · آخرین فعّالیت %1$s</string>
     <string name="device_manager_other_sessions_description_verified">تأیید شده · آخرین فعّالیت %1$s</string>
     <string name="device_manager_other_sessions_view_all">دیدن همه (%1$d)</string>
@@ -2629,7 +2629,7 @@
     <string name="onboarding_new_app_layout_spaces_message">دسترسی به فضاهایتان (پایین سمت چپ) سریع‌تر و ساده‌تر از همیشه.</string>
     <string name="onboarding_new_app_layout_welcome_message">برای ساده‌سازی ${app_name} زبانه‌ها اختیاری شده‌اند. مدیریت با استفاده از فهرست بالا سمت چپ.</string>
     <string name="home_empty_no_unreads_message">این جایی است که پیام‌های ناخوانده‌تان در صورت وجود ظاهر خواهند شد.</string>
-    <string name="home_empty_no_rooms_message">کارهٔ گپ امن یکپارچه برای گروه‌ها، دوستان و سازمان‌ها. برای آغاز، گپی ساخته یا به اتاقی بپیوندید.</string>
+    <string name="home_empty_no_rooms_message">کارهٔ گفتگو امن یکپارچه برای گروه‌ها، دوستان و سازمان‌ها. برای آغاز، گفتگوی ساخته یا به اتاقی بپیوندید.</string>
     <string name="home_empty_space_no_rooms_message">فضاها راهی جدید برای گروه‌بندی اتاق‌ها و افراد است. با استفاده از دکمهٔ پایین سمت چپ فضایی ساخته یا اتاقی را بیفزایید.</string>
     <string name="home_empty_space_no_rooms_title">%s
 \nکمی خالی به نظر می‌رسد.</string>
@@ -2840,7 +2840,7 @@
     <string name="device_manager_sessions_sign_in_with_qr_code_description">می‌توانید با یک رمز QR از این افزاره برای ورود به افزاره‌ای همراه یا روی وب استفاده کنید. دو راه برای این کار وجود دارد:</string>
     <string name="qr_code_login_header_failed_e2ee_security_issue_description">مشکلی امنیتی در برپایی پیام‌رسانی امن وجود داشت. ممکن است یکی از موارد زیر دستکاری شده باشند: کارساز خانیگیتان؛ اتّصال اینترنتیتان؛ افزاره(های)تان؛</string>
     <string name="qr_code_login_confirm_security_code_description">لطفاً مطمئن شوید که مبدأ این کد را می‌دانید. با پیوند دادن افزاره‌ها، دسترسی کامل را به حسابتان می‌دهید.</string>
-    <string name="settings_enable_direct_share_summary">نمایش گپ‌های اخیر در فهرست هم رسانی سامانه</string>
+    <string name="settings_enable_direct_share_summary">نمایش گفتگو‌های اخیر در فهرست هم رسانی سامانه</string>
     <string name="settings_enable_direct_share_title">به کار انداختن هم‌رسانی مستقیم</string>
     <string name="settings_security_incognito_keyboard_summary">درخواست این که صفحه‌کلید نباید هیچ دادهٔ شخصی‌ شده‌ای را مانند نوشتن تاریخچه و واژه‌نامه برپایهٔ آن‌چه در گفت‌وگوها می‌نویسید به‌روز کند. توجّه داشته باشید که ممکن است برخی صفحه‌کلیدها به این تنظیمات احترام نگذارند.</string>
     <string name="permissions_rationale_msg_notification">${app_name} برای نمایش آگاهی‌ها نیازمند اجازه است. آگاهی می‌تواندد پیام‌ها، دعوت‌ها و…تان را نشان دهند.
@@ -2925,7 +2925,7 @@
     <string name="error_voice_broadcast_unable_to_decrypt">ناتوان در رمزگشایی این پخش صوتی.</string>
     <string name="settings_external_account_management">جزییات حسابتان جداگانه در %1$s مدیریت می‌شود.</string>
     <string name="settings_notification_error_on_update">هنگام به‌روز رسانی ترجیحات آگاهیتان خطایی رخ داد. لطفاً دوباره تلاش کنید.</string>
-    <string name="direct_room_encryption_enabled_waiting_users_tile_description">به محض پیوستن کاربران دعوت شده، قادر به گپ خواهید بود و اتاق رمزنگاری سرتاسری می‌شود</string>
+    <string name="direct_room_encryption_enabled_waiting_users_tile_description">به محض پیوستن کاربران دعوت شده، قادر به گفتگو خواهید بود و اتاق رمزنگاری سرتاسری می‌شود</string>
     <string name="direct_room_encryption_enabled_waiting_users">منتظر پیوستن کاربران به ${app_name}</string>
     <string name="direct_room_user_list_only_invite_one_email">در هر زمان تنها می‌توانید یک رایانامه را دعوت کنید</string>
     <string name="pill_message_unknown_room_or_space">اتاق یا فضا</string>
@@ -2957,10 +2957,10 @@
     <string name="invite_unknown_users_dialog_content">ناتوان در یافتن نمایه‌ها برای شناسه‌های ماتریکس سیاهه شده. می‌خواهید به هر حال دعوتشان کنید؟
 \n
 \n%s</string>
-    <string name="create_room_unknown_users_dialog_content">ناتوان در یافتن نمایه‌ها برای شناسه‌های ماتریکس سیاهه شده. می‌خواهید به هر حال گپی بیاغازید؟
+    <string name="create_room_unknown_users_dialog_content">ناتوان در یافتن نمایه‌ها برای شناسه‌های ماتریکس سیاهه شده. می‌خواهید به هر حال گفتگوی بیاغازید؟
 \n
 \n%s</string>
-    <string name="create_room_unknown_users_dialog_submit">آغاز گپ به هر حال</string>
+    <string name="create_room_unknown_users_dialog_submit">آغاز گفتگو به هر حال</string>
     <string name="invite_unknown_users_dialog_submit">دعوت به هر حال</string>
     <string name="login_splash_sign_in">ورود</string>
     <string name="message_report_user">گزارش کاربر</string>

@@ -213,14 +213,7 @@ class FtueAuthVariant(
             OnboardingViewEvents.OnChooseProfilePicture -> onChooseProfilePicture()
             OnboardingViewEvents.OnPersonalizationComplete -> onPersonalizationComplete()
             OnboardingViewEvents.OnBack -> activity.popBackstack()
-            OnboardingViewEvents.EditServerSelection -> {
-                activity.addFragmentToBackstack(
-                        views.loginFragmentContainer,
-                        FtueAuthCombinedServerSelectionFragment::class.java,
-                        option = commonOption,
-                        tag = FRAGMENT_EDIT_HOMESERVER_TAG
-                )
-            }
+            OnboardingViewEvents.EditServerSelection -> Unit
             OnboardingViewEvents.OnHomeserverEdited -> {
                 supportFragmentManager.popBackStack(
                         FRAGMENT_EDIT_HOMESERVER_TAG,

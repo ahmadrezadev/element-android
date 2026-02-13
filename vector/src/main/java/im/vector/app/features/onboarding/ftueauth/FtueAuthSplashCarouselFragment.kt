@@ -68,7 +68,7 @@ class FtueAuthSplashCarouselFragment :
         tabLayoutMediator = TabLayoutMediator(views.carouselIndicator, views.splashCarousel) { _, _ -> }
                 .also { it.attach() }
 
-        carouselController.setData(carouselStateFactory.create())
+        carouselController.setData(carouselStateFactory.create(requireContext()))
 
         views.loginSplashSubmit.apply {
             setText(CommonStrings.login_splash_submit)

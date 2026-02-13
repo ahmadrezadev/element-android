@@ -85,7 +85,7 @@
             android:text="@string/ftue_auth_create_account_choose_server_header"
             android:textColor="?vctr_content_secondary"
             app:layout_constraintBottom_toTopOf="@id/selectedServerName"
-            app:layout_constraintEnd_toStartOf="@id/editServerButton"
+            app:layout_constraintEnd_toEndOf="@id/createAccountGutterEnd"
             app:layout_constraintStart_toStartOf="@id/createAccountGutterStart"
             app:layout_constraintTop_toBottomOf="@id/titleContentSpacing" />
 
@@ -97,7 +97,7 @@
             android:layout_marginStart="12dp"
             android:textColor="?vctr_content_primary"
             app:layout_constraintBottom_toTopOf="@id/serverSelectionSpacing"
-            app:layout_constraintEnd_toStartOf="@id/editServerButton"
+            app:layout_constraintEnd_toEndOf="@id/createAccountGutterEnd"
             app:layout_constraintStart_toStartOf="@id/createAccountGutterStart"
             app:layout_constraintTop_toBottomOf="@id/chooseYourServerHeader"
             tools:text="matrix.org" />
@@ -112,9 +112,11 @@
             android:paddingEnd="12dp"
             android:text="@string/ftue_auth_create_account_edit_server_selection"
             android:textAllCaps="true"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="@id/selectedServerName"
             app:layout_constraintEnd_toEndOf="@id/createAccountGutterEnd"
-            app:layout_constraintTop_toTopOf="@id/chooseYourServerHeader" />
+            app:layout_constraintTop_toTopOf="@id/chooseYourServerHeader"
+            tools:visibility="visible" />
 
         <Space
             android:id="@+id/serverSelectionSpacing"

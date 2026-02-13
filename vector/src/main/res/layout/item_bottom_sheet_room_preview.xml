@@ -33,7 +33,7 @@
         android:layout_gravity="start"
         android:layout_marginStart="8dp"
         android:ellipsize="end"
-        android:fontFamily="sans-serif-bold"
+        android:fontFamily="@font/iran_yekan_x_bold"
         android:singleLine="true"
         android:textColor="?vctr_content_primary"
         android:textStyle="bold"

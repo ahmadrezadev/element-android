@@ -620,14 +620,6 @@ class HomeActivity :
 
     override fun handleMenuItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.menu_home_suggestion -> {
-                bugReporter.openBugReportScreen(this, ReportType.SUGGESTION)
-                true
-            }
-            R.id.menu_home_report_bug -> {
-                bugReporter.openBugReportScreen(this, ReportType.BUG_REPORT)
-                true
-            }
             R.id.menu_home_init_sync_legacy -> {
                 // Configure the SDK
                 initialSyncStrategy = InitialSyncStrategy.Legacy
@@ -652,10 +644,6 @@ class HomeActivity :
             }
             R.id.menu_home_layout_settings -> {
                 showLayoutSettings()
-                true
-            }
-            R.id.menu_home_invite_friends -> {
-                launchInviteFriends()
                 true
             }
             R.id.menu_home_qr -> {

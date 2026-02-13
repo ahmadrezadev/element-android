@@ -16,11 +16,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isGone
 import androidx.core.view.isVisible
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import com.airbnb.mvrx.activityViewModel
 import com.airbnb.mvrx.fragmentViewModel
 import com.airbnb.mvrx.withState
 import com.google.android.material.appbar.AppBarLayout
+import com.tim.basevpn.state.ConnectionState
 import dagger.hilt.android.AndroidEntryPoint
 import im.vector.app.R
 import im.vector.app.SpaceStateHandler
@@ -51,14 +54,21 @@ import im.vector.app.features.popup.PopupAlertManager
 import im.vector.app.features.popup.VerificationVectorAlert
 import im.vector.app.features.qrcode.QrCodeScannerActivity
 import im.vector.app.features.settings.VectorPreferences
+import im.vector.app.features.settings.VectorSettingsActivity.Companion.EXTRA_DIRECT_ACCESS_VPN
 import im.vector.app.features.settings.VectorSettingsActivity.Companion.EXTRA_DIRECT_ACCESS_SECURITY_PRIVACY_MANAGE_SESSIONS
 import im.vector.app.features.spaces.SpaceListBottomSheet
+import im.vector.app.features.vpn.OpenVpnTunnelManager
+import im.vector.app.features.vpn.VpnConnectionStatusTracker
+import im.vector.app.features.vpn.VpnConnectionUiState
+import im.vector.app.features.vpn.toLocalizedString
 import im.vector.app.features.workers.signout.BannerState
 import im.vector.app.features.workers.signout.ServerBackupStatusAction
 import im.vector.app.features.workers.signout.ServerBackupStatusViewModel
 import im.vector.lib.strings.CommonStrings
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.launch
 import org.matrix.android.sdk.api.session.crypto.model.DeviceInfo
 import org.matrix.android.sdk.api.session.room.model.RoomSummary
 import javax.inject.Inject
@@ -78,6 +88,8 @@ class NewHomeDetailFragment :
     @Inject lateinit var callManager: WebRtcCallManager
     @Inject lateinit var vectorPreferences: VectorPreferences
     @Inject lateinit var spaceStateHandler: SpaceStateHandler
+    @Inject lateinit var openVpnTunnelManager: OpenVpnTunnelManager
+    @Inject lateinit var vpnConnectionStatusTracker: VpnConnectionStatusTracker
     @Inject lateinit var buildMeta: BuildMeta
 
     private val viewModel: HomeDetailViewModel by fragmentViewModel()
@@ -236,11 +248,18 @@ class NewHomeDetailFragment :
         super.onResume()
         callManager.checkForProtocolsSupportIfNeeded()
         refreshSpaceState()
+        refreshVpnStatus()
     }
 
     private fun refreshSpaceState() {
         spaceStateHandler.getCurrentSpace()?.let {
             onSpaceChange(it)
+        }
+    }
+
+    private fun refreshVpnStatus() {
+        viewLifecycleOwner.lifecycleScope.launch {
+            openVpnTunnelManager.refreshConnectionState()
         }
     }
 
@@ -341,9 +360,29 @@ class NewHomeDetailFragment :
 
         views.collapsingToolbar.debouncedClicks(::openSpaceSettings)
         views.toolbar.debouncedClicks(::openSpaceSettings)
-
+        renderProfileVpnStatus(vpnConnectionStatusTracker.uiState.value)
         views.avatar.debouncedClicks {
             navigator.openSettings(requireContext())
+        }
+        views.profileVpnLabel.debouncedClicks {
+            navigator.openSettings(requireContext(), EXTRA_DIRECT_ACCESS_VPN)
+        }
+        observeProfileVpnStatus()
+    }
+
+    private fun observeProfileVpnStatus() {
+        viewLifecycleOwner.lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.STARTED) {
+                vpnConnectionStatusTracker.uiState.collect(::renderProfileVpnStatus)
+            }
+        }
+    }
+
+    private fun renderProfileVpnStatus(state: VpnConnectionUiState) {
+        views.profileVpnLabel.text = if (state.connectionState == ConnectionState.CONNECTED) {
+            buildMeta.applicationName
+        } else {
+            state.connectionState.toLocalizedString(requireContext())
         }
     }
 

@@ -75,6 +75,8 @@
         <item name="colorOnSurface">?vctr_content_primary</item>
         <item name="android:colorBackground">@color/element_background_dark</item>
         <item name="colorOnBackground">?vctr_content_primary</item>
+        <item name="fontFamily">@font/iran_yekan_x_regular</item>
+        <item name="android:fontFamily">@font/iran_yekan_x_regular</item>
 
         <!--Material type attributes-->
         <item name="textAppearanceButton">@style/TextAppearance.Vector.Button</item>

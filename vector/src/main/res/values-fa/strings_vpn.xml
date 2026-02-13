@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="vpn_status_title">وضعیت VPN</string>
+    <string name="vpn_status_title">وضعیت اتصال به سرور</string>
     <string name="vpn_status_server_label">سرور</string>
     <string name="vpn_status_state_label">وضعیت</string>
     <string name="vpn_status_speed_label">سرعت</string>
@@ -10,7 +10,7 @@
     <string name="vpn_status_state_connected">متصل</string>
     <string name="vpn_status_state_disconnected">قطع شده</string>
     <string name="vpn_status_state_disconnecting">در حال قطع اتصال</string>
-    <string name="vpn_status_state_permission_required">نیازمند مجوز VPN</string>
+    <string name="vpn_status_state_permission_required">نیازمند مجوز</string>
     <string name="vpn_status_state_ready">آماده برای اتصال</string>
     <string name="vpn_status_state_idle">بیکار</string>
 
@@ -19,6 +19,9 @@
     <string name="vpn_settings_connection_category">اتصال</string>
     <string name="vpn_settings_server_category">سرورها</string>
     <string name="vpn_settings_routing_category">مسیر ترافیک</string>
+    <string name="vpn_settings_use_vpn_title">استفاده از VPN</string>
+    <string name="vpn_settings_use_vpn_summary_on">VPN فعال است</string>
+    <string name="vpn_settings_use_vpn_summary_off">VPN غیرفعال است</string>
     <string name="vpn_settings_active_server_title">سرور فعال</string>
     <string name="vpn_settings_selected_server_title">سرور ترجیحی</string>
     <string name="vpn_settings_reconnect_title">اتصال مجدد</string>
@@ -33,4 +36,5 @@
     <string name="vpn_settings_server_load_error">بارگذاری سرورهای VPN ناموفق بود</string>
     <string name="vpn_status_action_allow">اجازه VPN</string>
     <string name="vpn_status_action_retry">اتصال مجدد</string>
+    <string name="a11y_open_vpn_settings">باز کردن تنظیمات VPN</string>
 </resources>
