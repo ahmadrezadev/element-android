@@ -7,9 +7,8 @@
 
 package im.vector.app.ui.robot
 
-import android.annotation.SuppressLint
+import androidx.test.espresso.Espresso.closeSoftKeyboard
 import androidx.test.espresso.Espresso.pressBack
-import androidx.test.espresso.action.ViewActions
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withText
 import com.adevinta.android.barista.assertion.BaristaVisibilityAssertions.assertDisplayed
@@ -110,8 +109,7 @@ class RoomSettingsRobot {
     private fun navigateToInvite() {
         assertDisplayed(R.id.inviteUsersButton)
         clickOn(R.id.inviteUsersButton)
-        @SuppressLint("CheckResult")
-        ViewActions.closeSoftKeyboard()
+        closeSoftKeyboard()
         pressBack()
     }
 
