@@ -1,7 +1,7 @@
 /*
  * Copyright 2018-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -261,10 +261,10 @@ class BugReporter @Inject constructor(
 
                 if (!mIsCancelled) {
                     val text = when (reportType) {
-                        ReportType.BUG_REPORT -> "[Element] $bugDescription"
-                        ReportType.SUGGESTION -> "[Element] [Suggestion] $bugDescription"
-                        ReportType.SPACE_BETA_FEEDBACK -> "[Element] [spaces-feedback] $bugDescription"
-                        ReportType.THREADS_BETA_FEEDBACK -> "[Element] [threads-feedback] $bugDescription"
+                        ReportType.BUG_REPORT -> "[Mana] $bugDescription"
+                        ReportType.SUGGESTION -> "[Mana] [Suggestion] $bugDescription"
+                        ReportType.SPACE_BETA_FEEDBACK -> "[Mana] [spaces-feedback] $bugDescription"
+                        ReportType.THREADS_BETA_FEEDBACK -> "[Mana] [threads-feedback] $bugDescription"
                         ReportType.AUTO_UISI_SENDER,
                         ReportType.AUTO_UISI -> bugDescription
                     }
@@ -338,8 +338,8 @@ class BugReporter @Inject constructor(
                     builder.addFormDataPart("label", buildMeta.flavorDescription)
                     builder.addFormDataPart("label", buildMeta.gitBranchName)
 
-                    // Special for Element
-                    builder.addFormDataPart("label", "[Element]")
+                    // Special for Mana
+                    builder.addFormDataPart("label", "[Mana]")
 
                     // Possible values for BuildConfig.BUILD_TYPE: "debug", "nightly", "release".
                     builder.addFormDataPart("label", BuildConfig.BUILD_TYPE)

@@ -1,7 +1,7 @@
 /*
  * Copyright 2022-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -21,7 +21,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.LargeTest
 import im.vector.app.core.utils.getMatrixInstance
 import im.vector.app.features.MainActivity
-import im.vector.app.ui.robot.ElementRobot
+import im.vector.app.ui.robot.ManaRobot
 import im.vector.lib.strings.CommonStrings
 import kotlinx.coroutines.test.runTest
 import org.amshove.kluent.internal.assertEquals
@@ -206,6 +206,6 @@ class VerifySessionInteractiveTest : VerificationTestBase() {
                 runBlockingTest { uiSession.cryptoService().crossSigningService().isCrossSigningVerified() }
         )
 
-        ElementRobot().signout(false)
+        ManaRobot().signout(false)
     }
 }

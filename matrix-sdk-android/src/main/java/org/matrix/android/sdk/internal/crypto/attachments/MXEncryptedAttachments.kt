@@ -17,7 +17,7 @@
 package org.matrix.android.sdk.internal.crypto.attachments
 
 import android.util.Base64
-import org.matrix.android.sdk.api.session.crypto.attachments.ElementToDecrypt
+import org.matrix.android.sdk.api.session.crypto.attachments.ManaToDecrypt
 import org.matrix.android.sdk.api.session.crypto.model.EncryptedFileInfo
 import org.matrix.android.sdk.api.session.crypto.model.EncryptedFileKey
 import org.matrix.android.sdk.internal.util.base64ToBase64Url
@@ -233,19 +233,19 @@ internal object MXEncryptedAttachments {
      * Decrypt an attachment.
      *
      * @param attachmentStream the attachment stream. Will be closed after this method call.
-     * @param elementToDecrypt the elementToDecrypt info
+     * @param manaToDecrypt the manaToDecrypt info
      * @param outputStream the outputStream where the decrypted attachment will be write.
      * @param clock a clock to retrieve current time
      * @return true in case of success, false in case of error
      */
     fun decryptAttachment(
             attachmentStream: InputStream?,
-            elementToDecrypt: ElementToDecrypt?,
+            manaToDecrypt: ManaToDecrypt?,
             outputStream: OutputStream,
             clock: Clock
     ): Boolean {
         // sanity checks
-        if (null == attachmentStream || elementToDecrypt == null) {
+        if (null == attachmentStream || manaToDecrypt == null) {
             Timber.e("## decryptAttachment() : null stream")
             return false
         }
@@ -253,8 +253,8 @@ internal object MXEncryptedAttachments {
         val t0 = clock.epochMillis()
 
         try {
-            val key = Base64.decode(base64UrlToBase64(elementToDecrypt.k), Base64.DEFAULT)
-            val initVectorBytes = Base64.decode(elementToDecrypt.iv, Base64.DEFAULT)
+            val key = Base64.decode(base64UrlToBase64(manaToDecrypt.k), Base64.DEFAULT)
+            val initVectorBytes = Base64.decode(manaToDecrypt.iv, Base64.DEFAULT)
 
             val decryptCipher = Cipher.getInstance(CIPHER_ALGORITHM)
             val secretKeySpec = SecretKeySpec(key, SECRET_KEY_SPEC_ALGORITHM)
@@ -283,7 +283,7 @@ internal object MXEncryptedAttachments {
 
             val currentDigestValue = base64ToUnpaddedBase64(Base64.encodeToString(messageDigest.digest(), Base64.DEFAULT))
 
-            if (elementToDecrypt.sha256 != currentDigestValue) {
+            if (manaToDecrypt.sha256 != currentDigestValue) {
                 Timber.e("## decryptAttachment() :  Digest value mismatch")
                 return false
             }

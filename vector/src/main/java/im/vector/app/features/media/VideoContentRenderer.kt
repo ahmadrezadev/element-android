@@ -1,7 +1,7 @@
 /*
  * Copyright 2019-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -22,7 +22,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlinx.parcelize.Parcelize
-import org.matrix.android.sdk.api.session.crypto.attachments.ElementToDecrypt
+import org.matrix.android.sdk.api.session.crypto.attachments.ManaToDecrypt
 import timber.log.Timber
 import java.net.URLEncoder
 import javax.inject.Inject
@@ -42,7 +42,7 @@ class VideoContentRenderer @Inject constructor(
             override val filename: String,
             override val mimeType: String?,
             override val url: String?,
-            override val elementToDecrypt: ElementToDecrypt?,
+            override val manaToDecrypt: ManaToDecrypt?,
             val thumbnailMediaData: ImageContentRenderer.Data,
             // If true will load non mxc url, be careful to set it only for video sent by you
             override val allowNonMxcUrls: Boolean = false
@@ -57,7 +57,7 @@ class VideoContentRenderer @Inject constructor(
     ) {
         val contentUrlResolver = activeSessionHolder.getActiveSession().contentUrlResolver()
 
-        if (data.elementToDecrypt != null) {
+        if (data.manaToDecrypt != null) {
             Timber.v("Decrypt video")
             videoView.isVisible = false
 
@@ -82,7 +82,7 @@ class VideoContentRenderer @Inject constructor(
                                         fileName = data.filename,
                                         mimeType = data.mimeType,
                                         url = data.url,
-                                        elementToDecrypt = data.elementToDecrypt
+                                        manaToDecrypt = data.manaToDecrypt
                                 )
                     }
                     withContext(Dispatchers.Main) {
@@ -126,7 +126,7 @@ class VideoContentRenderer @Inject constructor(
                                         fileName = data.filename,
                                         mimeType = data.mimeType,
                                         url = data.url,
-                                        elementToDecrypt = null
+                                        manaToDecrypt = null
                                 )
                     }
                     withContext(Dispatchers.Main) {

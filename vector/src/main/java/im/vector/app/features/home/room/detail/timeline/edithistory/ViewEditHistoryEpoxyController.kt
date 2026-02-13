@@ -1,7 +1,7 @@
 /*
  * Copyright 2019-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 package im.vector.app.features.home.room.detail.timeline.edithistory
@@ -115,7 +115,7 @@ class ViewEditHistoryEpoxyController @Inject constructor(
                                 diff_match_patch.Operation.INSERT -> {
                                     span {
                                         text = it.text
-                                        textColor = colorProvider.getColor(im.vector.lib.ui.styles.R.color.palette_element_green)
+                                        textColor = colorProvider.getColor(im.vector.lib.ui.styles.R.color.palette_mana_green)
                                     }
                                 }
                                 else -> {

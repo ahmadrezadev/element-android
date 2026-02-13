@@ -1052,17 +1052,17 @@ Di masa mendatang proses verifikasi ini akan dimutakhirkan.</string>
 \nApakah Anda ingin masuk menggunakan klien web\?</string>
     <string name="login_sso_error_message">Ada kesalahan terjadi saat memuat halaman: %1$s (%2$d)</string>
     <string name="login_server_url_form_common_notice">Masukkan alamat server yang ingin Anda gunakan</string>
-    <string name="login_server_url_form_modular_notice">Masukkan alamat Modular Element atau Server yang ingin Anda gunakan</string>
+    <string name="login_server_url_form_modular_notice">Masukkan alamat Modular Mana atau Server yang ingin Anda gunakan</string>
     <string name="login_server_url_form_modular_text">Hosting premium untuk organisasi</string>
     <string name="login_server_url_form_other_hint">Alamat</string>
-    <string name="login_server_url_form_modular_hint">Alamat Element Matrix Services</string>
+    <string name="login_server_url_form_modular_hint">Alamat Mana Matrix Services</string>
     <string name="login_clear_homeserver_history">Hapus riwayat</string>
     <string name="login_signin_sso">Lanjutkan dengan login masuk-tunggal</string>
     <string name="login_signin">Masuk</string>
     <string name="login_signup">Daftar</string>
     <string name="login_signin_to">Masuk ke %1$s</string>
     <string name="login_connect_to_a_custom_server">Hubungkan ke server kustom</string>
-    <string name="login_connect_to_modular">Hubungkan ke Element Matrix Services</string>
+    <string name="login_connect_to_modular">Hubungkan ke Mana Matrix Services</string>
     <string name="login_connect_to">Hubungkan ke %1$s</string>
     <string name="login_continue">Lanjutkan</string>
     <string name="login_social_sso">login masuk-tunggal</string>
@@ -1603,7 +1603,7 @@ Di masa mendatang proses verifikasi ini akan dimutakhirkan.</string>
     <string name="login_terms_title">Terima ketentuan untuk melanjutkan</string>
     <string name="login_a11y_captcha_container">Mohon melakukan tantangan captcha</string>
     <string name="login_a11y_choose_other">Pilih homeserver kustom</string>
-    <string name="login_a11y_choose_modular">Pilih Element Matrix Services</string>
+    <string name="login_a11y_choose_modular">Pilih Mana Matrix Services</string>
     <string name="login_a11y_choose_matrix_org">Pilih matrix.org</string>
     <string name="login_signup_cancel_confirmation_content">Akun Anda belum dibuat. Batalkan proses pendaftaran\?</string>
     <string name="login_signup_cancel_confirmation_title">Peringatan</string>
@@ -1866,7 +1866,7 @@ Di masa mendatang proses verifikasi ini akan dimutakhirkan.</string>
     <string name="disclaimer_positive_button">PELAJARI LEBIH LANJUT</string>
     <string name="disclaimer_negative_button">MENGERTI</string>
     <string name="disclaimer_content">Kami senang mengumumkan kami telah mengubah nama! Aplikasi Anda mutakhir dan Anda telah masuk ke akun Anda.</string>
-    <string name="disclaimer_title">Riot sekarang telah menjadi Element!</string>
+    <string name="disclaimer_title">Riot sekarang telah menjadi Mana!</string>
     <string name="notice_crypto_unable_to_decrypt_merged">Menunggu untuk riwayat enkripsi</string>
     <string name="crypto_error_withheld_generic">Anda tidak dapat mengakses pesan ini karena pengirim telah sengaja tidak mengirim kuncinya</string>
     <string name="crypto_error_withheld_unverified">Anda tidak dapat mengakses pesan ini karena sesi Anda tidak dipercayai oleh pengirim</string>
@@ -2511,7 +2511,7 @@ Di masa mendatang proses verifikasi ini akan dimutakhirkan.</string>
     <string name="ftue_auth_terms_subtitle">Mohon baca ketentuan dan kebijakan %s</string>
     <string name="ftue_auth_terms_title">Kebijakan server</string>
     <string name="ftue_auth_choose_server_ems_cta">Hubungi kami</string>
-    <string name="ftue_auth_choose_server_ems_subtitle">Element Matrix Services (EMS) adalah layanan kokoh dan dapat diandalkan untuk komunikasi waktu nyata aman dan cepat. Pelajari lebih lanjut di <a href="${ftue_ems_url}">element.io/ems</a></string>
+    <string name="ftue_auth_choose_server_ems_subtitle">Mana Matrix Services (EMS) adalah layanan kokoh dan dapat diandalkan untuk komunikasi waktu nyata aman dan cepat. Pelajari lebih lanjut di <a href="${ftue_ems_url}">mana.io/ems</a></string>
     <string name="ftue_auth_choose_server_ems_title">Ingin menghost server Anda sendiri\?</string>
     <string name="ftue_auth_choose_server_entry_hint">URL Server</string>
     <string name="ftue_auth_choose_server_subtitle">Apa alamat server Anda\? Ini seperti rumah untuk semua data Anda</string>
@@ -2527,8 +2527,8 @@ Di masa mendatang proses verifikasi ini akan dimutakhirkan.</string>
     <string name="font_size_section_manually">Pilih secara manual</string>
     <string name="font_size_section_auto">Atur secara otomatis</string>
     <string name="font_size_title">Pilih ukuran font</string>
-    <string name="labs_enable_element_call_permission_shortcuts_summary">Terima akses kamera / mikrofon widget Element Call secara otomatis</string>
-    <string name="labs_enable_element_call_permission_shortcuts">Aktifkan pintasan izin Element Call</string>
+    <string name="labs_enable_mana_call_permission_shortcuts_summary">Terima akses kamera / mikrofon widget Mana Call secara otomatis</string>
+    <string name="labs_enable_mana_call_permission_shortcuts">Aktifkan pintasan izin Mana Call</string>
     <string name="live_location_description">Lokasi langsung</string>
     <string name="location_share_loading_map_error">Tidak dapat memuat peta
 \nHomeserver ini mungkin tidak diatur untuk menampilkan peta.</string>
@@ -2648,7 +2648,7 @@ Di masa mendatang proses verifikasi ini akan dimutakhirkan.</string>
     <string name="device_manager_verification_status_detail_current_session_verified">Sesi Anda saat ini siap untuk perpesanan aman.</string>
     <string name="labs_enable_deferred_dm_summary">Buat pesan langsung hanya pada pesan pertama</string>
     <string name="labs_enable_deferred_dm_title">Aktifkan pesan langsung tangguhan</string>
-    <string name="labs_enable_new_app_layout_summary">Sebuah Element yang sederhana dengan fitur tab opsional</string>
+    <string name="labs_enable_new_app_layout_summary">Sebuah Mana yang sederhana dengan fitur tab opsional</string>
     <string name="labs_enable_new_app_layout_title">Aktifkan tata letak baru</string>
     <string name="device_manager_learn_more_session_rename">Pengguna lain dalam pesan langsung dan ruangan yang Anda bergabung dapat melihat daftar sesi Anda yang lengkap.
 \n
@@ -2781,7 +2781,7 @@ Di masa mendatang proses verifikasi ini akan dimutakhirkan.</string>
     <string name="error_voice_broadcast_unauthorized_title">Tidak dapat memulai siaran suara baru</string>
     <string name="a11y_voice_broadcast_fast_forward">Maju cepat 30 detik</string>
     <string name="a11y_voice_broadcast_fast_backward">Mundur cepat 30 detik</string>
-    <string name="device_manager_learn_more_sessions_verified_description">Sesi terverifikasi ada di mana pun Anda menggunakan Element setelah memasukkan frasa sandi atau mengonfirmasi identitas Anda dengan sesi terverifikasi lainnya.
+    <string name="device_manager_learn_more_sessions_verified_description">Sesi terverifikasi ada di mana pun Anda menggunakan Mana setelah memasukkan frasa sandi atau mengonfirmasi identitas Anda dengan sesi terverifikasi lainnya.
 \n
 \nIni berarti Anda memiliki semua kunci yang diperlukan untuk membuka kunci pesan terenkripsi dan mengonfirmasi kepada pengguna lain bahwa Anda memercayai sesi ini.</string>
     <plurals name="device_manager_other_sessions_multi_signout_all">
@@ -2912,7 +2912,7 @@ Di masa mendatang proses verifikasi ini akan dimutakhirkan.</string>
 \nJika Anda tidak ingin melihat konten lagi dari pengguna ini, Anda dapat mengabaikan untuk menyembunyikan pesannya.</string>
     <string name="microphone_in_use_title">Mikrofon digunakan</string>
     <string name="call_unsupported">Panggilan tidak didukung</string>
-    <string name="call_unsupported_matrix_rtc_call">Panggilan tidak didukung. Aplikasi Element X yang baru diperlukan untuk bergabung ke panggilan ini.</string>
+    <string name="call_unsupported_matrix_rtc_call">Panggilan tidak didukung. Aplikasi Mana X yang baru diperlukan untuk bergabung ke panggilan ini.</string>
     <string name="view_download_replacement_app_title">Unduh %1$s</string>
     <string name="view_download_replacement_app_subtitle">Lebih cepat, lebih aman, dan lengkap dengan peralatan kolaborasi yang lebih berdaya.</string>
     <string name="error_mas_not_supported_title">Anda sudah tidak bisa lagi membuat akun dengan %1$s menggunakan aplikasi ini</string>

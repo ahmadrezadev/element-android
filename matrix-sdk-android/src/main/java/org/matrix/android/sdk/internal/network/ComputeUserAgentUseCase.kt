@@ -30,7 +30,7 @@ class ComputeUserAgentUseCase @Inject constructor(
 
     /**
      * Create an user agent with the application version.
-     * Ex: Element/1.5.0 (Xiaomi Mi 9T; Android 11; RKQ1.200826.002; Flavour GooglePlay; MatrixAndroidSdk2 1.5.0)
+     * Ex: Mana/1.5.0 (Xiaomi Mi 9T; Android 11; RKQ1.200826.002; Flavour GooglePlay; MatrixAndroidSdk2 1.5.0)
      *
      * @param flavorDescription the flavor description
      */

@@ -1062,14 +1062,14 @@
     <string name="login_server_other_text">Ajustes avanzados y de personalización</string>
     <string name="login_continue">Continuar</string>
     <string name="login_connect_to">Conectarse a %1$s</string>
-    <string name="login_connect_to_modular">Conectarse a Element Matrix Services</string>
+    <string name="login_connect_to_modular">Conectarse a Mana Matrix Services</string>
     <string name="login_connect_to_a_custom_server">Conectarse a un servidor externo</string>
     <string name="login_signin_to">Iniciar sesión en %1$s</string>
     <string name="login_signup">Registrarse</string>
     <string name="login_signin">Iniciar sesión</string>
     <string name="login_server_url_form_other_hint">Dirección</string>
     <string name="login_server_url_form_modular_text">Alojamiento de pago para organizaciones</string>
-    <string name="login_server_url_form_modular_notice">Introduzca la dirección de Modular Element o servidor que quieres usar</string>
+    <string name="login_server_url_form_modular_notice">Introduzca la dirección de Modular Mana o servidor que quieres usar</string>
     <string name="login_sso_error_message">Se produjo un error al cargar la página: %1$s (%2$d)</string>
     <string name="login_mode_not_supported">La aplicación no es capaz de iniciar sesión en este servidor. Éste solo soporta el acceso mediante: %1$s.
 \n
@@ -1129,7 +1129,7 @@
     <string name="identity_server_error_outdated_identity_server">Servidor de identidad desactualizado. ${app_name} solo soporta API V2.</string>
     <string name="identity_server_error_outdated_home_server">Operación no posible. Servidor desactualizado.</string>
     <string name="identity_server_error_no_identity_server_configured">Por favor, configure primero un Servidor de Identidad.</string>
-    <string name="disclaimer_title">Riot ahora es Element!</string>
+    <string name="disclaimer_title">Riot ahora es Mana!</string>
     <string name="disclaimer_negative_button">Entendido</string>
     <string name="disclaimer_positive_button">Aprender Mas</string>
     <string name="three_pid_revoke_invite_dialog_title">Rechazar invitación</string>
@@ -1353,7 +1353,7 @@
     <string name="room_join_rules_invite_by_you">Hiciste la sala solo por invitación.</string>
     <string name="login_server_matrix_org_text">Únase gratis a millones de personas en el mayor servidor público</string>
     <string name="login_signin_sso">Continuar con SSO</string>
-    <string name="login_server_url_form_modular_hint">Dirección de Element Matrix Services</string>
+    <string name="login_server_url_form_modular_hint">Dirección de Mana Matrix Services</string>
     <string name="login_server_url_form_common_notice">Ingrese la dirección del servidor que desea utilizar</string>
     <string name="login_reset_password_notice">Se enviará un correo electrónico de verificación a su bandeja de entrada para confirmar la configuración de su nueva contraseña.</string>
     <string name="login_reset_password_submit">Siguiente</string>
@@ -1403,7 +1403,7 @@
     <string name="login_signup_cancel_confirmation_title">Advertencia</string>
     <string name="login_signup_cancel_confirmation_content">Tu cuenta aún no está creada. ¿Detener el proceso de registro\?</string>
     <string name="login_a11y_choose_matrix_org">Seleccione matrix.org</string>
-    <string name="login_a11y_choose_modular">Seleccionar Element Matrix Services</string>
+    <string name="login_a11y_choose_modular">Seleccionar Mana Matrix Services</string>
     <string name="login_a11y_choose_other">Seleccione un servidor doméstico personalizado</string>
     <string name="login_a11y_captcha_container">Realiza el desafío de captcha</string>
     <string name="login_terms_title">Acepta los términos para continuar</string>
@@ -2541,7 +2541,7 @@
     <string name="a11y_device_manager_device_type_desktop">Escritorio</string>
     <string name="a11y_device_manager_device_type_web">Web</string>
     <string name="a11y_device_manager_device_type_mobile">Móvil</string>
-    <string name="labs_enable_element_call_permission_shortcuts_summary">Auto aprovar widgets de Element Call y dar permisos de cámara y micrófono</string>
+    <string name="labs_enable_mana_call_permission_shortcuts_summary">Auto aprovar widgets de Mana Call y dar permisos de cámara y micrófono</string>
     <plurals name="room_removed_messages">
         <item quantity="one">%d mensaje borrado</item>
         <item quantity="other">%d mensajes borrados</item>
@@ -2658,7 +2658,7 @@
     <string name="labs_enable_rich_text_editor_summary">Prueba el editor de texto enriquecido (pronto llegará la opción de texto simple, sin formato)</string>
     <string name="labs_enable_rich_text_editor_title">Habilitar editor de texto enriquecido (rich text)</string>
     <string name="labs_enable_deferred_dm_summary">Crear MD únicamente al primer mensaje</string>
-    <string name="labs_enable_new_app_layout_summary">Una versión simplificada de Element con pestañas opcionales</string>
+    <string name="labs_enable_new_app_layout_summary">Una versión simplificada de Mana con pestañas opcionales</string>
     <string name="labs_enable_new_app_layout_title">Habilitar nueva disposición</string>
     <string name="action_stop">Sí, Detener</string>
     <string name="action_deselect_all">Deseleccionar todo</string>
@@ -2666,7 +2666,7 @@
     <string name="a11y_expand_space_children">Mostrar los subespacios de %s</string>
     <string name="notice_voice_broadcast_ended_by_you">Has finalizado una transmisión de voz.</string>
     <string name="notice_voice_broadcast_ended">%1$s ha finalizado una transmisión de voz.</string>
-    <string name="ftue_auth_choose_server_ems_subtitle">Element Matrix Services (EMS) es un servicio de alojamiento para tus comunicaciones en tiempo real. Robusto, confiable, rápido y seguro. Para saber cómo, ve a &lt;a href=\"${ftue_ems_url}\"&gt;element.io/ems&lt;/a&gt;</string>
+    <string name="ftue_auth_choose_server_ems_subtitle">Mana Matrix Services (EMS) es un servicio de alojamiento para tus comunicaciones en tiempo real. Robusto, confiable, rápido y seguro. Para saber cómo, ve a &lt;a href=\"${ftue_ems_url}\"&gt;mana.io/ems&lt;/a&gt;</string>
     <string name="attachment_type_voice_broadcast">Difusión de voz</string>
     <string name="push_gateway_item_enabled">Habilitado:</string>
     <string name="push_gateway_item_device_id">ID de sesión:</string>

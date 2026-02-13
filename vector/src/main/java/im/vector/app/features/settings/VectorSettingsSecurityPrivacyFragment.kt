@@ -2,7 +2,7 @@
  * Copyright 2020-2024 New Vector Ltd.
  * Copyright 2019 New Vector Ltd
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -57,7 +57,7 @@ import im.vector.app.features.crypto.recover.SetupMode
 import im.vector.app.features.navigation.Navigator
 import im.vector.app.features.pin.PinCodeStore
 import im.vector.app.features.pin.PinMode
-import im.vector.app.features.raw.wellknown.getElementWellknown
+import im.vector.app.features.raw.wellknown.getManaWellknown
 import im.vector.app.features.raw.wellknown.isE2EByDefault
 import im.vector.app.features.themes.ThemeUtils
 import im.vector.lib.strings.CommonPlurals
@@ -182,7 +182,7 @@ class VectorSettingsSecurityPrivacyFragment :
         viewLifecycleOwner.lifecycleScope.launch {
             findPreference<VectorPreference>(VectorPreferences.SETTINGS_CRYPTOGRAPHY_HS_ADMIN_DISABLED_E2E_DEFAULT)?.isVisible =
                     rawService
-                            .getElementWellknown(session.sessionParams)
+                            .getManaWellknown(session.sessionParams)
                             ?.isE2EByDefault() == false
 
             refreshXSigningStatus()

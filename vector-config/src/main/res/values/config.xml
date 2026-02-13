@@ -7,9 +7,9 @@
     <string name="matrix_org_server_url" translatable="false">https://matrix.org</string>
 
     <!-- Rageshake configuration -->
-    <string name="bug_report_url" translatable="false">https://rageshakes.element.io/api/submit</string>
+    <string name="bug_report_url" translatable="false">https://rageshakes.mana.io/api/submit</string>
     <string name="bug_report_app_name" translatable="false">riot-android</string>
-    <string name="bug_report_auto_uisi_app_name" translatable="false">element-auto-uisi</string>
+    <string name="bug_report_auto_uisi_app_name" translatable="false">mana-auto-uisi</string>
 
     <!--
         Pusher config for the application
@@ -26,7 +26,7 @@
     <string name="pusher_app_id" translatable="false">im.vector.app.android</string>
 
     <!-- preferred jitsi domain -->
-    <string name="preferred_jitsi_domain" translatable="false">meet.element.io</string>
+    <string name="preferred_jitsi_domain" translatable="false">meet.mana.io</string>
 
     <string-array name="room_directory_servers" translatable="false">
         <item>matrix.org</item>
@@ -35,11 +35,11 @@
 
     <!-- Permalink config -->
     <string-array name="permalink_supported_hosts" translatable="false">
-        <!-- Regular Element Web instance -->
-        <item>app.element.io</item>
-        <!-- Other known instances of Element Web -->
-        <item>develop.element.io</item>
-        <item>staging.element.io</item>
+        <!-- Regular Mana Web instance -->
+        <item>app.mana.io</item>
+        <!-- Other known instances of Mana Web -->
+        <item>develop.mana.io</item>
+        <item>staging.mana.io</item>
         <!-- Previous Web instance, kept for compatibility reason -->
         <item>riot.im</item>
     </string-array>

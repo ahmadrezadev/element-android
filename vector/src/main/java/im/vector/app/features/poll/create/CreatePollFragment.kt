@@ -1,7 +1,7 @@
 /*
  * Copyright 2021-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -67,7 +67,7 @@ class CreatePollFragment :
         }
 
         views.createPollRecyclerView.configureWith(controller, disableItemAnimation = true)
-        // workaround for https://github.com/element-hq/element-android/issues/4735
+        // workaround for https://github.com/mana-hq/mana-android/issues/4735
         views.createPollRecyclerView.setItemViewCacheSize(MAX_OPTIONS_COUNT + 6)
         controller.callback = this
 

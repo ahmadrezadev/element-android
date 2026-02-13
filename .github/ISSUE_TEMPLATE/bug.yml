@@ -1,5 +1,5 @@
-name: Bug report for the Element Android app
-description: Report any issues that you have found with the Element app. Please check open issues first, in case it has already been reported.
+name: Bug report for the Mana Android app
+description: Report any issues that you have found with the Mana app. Please check open issues first, in case it has already been reported.
 labels: [T-Defect]
 body:
   - type: markdown
@@ -50,7 +50,7 @@ body:
     attributes:
       label: Application version and app store
       description: You can find the version information in Settings -> Help & About. 
-      placeholder: e.g. Element version 1.7.34, olm version 3.2.3 from F-Droid
+      placeholder: e.g. Mana version 1.7.34, olm version 3.2.3 from F-Droid
     validations:
       required: false
   - type: input

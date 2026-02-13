@@ -17,7 +17,7 @@
 package org.matrix.android.sdk.internal.session.contentscanner.tasks
 
 import okhttp3.ResponseBody
-import org.matrix.android.sdk.api.session.crypto.attachments.ElementToDecrypt
+import org.matrix.android.sdk.api.session.crypto.attachments.ManaToDecrypt
 import org.matrix.android.sdk.internal.network.executeRequest
 import org.matrix.android.sdk.internal.session.contentscanner.ContentScannerApiProvider
 import org.matrix.android.sdk.internal.session.contentscanner.ScanEncryptorUtils
@@ -27,7 +27,7 @@ import javax.inject.Inject
 internal interface DownloadEncryptedTask : Task<DownloadEncryptedTask.Params, ResponseBody> {
     data class Params(
             val publicServerKey: String?,
-            val encryptedInfo: ElementToDecrypt,
+            val encryptedInfo: ManaToDecrypt,
             val mxcUrl: String
     )
 }

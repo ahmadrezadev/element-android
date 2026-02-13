@@ -1370,16 +1370,16 @@
     <string name="login_server_modular_text">Premiumservervärd för organisationer</string>
     <string name="login_continue">Fortsätt</string>
     <string name="login_connect_to">Anslut till %1$s</string>
-    <string name="login_connect_to_modular">Anslut till Element Matrix Services</string>
+    <string name="login_connect_to_modular">Anslut till Mana Matrix Services</string>
     <string name="login_connect_to_a_custom_server">Anslut till en annan server</string>
     <string name="login_signin_to">Logga in på %1$s</string>
     <string name="login_signup">Bli medlem</string>
     <string name="login_signin">Logga in</string>
     <string name="login_signin_sso">Fortsätt med SSO</string>
-    <string name="login_server_url_form_modular_hint">Element Matrix Services-adress</string>
+    <string name="login_server_url_form_modular_hint">Mana Matrix Services-adress</string>
     <string name="login_server_url_form_other_hint">Adress</string>
     <string name="login_server_url_form_modular_text">Premiumservervärd för organisationer</string>
-    <string name="login_server_url_form_modular_notice">Skriv in adressen för den Modular Element eller server du vill använda</string>
+    <string name="login_server_url_form_modular_notice">Skriv in adressen för den Modular Mana eller server du vill använda</string>
     <string name="login_server_url_form_common_notice">Skriv in adressen för servern du vill använda</string>
     <string name="login_sso_error_message">Ett fel inträffade vid laddning av sidan: %1$s (%2$d)</string>
     <string name="login_mode_not_supported">Appen kan inte logga in på den här hemservern. Hemservern stöder följande inloggningstyp(er): %1$s.
@@ -1422,7 +1422,7 @@
     <string name="login_signup_cancel_confirmation_title">Varning</string>
     <string name="login_signup_cancel_confirmation_content">Ditt konto är inte skapat än. Vill du avbryta registreringsprocessen\?</string>
     <string name="login_a11y_choose_matrix_org">Välj matrix.org</string>
-    <string name="login_a11y_choose_modular">Välj Element Matrix Services</string>
+    <string name="login_a11y_choose_modular">Välj Mana Matrix Services</string>
     <string name="login_a11y_choose_other">Välj en annan hemserver</string>
     <string name="login_a11y_captcha_container">Vänligen utför captchautmaningen</string>
     <string name="login_terms_title">Acceptera villkoren för att fortsätta</string>
@@ -1616,7 +1616,7 @@
     <string name="room_settings_topic_hint">Ämne</string>
     <string name="room_settings_save_success">Du ändrade rumsinställningarna framgångsrikt</string>
     <string name="notice_crypto_unable_to_decrypt_merged">Väntar på krypteringshistorik</string>
-    <string name="disclaimer_title">Riot är nu Element!</string>
+    <string name="disclaimer_title">Riot är nu Mana!</string>
     <string name="disclaimer_content">Vi är glada att meddela att vi har bytt namn! Din app är uppdaterad och du är inloggad på ditt konto.</string>
     <string name="disclaimer_negative_button">UPPFATTAT</string>
     <string name="disclaimer_positive_button">LÄR DIG MER</string>
@@ -2558,7 +2558,7 @@
     <string name="ftue_auth_terms_subtitle">Vänligen läs villkor och policyer för %s</string>
     <string name="ftue_auth_terms_title">Serverpolicyer</string>
     <string name="ftue_auth_choose_server_ems_cta">Kom i kontakt</string>
-    <string name="ftue_auth_choose_server_ems_subtitle">Element Matrix Services (EMS) är en robust och pålitlig värdtjänst för snabb och säker realtidskommunikation. Lär dig hur på <a href="${ftue_ems_url}">element.io/ems</a></string>
+    <string name="ftue_auth_choose_server_ems_subtitle">Mana Matrix Services (EMS) är en robust och pålitlig värdtjänst för snabb och säker realtidskommunikation. Lär dig hur på <a href="${ftue_ems_url}">mana.io/ems</a></string>
     <string name="ftue_auth_choose_server_ems_title">Vill du driva din egen server\?</string>
     <string name="ftue_auth_choose_server_entry_hint">Server-URL</string>
     <string name="ftue_auth_choose_server_subtitle">Vad är adressen för din server\? Det är som ett hem för all din data</string>
@@ -2593,7 +2593,7 @@
     <string name="space_list_empty_title">Inga utrymmen än.</string>
     <string name="labs_enable_deferred_dm_summary">Skapa DM först när du skickar första meddelandet</string>
     <string name="labs_enable_deferred_dm_title">Aktivera avvaktade DM:er</string>
-    <string name="labs_enable_new_app_layout_summary">En förenklad Element med valfria flikar</string>
+    <string name="labs_enable_new_app_layout_summary">En förenklad Mana med valfria flikar</string>
     <string name="labs_enable_new_app_layout_title">Aktivera ny layout</string>
     <string name="home_layout_preferences_sort_name">A - Ö</string>
     <string name="home_layout_preferences_sort_activity">Aktivitet</string>
@@ -2619,8 +2619,8 @@
     <string name="a11y_device_manager_device_type_mobile">Mobil</string>
     <string name="device_manager_sessions_other_description">För bäst säkerhet, verifiera dina sessioner och logga ut från alla sessioner du inte känner igen eller använder längre.</string>
     <string name="device_manager_sessions_other_title">Andra sessioner</string>
-    <string name="labs_enable_element_call_permission_shortcuts_summary">Godkänn automatiskt Element Call-widgets och ge kamera-/mikrofonåtkomst</string>
-    <string name="labs_enable_element_call_permission_shortcuts">Aktivera Element Call-behörighetsgenvägar</string>
+    <string name="labs_enable_mana_call_permission_shortcuts_summary">Godkänn automatiskt Mana Call-widgets och ge kamera-/mikrofonåtkomst</string>
+    <string name="labs_enable_mana_call_permission_shortcuts">Aktivera Mana Call-behörighetsgenvägar</string>
     <string name="tooltip_attachment_voice_broadcast">Starta en röstsändning</string>
     <string name="live_location_description">Realtidsplats</string>
     <string name="location_share_loading_map_error">Kunde inte ladda kartan.
@@ -2970,7 +2970,7 @@
 \nOm du inte vill se något mer innehåll från den här användaren så kan du ignorera denne för att dölja dennes meddelanden.</string>
     <string name="microphone_in_use_title">Mikrofon används</string>
     <string name="call_unsupported">Samtal stöds inte</string>
-    <string name="call_unsupported_matrix_rtc_call">Samtal stöds inte. Nya Element X-appen behövs för att gå med i det här samtalet.</string>
+    <string name="call_unsupported_matrix_rtc_call">Samtal stöds inte. Nya Mana X-appen behövs för att gå med i det här samtalet.</string>
     <string name="view_download_replacement_app_title">Ladda ner %1$s</string>
     <string name="view_download_replacement_app_subtitle">Snabbare, säkrare och fullproppad med kraftfulla samarbetsverktyg.</string>
     <string name="error_mas_not_supported_title">Du kan inte längre skapa ett konto med %1$s med den här appen</string>

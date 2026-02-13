@@ -1,7 +1,7 @@
 /*
  * Copyright 2019-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -22,7 +22,7 @@ import im.vector.app.core.di.hiltMavericksViewModelFactory
 import im.vector.app.core.platform.VectorViewModel
 import im.vector.app.features.analytics.AnalyticsTracker
 import im.vector.app.features.analytics.plan.CreatedRoom
-import im.vector.app.features.raw.wellknown.getElementWellknown
+import im.vector.app.features.raw.wellknown.getManaWellknown
 import im.vector.app.features.raw.wellknown.isE2EByDefault
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -99,7 +99,7 @@ class CreateRoomViewModel @AssistedInject constructor(
     private fun initAdminE2eByDefault() {
         viewModelScope.launch(Dispatchers.IO) {
             adminE2EByDefault = tryOrNull {
-                rawService.getElementWellknown(session.sessionParams)
+                rawService.getManaWellknown(session.sessionParams)
                         ?.isE2EByDefault()
                         ?: true
             } ?: true

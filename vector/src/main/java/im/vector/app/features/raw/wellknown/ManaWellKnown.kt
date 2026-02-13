@@ -1,7 +1,7 @@
 /*
  * Copyright 2020-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -11,7 +11,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
-data class ElementWellKnown(
+data class ManaWellKnown(
         /**
          * Preferred Jitsi domain.
          */
@@ -20,10 +20,10 @@ data class ElementWellKnown(
 
         /**
          * The settings above were first proposed under a im.vector.riot.e2ee key, which is now deprecated.
-         * Element will check for either key, preferring io.element.e2ee if both exist.
+         * Mana will check for either key, preferring io.mana.e2ee if both exist.
          */
-        @Json(name = "io.element.e2ee")
-        val elementE2E: E2EWellKnownConfig? = null,
+        @Json(name = "io.mana.e2ee")
+        val manaE2E: E2EWellKnownConfig? = null,
 
         @Json(name = "im.vector.riot.e2ee")
         val riotE2E: E2EWellKnownConfig? = null,

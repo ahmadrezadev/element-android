@@ -1,7 +1,7 @@
 /*
  * Copyright 2019-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -40,11 +40,11 @@ class CreateRoomController @Inject constructor(
         buildForm(viewState, viewState.asyncCreateRoomRequest !is Loading)
     }
 
-    private fun buildForm(viewState: CreateRoomViewState, enableFormElement: Boolean) {
+    private fun buildForm(viewState: CreateRoomViewState, enableFormMana: Boolean) {
         val host = this
         formEditableAvatarItem {
             id("avatar")
-            enabled(enableFormElement)
+            enabled(enableFormMana)
             imageUri(viewState.avatarUri)
             clickListener { host.listener?.onAvatarChange() }
             deleteListener { host.listener?.onAvatarDelete() }
@@ -55,7 +55,7 @@ class CreateRoomController @Inject constructor(
         }
         formEditTextItem {
             id("name")
-            enabled(enableFormElement)
+            enabled(enableFormMana)
             value(viewState.roomName)
             hint(host.stringProvider.getString(CommonStrings.create_room_name_hint))
             autoCapitalize(true)
@@ -70,7 +70,7 @@ class CreateRoomController @Inject constructor(
         }
         formEditTextItem {
             id("topic")
-            enabled(enableFormElement)
+            enabled(enableFormMana)
             value(viewState.roomTopic)
             singleLine(false)
             hint(host.stringProvider.getString(CommonStrings.create_room_topic_hint))
@@ -130,7 +130,7 @@ class CreateRoomController @Inject constructor(
             // Room alias for public room
             formEditTextItem {
                 id("alias")
-                enabled(enableFormElement)
+                enabled(enableFormMana)
                 value(viewState.aliasLocalPart)
                 suffixText(":" + viewState.homeServerName)
                 prefixText("#")
@@ -152,7 +152,7 @@ class CreateRoomController @Inject constructor(
             // Room encryption for private room
             formSwitchItem {
                 id("encryption")
-                enabled(enableFormElement)
+                enabled(enableFormMana)
                 title(host.stringProvider.getString(CommonStrings.create_room_encryption_title))
                 summary(
                         if (viewState.hsAdminHasDisabledE2E) {
@@ -182,7 +182,7 @@ class CreateRoomController @Inject constructor(
         if (viewState.showAdvanced) {
             formSwitchItem {
                 id("federation")
-                enabled(enableFormElement)
+                enabled(enableFormMana)
                 title(host.stringProvider.getString(CommonStrings.create_room_disable_federation_title, viewState.homeServerName))
                 summary(host.stringProvider.getString(CommonStrings.create_room_disable_federation_description))
                 switchChecked(viewState.disableFederation)
@@ -191,7 +191,7 @@ class CreateRoomController @Inject constructor(
         }
         formSubmitButtonItem {
             id("submit")
-            enabled(enableFormElement)
+            enabled(enableFormMana)
             buttonTitleId(CommonStrings.create_room_action_create)
             buttonClickListener { host.listener?.submit() }
         }

@@ -16,11 +16,11 @@
         <item name="vctr_reaction_background_off">@color/vctr_reaction_background_off_black</item>
         <item name="vctr_reaction_background_on">@color/vctr_reaction_background_on_black</item>
         <item name="vctr_markdown_block_background_color">#FF4D4D4D</item>
-        <item name="vctr_toolbar_background">@color/element_background_black</item>
+        <item name="vctr_toolbar_background">@color/mana_background_black</item>
 
         <!-- Material color -->
         <item name="colorSurface">@android:color/black</item>
-        <item name="android:colorBackground">@color/element_background_black</item>
+        <item name="android:colorBackground">@color/mana_background_black</item>
 
         <!-- Default theme -->
         <item name="bottomSheetDialogTheme">@style/Theme.Vector.BottomSheetDialog.Black</item>

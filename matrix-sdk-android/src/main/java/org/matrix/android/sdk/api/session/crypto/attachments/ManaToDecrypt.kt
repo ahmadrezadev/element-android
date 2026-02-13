@@ -20,11 +20,11 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 import org.matrix.android.sdk.api.session.crypto.model.EncryptedFileInfo
 
-fun EncryptedFileInfo.toElementToDecrypt(): ElementToDecrypt? {
+fun EncryptedFileInfo.toManaToDecrypt(): ManaToDecrypt? {
     // Check the validity of some fields
     if (isValid()) {
         // It's valid so the data are here
-        return ElementToDecrypt(
+        return ManaToDecrypt(
                 iv = this.iv ?: "",
                 k = this.key?.k ?: "",
                 sha256 = this.hashes?.get("sha256") ?: ""
@@ -38,7 +38,7 @@ fun EncryptedFileInfo.toElementToDecrypt(): ElementToDecrypt? {
  * Represent data to decode an attachment.
  */
 @Parcelize
-data class ElementToDecrypt(
+data class ManaToDecrypt(
         val iv: String,
         val k: String,
         val sha256: String

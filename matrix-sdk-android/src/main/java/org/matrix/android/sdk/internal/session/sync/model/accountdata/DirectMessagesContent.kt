@@ -22,7 +22,7 @@ package org.matrix.android.sdk.internal.session.sync.model.accountdata
 internal typealias DirectMessagesContent = Map<String, List<String>>
 
 /**
- * Returns a new [MutableMap] with all elements of this collection.
+ * Returns a new [MutableMap] with all manas of this collection.
  */
 internal fun DirectMessagesContent.toMutable(): MutableMap<String, MutableList<String>> {
     return map { it.key to it.value.toMutableList() }

@@ -1,7 +1,7 @@
 /*
  * Copyright 2019-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -63,7 +63,7 @@ class KeyRequestHandler @Inject constructor(
 
     var scope: CoroutineScope? = null
 
-    // This functionality is disabled in element for now. As it could be prone to social attacks
+    // This functionality is disabled in mana for now. As it could be prone to social attacks
     var enablePromptingForRequest = false
 
     //    lateinit var listenerJob: Job
@@ -94,7 +94,7 @@ class KeyRequestHandler @Inject constructor(
     }
 
     override fun onSecretShareRequest(request: SecretShareRequest): Boolean {
-        // By default Element will not prompt if the SDK has decided that the request should not be fulfilled
+        // By default Mana will not prompt if the SDK has decided that the request should not be fulfilled
         Timber.v("## onSecretShareRequest() : Ignoring $request")
         return true
     }

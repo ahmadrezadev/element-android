@@ -1,7 +1,7 @@
 /*
  * Copyright 2019-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -56,7 +56,7 @@ import im.vector.app.features.location.live.tracking.LocationSharingServiceConne
 import im.vector.app.features.notifications.NotificationDrawerManager
 import im.vector.app.features.raw.wellknown.CryptoConfig
 import im.vector.app.features.raw.wellknown.getOutboundSessionKeySharingStrategyOrDefault
-import im.vector.app.features.raw.wellknown.withElementWellKnown
+import im.vector.app.features.raw.wellknown.withManaWellKnown
 import im.vector.app.features.session.coroutineScope
 import im.vector.app.features.settings.VectorDataStore
 import im.vector.app.features.settings.VectorPreferences
@@ -226,7 +226,7 @@ class TimelineViewModel @AssistedInject constructor(
 
         // Ensure to share the outbound session keys with all members
         if (room.roomCryptoService().isEncrypted()) {
-            rawService.withElementWellKnown(viewModelScope, session.sessionParams) {
+            rawService.withManaWellKnown(viewModelScope, session.sessionParams) {
                 val strategy = it.getOutboundSessionKeySharingStrategyOrDefault(cryptoConfig.fallbackKeySharingStrategy)
                 if (strategy == OutboundSessionKeySharingStrategy.WhenEnteringRoom) {
                     prepareForEncryption()
@@ -510,13 +510,13 @@ class TimelineViewModel @AssistedInject constructor(
             }
             is RoomDetailAction.EndPoll -> handleEndPoll(action.eventId)
             RoomDetailAction.StopLiveLocationSharing -> handleStopLiveLocationSharing()
-            RoomDetailAction.OpenElementCallWidget -> handleOpenElementCallWidget()
+            RoomDetailAction.OpenManaCallWidget -> handleOpenManaCallWidget()
         }
     }
 
-    private fun handleOpenElementCallWidget() = withState { state ->
-        if (state.hasActiveElementCallWidget()) {
-            _viewEvents.post(RoomDetailViewEvents.OpenElementCallWidget)
+    private fun handleOpenManaCallWidget() = withState { state ->
+        if (state.hasActiveManaCallWidget()) {
+            _viewEvents.post(RoomDetailViewEvents.OpenManaCallWidget)
         }
     }
 
@@ -766,7 +766,7 @@ class TimelineViewModel @AssistedInject constructor(
         if (room == null) return
         // Ensure outbound session keys
         if (room.roomCryptoService().isEncrypted()) {
-            rawService.withElementWellKnown(viewModelScope, session.sessionParams) {
+            rawService.withManaWellKnown(viewModelScope, session.sessionParams) {
                 val strategy = it.getOutboundSessionKeySharingStrategyOrDefault(cryptoConfig.fallbackKeySharingStrategy)
                 if (strategy == OutboundSessionKeySharingStrategy.WhenTyping && action.focused) {
                     // Should we add some rate limit here, or do it only once per model lifecycle?
@@ -837,7 +837,7 @@ class TimelineViewModel @AssistedInject constructor(
                     R.id.timeline_setting -> true
                     R.id.invite -> state.canInvite
                     R.id.open_matrix_apps -> true
-                    R.id.voice_call -> state.isCallOptionAvailable() || state.hasActiveElementCallWidget()
+                    R.id.voice_call -> state.isCallOptionAvailable() || state.hasActiveManaCallWidget()
                     R.id.video_call -> state.isCallOptionAvailable() || state.jitsiState.confId == null || state.jitsiState.hasJoined
                     // Show Join conference button only if there is an active conf id not joined. Otherwise fallback to default video disabled. ^
                     R.id.join_conference -> !state.isCallOptionAvailable() && state.jitsiState.confId != null && !state.jitsiState.hasJoined

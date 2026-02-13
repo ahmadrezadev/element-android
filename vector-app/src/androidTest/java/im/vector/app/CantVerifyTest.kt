@@ -1,7 +1,7 @@
 /*
  * Copyright 2022-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -16,7 +16,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.LargeTest
 import com.adevinta.android.barista.internal.viewaction.SleepViewAction
 import im.vector.app.features.MainActivity
-import im.vector.app.ui.robot.ElementRobot
+import im.vector.app.ui.robot.ManaRobot
 import im.vector.lib.strings.CommonStrings
 import org.junit.Rule
 import org.junit.Test
@@ -33,23 +33,23 @@ class CantVerifyTest {
             .outerRule(ActivityScenarioRule(MainActivity::class.java))
             .around(ClearCurrentSessionRule())
 
-    private val elementRobot = ElementRobot()
+    private val manaRobot = ManaRobot()
     var userName: String = "loginTest_${UUID.randomUUID()}"
 
     @Test
     fun checkCantVerifyPopup() {
         // Let' create an account
         // This first session will create cross signing keys then logout
-        elementRobot.signUp(userName)
+        manaRobot.signUp(userName)
         Espresso.onView(ViewMatchers.isRoot()).perform(SleepViewAction.sleep(2000))
 
-        elementRobot.signout(false)
+        manaRobot.signout(false)
         Espresso.onView(ViewMatchers.isRoot()).perform(SleepViewAction.sleep(2000))
 
         // Let's login again now
         // There are no methods to verify (no other devices, nor 4S)
         // So it should ask to reset all
-        elementRobot.login(userName)
+        manaRobot.login(userName)
 
         val activity = EspressoHelper.getCurrentActivity()!!
         Espresso.onView(ViewMatchers.isRoot())

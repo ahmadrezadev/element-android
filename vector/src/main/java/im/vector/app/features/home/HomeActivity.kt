@@ -1,7 +1,7 @@
 /*
  * Copyright 2019-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -316,7 +316,7 @@ class HomeActivity :
     }
 
     /**
-     * Migrating from old threads io.element.thread to new m.thread needs an initial sync to
+     * Migrating from old threads io.mana.thread to new m.thread needs an initial sync to
      * sync and display existing messages appropriately.
      */
     private fun migrateThreadsIfNeeded(checkSession: Boolean) {
@@ -360,7 +360,7 @@ class HomeActivity :
     private fun handleIntent(intent: Intent?) {
         intent?.dataString?.let { deepLink ->
             val resolvedLink = when {
-                // Element custom scheme is not handled by the sdk, convert it to matrix.to link for compatibility
+                // Mana custom scheme is not handled by the sdk, convert it to matrix.to link for compatibility
                 deepLink.startsWith(MATRIX_TO_CUSTOM_SCHEME_URL_BASE) -> {
                     when {
                         deepLink.startsWith(USER_LINK_PREFIX) -> deepLink.substring(USER_LINK_PREFIX.length)

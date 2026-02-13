@@ -1,7 +1,7 @@
 /*
  * Copyright 2021-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -78,9 +78,9 @@ class AnalyticsAccountDataViewModel @AssistedInject constructor(
                 .mapNotNull { it.content.toModel<AnalyticsAccountDataContent>() }
                 .onEach { analyticsAccountDataContent ->
                     if (analyticsAccountDataContent.id.isNullOrEmpty()) {
-                        // Probably consent revoked from Element Web
+                        // Probably consent revoked from Mana Web
                         // Ignore here
-                        Timber.tag(analyticsTag.value).d("Consent revoked from Element Web?")
+                        Timber.tag(analyticsTag.value).d("Consent revoked from Mana Web?")
                     } else {
                         Timber.tag(analyticsTag.value).d("AnalyticsId has been retrieved")
                         analytics.setAnalyticsId(analyticsAccountDataContent.id)

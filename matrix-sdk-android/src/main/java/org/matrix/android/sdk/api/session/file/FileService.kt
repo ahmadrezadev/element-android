@@ -17,8 +17,8 @@
 package org.matrix.android.sdk.api.session.file
 
 import android.net.Uri
-import org.matrix.android.sdk.api.session.crypto.attachments.ElementToDecrypt
-import org.matrix.android.sdk.api.session.crypto.attachments.toElementToDecrypt
+import org.matrix.android.sdk.api.session.crypto.attachments.ManaToDecrypt
+import org.matrix.android.sdk.api.session.crypto.attachments.toManaToDecrypt
 import org.matrix.android.sdk.api.session.room.model.message.MessageWithAttachmentContent
 import org.matrix.android.sdk.api.session.room.model.message.getFileName
 import org.matrix.android.sdk.api.session.room.model.message.getFileUrl
@@ -48,7 +48,7 @@ interface FileService {
             fileName: String,
             mimeType: String?,
             url: String?,
-            elementToDecrypt: ElementToDecrypt?
+            manaToDecrypt: ManaToDecrypt?
     ): File
 
     suspend fun downloadFile(messageContent: MessageWithAttachmentContent): File =
@@ -56,14 +56,14 @@ interface FileService {
                     fileName = messageContent.getFileName(),
                     mimeType = messageContent.mimeType,
                     url = messageContent.getFileUrl(),
-                    elementToDecrypt = messageContent.encryptedFileInfo?.toElementToDecrypt()
+                    manaToDecrypt = messageContent.encryptedFileInfo?.toManaToDecrypt()
             )
 
     fun isFileInCache(
             mxcUrl: String?,
             fileName: String,
             mimeType: String?,
-            elementToDecrypt: ElementToDecrypt?
+            manaToDecrypt: ManaToDecrypt?
     ): Boolean
 
     fun isFileInCache(messageContent: MessageWithAttachmentContent) =
@@ -71,7 +71,7 @@ interface FileService {
                     mxcUrl = messageContent.getFileUrl(),
                     fileName = messageContent.getFileName(),
                     mimeType = messageContent.mimeType,
-                    elementToDecrypt = messageContent.encryptedFileInfo?.toElementToDecrypt()
+                    manaToDecrypt = messageContent.encryptedFileInfo?.toManaToDecrypt()
             )
 
     /**
@@ -82,7 +82,7 @@ interface FileService {
             mxcUrl: String?,
             fileName: String,
             mimeType: String?,
-            elementToDecrypt: ElementToDecrypt?
+            manaToDecrypt: ManaToDecrypt?
     ): Uri?
 
     fun getTemporarySharableURI(messageContent: MessageWithAttachmentContent): Uri? =
@@ -90,7 +90,7 @@ interface FileService {
                     mxcUrl = messageContent.getFileUrl(),
                     fileName = messageContent.getFileName(),
                     mimeType = messageContent.mimeType,
-                    elementToDecrypt = messageContent.encryptedFileInfo?.toElementToDecrypt()
+                    manaToDecrypt = messageContent.encryptedFileInfo?.toManaToDecrypt()
             )
 
     /**
@@ -101,7 +101,7 @@ interface FileService {
             mxcUrl: String?,
             fileName: String,
             mimeType: String?,
-            elementToDecrypt: ElementToDecrypt?
+            manaToDecrypt: ManaToDecrypt?
     ): FileState
 
     fun fileState(messageContent: MessageWithAttachmentContent): FileState =
@@ -109,7 +109,7 @@ interface FileService {
                     mxcUrl = messageContent.getFileUrl(),
                     fileName = messageContent.getFileName(),
                     mimeType = messageContent.mimeType,
-                    elementToDecrypt = messageContent.encryptedFileInfo?.toElementToDecrypt()
+                    manaToDecrypt = messageContent.encryptedFileInfo?.toManaToDecrypt()
             )
 
     /**

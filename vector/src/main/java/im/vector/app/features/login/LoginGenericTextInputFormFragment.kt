@@ -1,7 +1,7 @@
 /*
  * Copyright 2019-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -172,7 +172,7 @@ class LoginGenericTextInputFormFragment :
     }
 
     private fun getCountryCodeOrShowError(text: String): String? {
-        // We expect an international format for the moment (see https://github.com/element-hq/riotX-android/issues/693)
+        // We expect an international format for the moment (see https://github.com/mana-hq/riotX-android/issues/693)
         if (text.startsWith("+")) {
             try {
                 val phoneNumber = PhoneNumberUtil.getInstance().parse(text, null)

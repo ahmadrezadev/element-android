@@ -1,7 +1,7 @@
 /*
  * Copyright 2020-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -31,10 +31,10 @@ import im.vector.app.features.analytics.store.AnalyticsStore
 import im.vector.app.features.home.room.list.home.release.ReleaseNotesPreferencesStore
 import im.vector.app.features.login.ReAuthHelper
 import im.vector.app.features.onboarding.AuthenticationDescription
-import im.vector.app.features.raw.wellknown.ElementWellKnown
-import im.vector.app.features.raw.wellknown.getElementWellknown
+import im.vector.app.features.raw.wellknown.ManaWellKnown
+import im.vector.app.features.raw.wellknown.getManaWellknown
 import im.vector.app.features.raw.wellknown.isSecureBackupRequired
-import im.vector.app.features.raw.wellknown.withElementWellKnown
+import im.vector.app.features.raw.wellknown.withManaWellKnown
 import im.vector.app.features.session.coroutineScope
 import im.vector.app.features.settings.VectorPreferences
 import im.vector.app.features.voicebroadcast.recording.usecase.StopOngoingVoiceBroadcastUseCase
@@ -228,7 +228,7 @@ class HomeActivityViewModel @AssistedInject constructor(
                 .onEach { info ->
                     val isVerified = info.getOrNull()?.isTrusted() ?: false
                     if (!isVerified && onceTrusted) {
-                        rawService.withElementWellKnown(viewModelScope, safeActiveSession.sessionParams) {
+                        rawService.withManaWellKnown(viewModelScope, safeActiveSession.sessionParams) {
                             sessionHasBeenUnverified(it)
                         }
                     }
@@ -239,7 +239,7 @@ class HomeActivityViewModel @AssistedInject constructor(
 
     /**
      * Handle threads migration. The migration includes:
-     * - Notify users that had io.element.thread enabled from labs
+     * - Notify users that had io.mana.thread enabled from labs
      * - Re-Enable m.thread to those users (that they had enabled labs threads)
      * - Handle migration when threads are enabled by default
      */
@@ -261,14 +261,14 @@ class HomeActivityViewModel @AssistedInject constructor(
             vectorPreferences.shouldNotifyUserAboutThreads() && vectorPreferences.areThreadMessagesEnabled() -> {
                 Timber.i("----> Notify users about threads")
                 // Notify the user if needed that we migrated to support m.thread
-                // instead of io.element.thread so old thread messages will be displayed as normal timeline messages
+                // instead of io.mana.thread so old thread messages will be displayed as normal timeline messages
                 _viewEvents.post(HomeActivityViewEvents.NotifyUserForThreadsMigration)
                 vectorPreferences.userNotifiedAboutThreads()
             }
             // Migrate users with enabled lab settings
             vectorPreferences.shouldNotifyUserAboutThreads() && vectorPreferences.shouldMigrateThreads() -> {
                 Timber.i("----> Migrate threads with enabled labs")
-                // If user had io.element.thread enabled then enable the new thread support,
+                // If user had io.mana.thread enabled then enable the new thread support,
                 // clear cache to sync messages appropriately
                 vectorPreferences.setThreadMessagesEnabled()
                 lightweightSettingsStorage.setThreadMessagesEnabled(vectorPreferences.areThreadMessagesEnabled())
@@ -309,7 +309,7 @@ class HomeActivityViewModel @AssistedInject constructor(
     }
 
     /**
-     * After migration from riot to element some users reported that their
+     * After migration from riot to mana some users reported that their
      * push setting for the session was set to off.
      * In order to mitigate this, we want to display a popup once to the user
      * giving him the option to review this setting.
@@ -346,9 +346,9 @@ class HomeActivityViewModel @AssistedInject constructor(
         }
     }
 
-    private fun sessionHasBeenUnverified(elementWellKnown: ElementWellKnown?) {
+    private fun sessionHasBeenUnverified(manaWellKnown: ManaWellKnown?) {
         val session = activeSessionHolder.getSafeActiveSession() ?: return
-        val isSecureBackupRequired = elementWellKnown?.isSecureBackupRequired() ?: false
+        val isSecureBackupRequired = manaWellKnown?.isSecureBackupRequired() ?: false
         if (isSecureBackupRequired) {
             // If 4S is forced, force verification
             // for stability cancel all pending verifications?
@@ -383,8 +383,8 @@ class HomeActivityViewModel @AssistedInject constructor(
                 Timber.w("## No session to init cross signing or bootstrap")
             }
 
-            val elementWellKnown = rawService.getElementWellknown(session.sessionParams)
-            val isSecureBackupRequired = elementWellKnown?.isSecureBackupRequired() ?: false
+            val manaWellKnown = rawService.getManaWellknown(session.sessionParams)
+            val isSecureBackupRequired = manaWellKnown?.isSecureBackupRequired() ?: false
 
             // In case of account creation, it is already done before
             if (initialState.authenticationDescription is AuthenticationDescription.Register) {

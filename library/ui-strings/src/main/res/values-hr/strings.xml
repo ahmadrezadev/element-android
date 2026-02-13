@@ -385,7 +385,7 @@
     <string name="media_saving_period_1_month">Jedan mjesec</string>
     <string name="media_saving_period_forever">Zauvijek</string>
     <string name="room_settings_topic">Tema</string>
-    <string name="room_widget_resource_permission_title">Ovaj grafički element želi koristiti sljedeća sredstva:</string>
+    <string name="room_widget_resource_permission_title">Ovaj grafički mana želi koristiti sljedeća sredstva:</string>
     <string name="room_widget_resource_grant_permission">Dozvoli</string>
     <string name="room_widget_resource_decline_permission">Sve blokiraj</string>
     <string name="room_widget_webview_access_camera">Koristi kameru</string>
@@ -393,7 +393,7 @@
     <string name="room_widget_webview_read_protected_media">Čitaj medije ograničene DRM-om</string>
     <string name="resource_limit_soft_default">Ovaj poslužitelj je prekoračio jedno od ograničenja sredstava pa se <b>neki korisnici neće moći prijaviti</b>.</string>
     <string name="resource_limit_hard_default">Ovaj je poslužitelj prekoračio jedno od ograničenja sredstava.</string>
-    <string name="widget_integration_unable_to_create">Neuspjela izrada grafičkog elementa.</string>
+    <string name="widget_integration_unable_to_create">Neuspjela izrada grafičkog manaa.</string>
     <string name="widget_integration_failed_to_send_request">Neuspjelo slanje zahtjeva.</string>
     <string name="widget_integration_positive_power_level">Razina upravljanja treba biti pozitivan cijeli broj.</string>
     <string name="widget_integration_must_be_in_room">Niste u ovoj sobi.</string>
@@ -554,8 +554,8 @@
     <string name="a11y_create_direct_message">Započni novi izravni razgovor</string>
     <string name="a11y_create_room">Izradi novu sobu</string>
     <string name="settings_rageshake">Gnjevno drmanje</string>
-    <string name="settings_integrations_summary">Koristite upravitelja integracijama kako biste rukovali botovima, mostovima, grafičkim elementima i paketima naljepnica.
-\nUpravitelji integracijama primaju konfiguracijske podatke i mogu mijenjati grafičke elemente, slati pozivnice za pridruživanje u sobe i postavljati razine upravljanja u Vaše ime.</string>
+    <string name="settings_integrations_summary">Koristite upravitelja integracijama kako biste rukovali botovima, mostovima, grafičkim manaima i paketima naljepnica.
+\nUpravitelji integracijama primaju konfiguracijske podatke i mogu mijenjati grafičke manae, slati pozivnice za pridruživanje u sobe i postavljati razine upravljanja u Vaše ime.</string>
     <string name="room_settings_room_read_history_rules_pref_title">Čitljivost sobne povijesti</string>
     <string name="room_settings_room_read_history_rules_pref_dialog_title">Tko može čitati povijest\?</string>
     <string name="room_settings_read_history_entry_anyone">Bilo tko</string>
@@ -633,27 +633,27 @@
     <string name="larger">Veća</string>
     <string name="largest">Najveća</string>
     <string name="huge">Ogromna</string>
-    <string name="widget_delete_message_confirmation">Jeste li sigurni da želite ukloniti grafički element iz ove sobe\?</string>
+    <string name="widget_delete_message_confirmation">Jeste li sigurni da želite ukloniti grafički mana iz ove sobe\?</string>
     <plurals name="active_widgets">
-        <item quantity="one">%d aktivan grafički element</item>
-        <item quantity="few">%d aktivna grafička elementa</item>
+        <item quantity="one">%d aktivan grafički mana</item>
+        <item quantity="few">%d aktivna grafička manaa</item>
         <item quantity="other">%d aktivnih grafičkih elemenata</item>
     </plurals>
-    <string name="room_widget_activity_title">Grafički element</string>
-    <string name="room_widget_permission_title">Učitaj grafički element</string>
-    <string name="room_widget_permission_added_by">Ovaj je grafički element dodao/la:</string>
+    <string name="room_widget_activity_title">Grafički mana</string>
+    <string name="room_widget_permission_title">Učitaj grafički mana</string>
+    <string name="room_widget_permission_added_by">Ovaj je grafički mana dodao/la:</string>
     <string name="room_widget_permission_webview_shared_info_title">Njegovo korištenje može postaviti kolačiće i dijeliti podatke s %s:</string>
     <string name="room_widget_permission_shared_info_title">Njegovo korištenje može dijeliti podatke s %s:</string>
-    <string name="room_widget_failed_to_load">Neuspješno učitavanje grafičkog elementa.
+    <string name="room_widget_failed_to_load">Neuspješno učitavanje grafičkog manaa.
 \n%s</string>
-    <string name="room_widget_reload">Ponovno učitaj grafički element</string>
+    <string name="room_widget_reload">Ponovno učitaj grafički mana</string>
     <string name="room_widget_open_in_browser">Otvori u web pregledniku</string>
     <string name="room_widget_revoke_access">Opozovi moj pristup</string>
     <string name="room_widget_permission_display_name">Vaše ime za prikaz</string>
     <string name="room_widget_permission_avatar_url">URL Vašeg avatara</string>
     <string name="room_widget_permission_user_id">Vaš korisnički identitet</string>
     <string name="room_widget_permission_theme">Vaša tema</string>
-    <string name="room_widget_permission_widget_id">Identitet grafičkog elementa</string>
+    <string name="room_widget_permission_widget_id">Identitet grafičkog manaa</string>
     <string name="room_widget_permission_room_id">Identitet sobe</string>
     <string name="error_jitsi_not_supported_on_old_device">Nažalost konferencijski pozivi kroz Jitsi nisu podržani na starim uređajima (uređaji s Androidom inačice manje od 6.0)</string>
     <string name="command_description_clear_scalar_token">Za popravak upravljanja aplikacijama unutar Matrixa</string>
@@ -696,16 +696,16 @@
     <string name="login_server_other_text">Prilagođene i napredne postavke</string>
     <string name="login_continue">Nastavi</string>
     <string name="login_connect_to">Spoji se na %1$s</string>
-    <string name="login_connect_to_modular">Spoji se na Element Matrix Services</string>
+    <string name="login_connect_to_modular">Spoji se na Mana Matrix Services</string>
     <string name="login_connect_to_a_custom_server">Spoji se na prilagođenog poslužitelja</string>
     <string name="login_signin_to">Prijavi se na %1$s</string>
     <string name="login_signup">Otvori račun</string>
     <string name="login_signin">Prijavi se</string>
     <string name="login_signin_sso">Nastavi sa SSO-om</string>
-    <string name="login_server_url_form_modular_hint">Adresa u Element Matrix Services u</string>
+    <string name="login_server_url_form_modular_hint">Adresa u Mana Matrix Services u</string>
     <string name="login_server_url_form_other_hint">Adresa</string>
     <string name="login_server_url_form_modular_text">Plaćeno gošćenje za organizacije</string>
-    <string name="login_server_url_form_modular_notice">Unesite adresu Modular Elementa ili poslužitelja koji želite koristiti</string>
+    <string name="login_server_url_form_modular_notice">Unesite adresu Modular Manaa ili poslužitelja koji želite koristiti</string>
     <string name="login_sso_error_message">Došlo je do greške pri učitavanju stranice: %1$s (%2$d)</string>
     <string name="login_mode_not_supported">Aplikacija se ne može prijaviti na ovog poslužitelja. Poslužitelj podržava sljedeće vrste prijava: %1$s.
 \n

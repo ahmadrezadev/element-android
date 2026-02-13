@@ -1,7 +1,7 @@
 /*
  * Copyright 2019-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -82,7 +82,7 @@ data class MainActivityArgs(
 ) : Parcelable
 
 /**
- * This is the entry point of Element Android.
+ * This is the entry point of Mana Android.
  * This Activity, when started with argument, is also doing some cleanup when user signs out,
  * clears cache, is logged out, or is soft logged out.
  */

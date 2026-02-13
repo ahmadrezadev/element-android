@@ -384,7 +384,7 @@
     <string name="settings_privacy_policy">Política de privacitat</string>
     <string name="settings_clear_cache">Esborra la memòria cau</string>
     <string name="settings_clear_media_cache">Esborra la memòria cau multimèdia</string>
-    <string name="settings_keep_media">Manté els elements multimèdia</string>
+    <string name="settings_keep_media">Manté els manas multimèdia</string>
     <string name="settings_user_settings">Configuració d\'usuari</string>
     <string name="settings_notifications">Notificacions</string>
     <string name="settings_ignored_users">Usuaris ignorats</string>
@@ -1204,15 +1204,15 @@
     <string name="member_banned_by">Vetat per %1$s</string>
     <string name="three_pid_revoke_invite_dialog_content">Revoca la invitació a %1$s\?</string>
     <string name="three_pid_revoke_invite_dialog_title">Revoca la invitació</string>
-    <string name="login_server_url_form_modular_notice">Introdueix l\'adreça d\'Element Modular o del servidor que vulguis utilitzar</string>
+    <string name="login_server_url_form_modular_notice">Introdueix l\'adreça d\'Mana Modular o del servidor que vulguis utilitzar</string>
     <string name="login_server_url_form_modular_text">Allotjament de primera classe per a organitzacions</string>
     <string name="login_server_url_form_other_hint">Adreça</string>
-    <string name="login_server_url_form_modular_hint">Adreça dels Serveis Matrix d\'Element</string>
+    <string name="login_server_url_form_modular_hint">Adreça dels Serveis Matrix d\'Mana</string>
     <string name="login_signin">Inicia sessió</string>
     <string name="login_signup">Registra\'t</string>
     <string name="login_signin_to">Inicia sessió a %1$s</string>
     <string name="login_connect_to_a_custom_server">Connecta\'t a un servidor personalitzat</string>
-    <string name="login_connect_to_modular">Connecta\'t als Serveis Matrix d\'Element</string>
+    <string name="login_connect_to_modular">Connecta\'t als Serveis Matrix d\'Mana</string>
     <string name="login_connect_to">Connecta\'t a %1$s</string>
     <string name="login_continue">Continua</string>
     <string name="login_social_sso">inici de sessió únic</string>
@@ -1590,7 +1590,7 @@
     <string name="login_wait_for_email_title">Comprova el teu correu</string>
     <string name="login_a11y_captcha_container">Resol el repte captcha</string>
     <string name="login_a11y_choose_other">Selecciona un servidor local personalitzat</string>
-    <string name="login_a11y_choose_modular">Selecciona Serveis Matrix d\'Element</string>
+    <string name="login_a11y_choose_modular">Selecciona Serveis Matrix d\'Mana</string>
     <string name="login_a11y_choose_matrix_org">Selecciona matrix.org</string>
     <string name="login_signup_cancel_confirmation_content">El teu compte encara s\'ha creat. Vols aturar el procés de registre\?</string>
     <string name="login_signup_cancel_confirmation_title">Atenció</string>
@@ -1695,7 +1695,7 @@
     </plurals>
     <string name="phone_book_perform_lookup">Busca contactes a Matrix</string>
     <string name="disclaimer_positive_button">MÉS INFORMACIÓ</string>
-    <string name="disclaimer_title">Riot ara és Element!</string>
+    <string name="disclaimer_title">Riot ara és Mana!</string>
     <string name="crypto_error_withheld_generic">No pots accedir al missatge perquè el remitent, intencionadament, no ha enviat les claus</string>
     <string name="crypto_error_withheld_unverified">No pots accedir al missatge perquè la teva sessió no és de confiança pel remitent</string>
     <string name="crypto_error_withheld_blacklisted">No pots accedir al missatge perquè el remitent t\'ha bloquejat</string>
@@ -2573,10 +2573,10 @@
     <string name="live_location_not_enough_permission_dialog_description">No tens els permisos adequats per poder compartir la ubicació en directe en aquesta sala.</string>
     <string name="ftue_auth_password_reset_confirmation">Restabliment de contrasenya</string>
     <string name="ftue_auth_forgot_password">Contrasenya oblidada</string>
-    <string name="ftue_auth_choose_server_ems_subtitle">Element Matrix Services (EMS) és un servei robust i fiable d\'allotjament (servidors) per comunicacions ràpides, segures i en temps real. Descobreix-ho a &lt;a href=\"${ftue_ems_url}\"&gt;element.io/ems&lt;/a&gt;</string>
+    <string name="ftue_auth_choose_server_ems_subtitle">Mana Matrix Services (EMS) és un servei robust i fiable d\'allotjament (servidors) per comunicacions ràpides, segures i en temps real. Descobreix-ho a &lt;a href=\"${ftue_ems_url}\"&gt;mana.io/ems&lt;/a&gt;</string>
     <string name="crosssigning_cannot_verify_this_session_desc">No podràs accedir a l\'històric de missatges xifrats. Restableix la còpia de seguretat de missatges i les claus de verificació per començar de nou.</string>
-    <string name="labs_enable_element_call_permission_shortcuts_summary">Aprova automàticament els ginys d\'Element Call i permet l\'accés a la càmera i el micròfon</string>
-    <string name="labs_enable_element_call_permission_shortcuts">Activa els permisos d\'accés directe d\'Element Call</string>
+    <string name="labs_enable_mana_call_permission_shortcuts_summary">Aprova automàticament els ginys d\'Mana Call i permet l\'accés a la càmera i el micròfon</string>
+    <string name="labs_enable_mana_call_permission_shortcuts">Activa els permisos d\'accés directe d\'Mana Call</string>
     <string name="live_location_description">Ubicació en directe</string>
     <string name="verify_invalid_qr_notice">Aquest codi QR sembla incorrecte. Prova de fer la verificació amb un altre mètode.</string>
     <string name="crosssigning_cannot_verify_this_session">No s\'ha pogut verificar aquest dispositiu</string>
@@ -2700,7 +2700,7 @@
     <string name="device_manager_device_title">Dispositiu</string>
     <string name="device_manager_session_title">Sessió</string>
     <string name="device_manager_current_session_title">Sessió actual</string>
-    <string name="labs_enable_new_app_layout_summary">Element simplificat amb pestanyes opcionals</string>
+    <string name="labs_enable_new_app_layout_summary">Mana simplificat amb pestanyes opcionals</string>
     <string name="labs_enable_new_app_layout_title">Activa la nova visualització</string>
     <string name="device_manager_learn_more_sessions_inactive">Les sessions inactives son sessions que no has utilitzat durant un temps, però continuen rebent claus de xifrat.
 \n
@@ -2738,7 +2738,7 @@
     <string name="permissions_rationale_msg_notification">${app_name} necessita permís per mostrar notificacions. Les notificacions poden mostrar missatges, invitacions, etc.
 \n
 \nConcedeix els permisos a les següents finestres emergents per poder veure les notificacions correctament.</string>
-    <string name="qr_code_login_header_failed_e2ee_security_issue_description">S\'ha detectat un problema de seguretat en configurar la missatgeria segura. Algun dels següents elements pot estar compromès: el servidor que utilitzes; alguna de les teves connexions a Internet; algun dels teus dispositius;</string>
+    <string name="qr_code_login_header_failed_e2ee_security_issue_description">S\'ha detectat un problema de seguretat en configurar la missatgeria segura. Algun dels següents manas pot estar compromès: el servidor que utilitzes; alguna de les teves connexions a Internet; algun dels teus dispositius;</string>
     <string name="qr_code_login_header_connected_description">Comprova el dispositiu amb la sessió iniciada, s\'hauria de mostrar el codi de sota. Verifica que el codi de sota coincideix amb el del dispositiu:</string>
     <string name="qr_code_login_link_a_device_show_qr_code_instruction_1">Comença a la pantalla d\'inici de sessió</string>
     <string name="qr_code_login_link_a_device_scan_qr_code_instruction_1">Comença a la pantalla d\'inici de sessió</string>

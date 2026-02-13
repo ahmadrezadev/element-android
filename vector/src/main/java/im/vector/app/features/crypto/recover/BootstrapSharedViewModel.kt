@@ -1,7 +1,7 @@
 /*
  * Copyright 2020-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -24,7 +24,7 @@ import im.vector.app.core.platform.WaitingViewData
 import im.vector.app.core.resources.StringProvider
 import im.vector.app.features.auth.PendingAuthHandler
 import im.vector.app.features.raw.wellknown.SecureBackupMethod
-import im.vector.app.features.raw.wellknown.getElementWellknown
+import im.vector.app.features.raw.wellknown.getManaWellknown
 import im.vector.app.features.raw.wellknown.isSecureBackupRequired
 import im.vector.app.features.raw.wellknown.secureBackupMethod
 import im.vector.lib.strings.CommonStrings
@@ -80,7 +80,7 @@ class BootstrapSharedViewModel @AssistedInject constructor(
 
         // Refresh the well-known configuration
         viewModelScope.launch(Dispatchers.IO) {
-            val wellKnown = rawService.getElementWellknown(session.sessionParams)
+            val wellKnown = rawService.getManaWellknown(session.sessionParams)
             setState {
                 copy(
                         isSecureBackupRequired = wellKnown?.isSecureBackupRequired().orFalse(),

@@ -16,7 +16,7 @@
 
 package org.matrix.android.sdk.internal.session.contentscanner
 
-import org.matrix.android.sdk.api.session.crypto.attachments.ElementToDecrypt
+import org.matrix.android.sdk.api.session.crypto.attachments.ManaToDecrypt
 import org.matrix.android.sdk.api.session.crypto.model.EncryptedFileInfo
 import org.matrix.android.sdk.api.session.crypto.model.EncryptedFileKey
 import org.matrix.android.sdk.internal.session.contentscanner.model.DownloadBody
@@ -27,15 +27,15 @@ import org.matrix.rustcomponents.sdk.crypto.PkEncryption
 internal object ScanEncryptorUtils {
 
     @Throws
-    fun getDownloadBodyAndEncryptIfNeeded(publicServerKey: String?, mxcUrl: String, elementToDecrypt: ElementToDecrypt): DownloadBody {
+    fun getDownloadBodyAndEncryptIfNeeded(publicServerKey: String?, mxcUrl: String, manaToDecrypt: ManaToDecrypt): DownloadBody {
         // TODO, upstream refactoring changed the object model here...
         // it's bad we have to recreate and use hardcoded values
         val encryptedInfo = EncryptedFileInfo(
                 url = mxcUrl,
-                iv = elementToDecrypt.iv,
-                hashes = mapOf("sha256" to elementToDecrypt.sha256),
+                iv = manaToDecrypt.iv,
+                hashes = mapOf("sha256" to manaToDecrypt.sha256),
                 key = EncryptedFileKey(
-                        k = elementToDecrypt.k,
+                        k = manaToDecrypt.k,
                         alg = "A256CTR",
                         keyOps = listOf("encrypt", "decrypt"),
                         kty = "oct",

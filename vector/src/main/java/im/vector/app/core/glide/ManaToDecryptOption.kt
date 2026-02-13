@@ -1,17 +1,17 @@
 /*
  * Copyright 2019-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
 package im.vector.app.core.glide
 
 import com.bumptech.glide.load.Option
-import org.matrix.android.sdk.api.session.crypto.attachments.ElementToDecrypt
+import org.matrix.android.sdk.api.session.crypto.attachments.ManaToDecrypt
 
-const val ElementToDecryptOptionKey = "im.vector.app.core.glide.ElementToDecrypt"
+const val ManaToDecryptOptionKey = "im.vector.app.core.glide.ManaToDecrypt"
 
 val ELEMENT_TO_DECRYPT = Option.memory(
-        ElementToDecryptOptionKey, ElementToDecrypt("", "", "")
+        ManaToDecryptOptionKey, ManaToDecrypt("", "", "")
 )

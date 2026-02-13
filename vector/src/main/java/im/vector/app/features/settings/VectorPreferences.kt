@@ -1,7 +1,7 @@
 /*
  * Copyright 2018-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 package im.vector.app.features.settings
@@ -227,7 +227,7 @@ class VectorPreferences @Inject constructor(
 
         private const val SETTINGS_LABS_ENABLE_ELEMENT_CALL_PERMISSION_SHORTCUTS = "SETTINGS_LABS_ENABLE_ELEMENT_CALL_PERMISSION_SHORTCUTS"
 
-        // This key will be used to identify clients with the old thread support enabled io.element.thread
+        // This key will be used to identify clients with the old thread support enabled io.mana.thread
         const val SETTINGS_LABS_ENABLE_THREAD_MESSAGES_OLD_CLIENTS = "SETTINGS_LABS_ENABLE_THREAD_MESSAGES"
 
         // This key will be used to identify clients with the new thread support enabled m.thread
@@ -530,7 +530,7 @@ class VectorPreferences @Inject constructor(
                 if (value.startsWith("file://")) {
                     // it should never happen
                     // else android.os.FileUriExposedException will be triggered.
-                    // see https://github.com/element-hq/riot-android/issues/1725
+                    // see https://github.com/mana-hq/riot-android/issues/1725
                     return
                 }
             }
@@ -554,7 +554,7 @@ class VectorPreferences @Inject constructor(
 
         var uri: Uri? = null
 
-        // https://github.com/element-hq/riot-android/issues/1725
+        // https://github.com/mana-hq/riot-android/issues/1725
         if (null != url && !url.startsWith("file://")) {
             try {
                 uri = Uri.parse(url)
@@ -1107,7 +1107,7 @@ class VectorPreferences @Inject constructor(
         }
     }
 
-    fun labsEnableElementCallPermissionShortcuts(): Boolean {
+    fun labsEnableManaCallPermissionShortcuts(): Boolean {
         return defaultPrefs.getBoolean(SETTINGS_LABS_ENABLE_ELEMENT_CALL_PERMISSION_SHORTCUTS, false)
     }
 
@@ -1119,7 +1119,7 @@ class VectorPreferences @Inject constructor(
     }
 
     /**
-     * Manually sets thread messages enabled, useful for migrating users from io.element.thread.
+     * Manually sets thread messages enabled, useful for migrating users from io.mana.thread.
      */
     fun setThreadMessagesEnabled() {
         defaultPrefs

@@ -1,4 +1,4 @@
-# Contributing to Element Android
+# Contributing to Mana Android
 
 <!--- TOC -->
 
@@ -6,7 +6,7 @@
 * [Android Studio settings](#android-studio-settings)
   * [Template](#template)
 * [Compilation](#compilation)
-* [I want to help translating Element](#i-want-to-help-translating-element)
+* [I want to help translating Mana](#i-want-to-help-translating-mana)
 * [I want to submit a PR to fix an issue](#i-want-to-submit-a-pr-to-fix-an-issue)
   * [Kotlin](#kotlin)
   * [Changelog](#changelog)
@@ -35,7 +35,7 @@
 
 Please read https://github.com/matrix-org/synapse/blob/master/CONTRIBUTING.md
 
-Element Android support can be found in this room: [![Element Android Matrix room #element-android:matrix.org](https://img.shields.io/matrix/element-android:matrix.org.svg?label=%23element-android:matrix.org&logo=matrix&server_fqdn=matrix.org)](https://matrix.to/#/#element-android:matrix.org).
+Mana Android support can be found in this room: [![Mana Android Matrix room #mana-android:matrix.org](https://img.shields.io/matrix/mana-android:matrix.org.svg?label=%23mana-android:matrix.org&logo=matrix&server_fqdn=matrix.org)](https://matrix.to/#/#mana-android:matrix.org).
 
 The rest of the document contains specific rules for Matrix Android projects
 
@@ -59,7 +59,7 @@ To install the template (to be done only once):
 
 To create a new screen:
 - First create a new package in your code.
-- Then right click on the package, and select `New/New Vector/Element Feature`.
+- Then right click on the package, and select `New/New Vector/Mana Feature`.
 - Follow the Wizard, especially replace `Main` by something more relevant to your feature.
 - Click on `Finish`.
 - Remaining steps are described as TODO in the generated files, or will be pointed out by the compiler, or at runtime :)
@@ -68,14 +68,14 @@ Note that if the templates are modified, the only things to do is to restart And
 
 ## Compilation
 
-For now, the Matrix SDK and the Element application are in the same project. So there is no specific thing to do, this project should compile without any special action.
+For now, the Matrix SDK and the Mana application are in the same project. So there is no specific thing to do, this project should compile without any special action.
 
 See [docs/rust_crypto_integration.md](./docs/rust_crypto_integration.md#testing-with-a-local-rust-aar) for notes on building against a custom version of the Rust `matrix-sdk-crypto`.
 
-## I want to help translating Element
+## I want to help translating Mana
 
 If you want to fix an issue with an English string, please submit a PR.
-If you want to fix an issue in other languages, or add a missing translation, or even add a new language, please use [Weblate](https://translate.element.io/projects/element-android/).
+If you want to fix an issue in other languages, or add a missing translation, or even add a new language, please use [Weblate](https://translate.mana.io/projects/mana-android/).
 
 ## I want to submit a PR to fix an issue
 
@@ -96,7 +96,7 @@ Towncrier says to use the PR number for the filename, but the issue number is al
 
 Supported filename extensions are:
 
-- ``.feature``: Signifying a new feature in Element Android or in the Matrix SDK.
+- ``.feature``: Signifying a new feature in Mana Android or in the Matrix SDK.
 - ``.bugfix``: Signifying a bug fix.
 - ``.wip``: Signifying a work in progress change, typically a component of a larger feature which will be enabled once all tasks are complete.
 - ``.doc``: Signifying a documentation improvement.
@@ -163,14 +163,14 @@ Make sure the following commands execute without any error:
 
 ### Tests
 
-Element is currently supported on Android Lollipop (API 21+): please test your change on an Android device (or Android emulator) running with API 21. Many issues can happen (including crashes) on older devices.
+Mana is currently supported on Android Lollipop (API 21+): please test your change on an Android device (or Android emulator) running with API 21. Many issues can happen (including crashes) on older devices.
 Also, if possible, please test your change on a real device. Testing on Android emulator may not be sufficient.
 
 You should consider adding Unit tests with your PR, and also integration tests (AndroidTest). Please refer to [this document](./docs/integration_tests.md) to install and run the integration test environment.
 
 ### Internationalisation
 
-Translations are handled using an external tool: [Weblate](https://translate.element.io/projects/element-android/)
+Translations are handled using an external tool: [Weblate](https://translate.mana.io/projects/mana-android/)
 
 **As a general rule, please never edit or add or remove translations to the project in a Pull Request**. It can lead to merge conflict if the translations are also modified in Weblate side. Pull Request containing change(s) on the translation files cannot be merged.
 
@@ -178,7 +178,7 @@ Translations are handled using an external tool: [Weblate](https://translate.ele
 
 When adding new string resources, please only add new entries in the file `values/strings.xml` ([this file](./library/ui-strings/src/main/res/values/strings.xml)). Translations will be added later by the community of translators using Weblate.
 
-The file `values/strings.xml` must only contain American English (U. S. English) values, as this is the default language of the Android operating system. So for instance, please use "color" instead of "colour". Element Android will still use the language set on the system by the user, like any other Android applications which provide translations. The system language can be any other English language variants, or any other languages. Note that this is also possible to override the system language using the Element Android in-app language settings.
+The file `values/strings.xml` must only contain American English (U. S. English) values, as this is the default language of the Android operating system. So for instance, please use "color" instead of "colour". Mana Android will still use the language set on the system by the user, like any other Android applications which provide translations. The system language can be any other English language variants, or any other languages. Note that this is also possible to override the system language using the Mana Android in-app language settings.
 
 New strings can be added anywhere in the file `values/strings.xml`, not necessarily at the end of the file. Generally, it's even better to add the new strings in some dedicated section per feature, and not at the end of the file, to avoid merge conflict between 2 PR adding strings at the end of the same file.
 
@@ -234,7 +234,7 @@ For instance, when updating the image `src` of an ImageView, please also conside
 When adding or editing layouts, make sure the layout will render correctly if device uses a RTL (Right To Left) language.
 You can check this in the layout editor preview by selecting any RTL language (ex: Arabic).
 
-Also please check that the colors are ok for all the current themes of Element. Please use `?attr` instead of `@color` to reference colors in the layout. You can check this in the layout editor preview by selecting all the main themes (`AppTheme.Status`, `AppTheme.Dark`, etc.).
+Also please check that the colors are ok for all the current themes of Mana. Please use `?attr` instead of `@color` to reference colors in the layout. You can check this in the layout editor preview by selecting all the main themes (`AppTheme.Status`, `AppTheme.Dark`, etc.).
 
 ### Authors
 

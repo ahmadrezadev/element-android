@@ -1,7 +1,7 @@
 /*
  * Copyright 2020-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -99,8 +99,8 @@ class WidgetActivity : VectorBaseActivity<ActivityWidgetBinding>() {
             }
         }
 
-        // Trust element call widget by default
-        if (widgetArgs.kind == WidgetKind.ELEMENT_CALL && vectorPreferences.labsEnableElementCallPermissionShortcuts()) {
+        // Trust mana call widget by default
+        if (widgetArgs.kind == WidgetKind.ELEMENT_CALL && vectorPreferences.labsEnableManaCallPermissionShortcuts()) {
             if (supportFragmentManager.findFragmentByTag(WIDGET_FRAGMENT_TAG) == null) {
                 addOnPictureInPictureModeChangedListener(pictureInPictureModeChangedInfoConsumer)
                 addFragment(views.fragmentContainer, WidgetFragment::class.java, widgetArgs, WIDGET_FRAGMENT_TAG)
@@ -159,14 +159,14 @@ class WidgetActivity : VectorBaseActivity<ActivityWidgetBinding>() {
 
     private fun enterPictureInPicture() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            createElementCallPipParams()?.let {
+            createManaCallPipParams()?.let {
                 enterPictureInPictureMode(it)
             }
         }
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
-    private fun createElementCallPipParams(): PictureInPictureParams? {
+    private fun createManaCallPipParams(): PictureInPictureParams? {
         val actions = mutableListOf<RemoteAction>()
         val intent = Intent(ACTION_MEDIA_CONTROL).putExtra(EXTRA_CONTROL_TYPE, CONTROL_TYPE_HANGUP)
         val pendingIntent = PendingIntent.getBroadcast(this, REQUEST_CODE_HANGUP, intent, FLAG_IMMUTABLE)

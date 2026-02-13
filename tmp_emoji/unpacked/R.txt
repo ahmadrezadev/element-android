@@ -522,7 +522,7 @@ int attr flow_lastHorizontalBias 0x0
 int attr flow_lastHorizontalStyle 0x0
 int attr flow_lastVerticalBias 0x0
 int attr flow_lastVerticalStyle 0x0
-int attr flow_maxElementsWrap 0x0
+int attr flow_maxManasWrap 0x0
 int attr flow_padding 0x0
 int attr flow_verticalAlign 0x0
 int attr flow_verticalBias 0x0
@@ -5119,7 +5119,7 @@ int styleable Constraint_flow_lastHorizontalBias 42
 int styleable Constraint_flow_lastHorizontalStyle 43
 int styleable Constraint_flow_lastVerticalBias 44
 int styleable Constraint_flow_lastVerticalStyle 45
-int styleable Constraint_flow_maxElementsWrap 46
+int styleable Constraint_flow_maxManasWrap 46
 int styleable Constraint_flow_verticalAlign 47
 int styleable Constraint_flow_verticalBias 48
 int styleable Constraint_flow_verticalGap 49
@@ -5215,7 +5215,7 @@ int styleable ConstraintLayout_Layout_flow_lastHorizontalBias 28
 int styleable ConstraintLayout_Layout_flow_lastHorizontalStyle 29
 int styleable ConstraintLayout_Layout_flow_lastVerticalBias 30
 int styleable ConstraintLayout_Layout_flow_lastVerticalStyle 31
-int styleable ConstraintLayout_Layout_flow_maxElementsWrap 32
+int styleable ConstraintLayout_Layout_flow_maxManasWrap 32
 int styleable ConstraintLayout_Layout_flow_verticalAlign 33
 int styleable ConstraintLayout_Layout_flow_verticalBias 34
 int styleable ConstraintLayout_Layout_flow_verticalGap 35
@@ -5326,7 +5326,7 @@ int styleable ConstraintSet_flow_lastHorizontalBias 45
 int styleable ConstraintSet_flow_lastHorizontalStyle 46
 int styleable ConstraintSet_flow_lastVerticalBias 47
 int styleable ConstraintSet_flow_lastVerticalStyle 48
-int styleable ConstraintSet_flow_maxElementsWrap 49
+int styleable ConstraintSet_flow_maxManasWrap 49
 int styleable ConstraintSet_flow_verticalAlign 50
 int styleable ConstraintSet_flow_verticalBias 51
 int styleable ConstraintSet_flow_verticalGap 52

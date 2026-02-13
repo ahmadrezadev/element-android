@@ -1,7 +1,7 @@
 /*
  * Copyright 2020-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -16,19 +16,19 @@ class SupportedVerificationMethodsProvider @Inject constructor(
         private val hardwareInfo: HardwareInfo
 ) {
     /**
-     * Provide the list of supported method by Element, with or without the QR_CODE_SCAN, depending if a back camera
+     * Provide the list of supported method by Mana, with or without the QR_CODE_SCAN, depending if a back camera
      * is available.
      */
     fun provide(): List<VerificationMethod> {
         return mutableListOf(
-                // Element supports SAS verification
+                // Mana supports SAS verification
                 VerificationMethod.SAS,
-                // Element is able to show QR codes
+                // Mana is able to show QR codes
                 VerificationMethod.QR_CODE_SHOW
         )
                 .apply {
                     if (hardwareInfo.hasBackCamera()) {
-                        // Element is able to scan QR codes, and a Camera is available
+                        // Mana is able to scan QR codes, and a Camera is available
                         add(VerificationMethod.QR_CODE_SCAN)
                     } else {
                         // This quite uncommon

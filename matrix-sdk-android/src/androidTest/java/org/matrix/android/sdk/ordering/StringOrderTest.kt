@@ -31,8 +31,8 @@ class StringOrderTest {
                 StringOrderUtils.baseToString(StringOrderUtils.stringToBase("a", StringOrderUtils.DEFAULT_ALPHABET), StringOrderUtils.DEFAULT_ALPHABET)
         )
         assertEquals(
-                "element",
-                StringOrderUtils.baseToString(StringOrderUtils.stringToBase("element", StringOrderUtils.DEFAULT_ALPHABET), StringOrderUtils.DEFAULT_ALPHABET)
+                "mana",
+                StringOrderUtils.baseToString(StringOrderUtils.stringToBase("mana", StringOrderUtils.DEFAULT_ALPHABET), StringOrderUtils.DEFAULT_ALPHABET)
         )
         assertEquals(
                 "matrix",
@@ -74,7 +74,7 @@ class StringOrderTest {
     fun testAverage() {
         assertAverage("${StringOrderUtils.DEFAULT_ALPHABET.first()}", "m")
         assertAverage("aa", "aab")
-        assertAverage("matrix", "element")
+        assertAverage("matrix", "mana")
         assertAverage("mmm", "mmmmm")
         assertAverage("aab", "aa")
         assertAverage("", "aa")
@@ -84,15 +84,15 @@ class StringOrderTest {
 
     @Test
     fun testMidPoints() {
-        val orders = StringOrderUtils.midPoints("element", "matrix", 4)
+        val orders = StringOrderUtils.midPoints("mana", "matrix", 4)
         assertEquals(4, orders!!.size)
-        assert("element" < orders[0])
+        assert("mana" < orders[0])
         assert(orders[0] < orders[1])
         assert(orders[1] < orders[2])
         assert(orders[2] < orders[3])
         assert(orders[3] < "matrix")
 
-        println("element < ${orders.joinToString(" < ") { "[$it]" }} < matrix")
+        println("mana < ${orders.joinToString(" < ") { "[$it]" }} < matrix")
 
         val orders2 = StringOrderUtils.midPoints("a", "d", 4)
         assertEquals(null, orders2)

@@ -1,7 +1,7 @@
 /*
  * Copyright 2020-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -17,7 +17,7 @@ import androidx.test.rule.GrantPermissionRule
 import im.vector.app.espresso.tools.ScreenshotFailureRule
 import im.vector.app.features.MainActivity
 import im.vector.app.getString
-import im.vector.app.ui.robot.ElementRobot
+import im.vector.app.ui.robot.ManaRobot
 import im.vector.app.ui.robot.settings.labs.LabFeaturesPreferences
 import im.vector.app.ui.robot.withDeveloperMode
 import im.vector.lib.strings.CommonStrings
@@ -41,7 +41,7 @@ class UiAllScreensSanityTest {
             .around(GrantPermissionRule.grant(Manifest.permission.WRITE_EXTERNAL_STORAGE))
             .around(ScreenshotFailureRule())
 
-    private val elementRobot = ElementRobot(
+    private val manaRobot = ManaRobot(
             LabFeaturesPreferences(
                     InstrumentationRegistry.getInstrumentation()
                             .targetContext
@@ -58,15 +58,15 @@ class UiAllScreensSanityTest {
     fun allScreensTest() {
         IdlingPolicies.setMasterPolicyTimeout(120, TimeUnit.SECONDS)
 
-        elementRobot.onboarding {
+        manaRobot.onboarding {
             crawl()
         }
 
         // Create an account
         val userId = "UiTest_" + UUID.randomUUID().toString()
-        elementRobot.signUp(userId)
+        manaRobot.signUp(userId)
 
-        elementRobot.settings {
+        manaRobot.settings {
             general { crawl() }
             notifications { crawl() }
             preferences { crawl() }
@@ -78,12 +78,12 @@ class UiAllScreensSanityTest {
             legals { crawl() }
         }
 
-        elementRobot.newDirectMessage {
+        manaRobot.newDirectMessage {
             verifyQrCodeButton()
             verifyInviteFriendsButton()
         }
 
-        elementRobot.newRoom {
+        manaRobot.newRoom {
             createNewRoom {
                 crawl()
                 createRoom {
@@ -99,7 +99,7 @@ class UiAllScreensSanityTest {
         testThreadScreens()
 
         val spaceName = UUID.randomUUID().toString()
-        elementRobot.space {
+        manaRobot.space {
             createSpace(true) {
                 createAndCrawl(spaceName)
             }
@@ -127,17 +127,17 @@ class UiAllScreensSanityTest {
         // not sure what's the source, maybe the expanded state?
         Thread.sleep(10_000)
 
-        elementRobot.space { selectSpace(spaceName) }
+        manaRobot.space { selectSpace(spaceName) }
 
-        elementRobot.layoutPreferences {
+        manaRobot.layoutPreferences {
             crawl()
         }
 
-        elementRobot.roomList {
+        manaRobot.roomList {
             crawlTabs()
         }
 
-        elementRobot.withDeveloperMode {
+        manaRobot.withDeveloperMode {
             settings {
                 advancedSettings { crawlDeveloperOptions() }
             }
@@ -152,24 +152,24 @@ class UiAllScreensSanityTest {
             }
         }
 
-        elementRobot.roomList {
+        manaRobot.roomList {
             verifyCreatedRoom()
         }
 
-        elementRobot.signout(expectSignOutWarning = true)
+        manaRobot.signout(expectSignOutWarning = true)
 
         // Login again on the same account
-        elementRobot.login(userId)
-        elementRobot.dismissVerificationIfPresent()
+        manaRobot.login(userId)
+        manaRobot.dismissVerificationIfPresent()
         // TODO Deactivate account instead of logout?
-        elementRobot.signout(expectSignOutWarning = false)
+        manaRobot.signout(expectSignOutWarning = false)
     }
 
     /**
      * Testing multiple threads screens
      */
     private fun testThreadScreens() {
-        elementRobot.newRoom {
+        manaRobot.newRoom {
             createNewRoom {
                 crawl()
                 createRoom(roomName = "thread room") {

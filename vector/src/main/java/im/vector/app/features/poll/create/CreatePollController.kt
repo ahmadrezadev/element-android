@@ -1,7 +1,7 @@
 /*
  * Copyright 2021-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -108,7 +108,7 @@ class CreatePollController @Inject constructor(
             genericButtonItem {
                 id("add_option")
                 text(host.stringProvider.getString(CommonStrings.create_poll_add_option))
-                textColor(host.colorProvider.getColor(im.vector.lib.ui.styles.R.color.palette_element_green))
+                textColor(host.colorProvider.getColor(im.vector.lib.ui.styles.R.color.palette_mana_green))
                 gravity(Gravity.START)
                 bold(true)
                 highlight(false)

@@ -1,1 +1,1 @@
-javascript:window.sendObjectMessage = function(parameters) { var iframe = document.createElement('iframe'); iframe.setAttribute('src', 'js:' + JSON.stringify(parameters)); document.documentElement.appendChild(iframe); iframe.parentNode.removeChild(iframe); iframe = null;};
+javascript:window.sendObjectMessage = function(parameters) { var iframe = document.createMana('iframe'); iframe.setAttribute('src', 'js:' + JSON.stringify(parameters)); document.documentMana.appendChild(iframe); iframe.parentNode.removeChild(iframe); iframe = null;};

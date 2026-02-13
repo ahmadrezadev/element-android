@@ -361,7 +361,7 @@ internal class RustVerificationService @Inject constructor(
 
 //    override suspend fun beginDeviceVerification(otherUserId: String, otherDeviceId: String): String? {
 //        // This starts the short SAS flow, the one that doesn't start with
-//        // a `m.key.verification.request`, Element web stopped doing this, might
+//        // a `m.key.verification.request`, Mana web stopped doing this, might
 //        // be wise do do so as well
 //        // DeviceListBottomSheetViewModel triggers this, interestingly the method that
 //        // triggers this is called `manuallyVerify()`

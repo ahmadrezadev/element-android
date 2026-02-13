@@ -31,10 +31,10 @@
     <color name="black_54">#8A000000</color>
 
     <!-- For Android status bar and navigation bar -->
-    <color name="android_status_bar_background_light">@color/element_system_light</color>
-    <color name="android_navigation_bar_background_light">@color/element_system_light</color>
-    <color name="android_status_bar_background_dark">@color/element_background_dark</color>
-    <color name="android_navigation_bar_background_dark">@color/element_system_dark</color>
+    <color name="android_status_bar_background_light">@color/mana_system_light</color>
+    <color name="android_navigation_bar_background_light">@color/mana_system_light</color>
+    <color name="android_status_bar_background_dark">@color/mana_background_dark</color>
+    <color name="android_navigation_bar_background_dark">@color/mana_system_dark</color>
 
     <!-- Used for toolbar background -->
     <attr name="vctr_toolbar_background" format="color" />
@@ -45,7 +45,7 @@
     <!-- Used for item separators in list -->
     <attr name="vctr_list_separator" format="color" />
 
-    <!-- Used for item separators in list, variant using element system color -->
+    <!-- Used for item separators in list, variant using mana system color -->
     <attr name="vctr_list_separator_system" format="color" />
 
     <!-- Used for item separators in list, on surface -->
@@ -123,16 +123,16 @@
     <color name="vctr_presence_indicator_offline_dark">@color/palette_gray_450</color>
 
     <attr name="vctr_presence_indicator_online" format="color" />
-    <color name="vctr_presence_indicator_online_light">@color/palette_element_green</color>
-    <color name="vctr_presence_indicator_online_dark">@color/palette_element_green</color>
+    <color name="vctr_presence_indicator_online_light">@color/palette_mana_green</color>
+    <color name="vctr_presence_indicator_online_dark">@color/palette_mana_green</color>
 
     <attr name="vctr_presence_indicator_busy" format="color" />
-    <color name="vctr_presence_indicator_busy_light">@color/element_alert_light</color>
-    <color name="vctr_presence_indicator_busy_dark">@color/element_alert_dark</color>
+    <color name="vctr_presence_indicator_busy_light">@color/mana_alert_light</color>
+    <color name="vctr_presence_indicator_busy_dark">@color/mana_alert_dark</color>
 
     <attr name="vctr_presence_indicator_away" format="color" />
-    <color name="vctr_presence_indicator_away_light">@color/palette_element_orange</color>
-    <color name="vctr_presence_indicator_away_dark">@color/palette_element_orange</color>
+    <color name="vctr_presence_indicator_away_light">@color/palette_mana_orange</color>
+    <color name="vctr_presence_indicator_away_dark">@color/palette_mana_orange</color>
 
     <!-- Location sharing colors -->
     <attr name="vctr_live_location" format="color" />

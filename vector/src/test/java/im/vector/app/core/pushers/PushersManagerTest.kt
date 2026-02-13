@@ -1,7 +1,7 @@
 /*
  * Copyright 2022-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -53,7 +53,7 @@ class PushersManagerTest {
         val pushKey = "abc"
         val gateway = "123"
         val pusherAppId = "app-id"
-        val appName = "element"
+        val appName = "mana"
         val deviceDisplayName = "iPhone Lollipop"
         stringProvider.given(im.vector.app.config.R.string.pusher_app_id, pusherAppId)
         localeProvider.givenCurrent(Locale.UK)

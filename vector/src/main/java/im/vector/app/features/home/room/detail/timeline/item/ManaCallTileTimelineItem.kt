@@ -1,7 +1,7 @@
 /*
  * Copyright 2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 package im.vector.app.features.home.room.detail.timeline.item
@@ -26,7 +26,7 @@ import im.vector.lib.strings.CommonStrings
 import org.matrix.android.sdk.api.util.MatrixItem
 
 @EpoxyModelClass
-abstract class ElementCallTileTimelineItem : AbsBaseMessageItem<ElementCallTileTimelineItem.Holder>(R.layout.item_timeline_event_base_state) {
+abstract class ManaCallTileTimelineItem : AbsBaseMessageItem<ManaCallTileTimelineItem.Holder>(R.layout.item_timeline_event_base_state) {
 
     override val baseAttributes: AbsBaseMessageItem.Attributes
         get() = attributes
@@ -59,7 +59,7 @@ abstract class ElementCallTileTimelineItem : AbsBaseMessageItem<ElementCallTileT
     }
 
     companion object {
-        private val STUB_ID = R.id.messageElementCallStub
+        private val STUB_ID = R.id.messageManaCallStub
     }
 
     data class Attributes(

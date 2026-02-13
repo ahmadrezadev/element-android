@@ -1,7 +1,7 @@
 /*
  * Copyright 2020-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -37,7 +37,7 @@ class JoinConferenceView @JvmOverloads constructor(
         super.onAttachedToWindow()
         views = ViewJoinConferenceBinding.bind(this)
         views?.joinConferenceButton?.setOnClickListener { onJoinClicked?.invoke() }
-        val colorFrom = ContextCompat.getColor(context, im.vector.lib.ui.styles.R.color.palette_element_green)
+        val colorFrom = ContextCompat.getColor(context, im.vector.lib.ui.styles.R.color.palette_mana_green)
         val colorTo = ContextCompat.getColor(context, im.vector.lib.ui.styles.R.color.join_conference_animated_color)
         // Animate button color to highlight
         backgroundAnimator = ValueAnimator.ofObject(ArgbEvaluator(), colorFrom, colorTo).apply {

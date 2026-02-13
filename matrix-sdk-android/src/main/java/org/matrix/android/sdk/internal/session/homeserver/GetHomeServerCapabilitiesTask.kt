@@ -215,7 +215,7 @@ internal class DefaultGetHomeServerCapabilitiesTask @Inject constructor(
     }
 
     companion object {
-        // 8 hours like on Element Web
+        // 8 hours like on Mana Web
         private const val MIN_DELAY_BETWEEN_TWO_REQUEST_MILLIS = 8 * 60 * 60 * 1000
     }
 }

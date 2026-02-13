@@ -1150,16 +1150,16 @@
     <string name="login_server_other_text">Configurações personalizadas &amp; avançadas</string>
     <string name="login_continue">Continuar</string>
     <string name="login_connect_to">Conectar-se a %1$s</string>
-    <string name="login_connect_to_modular">Conectar-se a Element Matrix Services</string>
+    <string name="login_connect_to_modular">Conectar-se a Mana Matrix Services</string>
     <string name="login_connect_to_a_custom_server">Conectar-se a um servidor personalizado</string>
     <string name="login_signin_to">Fazer signin a %1$s</string>
     <string name="login_signup">Fazer Signup</string>
     <string name="login_signin">Fazer Signin</string>
     <string name="login_signin_sso">Continuar com SOU</string>
-    <string name="login_server_url_form_modular_hint">Endereço de Element Matrix Services</string>
+    <string name="login_server_url_form_modular_hint">Endereço de Mana Matrix Services</string>
     <string name="login_server_url_form_other_hint">Endereço</string>
     <string name="login_server_url_form_modular_text">Hospedagem premium para organizações</string>
-    <string name="login_server_url_form_modular_notice">Digite o endereço do Modular Element ou Servidor que você quer usar</string>
+    <string name="login_server_url_form_modular_notice">Digite o endereço do Modular Mana ou Servidor que você quer usar</string>
     <string name="login_server_url_form_common_notice">Digite o endereço do servidor que você quer usar</string>
     <string name="login_sso_error_message">Um erro ocorreu quando carregando a página: %1$s (%2$d)</string>
     <string name="login_mode_not_supported">O aplicativo não é capaz de fazer signin a este servidorcasa. O servidorcasa suporta o(s) seguinte(s) tipo(s) de signin: %1$s.
@@ -1218,7 +1218,7 @@
     <string name="login_signup_cancel_confirmation_title">Aviso</string>
     <string name="login_signup_cancel_confirmation_content">Sua conta não foi criada ainda. Parar o processo de registro\?</string>
     <string name="login_a11y_choose_matrix_org">Selecionar matrix.org</string>
-    <string name="login_a11y_choose_modular">Selecionar Element Matrix Services</string>
+    <string name="login_a11y_choose_modular">Selecionar Mana Matrix Services</string>
     <string name="login_a11y_choose_other">Selecionar um servidorcasa personalizado</string>
     <string name="login_a11y_captcha_container">Por favor performe o desafio de captcha</string>
     <string name="login_terms_title">Aceite termos para continuar</string>
@@ -1592,7 +1592,7 @@
     <string name="crypto_error_withheld_unverified">Você não pode acessar esta mensagem porque sua sessão não é confiada pelo remetente</string>
     <string name="crypto_error_withheld_generic">Você não pode acessar esta mensagem porque o remetente propositalmente não enviou as chaves</string>
     <string name="notice_crypto_unable_to_decrypt_merged">Esperando por histórico de encriptação</string>
-    <string name="disclaimer_title">Riot agora é Element!</string>
+    <string name="disclaimer_title">Riot agora é Mana!</string>
     <string name="disclaimer_content">Nós estamos animados em anunciar que nós temos mudado de nome! Seu app está atualizado e você está com signin feito a sua conta.</string>
     <string name="disclaimer_negative_button">ENTENDI</string>
     <string name="disclaimer_positive_button">SABER MAIS</string>
@@ -2557,7 +2557,7 @@
     <string name="ftue_auth_terms_subtitle">Por favor leia todos os termos e políticas de %s</string>
     <string name="ftue_auth_terms_title">Políticas de servidor</string>
     <string name="ftue_auth_choose_server_ems_cta">Entrar em contato</string>
-    <string name="ftue_auth_choose_server_ems_subtitle">Element Matrix Services (EMS) é um serviço de hospedagem robusto e confiável para comunicação rápida, segura e em tempo real. Descubra como em <a href="${ftue_ems_url}">element.io/ems</a></string>
+    <string name="ftue_auth_choose_server_ems_subtitle">Mana Matrix Services (EMS) é um serviço de hospedagem robusto e confiável para comunicação rápida, segura e em tempo real. Descubra como em <a href="${ftue_ems_url}">mana.io/ems</a></string>
     <string name="ftue_auth_choose_server_ems_title">Quer hospedar seu próprio servidor\?</string>
     <string name="ftue_auth_choose_server_entry_hint">URL de servidor</string>
     <string name="ftue_auth_choose_server_subtitle">Qual é o endereço de seu servidor\? Isto é como uma casa para todos os seus dados</string>
@@ -2574,8 +2574,8 @@
     <string name="font_size_section_manually">Escolher manualmente</string>
     <string name="font_size_section_auto">Definir automaticamente</string>
     <string name="font_size_title">Encolher tamanho de fonte</string>
-    <string name="labs_enable_element_call_permission_shortcuts_summary">Auto-aprovar widgets de Element Call e conceder acesso de câmera / mic</string>
-    <string name="labs_enable_element_call_permission_shortcuts">Habilitar atalhos de permissão de Element Call</string>
+    <string name="labs_enable_mana_call_permission_shortcuts_summary">Auto-aprovar widgets de Mana Call e conceder acesso de câmera / mic</string>
+    <string name="labs_enable_mana_call_permission_shortcuts">Habilitar atalhos de permissão de Mana Call</string>
     <string name="live_location_description">Localização ao vivo</string>
     <string name="verify_invalid_qr_notice">Este QR code parece malformado. Por favor tente verificar com um outro método.</string>
     <string name="crosssigning_cannot_verify_this_session_desc">Você não vai ser capaz de acessar histórico de mensagem encriptada. Resette seu Backup de Mensagem Seguro e chaves de verificação para começar do zero.</string>
@@ -2700,7 +2700,7 @@
     <string name="device_manager_verification_status_detail_current_session_verified">Sua sessão atual está pronta para mensageria segura.</string>
     <string name="labs_enable_deferred_dm_summary">Criar DM somente em primeira mensagem</string>
     <string name="labs_enable_deferred_dm_title">Habilitar DMs diferidas</string>
-    <string name="labs_enable_new_app_layout_summary">Um Element simplificado com abas opcionais</string>
+    <string name="labs_enable_new_app_layout_summary">Um Mana simplificado com abas opcionais</string>
     <string name="labs_enable_new_app_layout_title">Habilitar novo layout</string>
     <string name="device_manager_learn_more_session_rename">Outros usuários em mensagens diretas e salas das quais você participa podem visualizar uma lista completa de suas sessões.
 \n

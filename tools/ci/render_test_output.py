@@ -6,7 +6,7 @@
 
 # Potentially rewrite as an independent action, use handlebars to template result
 import sys
-import xml.etree.ElementTree as ET
+import xml.etree.ManaTree as ET
 suitename = sys.argv[1]
 xmlfiles = sys.argv[2:]
 print("::group::Arguments")

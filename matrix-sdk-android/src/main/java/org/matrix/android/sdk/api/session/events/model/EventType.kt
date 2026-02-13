@@ -87,7 +87,7 @@ object EventType {
     // This type is not processed by the client, just sent to the server
     const val CALL_REPLACES = "m.call.replaces"
 
-    // Element Call
+    // Mana Call
     val ELEMENT_CALL_NOTIFY = StableUnstableId(stable = "m.call.notify", unstable = "org.matrix.msc4075.call.notify")
 
     // Key share events

@@ -1,7 +1,7 @@
 /*
  * Copyright 2020-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -17,7 +17,7 @@ import im.vector.app.core.utils.DimensionConverter
 import im.vector.app.features.media.ImageContentRenderer
 import im.vector.app.features.media.VideoContentRenderer
 import im.vector.app.features.roomprofile.uploads.RoomUploadsViewState
-import org.matrix.android.sdk.api.session.crypto.attachments.toElementToDecrypt
+import org.matrix.android.sdk.api.session.crypto.attachments.toManaToDecrypt
 import org.matrix.android.sdk.api.session.room.model.message.MessageImageContent
 import org.matrix.android.sdk.api.session.room.model.message.MessageType
 import org.matrix.android.sdk.api.session.room.model.message.MessageVideoContent
@@ -102,7 +102,7 @@ class UploadsMediaController @Inject constructor(
                 filename = messageContent.body,
                 url = messageContent.getFileUrl(),
                 mimeType = messageContent.mimeType,
-                elementToDecrypt = messageContent.encryptedFileInfo?.toElementToDecrypt(),
+                manaToDecrypt = messageContent.encryptedFileInfo?.toManaToDecrypt(),
                 height = messageContent.info?.height,
                 maxHeight = itemSize,
                 width = messageContent.info?.width,
@@ -118,7 +118,7 @@ class UploadsMediaController @Inject constructor(
                 filename = messageContent.body,
                 mimeType = messageContent.mimeType,
                 url = messageContent.videoInfo?.getThumbnailUrl(),
-                elementToDecrypt = messageContent.videoInfo?.thumbnailFile?.toElementToDecrypt(),
+                manaToDecrypt = messageContent.videoInfo?.thumbnailFile?.toManaToDecrypt(),
                 height = messageContent.videoInfo?.height,
                 maxHeight = itemSize,
                 width = messageContent.videoInfo?.width,
@@ -130,7 +130,7 @@ class UploadsMediaController @Inject constructor(
                 filename = messageContent.body,
                 mimeType = messageContent.mimeType,
                 url = messageContent.getFileUrl(),
-                elementToDecrypt = messageContent.encryptedFileInfo?.toElementToDecrypt(),
+                manaToDecrypt = messageContent.encryptedFileInfo?.toManaToDecrypt(),
                 thumbnailMediaData = thumbnailData
         )
     }

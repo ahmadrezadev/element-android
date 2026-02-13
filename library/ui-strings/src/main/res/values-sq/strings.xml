@@ -1058,16 +1058,16 @@
     <string name="login_server_other_text">Rregullime vetjake &amp; të mëtejshme</string>
     <string name="login_continue">Vazhdo</string>
     <string name="login_connect_to">Lidhu me %1$s</string>
-    <string name="login_connect_to_modular">Lidhu me një shërbyes Element Matrix Services</string>
+    <string name="login_connect_to_modular">Lidhu me një shërbyes Mana Matrix Services</string>
     <string name="login_connect_to_a_custom_server">Lidhu me një shërbyes vetjak</string>
     <string name="login_signin_to">Hyni te %1$s</string>
     <string name="login_signup">Regjistrohuni</string>
     <string name="login_signin">Hyni</string>
     <string name="login_signin_sso">Vazhdoni me SSO</string>
-    <string name="login_server_url_form_modular_hint">Adresë Element Matrix Services</string>
+    <string name="login_server_url_form_modular_hint">Adresë Mana Matrix Services</string>
     <string name="login_server_url_form_other_hint">Adresë</string>
     <string name="login_server_url_form_modular_text">Strehim me pagesë për ente</string>
-    <string name="login_server_url_form_modular_notice">Jepni adresën e Modular Element-it ose Shërbyesit që doni të përdoret</string>
+    <string name="login_server_url_form_modular_notice">Jepni adresën e Modular Mana-it ose Shërbyesit që doni të përdoret</string>
     <string name="login_sso_error_message">Ndodhi një gabim kur ngarkohej faqja: %1$s (%2$d)</string>
     <string name="login_mode_not_supported">Aplikacioni s’është në gjendje të bëjë hyrje në llogari në këtë shërbyes Home. Shërbyesi Home mbulon llojet vijuese të hyrjes(ve): %1$s.
 \n
@@ -1124,7 +1124,7 @@
     <string name="login_signup_cancel_confirmation_title">Kujdes</string>
     <string name="login_signup_cancel_confirmation_content">Llogaria juaj s’është krijuar ende. Të ndalet procesi i regjistrimit\?</string>
     <string name="login_a11y_choose_matrix_org">Përzgjidhni matrix.org</string>
-    <string name="login_a11y_choose_modular">Përzgjidhni Element Matrix Services</string>
+    <string name="login_a11y_choose_modular">Përzgjidhni Mana Matrix Services</string>
     <string name="login_a11y_choose_other">Përzgjidhni një shërbyes Home vetjak</string>
     <string name="login_a11y_captcha_container">Ju lutemi, zgjidhni captcha-n</string>
     <string name="login_terms_title">Që të vazhdohet, pranoni terma</string>
@@ -1372,7 +1372,7 @@
     <string name="settings_messages_in_e2e_group_chat">Mesazhe të fshehtëzuar te biseda në grup</string>
     <string name="settings_when_rooms_are_upgraded">Kur dhomat përditësohen</string>
     <string name="settings_troubleshoot_title">Diagnostikoje</string>
-    <string name="command_description_plain">E dërgon një mesazh si tekst të thjeshtë, pa interpretuar elementët Markdown</string>
+    <string name="command_description_plain">E dërgon një mesazh si tekst të thjeshtë, pa interpretuar manaët Markdown</string>
     <string name="auth_invalid_login_param_space_in_password">Emër përdoruesi dhe/ose fjalëkalim i pasaktë. Fjalëkalimi i dhënë fillon ose mbaron me hapësirë, ju lutemi, kontrollojeni.</string>
     <string name="bootstrap_crosssigning_progress_initializing">Po publikohen kyçe të krijuar identiteti</string>
     <string name="room_message_placeholder">Mesazh…</string>
@@ -1626,7 +1626,7 @@
     <string name="crypto_error_withheld_unverified">S’mund të hapni këtë mesazh, ngaqë sesionit tuaj nuk i zihet besë nga dërguesi</string>
     <string name="crypto_error_withheld_generic">S’mund ta hapni këtë mesazh, ngaqë dërguesi qëllimisht nuk ju dërgoi kyçet</string>
     <string name="notice_crypto_unable_to_decrypt_merged">Po pritet për historik fshehtëzimesh</string>
-    <string name="disclaimer_title">Riot-i tanimë quhet Element!</string>
+    <string name="disclaimer_title">Riot-i tanimë quhet Mana!</string>
     <string name="disclaimer_content">Jemi të ngazëllyer t’ju njoftojmë se kemi ndërruar emër! Aplikacioni juaj është i përditësuar dhe jeni i futur në llogarinë tuaj.</string>
     <string name="disclaimer_negative_button">E MORA VESH</string>
     <string name="disclaimer_positive_button">MËSONI MË TEPËR</string>
@@ -2292,7 +2292,7 @@
         <item quantity="other">%1$d vota të hedhur. Votoni, që të shihni përfundimet</item>
     </plurals>
     <string name="restart_the_application_to_apply_changes">Që ndryshimi të hyjë në fuqi, rinisni aplikacionin.</string>
-    <string name="labs_enable_latex_maths">Aktivizo elementë LaTeX për matematikë</string>
+    <string name="labs_enable_latex_maths">Aktivizo manaë LaTeX për matematikë</string>
     <string name="room_error_access_unauthorized">S’keni leje të hyni në këtë dhomë</string>
     <string name="tooltip_attachment_poll">Krijoni anketim</string>
     <string name="tooltip_attachment_contact">Hap kontakte</string>
@@ -2440,7 +2440,7 @@
     <string name="settings_presence">Prani</string>
     <string name="action_learn_more">Mësoni më tepër</string>
     <string name="action_try_it_out">Provojeni</string>
-    <string name="labs_enable_element_call_permission_shortcuts">Aktivizo shkurtore lejesh për Thirrje Element</string>
+    <string name="labs_enable_mana_call_permission_shortcuts">Aktivizo shkurtore lejesh për Thirrje Mana</string>
     <string name="settings_troubleshoot_test_distributors_fdroid">S’u gjet metodë tjetër veç njëkohësimit në prapaskenë.</string>
     <string name="initial_sync_request_content">${app_name}-it i duhet një fshehtinë e pastër, për të qenë i përditësuar, për arsyen vijuese:
 \n%s
@@ -2707,7 +2707,7 @@
     <string name="ftue_auth_terms_subtitle">Ju lutemi, lexoni kushte dhe rregulla të %s</string>
     <string name="ftue_auth_terms_title">Rregulla shërbyesi</string>
     <string name="ftue_auth_choose_server_ems_cta">Lidhuni</string>
-    <string name="ftue_auth_choose_server_ems_subtitle">Element Matrix Services (EMS) është një shërbim strehimi i fuqishëm dhe i besueshëm, për komunikim të shpejtë, të sigurt dhe të atypëratyshëm. Shihni më tepër se si, te<a href="${ftue_ems_url}">element.io/ems</a></string>
+    <string name="ftue_auth_choose_server_ems_subtitle">Mana Matrix Services (EMS) është një shërbim strehimi i fuqishëm dhe i besueshëm, për komunikim të shpejtë, të sigurt dhe të atypëratyshëm. Shihni më tepër se si, te<a href="${ftue_ems_url}">mana.io/ems</a></string>
     <string name="ftue_auth_choose_server_ems_title">Doni të strehoni shërbyesin tuaj\?</string>
     <string name="ftue_auth_choose_server_entry_hint">URL Shërbyesi</string>
     <string name="ftue_auth_choose_server_sign_in_subtitle">Cila është adresa e shërbyesit tuaj\?</string>
@@ -2772,7 +2772,7 @@
     <string name="labs_enable_rich_text_editor_summary">Provoni përpunuesin e teksteve të pasur (për tekst të thjeshtë vjen së shpejti)</string>
     <string name="labs_enable_rich_text_editor_title">Aktivizo përpunues teksti të pasur</string>
     <string name="labs_enable_deferred_dm_summary">Krijo MD vetëm për mesazhin e parë</string>
-    <string name="labs_enable_new_app_layout_summary">Një Element i thjeshtuar, me skeda opsionale</string>
+    <string name="labs_enable_new_app_layout_summary">Një Mana i thjeshtuar, me skeda opsionale</string>
     <string name="labs_enable_new_app_layout_title">Aktivizo skemë të re</string>
     <string name="home_layout_preferences_sort_name">A - Z</string>
     <string name="home_layout_preferences_sort_activity">Veprimtari</string>
@@ -2806,7 +2806,7 @@
     <string name="qr_code_login_header_show_qr_code_link_a_device_description">Skanoni kodin QR më poshtë me pajisjen tuaj prej nga është dalë nga llogaria.</string>
     <string name="qr_code_login_header_show_qr_code_new_device_description">Përdorni pajisjen tuaj ku jeni brenda llogarisë që të skanoni kodin QR më poshtë:</string>
     <string name="qr_code_login_header_scan_qr_code_description">Përdorni kamerën në këtë pajisje që të skanoni kodin QR të shfaqur në pajisjen tuaj tjetër:</string>
-    <string name="labs_enable_element_call_permission_shortcuts_summary">Mirato vetvetiu widget-e Thirrjesh Element dhe akordo përdorim kamere / mikrofoni</string>
+    <string name="labs_enable_mana_call_permission_shortcuts_summary">Mirato vetvetiu widget-e Thirrjesh Mana dhe akordo përdorim kamere / mikrofoni</string>
     <string name="labs_enable_msc3061_share_history">MSC3061: Po jepen kyçe dhome për mesazhe të dikurshëm</string>
     <string name="settings_show_latest_profile_description">Shfaq hollësitë më të reja të profileve (avatar dhe emër në ekran) për krejt mesazhet.</string>
     <string name="settings_security_incognito_keyboard_summary">Kërko doemos që tastiera të mos përditësojë ndonjë të dhënë të personalizuar, bie fjala, historik shtypjeje në të dhe fjalor bazuar në ç’keni shtypur në biseda. Kini parasysh se disa tastiera mund të mos e respektojnë këtë rregullim.</string>
@@ -2957,7 +2957,7 @@
 \n
 \nNëse s’doni të shihni më lëndë nga ky përdorues, mund ta shpërfillni, që mesazhet e tij të jenë të fshehura.</string>
     <string name="microphone_in_use_title">Mikrofon në përdorim</string>
-    <string name="call_unsupported_matrix_rtc_call">Thirrje që s’mbulohet. Për të marrë pjesë në këtë thirrje lypset aplikacioni i ri Element X.</string>
+    <string name="call_unsupported_matrix_rtc_call">Thirrje që s’mbulohet. Për të marrë pjesë në këtë thirrje lypset aplikacioni i ri Mana X.</string>
     <string name="call_unsupported">Thirrje që s’mbulohet</string>
     <string name="error_mas_not_supported_subtitle">Shkarkoni %1$s, që të përdorni %2$s për llogarinë tuaj, ose zgjidhni një tjetër shërbyes Home.</string>
     <string name="view_download_replacement_app_title">Shkarko %1$s</string>

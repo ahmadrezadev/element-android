@@ -1,7 +1,7 @@
 /*
  * Copyright 2021-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -9,7 +9,7 @@ package im.vector.app.features.spaces.create
 
 import android.net.Uri
 import im.vector.app.core.platform.ViewModelTask
-import im.vector.app.features.raw.wellknown.getElementWellknown
+import im.vector.app.features.raw.wellknown.getManaWellknown
 import im.vector.app.features.raw.wellknown.isE2EByDefault
 import im.vector.app.features.settings.VectorPreferences
 import org.matrix.android.sdk.api.extensions.tryOrNull
@@ -93,7 +93,7 @@ class CreateSpaceViewModelTask @Inject constructor(
         val childIds = mutableListOf<String>()
 
         val e2eByDefault = tryOrNull {
-            rawService.getElementWellknown(session.sessionParams)
+            rawService.getManaWellknown(session.sessionParams)
                     ?.isE2EByDefault()
                     ?: true
         } ?: true

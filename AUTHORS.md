@@ -1,4 +1,4 @@
-A full developer contributors list can be found [here](https://github.com/element-hq/element-android/graphs/contributors).
+A full developer contributors list can be found [here](https://github.com/mana-hq/mana-android/graphs/contributors).
 
 # Core team:
 
@@ -33,9 +33,9 @@ Even if we try to be able to work on all the functionalities, we have more knowl
 
 # Other contributors
 
-First of all, we thank all contributors who use Element and report problems on this GitHub project or via the integrated rageshake function.
+First of all, we thank all contributors who use Mana and report problems on this GitHub project or via the integrated rageshake function.
 
-We do not forget all translators, for their work of translating Element into many languages. They are also the authors of Element.
+We do not forget all translators, for their work of translating Mana into many languages. They are also the authors of Mana.
 
 Feel free to add your name below, when you contribute to the project!
 

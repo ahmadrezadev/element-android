@@ -39,7 +39,7 @@
         app:layout_constraintEnd_toStartOf="@id/unread_counter"
         app:layout_constraintStart_toEndOf="@id/avatar"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Element Corp" />
+        tools:text="Mana Corp" />
 
     <TextView
         android:id="@+id/invited_by"

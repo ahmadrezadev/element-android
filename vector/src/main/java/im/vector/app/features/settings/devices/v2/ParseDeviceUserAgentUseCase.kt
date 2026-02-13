@@ -1,7 +1,7 @@
 /*
  * Copyright 2022-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -187,14 +187,14 @@ class ParseDeviceUserAgentUseCase @Inject constructor() {
     }
 
     companion object {
-        // Element dbg/1.5.0-dev (Xiaomi; Mi 9T; Android 11; RKQ1.200826.002 test-keys; Flavour GooglePlay; MatrixAndroidSdk2 1.5.0)
-        // Legacy : Element/1.0.0 (Linux; U; Android 6.0.1; SM-A510F Build/MMB29; Flavour GPlay; MatrixAndroidSdk2 1.0)
+        // Mana dbg/1.5.0-dev (Xiaomi; Mi 9T; Android 11; RKQ1.200826.002 test-keys; Flavour GooglePlay; MatrixAndroidSdk2 1.5.0)
+        // Legacy : Mana/1.0.0 (Linux; U; Android 6.0.1; SM-A510F Build/MMB29; Flavour GPlay; MatrixAndroidSdk2 1.0)
         private const val ANDROID_KEYWORD = "; MatrixAndroidSdk2"
 
-        // Element/1.8.21 (iPhone XS Max; iOS 15.2; Scale/3.00)
+        // Mana/1.8.21 (iPhone XS Max; iOS 15.2; Scale/3.00)
         private const val IOS_KEYWORD = "; iOS "
 
-        // Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) ElementNightly/2022091301
+        // Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) ManaNightly/2022091301
         // Chrome/104.0.5112.102 Electron/20.1.1 Safari/537.36
         private const val DESKTOP_KEYWORD = " Electron/"
 

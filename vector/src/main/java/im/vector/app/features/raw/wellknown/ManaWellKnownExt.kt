@@ -1,7 +1,7 @@
 /*
  * Copyright 2020-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -16,17 +16,17 @@ import org.matrix.android.sdk.api.auth.data.SessionParams
 import org.matrix.android.sdk.api.extensions.tryOrNull
 import org.matrix.android.sdk.api.raw.RawService
 
-suspend fun RawService.getElementWellknown(sessionParams: SessionParams): ElementWellKnown? {
+suspend fun RawService.getManaWellknown(sessionParams: SessionParams): ManaWellKnown? {
     // By default we use the domain of the userId to retrieve the .well-known data
     val domain = sessionParams.userId.getServerName()
     return tryOrNull { getWellknown(domain) }
-            ?.let { ElementWellKnownMapper.from(it) }
+            ?.let { ManaWellKnownMapper.from(it) }
 }
 
-fun ElementWellKnown.isE2EByDefault() = elementE2E?.e2eDefault ?: riotE2E?.e2eDefault ?: true
+fun ManaWellKnown.isE2EByDefault() = manaE2E?.e2eDefault ?: riotE2E?.e2eDefault ?: true
 
-fun ElementWellKnown?.getOutboundSessionKeySharingStrategyOrDefault(fallback: OutboundSessionKeySharingStrategy): OutboundSessionKeySharingStrategy {
-    return when (this?.elementE2E?.outboundsKeyPreSharingMode) {
+fun ManaWellKnown?.getOutboundSessionKeySharingStrategyOrDefault(fallback: OutboundSessionKeySharingStrategy): OutboundSessionKeySharingStrategy {
+    return when (this?.manaE2E?.outboundsKeyPreSharingMode) {
         "on_room_opening" -> OutboundSessionKeySharingStrategy.WhenEnteringRoom
         "on_typing" -> OutboundSessionKeySharingStrategy.WhenTyping
         "disabled" -> OutboundSessionKeySharingStrategy.WhenSendingEvent
@@ -34,22 +34,22 @@ fun ElementWellKnown?.getOutboundSessionKeySharingStrategyOrDefault(fallback: Ou
     }
 }
 
-fun RawService.withElementWellKnown(
+fun RawService.withManaWellKnown(
         coroutineScope: CoroutineScope,
         sessionParams: SessionParams,
-        block: ((ElementWellKnown?) -> Unit)
+        block: ((ManaWellKnown?) -> Unit)
 ) = with(coroutineScope) {
     launch(Dispatchers.IO) {
-        block(getElementWellknown(sessionParams))
+        block(getManaWellknown(sessionParams))
     }
 }
 
-fun ElementWellKnown.isSecureBackupRequired() = elementE2E?.secureBackupRequired
+fun ManaWellKnown.isSecureBackupRequired() = manaE2E?.secureBackupRequired
         ?: riotE2E?.secureBackupRequired
         ?: false
 
-fun ElementWellKnown?.secureBackupMethod(): SecureBackupMethod {
-    val methodList = this?.elementE2E?.secureBackupSetupMethods
+fun ManaWellKnown?.secureBackupMethod(): SecureBackupMethod {
+    val methodList = this?.manaE2E?.secureBackupSetupMethods
             ?: this?.riotE2E?.secureBackupSetupMethods
             ?: listOf("key", "passphrase")
     return if (methodList.contains("key") && methodList.contains("passphrase")) {

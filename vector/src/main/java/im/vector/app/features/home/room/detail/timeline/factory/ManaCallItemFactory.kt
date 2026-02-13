@@ -1,7 +1,7 @@
 /*
  * Copyright 2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 package im.vector.app.features.home.room.detail.timeline.factory
@@ -13,19 +13,19 @@ import im.vector.app.features.home.room.detail.timeline.TimelineEventController
 import im.vector.app.features.home.room.detail.timeline.helper.AvatarSizeProvider
 import im.vector.app.features.home.room.detail.timeline.helper.MessageInformationDataFactory
 import im.vector.app.features.home.room.detail.timeline.helper.MessageItemAttributesFactory
-import im.vector.app.features.home.room.detail.timeline.item.ElementCallTileTimelineItem
-import im.vector.app.features.home.room.detail.timeline.item.ElementCallTileTimelineItem_
+import im.vector.app.features.home.room.detail.timeline.item.ManaCallTileTimelineItem
+import im.vector.app.features.home.room.detail.timeline.item.ManaCallTileTimelineItem_
 import im.vector.app.features.home.room.detail.timeline.item.MessageInformationData
 import im.vector.app.features.home.room.detail.timeline.item.ReactionsSummaryEvents
 import org.matrix.android.sdk.api.session.Session
 import org.matrix.android.sdk.api.session.events.model.EventType
 import org.matrix.android.sdk.api.session.events.model.toModel
 import org.matrix.android.sdk.api.session.room.model.RoomSummary
-import org.matrix.android.sdk.api.session.room.model.message.ElementCallNotifyContent
+import org.matrix.android.sdk.api.session.room.model.message.ManaCallNotifyContent
 import org.matrix.android.sdk.api.util.toMatrixItem
 import javax.inject.Inject
 
-class ElementCallItemFactory @Inject constructor(
+class ManaCallItemFactory @Inject constructor(
         private val session: Session,
         private val userPreferencesProvider: UserPreferencesProvider,
         private val messageColorProvider: MessageColorProvider,
@@ -43,12 +43,12 @@ class ElementCallItemFactory @Inject constructor(
         val informationData = messageInformationDataFactory.create(params)
         val callItem = when (event.root.getClearType()) {
             in EventType.ELEMENT_CALL_NOTIFY.values -> {
-                val notifyContent: ElementCallNotifyContent = event.root.content.toModel() ?: return null
-                createElementCallTileTimelineItem(
+                val notifyContent: ManaCallNotifyContent = event.root.content.toModel() ?: return null
+                createManaCallTileTimelineItem(
                         roomSummary = roomSummary,
                         callId = notifyContent.callId.orEmpty(),
-                        callStatus = ElementCallTileTimelineItem.CallStatus.INVITED,
-                        callKind = ElementCallTileTimelineItem.CallKind.VIDEO,
+                        callStatus = ManaCallTileTimelineItem.CallStatus.INVITED,
+                        callKind = ManaCallTileTimelineItem.CallKind.VIDEO,
                         callback = params.callback,
                         highlight = params.isHighlighted,
                         informationData = informationData,
@@ -65,19 +65,19 @@ class ElementCallItemFactory @Inject constructor(
         }
     }
 
-    private fun createElementCallTileTimelineItem(
+    private fun createManaCallTileTimelineItem(
             roomSummary: RoomSummary,
             callId: String,
-            callKind: ElementCallTileTimelineItem.CallKind,
-            callStatus: ElementCallTileTimelineItem.CallStatus,
+            callKind: ManaCallTileTimelineItem.CallKind,
+            callStatus: ManaCallTileTimelineItem.CallStatus,
             informationData: MessageInformationData,
             highlight: Boolean,
             callback: TimelineEventController.Callback?,
             reactionsSummaryEvents: ReactionsSummaryEvents?
-    ): ElementCallTileTimelineItem? {
+    ): ManaCallTileTimelineItem? {
         val userOfInterest = roomSummary.toMatrixItem()
         val attributes = messageItemAttributesFactory.create(null, informationData, callback, reactionsSummaryEvents).let {
-            ElementCallTileTimelineItem.Attributes(
+            ManaCallTileTimelineItem.Attributes(
                     callId = callId,
                     callKind = callKind,
                     callStatus = callStatus,
@@ -93,7 +93,7 @@ class ElementCallItemFactory @Inject constructor(
                     reactionsSummaryEvents = reactionsSummaryEvents
             )
         }
-        return ElementCallTileTimelineItem_()
+        return ManaCallTileTimelineItem_()
                 .attributes(attributes)
                 .highlighted(highlight)
                 .leftGuideline(avatarSizeProvider.leftGuideline)

@@ -1,7 +1,7 @@
 /*
  * Copyright 2020-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 package im.vector.app.features.media
@@ -98,7 +98,7 @@ class VectorAttachmentViewerActivity : AttachmentViewerActivity(), AttachmentInt
                     // will be shown at end of transition
                     pager2.isInvisible = true
                     supportPostponeEnterTransition()
-                    imageContentRenderer.renderForSharedElementTransition(mediaData, imageTransitionView) {
+                    imageContentRenderer.renderForSharedManaTransition(mediaData, imageTransitionView) {
                         // Proceed with transaction
                         scheduleStartPostponedTransition(imageTransitionView)
                     }
@@ -106,7 +106,7 @@ class VectorAttachmentViewerActivity : AttachmentViewerActivity(), AttachmentInt
                     // will be shown at end of transition
                     pager2.isInvisible = true
                     supportPostponeEnterTransition()
-                    imageContentRenderer.renderForSharedElementTransition(mediaData.thumbnailMediaData, imageTransitionView) {
+                    imageContentRenderer.renderForSharedManaTransition(mediaData.thumbnailMediaData, imageTransitionView) {
                         // Proceed with transaction
                         scheduleStartPostponedTransition(imageTransitionView)
                     }
@@ -185,7 +185,7 @@ class VectorAttachmentViewerActivity : AttachmentViewerActivity(), AttachmentInt
     private fun getOtherThemes() = ActivityOtherThemes.VectorAttachmentsPreview
 
     /**
-     * Try and add a [Transition.TransitionListener] to the entering shared element
+     * Try and add a [Transition.TransitionListener] to the entering shared mana
      * [Transition]. We do this so that we can load the full-size image after the transition
      * has completed.
      *
@@ -195,7 +195,7 @@ class VectorAttachmentViewerActivity : AttachmentViewerActivity(), AttachmentInt
         val transition = window.sharedElementEnterTransition
 
         if (transition != null) {
-            // There is an entering shared element transition so add a listener to it
+            // There is an entering shared mana transition so add a listener to it
             transition.addListener(
                     onEnd = {
                         // The listener is also called when we are exiting
@@ -221,11 +221,11 @@ class VectorAttachmentViewerActivity : AttachmentViewerActivity(), AttachmentInt
 
     private fun args() = intent.getParcelableExtraCompat<Args>(EXTRA_ARGS)
 
-    private fun scheduleStartPostponedTransition(sharedElement: View) {
-        sharedElement.viewTreeObserver.addOnPreDrawListener(
+    private fun scheduleStartPostponedTransition(sharedMana: View) {
+        sharedMana.viewTreeObserver.addOnPreDrawListener(
                 object : ViewTreeObserver.OnPreDrawListener {
                     override fun onPreDraw(): Boolean {
-                        sharedElement.viewTreeObserver.removeOnPreDrawListener(this)
+                        sharedMana.viewTreeObserver.removeOnPreDrawListener(this)
                         supportStartPostponedEnterTransition()
                         return true
                     }

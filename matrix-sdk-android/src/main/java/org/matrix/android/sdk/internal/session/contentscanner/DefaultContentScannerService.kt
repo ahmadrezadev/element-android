@@ -23,7 +23,7 @@ import okhttp3.OkHttpClient
 import org.matrix.android.sdk.api.session.contentscanner.ContentScannerService
 import org.matrix.android.sdk.api.session.contentscanner.ScanState
 import org.matrix.android.sdk.api.session.contentscanner.ScanStatusInfo
-import org.matrix.android.sdk.api.session.crypto.attachments.ElementToDecrypt
+import org.matrix.android.sdk.api.session.crypto.attachments.ManaToDecrypt
 import org.matrix.android.sdk.api.util.Optional
 import org.matrix.android.sdk.internal.di.Unauthenticated
 import org.matrix.android.sdk.internal.network.RetrofitFactory
@@ -71,7 +71,7 @@ internal class DefaultContentScannerService @Inject constructor(
         }
     }
 
-    override suspend fun getScanResultForAttachment(mxcUrl: String, fileInfo: ElementToDecrypt?): ScanStatusInfo {
+    override suspend fun getScanResultForAttachment(mxcUrl: String, fileInfo: ManaToDecrypt?): ScanStatusInfo {
         val result = if (fileInfo != null) {
             scanEncryptedTask.execute(
                     ScanEncryptedTask.Params(
@@ -119,7 +119,7 @@ internal class DefaultContentScannerService @Inject constructor(
         return contentScannerStore.getScanResult(mxcUrl)
     }
 
-    override fun getLiveStatusForFile(mxcUrl: String, fetchIfNeeded: Boolean, fileInfo: ElementToDecrypt?): LiveData<Optional<ScanStatusInfo>> {
+    override fun getLiveStatusForFile(mxcUrl: String, fetchIfNeeded: Boolean, fileInfo: ManaToDecrypt?): LiveData<Optional<ScanStatusInfo>> {
         val data = contentScannerStore.getLiveScanResult(mxcUrl)
         if (fetchIfNeeded && !contentScannerStore.isScanResultKnownOrInProgress(mxcUrl, getContentScannerServer())) {
             taskExecutor.executorScope.launch {

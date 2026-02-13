@@ -1,7 +1,7 @@
 /*
  * Copyright 2019-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -13,9 +13,9 @@ import kotlinx.parcelize.Parcelize
 
 /**
  * Parameters extracted from a configuration url
- * Ex: https://mobile.element.io?hs_url=https%3A%2F%2Fexample.modular.im&is_url=https%3A%2F%2Fcustom.identity.org
+ * Ex: https://mobile.mana.io?hs_url=https%3A%2F%2Fexample.modular.im&is_url=https%3A%2F%2Fcustom.identity.org
  *
- * Note: On Element, identityServerUrl will never be used, so is declared private. Keep it for compatibility reason.
+ * Note: On Mana, identityServerUrl will never be used, so is declared private. Keep it for compatibility reason.
  */
 @Parcelize
 data class LoginConfig(

@@ -1,7 +1,7 @@
 /*
  * Copyright 2026 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -13,9 +13,9 @@ import android.net.VpnService
 import android.os.SystemClock
 import android.util.Log
 import com.tim.basevpn.state.ConnectionState
-import im.vector.app.features.vpn.openvpn.ElementOpenVpnService
-import im.vector.app.features.vpn.openvpn.ElementVpnServiceNotification
-import im.vector.app.features.vpn.openvpn.ElementOpenVpnServiceConnection
+import im.vector.app.features.vpn.openvpn.ManaOpenVpnService
+import im.vector.app.features.vpn.openvpn.ManaVpnServiceNotification
+import im.vector.app.features.vpn.openvpn.ManaOpenVpnServiceConnection
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -46,7 +46,7 @@ class OpenVpnTunnelManager @Inject constructor(
     @Volatile
     private var latestConnectionState: ConnectionState = ConnectionState.IDLE
 
-    private val serviceConnection = ElementOpenVpnServiceConnection(appContext) { state ->
+    private val serviceConnection = ManaOpenVpnServiceConnection(appContext) { state ->
         latestConnectionState = state
         vpnConnectionStatusTracker.onConnectionStateChanged(state)
         when (state) {
@@ -135,10 +135,10 @@ class OpenVpnTunnelManager @Inject constructor(
                     endpoint = remoteEndpoint,
                     serverId = server.id
             )
-            ElementOpenVpnService.startService(
+            ManaOpenVpnService.startService(
                     context = appContext,
                     config = preparedConfig,
-                    notificationClass = ElementVpnServiceNotification::class.java.name,
+                    notificationClass = ManaVpnServiceNotification::class.java.name,
                     username = server.username,
                     password = server.password,
                     privateKeyPassword = privateKeyPasswordForService,
@@ -423,7 +423,7 @@ private fun String?.extractPrimaryRemoteEndpoint(): RemoteEndpoint? {
 
 private val REMOTE_DIRECTIVE_REGEX = Regex("(?im)^\\s*remote\\s+([^\\s#;]+)\\s+(\\d+)(?:\\s+([^\\s#;]+))?.*$")
 private val IPV4_LITERAL_REGEX = Regex("^\\d{1,3}(?:\\.\\d{1,3}){3}$")
-private const val VPN_TUNNEL_TAG = "ElementVpnTunnel"
+private const val VPN_TUNNEL_TAG = "ManaVpnTunnel"
 private val UNSUPPORTED_DIRECTIVE_REGEX =
         Regex("(?im)^\\s*(user|group|persist-tun|persist-key|pull|connect-retry)\\b.*$")
 

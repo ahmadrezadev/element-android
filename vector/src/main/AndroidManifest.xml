@@ -121,7 +121,7 @@
 
                 <data
                     android:host="connect"
-                    android:scheme="element" />
+                    android:scheme="mana" />
             </intent-filter>
         </activity>
 
@@ -199,13 +199,13 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data android:scheme="https" />
-                <!-- Note: we can't use "*.element.io" here because it'll intercept the "mas.element.io" domain too. -->
-                <!-- Matching asset file: https://app.element.io/.well-known/assetlinks.json -->
-                <data android:host="app.element.io" />
-                <!-- Matching asset file: https://develop.element.io/.well-known/assetlinks.json -->
-                <data android:host="develop.element.io" />
-                <!-- Matching asset file: https://staging.element.io/.well-known/assetlinks.json -->
-                <data android:host="staging.element.io" />
+                <!-- Note: we can't use "*.mana.io" here because it'll intercept the "mas.mana.io" domain too. -->
+                <!-- Matching asset file: https://app.mana.io/.well-known/assetlinks.json -->
+                <data android:host="app.mana.io" />
+                <!-- Matching asset file: https://develop.mana.io/.well-known/assetlinks.json -->
+                <data android:host="develop.mana.io" />
+                <!-- Matching asset file: https://staging.mana.io/.well-known/assetlinks.json -->
+                <data android:host="staging.mana.io" />
             </intent-filter>
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
@@ -214,13 +214,13 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data android:scheme="https" />
-                <data android:host="mobile.element.io" />
+                <data android:host="mobile.mana.io" />
                 <!-- accept only root path -->
                 <data android:path="/" />
             </intent-filter>
         </activity>
 
-        <!-- Activity alias for matrix.to or element permalinks -->
+        <!-- Activity alias for matrix.to or mana permalinks -->
         <!-- exported="true" is required to handle android.intent.action.VIEW for URL redirection-->
         <activity-alias
             android:name=".features.permalink.PermalinkHandlerActivity"
@@ -239,10 +239,10 @@
                 <data android:host="matrix.to" />
                 <data
                     android:host="user"
-                    android:scheme="element" />
+                    android:scheme="mana" />
                 <data
                     android:host="room"
-                    android:scheme="element" />
+                    android:scheme="mana" />
 
             </intent-filter>
         </activity-alias>
@@ -341,7 +341,7 @@
 
             <!--                <data-->
             <!--                    android:host="reauth"-->
-            <!--                    android:scheme="element" />-->
+            <!--                    android:scheme="mana" />-->
             <!--            </intent-filter>-->
         </activity>
 

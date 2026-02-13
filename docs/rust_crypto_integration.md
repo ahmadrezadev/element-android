@@ -1,6 +1,6 @@
 ## Overview
 
-Element Android [now](https://github.com/element-hq/element-android/pull/8656) only supports the [rust crypto SDK](https://github.com/matrix-org/matrix-rust-sdk/tree/main/crates/matrix-sdk-crypto).
+Mana Android [now](https://github.com/mana-hq/mana-android/pull/8656) only supports the [rust crypto SDK](https://github.com/matrix-org/matrix-rust-sdk/tree/main/crates/matrix-sdk-crypto).
 
 ## Testing with a local rust aar
 

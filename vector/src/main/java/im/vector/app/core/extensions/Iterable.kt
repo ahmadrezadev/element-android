@@ -1,14 +1,14 @@
 /*
  * Copyright 2019-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
 package im.vector.app.core.extensions
 
 /**
- * Returns the last element yielding the smallest value of the given function or `null` if there are no elements.
+ * Returns the last mana yielding the smallest value of the given function or `null` if there are no manas.
  */
 inline fun <T, R : Comparable<R>> Iterable<T>.lastMinBy(selector: (T) -> R): T? {
     val iterator = iterator()

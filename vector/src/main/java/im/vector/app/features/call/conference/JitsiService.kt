@@ -1,7 +1,7 @@
 /*
  * Copyright 2021-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -13,7 +13,7 @@ import im.vector.app.core.utils.ensureProtocol
 import im.vector.app.core.utils.toBase32String
 import im.vector.app.features.call.conference.jwt.JitsiJWTFactory
 import im.vector.app.features.displayname.getBestName
-import im.vector.app.features.raw.wellknown.getElementWellknown
+import im.vector.app.features.raw.wellknown.getManaWellknown
 import im.vector.app.features.settings.VectorLocaleProvider
 import im.vector.app.features.themes.ThemeProvider
 import im.vector.lib.core.utils.timer.Clock
@@ -56,7 +56,7 @@ class JitsiService @Inject constructor(
         // Build data for a jitsi widget
         val widgetId: String = WidgetType.Jitsi.preferred + "_" + session.myUserId + "_" + clock.epochMillis()
         val preferredJitsiDomain = tryOrNull {
-            rawService.getElementWellknown(session.sessionParams)
+            rawService.getManaWellknown(session.sessionParams)
                     ?.jitsiServer
                     ?.preferredDomain
         }
@@ -64,11 +64,11 @@ class JitsiService @Inject constructor(
         val jitsiAuth = getJitsiAuth(jitsiDomain)
         val confId = createConferenceId(roomId, jitsiAuth)
 
-        // We use the default element wrapper for this widget
-        // https://github.com/element-hq/element-web/blob/develop/docs/jitsi-dev.md
+        // We use the default mana wrapper for this widget
+        // https://github.com/mana-hq/mana-web/blob/develop/docs/jitsi-dev.md
         // https://github.com/matrix-org/matrix-react-sdk/blob/develop/src/utils/WidgetUtils.ts#L469
         val url = buildString {
-            append("https://app.element.io/jitsi.html")
+            append("https://app.mana.io/jitsi.html")
             appendParamToUrl("confId", confId)
             append("#conferenceDomain=\$domain")
             append("&conferenceId=\$conferenceId")
@@ -159,7 +159,7 @@ class JitsiService @Inject constructor(
     }
 
     private suspend fun getJitsiAuth(jitsiDomain: String): String? {
-        val request = Request.Builder().url("$jitsiDomain/.well-known/element/jitsi".ensureProtocol()).build()
+        val request = Request.Builder().url("$jitsiDomain/.well-known/mana/jitsi".ensureProtocol()).build()
         return tryOrNull {
             val response = session.getOkHttpClient().newCall(request).await()
             val json = response.body?.string() ?: return null

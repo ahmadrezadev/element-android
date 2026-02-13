@@ -1,7 +1,7 @@
 /*
  * Copyright 2018-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -19,7 +19,7 @@ import javax.inject.Inject
 
 /**
  * This class manages the sound ringtone for calls.
- * It allows you to use the default Element Ringtone, or the standard ringtone or set a different one from the available choices
+ * It allows you to use the default Mana Ringtone, or the standard ringtone or set a different one from the available choices
  * in Android.
  */
 class RingtoneUtils @Inject constructor(

@@ -94,7 +94,7 @@ ext.libs = [
                 'hiltAndroidTesting'      : "com.google.dagger:hilt-android-testing:$dagger",
                 'hiltCompiler'            : "com.google.dagger:hilt-compiler:$dagger"
         ],
-        element     : [
+        mana     : [
                 'opusencoder'             : "io.element.android:opusencoder:1.1.2",
                 'wysiwyg'                 : "io.element.android:wysiwyg:2.41.1-classic"
         ],

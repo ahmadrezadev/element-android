@@ -1,7 +1,7 @@
 /*
  * Copyright 2019-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -394,12 +394,12 @@ class DefaultNavigator @Inject constructor(
         context.startActivity(RoomProfileActivity.newIntent(context, roomId, directAccess))
     }
 
-    override fun openBigImageViewer(activity: Activity, sharedElement: View?, mxcUrl: String?, title: String?) {
+    override fun openBigImageViewer(activity: Activity, sharedMana: View?, mxcUrl: String?, title: String?) {
         mxcUrl
                 ?.takeIf { it.isNotBlank() }
                 ?.let { avatarUrl ->
                     val intent = BigImageViewerActivity.newIntent(activity, title, avatarUrl)
-                    val options = sharedElement?.let {
+                    val options = sharedMana?.let {
                         ActivityOptionsCompat.makeSceneTransitionAnimation(activity, it, ViewCompat.getTransitionName(it) ?: "")
                     }
                     activity.startActivity(intent, options?.toBundle())
@@ -457,8 +457,8 @@ class DefaultNavigator @Inject constructor(
                 val enableVideo = options?.get(JitsiCallViewModel.ENABLE_VIDEO_OPTION) == true
                 context.startActivity(VectorJitsiActivity.newIntent(context, roomId = roomId, widgetId = widget.widgetId, enableVideo = enableVideo))
             }
-        } else if (widget.type is WidgetType.ElementCall) {
-            val widgetArgs = widgetArgsBuilder.buildElementCallWidgetArgs(roomId, widget)
+        } else if (widget.type is WidgetType.ManaCall) {
+            val widgetArgs = widgetArgsBuilder.buildManaCallWidgetArgs(roomId, widget)
             context.startActivity(WidgetActivity.newIntent(context, widgetArgs))
         } else {
             val widgetArgs = widgetArgsBuilder.buildRoomWidgetArgs(roomId, widget)

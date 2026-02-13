@@ -18,7 +18,7 @@ package org.matrix.android.sdk.internal.session.contentscanner.tasks
 
 import org.matrix.android.sdk.api.failure.toScanFailure
 import org.matrix.android.sdk.api.session.contentscanner.ScanState
-import org.matrix.android.sdk.api.session.crypto.attachments.ElementToDecrypt
+import org.matrix.android.sdk.api.session.crypto.attachments.ManaToDecrypt
 import org.matrix.android.sdk.internal.network.executeRequest
 import org.matrix.android.sdk.internal.session.contentscanner.ContentScannerApiProvider
 import org.matrix.android.sdk.internal.session.contentscanner.ScanEncryptorUtils
@@ -31,7 +31,7 @@ internal interface ScanEncryptedTask : Task<ScanEncryptedTask.Params, ScanRespon
     data class Params(
             val mxcUrl: String,
             val publicServerKey: String?,
-            val encryptedInfo: ElementToDecrypt
+            val encryptedInfo: ManaToDecrypt
     )
 }
 

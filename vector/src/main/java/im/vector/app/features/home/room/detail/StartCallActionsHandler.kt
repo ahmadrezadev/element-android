@@ -1,7 +1,7 @@
 /*
  * Copyright 2021-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -38,8 +38,8 @@ class StartCallActionsHandler(
     }
 
     private fun handleCallRequest(isVideoCall: Boolean) = withState(timelineViewModel) { state ->
-        if (state.hasActiveElementCallWidget() && !isVideoCall) {
-            timelineViewModel.handle(RoomDetailAction.OpenElementCallWidget)
+        if (state.hasActiveManaCallWidget() && !isVideoCall) {
+            timelineViewModel.handle(RoomDetailAction.OpenManaCallWidget)
             return@withState
         }
 

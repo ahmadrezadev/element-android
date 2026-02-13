@@ -1,7 +1,7 @@
 /*
  * Copyright 2020-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -20,7 +20,7 @@ import im.vector.app.core.extensions.toggle
 import im.vector.app.core.platform.VectorViewModel
 import im.vector.app.core.resources.StringProvider
 import im.vector.app.features.discovery.fetchIdentityServerWithTerms
-import im.vector.app.features.raw.wellknown.getElementWellknown
+import im.vector.app.features.raw.wellknown.getManaWellknown
 import im.vector.app.features.raw.wellknown.isE2EByDefault
 import im.vector.lib.strings.CommonStrings
 import kotlinx.coroutines.Dispatchers
@@ -93,7 +93,7 @@ class UserListViewModel @AssistedInject constructor(
     private fun initAdminE2eByDefault() {
         viewModelScope.launch(Dispatchers.IO) {
             val adminE2EByDefault = tryOrNull {
-                rawService.getElementWellknown(session.sessionParams)
+                rawService.getManaWellknown(session.sessionParams)
                         ?.isE2EByDefault()
                         ?: true
             } ?: true
@@ -279,7 +279,7 @@ class UserListViewModel @AssistedInject constructor(
             if (action.pendingSelection is PendingSelection.UserPendingSelection) {
                 action.pendingSelection.isUnknownUser = action.pendingSelection.getMxId() == state.unknownUserId
             }
-            val selections = state.pendingSelections.toggle(action.pendingSelection, singleElement = state.singleSelection)
+            val selections = state.pendingSelections.toggle(action.pendingSelection, singleMana = state.singleSelection)
             setState { copy(pendingSelections = selections) }
         }
     }

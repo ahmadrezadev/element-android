@@ -1,14 +1,14 @@
 /*
  * Copyright 2021-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
 package im.vector.app.features.home.room.detail.timeline.image
 
 import im.vector.app.features.media.ImageContentRenderer
-import org.matrix.android.sdk.api.session.crypto.attachments.toElementToDecrypt
+import org.matrix.android.sdk.api.session.crypto.attachments.toManaToDecrypt
 import org.matrix.android.sdk.api.session.events.model.isImageMessage
 import org.matrix.android.sdk.api.session.events.model.isVideoMessage
 import org.matrix.android.sdk.api.session.events.model.toModel
@@ -27,7 +27,7 @@ fun TimelineEvent.buildImageContentRendererData(maxHeight: Int): ImageContentRen
                             filename = messageImageContent.body,
                             mimeType = messageImageContent.mimeType,
                             url = messageImageContent.getFileUrl(),
-                            elementToDecrypt = messageImageContent.encryptedFileInfo?.toElementToDecrypt(),
+                            manaToDecrypt = messageImageContent.encryptedFileInfo?.toManaToDecrypt(),
                             height = messageImageContent.info?.height,
                             maxHeight = maxHeight,
                             width = messageImageContent.info?.width,
@@ -43,7 +43,7 @@ fun TimelineEvent.buildImageContentRendererData(maxHeight: Int): ImageContentRen
                             filename = messageVideoContent.body,
                             mimeType = videoInfo?.thumbnailInfo?.mimeType,
                             url = videoInfo?.getThumbnailUrl(),
-                            elementToDecrypt = videoInfo?.thumbnailFile?.toElementToDecrypt(),
+                            manaToDecrypt = videoInfo?.thumbnailFile?.toManaToDecrypt(),
                             height = videoInfo?.thumbnailInfo?.height,
                             maxHeight = maxHeight,
                             width = videoInfo?.thumbnailInfo?.width,

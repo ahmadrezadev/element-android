@@ -113,7 +113,7 @@ internal class RealmKeysUtils @Inject constructor(
         return key
     }
 
-    // Delete elements related to the alias
+    // Delete manas related to the alias
     fun clear(alias: String) {
         if (hasKeyForDatabase(alias)) {
             secretStoringUtils.safeDeleteKey(alias)

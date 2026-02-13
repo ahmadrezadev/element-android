@@ -1,7 +1,7 @@
 /*
  * Copyright 2019-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -69,7 +69,7 @@ fun openUrlInExternalBrowser(context: Context, url: String?) {
 fun openUrlInExternalBrowser(context: Context, uri: Uri?) {
     uri?.let {
         val browserIntent = Intent(Intent.ACTION_VIEW, it).apply {
-            // Open activity on browser task and not on element task
+            // Open activity on browser task and not on mana task
             flags = Intent.FLAG_ACTIVITY_NEW_TASK
             putExtra(Browser.EXTRA_APPLICATION_ID, context.packageName)
             putExtra(Browser.EXTRA_CREATE_NEW_TAB, true)

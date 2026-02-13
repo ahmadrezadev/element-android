@@ -87,14 +87,14 @@ class EventMatchCondition(
         val fieldParts = fieldPath.split(".")
         if (fieldParts.isEmpty()) return null
 
-        var jsonElement: Map<*, *> = jsonObject
+        var jsonMana: Map<*, *> = jsonObject
         fieldParts.forEachIndexed { index, pathSegment ->
             if (index == fieldParts.lastIndex) {
-                return jsonElement[pathSegment]?.toString()
+                return jsonMana[pathSegment]?.toString()
             } else {
-                val sub = jsonElement[pathSegment] ?: return null
+                val sub = jsonMana[pathSegment] ?: return null
                 if (sub is Map<*, *>) {
-                    jsonElement = sub
+                    jsonMana = sub
                 } else {
                     return null
                 }

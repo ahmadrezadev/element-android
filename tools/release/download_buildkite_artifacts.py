@@ -2,7 +2,7 @@
 #
 # Copyright 2020-2024 New Vector Ltd.
 #
-# SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+# SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
 # Please see LICENSE files in the repository root for full details.
 #
 
@@ -16,9 +16,9 @@ import requests
 # This script downloads artifacts from buildkite.
 # Ref: https://buildkite.com/docs/apis/rest-api/artifacts#download-an-artifact
 
-# Those two variables are specific to the Element Android project
+# Those two variables are specific to the Mana Android project
 ORG_SLUG = "matrix-dot-org"
-PIPELINE_SLUG = "element-android"
+PIPELINE_SLUG = "mana-android"
 
 ### Arguments
 

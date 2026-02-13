@@ -333,7 +333,7 @@ internal class RustKeyBackupService @Inject constructor(
 
             if (authData == null) {
                 Timber.w("trustKeyBackupVersion:trust: Key backup is missing required data")
-                throw IllegalArgumentException("Missing element")
+                throw IllegalArgumentException("Missing mana")
             } else {
                 // Get current signatures, or create an empty set
                 val userId = olmMachine.userId()
@@ -387,7 +387,7 @@ internal class RustKeyBackupService @Inject constructor(
         when {
             authData == null -> {
                 Timber.w("isValidRecoveryKeyForKeysBackupVersion: Key backup is missing required data")
-                throw IllegalArgumentException("Missing element")
+                throw IllegalArgumentException("Missing mana")
             }
             backupKey.publicKey != authData.publicKey -> {
                 Timber.w("isValidRecoveryKeyForKeysBackupVersion: Public keys mismatch")

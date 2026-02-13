@@ -1,7 +1,7 @@
 /*
  * Copyright 2019-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -32,7 +32,7 @@ import im.vector.app.core.utils.DimensionConverter
 import kotlinx.parcelize.Parcelize
 import org.matrix.android.sdk.api.extensions.tryOrNull
 import org.matrix.android.sdk.api.session.content.ContentUrlResolver
-import org.matrix.android.sdk.api.session.crypto.attachments.ElementToDecrypt
+import org.matrix.android.sdk.api.session.crypto.attachments.ManaToDecrypt
 import org.matrix.android.sdk.api.session.media.PreviewUrlData
 import javax.inject.Inject
 import kotlin.math.min
@@ -42,7 +42,7 @@ interface AttachmentData : Parcelable {
     val filename: String
     val mimeType: String?
     val url: String?
-    val elementToDecrypt: ElementToDecrypt?
+    val manaToDecrypt: ManaToDecrypt?
 
     // If true will load non mxc url, be careful to set it only for attachments sent by you
     val allowNonMxcUrls: Boolean
@@ -63,7 +63,7 @@ class ImageContentRenderer @Inject constructor(
             override val filename: String,
             override val mimeType: String?,
             override val url: String?,
-            override val elementToDecrypt: ElementToDecrypt?,
+            override val manaToDecrypt: ManaToDecrypt?,
             val height: Int?,
             val maxHeight: Int,
             val width: Int?,
@@ -143,7 +143,7 @@ class ImageContentRenderer @Inject constructor(
      * Used by Attachment Viewer.
      */
     fun render(data: Data, contextView: View, target: CustomViewTarget<*, Drawable>) {
-        val req = if (data.elementToDecrypt != null) {
+        val req = if (data.manaToDecrypt != null) {
             // Encrypted image
             GlideApp
                     .with(contextView)
@@ -162,11 +162,11 @@ class ImageContentRenderer @Inject constructor(
                 .into(target)
     }
 
-    fun renderForSharedElementTransition(data: Data, imageView: ImageView, callback: ((Boolean) -> Unit)? = null) {
+    fun renderForSharedManaTransition(data: Data, imageView: ImageView, callback: ((Boolean) -> Unit)? = null) {
         // a11y
         imageView.contentDescription = data.filename
 
-        val req = if (data.elementToDecrypt != null) {
+        val req = if (data.manaToDecrypt != null) {
             // Encrypted image
             GlideApp
                     .with(imageView)
@@ -211,7 +211,7 @@ class ImageContentRenderer @Inject constructor(
     }
 
     fun createGlideRequest(data: Data, mode: Mode, glideRequests: GlideRequests, size: Size = processSize(data, mode)): GlideRequest<Drawable> {
-        return if (data.elementToDecrypt != null) {
+        return if (data.manaToDecrypt != null) {
             // Encrypted image
             glideRequests
                     .load(data)

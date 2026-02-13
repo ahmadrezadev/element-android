@@ -1,7 +1,7 @@
 /*
  * Copyright 2026 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -230,7 +230,7 @@ private fun JSONObject.readBoolean(defaultValue: Boolean, vararg keys: String): 
 }
 
 private const val LOCAL_BOOTSTRAP_ASSET_PATH = "vpn/bootstrap.json"
-private const val VPN_PROVISIONING_TAG = "ElementVpnProvisioning"
+private const val VPN_PROVISIONING_TAG = "ManaVpnProvisioning"
 private val LOG_REMOTE_DIRECTIVE_REGEX = Regex("(?im)^\\s*remote\\s+([^\\s#;]+)\\s+(\\d+)(?:\\s+([^\\s#;]+))?.*$")
 
 private fun String?.maskForLog(): String {

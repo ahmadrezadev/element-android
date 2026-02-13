@@ -1,2 +1,2 @@
 Main changes in this version: support authenticated media.
-Full changelog: https://github.com/element-hq/element-android/releases
+Full changelog: https://github.com/mana-hq/mana-android/releases

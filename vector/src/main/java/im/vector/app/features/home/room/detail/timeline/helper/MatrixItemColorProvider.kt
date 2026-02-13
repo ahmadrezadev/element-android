@@ -1,7 +1,7 @@
 /*
  * Copyright 2020-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -87,23 +87,23 @@ class MatrixItemColorProvider @Inject constructor(
         @ColorRes
         private fun getUserColorByIndex(index: Int): Int {
             return when (index % 8) {
-                1 -> R.color.element_name_02
-                2 -> R.color.element_name_03
-                3 -> R.color.element_name_04
-                4 -> R.color.element_name_05
-                5 -> R.color.element_name_06
-                6 -> R.color.element_name_07
-                7 -> R.color.element_name_08
-                else -> R.color.element_name_01
+                1 -> R.color.mana_name_02
+                2 -> R.color.mana_name_03
+                3 -> R.color.mana_name_04
+                4 -> R.color.mana_name_05
+                5 -> R.color.mana_name_06
+                6 -> R.color.mana_name_07
+                7 -> R.color.mana_name_08
+                else -> R.color.mana_name_01
             }
         }
 
         @ColorRes
         private fun getColorFromRoomId(roomId: String?): Int {
             return when ((roomId?.toList()?.sumOf { it.code } ?: 0) % 3) {
-                1 -> R.color.element_room_02
-                2 -> R.color.element_room_03
-                else -> R.color.element_room_01
+                1 -> R.color.mana_room_02
+                2 -> R.color.mana_room_03
+                else -> R.color.mana_room_01
             }
         }
     }

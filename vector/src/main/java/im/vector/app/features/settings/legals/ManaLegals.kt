@@ -1,7 +1,7 @@
 /*
  * Copyright 2021-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -13,7 +13,7 @@ import im.vector.app.features.settings.VectorSettingsUrls
 import im.vector.lib.strings.CommonStrings
 import javax.inject.Inject
 
-class ElementLegals @Inject constructor(
+class ManaLegals @Inject constructor(
         private val stringProvider: StringProvider
 ) {
     /**

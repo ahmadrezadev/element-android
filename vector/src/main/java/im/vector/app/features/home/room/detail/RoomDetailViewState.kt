@@ -1,7 +1,7 @@
 /*
  * Copyright 2019-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -98,7 +98,7 @@ data class RoomDetailViewState(
     // It can differs for a short period of time on the JitsiState as its computed async.
     fun hasActiveJitsiWidget() = activeRoomWidgets()?.any { it.type == WidgetType.Jitsi && it.isActive }.orFalse()
 
-    fun hasActiveElementCallWidget() = activeRoomWidgets()?.any { it.type == WidgetType.ElementCall && it.isActive }.orFalse()
+    fun hasActiveManaCallWidget() = activeRoomWidgets()?.any { it.type == WidgetType.ManaCall && it.isActive }.orFalse()
 
     fun isDm() = asyncRoomSummary()?.isDirect == true
 

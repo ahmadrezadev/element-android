@@ -42,12 +42,12 @@
         </activity-alias>
 
         <service
-            android:name="im.vector.app.features.vpn.openvpn.ElementOpenVpnService"
+            android:name="im.vector.app.features.vpn.openvpn.ManaOpenVpnService"
             android:enabled="true"
             android:exported="true"
             android:foregroundServiceType="specialUse"
             android:permission="android.permission.BIND_VPN_SERVICE"
-            android:process=":element_openvpn">
+            android:process=":mana_openvpn">
             <intent-filter>
                 <action android:name="android.net.VpnService" />
             </intent-filter>

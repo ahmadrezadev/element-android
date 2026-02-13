@@ -94,7 +94,7 @@
                             android:gravity="start"
                             android:maxLines="1"
                             android:textColor="?vctr_content_primary"
-                            tools:text="Element" />
+                            tools:text="Mana" />
                     </LinearLayout>
 
                 </com.google.android.material.appbar.MaterialToolbar>

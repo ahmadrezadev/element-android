@@ -1,7 +1,7 @@
 /*
  * Copyright 2020-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -39,7 +39,7 @@ import im.vector.app.features.roomprofile.uploads.RoomUploadsFragment
 import im.vector.app.features.roomprofile.uploads.RoomUploadsViewModel
 import im.vector.app.features.roomprofile.uploads.RoomUploadsViewState
 import im.vector.lib.strings.CommonStrings
-import org.matrix.android.sdk.api.session.crypto.attachments.toElementToDecrypt
+import org.matrix.android.sdk.api.session.crypto.attachments.toManaToDecrypt
 import org.matrix.android.sdk.api.session.room.model.message.MessageImageContent
 import org.matrix.android.sdk.api.session.room.model.message.MessageVideoContent
 import org.matrix.android.sdk.api.session.room.model.message.getFileUrl
@@ -127,7 +127,7 @@ class RoomUploadsMediaFragment :
                             filename = content.body,
                             mimeType = content.mimeType,
                             url = content.getFileUrl(),
-                            elementToDecrypt = content.encryptedFileInfo?.toElementToDecrypt(),
+                            manaToDecrypt = content.encryptedFileInfo?.toManaToDecrypt(),
                             maxHeight = -1,
                             maxWidth = -1,
                             width = null,
@@ -140,7 +140,7 @@ class RoomUploadsMediaFragment :
                             filename = content.body,
                             mimeType = content.mimeType,
                             url = content.videoInfo?.getThumbnailUrl(),
-                            elementToDecrypt = content.videoInfo?.thumbnailFile?.toElementToDecrypt(),
+                            manaToDecrypt = content.videoInfo?.thumbnailFile?.toManaToDecrypt(),
                             height = content.videoInfo?.height,
                             maxHeight = -1,
                             width = content.videoInfo?.width,
@@ -151,7 +151,7 @@ class RoomUploadsMediaFragment :
                             filename = content.body,
                             mimeType = content.mimeType,
                             url = content.getFileUrl(),
-                            elementToDecrypt = content.encryptedFileInfo?.toElementToDecrypt(),
+                            manaToDecrypt = content.encryptedFileInfo?.toManaToDecrypt(),
                             thumbnailMediaData = thumbnailData
                     )
                 }

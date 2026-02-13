@@ -1,7 +1,7 @@
 /*
  * Copyright 2023, 2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -21,7 +21,7 @@ import im.vector.app.espresso.tools.waitUntilActivityVisible
 import im.vector.app.espresso.tools.waitUntilViewVisible
 import im.vector.app.features.MainActivity
 import im.vector.app.features.home.HomeActivity
-import im.vector.app.ui.robot.ElementRobot
+import im.vector.app.ui.robot.ManaRobot
 import im.vector.lib.strings.CommonStrings
 import kotlinx.coroutines.test.runTest
 import org.junit.After
@@ -130,6 +130,6 @@ class VerifySessionNavigationTest : VerificationTestBase() {
             waitUntilViewVisible(ViewMatchers.withId(R.id.roomListContainer))
         }
 
-        ElementRobot().signout(false)
+        ManaRobot().signout(false)
     }
 }

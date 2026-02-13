@@ -24,12 +24,12 @@ import android.net.Uri
 object MatrixToConverter {
 
     /**
-     * Try to convert a URL from an element web instance or from a client permalink to a matrix.to url.
+     * Try to convert a URL from an mana web instance or from a client permalink to a matrix.to url.
      * To be successfully converted, URL path should contain one of the [SUPPORTED_PATHS].
      * Examples:
-     * - https://riot.im/develop/#/room/#element-android:matrix.org  ->  https://matrix.to/#/#element-android:matrix.org
-     * - https://app.element.io/#/room/#element-android:matrix.org   ->  https://matrix.to/#/#element-android:matrix.org
-     * - https://www.example.org/#/room/#element-android:matrix.org  ->  https://matrix.to/#/#element-android:matrix.org
+     * - https://riot.im/develop/#/room/#mana-android:matrix.org  ->  https://matrix.to/#/#mana-android:matrix.org
+     * - https://app.mana.io/#/room/#mana-android:matrix.org   ->  https://matrix.to/#/#mana-android:matrix.org
+     * - https://www.example.org/#/room/#mana-android:matrix.org  ->  https://matrix.to/#/#mana-android:matrix.org
      */
     fun convert(uri: Uri): Uri? {
         val uriString = uri.toString()

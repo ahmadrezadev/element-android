@@ -70,9 +70,9 @@
             tools:visibility="visible" />
 
         <ViewStub
-            android:id="@+id/messageElementCallStub"
+            android:id="@+id/messageManaCallStub"
             style="@style/TimelineContentStubBaseParams"
-            android:layout="@layout/item_timeline_event_element_call_tile_stub"
+            android:layout="@layout/item_timeline_event_mana_call_tile_stub"
             tools:layout_marginTop="520dp"
             tools:visibility="visible" />
 

@@ -8,7 +8,7 @@
     * [The email is free](#the-email-is-free)
 * [User receives an e-mail](#user-receives-an-e-mail)
   * [User clicks on the link](#user-clicks-on-the-link)
-  * [User returns on Element](#user-returns-on-element)
+  * [User returns on Mana](#user-returns-on-mana)
   * [User enters his password](#user-enters-his-password)
     * [The link has not been clicked](#the-link-has-not-been-clicked)
     * [Wrong password](#wrong-password)
@@ -81,7 +81,7 @@ The browser displays the following message:
 
 > Your email has now been validated, please return to your client. You may now close this window.
 
-### User returns on Element
+### User returns on Mana
 
 User clicks on CONTINUE
 

@@ -2,7 +2,7 @@
 
 # Copyright 2022-2024 New Vector Ltd.
 #
-# SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+# SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
 # Please see LICENSE files in the repository root for full details.
 
 # Ignore any error to not stop the script
@@ -45,9 +45,9 @@ if [[ -z "${androidHome}" ]]; then
     printf "Fatal: ANDROID_HOME is not defined in the environment.\n"
     envError=1
 fi
-# @elementbot:matrix.org matrix token / Not mandatory
-elementBotToken="${ELEMENT_BOT_MATRIX_TOKEN}"
-if [[ -z "${elementBotToken}" ]]; then
+# @manabot:matrix.org matrix token / Not mandatory
+manaBotToken="${ELEMENT_BOT_MATRIX_TOKEN}"
+if [[ -z "${manaBotToken}" ]]; then
     printf "Warning: ELEMENT_BOT_MATRIX_TOKEN is not defined in the environment.\n"
 fi
 
@@ -128,7 +128,7 @@ printf "\n======================================================================
 read -p "Please check the crashes from the PlayStore. You can commit fixes if any on the release branch. Press enter when it's done."
 
 printf "\n================================================================================\n"
-read -p "Please check the rageshake with the current dev version: https://github.com/matrix-org/element-android-rageshakes/labels/${version}-dev. You can commit fixes if any on the release branch. Press enter when it's done."
+read -p "Please check the rageshake with the current dev version: https://github.com/matrix-org/mana-android-rageshakes/labels/${version}-dev. You can commit fixes if any on the release branch. Press enter when it's done."
 
 printf "\n================================================================================\n"
 read -p "Please make sure an emulator is running and press enter when it is ready."
@@ -193,7 +193,7 @@ printf -v versionMinor2Digits "%02d" ${versionMinor}
 printf -v versionPatch2Digits "%02d" ${versionPatch}
 fastlaneFile="4${versionMajor2Digits}${versionMinor2Digits}${versionPatch2Digits}0.txt"
 fastlanePathFile="./fastlane/metadata/android/en-US/changelogs/${fastlaneFile}"
-printf "Main changes in this version: TODO.\nFull changelog: https://github.com/element-hq/element-android/releases" > ${fastlanePathFile}
+printf "Main changes in this version: TODO.\nFull changelog: https://github.com/mana-hq/mana-android/releases" > ${fastlanePathFile}
 
 read -p "I have created the file ${fastlanePathFile}, please edit it and press enter when it's done."
 git add ${fastlanePathFile}
@@ -255,14 +255,14 @@ else
 fi
 
 printf "\n================================================================================\n"
-printf "Wait for the GitHub action https://github.com/element-hq/element-android/actions/workflows/build.yml?query=branch%%3Amain to build the 'main' branch.\n"
+printf "Wait for the GitHub action https://github.com/mana-hq/mana-android/actions/workflows/build.yml?query=branch%%3Amain to build the 'main' branch.\n"
 read -p "After GHA is finished, please enter the artifact URL (for 'vector-gplay-release-unsigned'): " artifactUrl
 
 printf "\n================================================================================\n"
 printf "Downloading the artifact...\n"
 
 # Download files
-targetPath="./tmp/Element/${version}"
+targetPath="./tmp/Mana/${version}"
 
 # Ignore error
 set +e
@@ -352,7 +352,7 @@ set -e
 read -p "Please run the APK on your phone to check that the upgrade went well (no init sync, etc.). Press enter when it's done."
 
 printf "\n================================================================================\n"
-githubCreateReleaseLink="https://github.com/element-hq/element-android/releases/new?tag=v${version}&title=Element%20Android%20v${version}&body=${changelogUrlEncoded}"
+githubCreateReleaseLink="https://github.com/mana-hq/mana-android/releases/new?tag=v${version}&title=Mana%20Android%20v${version}&body=${changelogUrlEncoded}"
 printf "Creating the release on gitHub.\n"
 printf -- "Open this link: %s\n" ${githubCreateReleaseLink}
 printf "Then\n"
@@ -362,10 +362,10 @@ read -p ". Press enter when it's done. "
 
 printf "\n================================================================================\n"
 printf "Message for the Android internal room:\n\n"
-message="@room Element Android ${version} is ready to be tested. You can get it from https://github.com/element-hq/element-android/releases/tag/v${version}. Please report any feedback here. Thanks!"
+message="@room Mana Android ${version} is ready to be tested. You can get it from https://github.com/mana-hq/mana-android/releases/tag/v${version}. Please report any feedback here. Thanks!"
 printf "${message}\n\n"
 
-if [[ -z "${elementBotToken}" ]]; then
+if [[ -z "${manaBotToken}" ]]; then
   read -p "ELEMENT_BOT_MATRIX_TOKEN is not defined in the environment. Cannot send the message for you. Please send it manually, and press enter when it's done "
 else
   read -p "Send this message to the room (yes/no) default to yes? " doSend
@@ -373,9 +373,9 @@ else
   if [ ${doSend} == "yes" ]; then
     printf "Sending message...\n"
     transactionId=`openssl rand -hex 16`
-    # Element Android internal
+    # Mana Android internal
     matrixRoomId="!LiSLXinTDCsepePiYW:matrix.org"
-    curl -X PUT --data $"{\"msgtype\":\"m.text\",\"body\":\"${message}\"}" -H "Authorization: Bearer ${elementBotToken}" https://matrix-client.matrix.org/_matrix/client/r0/rooms/${matrixRoomId}/send/m.room.message/\$local.${transactionId}
+    curl -X PUT --data $"{\"msgtype\":\"m.text\",\"body\":\"${message}\"}" -H "Authorization: Bearer ${manaBotToken}" https://matrix-client.matrix.org/_matrix/client/r0/rooms/${matrixRoomId}/send/m.room.message/\$local.${transactionId}
   else
     printf "Message not sent, please send it manually!\n"
   fi

@@ -147,7 +147,7 @@ internal class UIEchoManager(
     fun updateSentStateWithUiEcho(timelineEvent: TimelineEvent): TimelineEvent {
         if (timelineEvent.root.sendState.isSent()) return timelineEvent
         val inMemoryState = inMemorySendingStates[timelineEvent.eventId] ?: return timelineEvent
-        // Timber.v("## ${clock.epochMillis()} Send event refresh echo with live state $inMemoryState from state ${element.root.sendState}")
+        // Timber.v("## ${clock.epochMillis()} Send event refresh echo with live state $inMemoryState from state ${mana.root.sendState}")
         return timelineEvent.copy(
                 root = timelineEvent.root.copyAll()
                         .also { it.sendState = inMemoryState }

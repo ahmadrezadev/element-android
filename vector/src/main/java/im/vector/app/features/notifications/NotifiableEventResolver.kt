@@ -1,7 +1,7 @@
 /*
  * Copyright 2019-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 package im.vector.app.features.notifications
@@ -34,7 +34,7 @@ import org.matrix.android.sdk.api.session.getUserOrDefault
 import org.matrix.android.sdk.api.session.room.getTimelineEvent
 import org.matrix.android.sdk.api.session.room.model.Membership
 import org.matrix.android.sdk.api.session.room.model.RoomMemberContent
-import org.matrix.android.sdk.api.session.room.model.message.ElementCallNotifyContent
+import org.matrix.android.sdk.api.session.room.model.message.ManaCallNotifyContent
 import org.matrix.android.sdk.api.session.room.model.message.MessageWithAttachmentContent
 import org.matrix.android.sdk.api.session.room.model.message.isUserMentioned
 import org.matrix.android.sdk.api.session.room.sender.SenderInfo
@@ -151,11 +151,11 @@ class NotifiableEventResolver @Inject constructor(
             )
         } else {
             event.attemptToDecryptIfNeeded(session)
-            // For incoming Element Call, check that the user is mentioned
-            val isIncomingElementCall = event.root.getClearType() in EventType.ELEMENT_CALL_NOTIFY.values &&
-                    event.root.getClearContent()?.toModel<ElementCallNotifyContent>()?.isUserMentioned(session.myUserId) == true
+            // For incoming Mana Call, check that the user is mentioned
+            val isIncomingManaCall = event.root.getClearType() in EventType.ELEMENT_CALL_NOTIFY.values &&
+                    event.root.getClearContent()?.toModel<ManaCallNotifyContent>()?.isUserMentioned(session.myUserId) == true
             when {
-                isIncomingElementCall || event.root.supportsNotification() -> {
+                isIncomingManaCall || event.root.supportsNotification() -> {
                     val body = displayableEventFormatter.format(event, isDm = room.roomSummary()?.isDirect.orFalse(), appendAuthor = false).toString()
                     val roomName = room.roomSummary()?.displayName ?: ""
                     val senderDisplayName = event.senderInfo.disambiguatedDisplayName

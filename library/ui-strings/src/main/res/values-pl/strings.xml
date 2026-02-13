@@ -913,16 +913,16 @@
     <string name="login_server_other_text">Ustawienia niestandardowe i zaawansowane</string>
     <string name="login_continue">Kontynuuj</string>
     <string name="login_connect_to">Połącz z %1$s</string>
-    <string name="login_connect_to_modular">Połącz z Element Matrix Services</string>
+    <string name="login_connect_to_modular">Połącz z Mana Matrix Services</string>
     <string name="login_connect_to_a_custom_server">Połącz z serwerem niestandardowym</string>
     <string name="login_signin_to">Zaloguj się do %1$s</string>
     <string name="login_signup">Zarejestruj</string>
     <string name="login_signin">Zaloguj się</string>
     <string name="login_signin_sso">Kontynuuj za pomocą logowania jednostopniowego</string>
-    <string name="login_server_url_form_modular_hint">Adres Element Matrix Services</string>
+    <string name="login_server_url_form_modular_hint">Adres Mana Matrix Services</string>
     <string name="login_server_url_form_other_hint">Adres</string>
     <string name="login_server_url_form_modular_text">Hosting premium dla organizacji</string>
-    <string name="login_server_url_form_modular_notice">Wprowadź adres Element Modular lub serwera którego chcesz użyć</string>
+    <string name="login_server_url_form_modular_notice">Wprowadź adres Mana Modular lub serwera którego chcesz użyć</string>
     <string name="login_sso_error_message">Wystąpił błąd podczas ładowania strony: %1$s (%2$d)</string>
     <string name="login_mode_not_supported">Aplikacja nie jest w stanie zalogować się do tego serwera domowego. Serwer domowy obsluguje następujące metody logowania: %1$s.
 \n
@@ -980,7 +980,7 @@
     <string name="login_signup_cancel_confirmation_title">Ostrzeżenie</string>
     <string name="login_signup_cancel_confirmation_content">Twoje konto wciąż nie zostalo utworzone. Zatrzymać proces rejestracji\?</string>
     <string name="login_a11y_choose_matrix_org">Wybierz matrix.org</string>
-    <string name="login_a11y_choose_modular">Wybierz Element Matrix Services</string>
+    <string name="login_a11y_choose_modular">Wybierz Mana Matrix Services</string>
     <string name="login_a11y_choose_other">Wybierz niestandardowy serwer domowy</string>
     <string name="login_a11y_captcha_container">Wypełnij zadanie Captcha</string>
     <string name="login_terms_title">Zaakceptuj warunki aby kontynuować</string>
@@ -1223,7 +1223,7 @@
     <string name="save_recovery_key_chooser_hint">Zapisz klucz odzyskiwania w</string>
     <string name="disclaimer_positive_button">DOWIEDZ SIĘ WIĘCEJ</string>
     <string name="disclaimer_content">Jesteśmy podekscytowani mogąc oznajmić, że zmieniliśmy nazwę! Twoja aplikacja jest aktualna i jesteś zalogowany do swojego konta.</string>
-    <string name="disclaimer_title">Riot nazywa się teraz Element!</string>
+    <string name="disclaimer_title">Riot nazywa się teraz Mana!</string>
     <string name="crypto_error_withheld_generic">Nie masz dostępu do tej wiadomości ponieważ nadawca celowo nie wysłał jej kluczy</string>
     <string name="crypto_error_withheld_unverified">Nie masz dostępu do tej wiadomości ponieważ nadawca nie ufa Twojej sesji</string>
     <string name="crypto_error_withheld_blacklisted">Nie masz dostępu do tej wiadomości ponieważ zostałeś zablokowany przez jej nadawcę</string>
@@ -2642,7 +2642,7 @@
     <string name="ftue_auth_email_subtitle">%s potrzebuje zweryfikować twoje konto</string>
     <string name="ftue_auth_email_title">Podaj swój email</string>
     <string name="ftue_auth_terms_title">Reguły serwera</string>
-    <string name="ftue_auth_choose_server_ems_subtitle">Element Matrix Services (EMS) to solidny i niezawodny hosting zapewniający szybką, bezpieczną i natychmiastową komunikację. Dowiedz się więcej na &lt;a href=\"${ftue_ems_url}\"&gt;element.io/ems&lt;/a&gt;</string>
+    <string name="ftue_auth_choose_server_ems_subtitle">Mana Matrix Services (EMS) to solidny i niezawodny hosting zapewniający szybką, bezpieczną i natychmiastową komunikację. Dowiedz się więcej na &lt;a href=\"${ftue_ems_url}\"&gt;mana.io/ems&lt;/a&gt;</string>
     <string name="ftue_auth_choose_server_ems_title">Chcesz hostować swój własny serwer\?</string>
     <string name="ftue_auth_choose_server_entry_hint">URL serwera</string>
     <string name="ftue_auth_choose_server_subtitle">Jaki jest adres twojego serwera\? To miejsce, gdzie przechowywane będą twoje dane</string>
@@ -2658,8 +2658,8 @@
     <string name="font_size_section_manually">Ustaw ręcznie</string>
     <string name="font_size_section_auto">Ustaw automatycznie</string>
     <string name="font_size_title">Wybierz rozmiar czcionki</string>
-    <string name="labs_enable_element_call_permission_shortcuts_summary">Automatycznie akceptuj widżety Element Call i przyznaj dostęp do kamery i mikrofonu</string>
-    <string name="labs_enable_element_call_permission_shortcuts">Włącz skróty uprawnień dla Element Call</string>
+    <string name="labs_enable_mana_call_permission_shortcuts_summary">Automatycznie akceptuj widżety Mana Call i przyznaj dostęp do kamery i mikrofonu</string>
+    <string name="labs_enable_mana_call_permission_shortcuts">Włącz skróty uprawnień dla Mana Call</string>
     <string name="live_location_labs_promotion_description">Uwaga: to jest eksperymentalna funkcja wykorzystująca tymczasową implementację. Oznacza to, że nie będzie możliwości usunięcia historii lokalizacji, a zaawansowani użytkownicy będą mogli ją zobaczyć nawet, gdy przestaniesz dzielić się lokalizacją na żywo z tym pokojem.</string>
     <string name="live_location_description">Lokalizacja na żywo</string>
     <string name="labs_enable_msc3061_share_history_desc">Zapraszając kogoś do zaszyfrowanego pokoju który współdzieli historię, zaszyfrowana historia będzie dla tej osoby widoczna.</string>
@@ -2729,7 +2729,7 @@
     <string name="change_space">Zmień przestrzeń</string>
     <string name="labs_enable_deferred_dm_summary">Stwórz prywatny chat dopiero po wysłaniu pierwszej wiadomości</string>
     <string name="labs_enable_deferred_dm_title">Włącz odroczone prywatne chaty</string>
-    <string name="labs_enable_new_app_layout_summary">Odświeżony wygląd Element z opcjonalnymi kartami</string>
+    <string name="labs_enable_new_app_layout_summary">Odświeżony wygląd Mana z opcjonalnymi kartami</string>
     <string name="labs_enable_new_app_layout_title">Włącz nowy układ</string>
     <string name="home_empty_space_no_rooms_message">Przestrzenie to nowa metoda na grupowanie razem wielu pokoi i osób. Dodaj tu już istniejący pokój lub stwórz nowy używając przycisku w prawym-dolnym rogu.</string>
     <string name="space_list_empty_message">Jest to nowa metoda na grupowanie razem wielu pokoi i osób.</string>
@@ -2921,7 +2921,7 @@
 \nNie będziesz w stanie uczestniczyć w pokojach, gdzie szyfrowane jest włączone.
 \n
 \nDla najlepszego bezpieczeństwa i prywatności zaleca się korzystania z klientów Matrix, które wspierają szyfrowanie.</string>
-    <string name="device_manager_learn_more_sessions_verified_description">Sesje zweryfikowane są wszędzie, gdzie korzystasz z Element po wprowadzeniu swojego hasła lub zweryfikowaniu swojej tożsamości za pomocą innej sesji zweryfikowanej.
+    <string name="device_manager_learn_more_sessions_verified_description">Sesje zweryfikowane są wszędzie, gdzie korzystasz z Mana po wprowadzeniu swojego hasła lub zweryfikowaniu swojej tożsamości za pomocą innej sesji zweryfikowanej.
 \n
 \nTo oznacza, że posiadasz wszystkie niezbędne klucze wymagane do odblokowania swoich zaszyfrowanych wiadomości i oznajmiasz innym użytkownikom, że ufasz tej sesji.</string>
     <string name="device_manager_learn_more_sessions_unverified">Sesje niezweryfikowane to sesje, w których zalogowano się za pomocą Twoich danych, lecz nie zostały zweryfikowane inną sesją.

@@ -29,7 +29,7 @@ import okhttp3.RequestBody.Companion.toRequestBody
 import org.matrix.android.sdk.api.MatrixCoroutineDispatchers
 import org.matrix.android.sdk.api.failure.Failure
 import org.matrix.android.sdk.api.session.content.ContentUrlResolver
-import org.matrix.android.sdk.api.session.crypto.attachments.ElementToDecrypt
+import org.matrix.android.sdk.api.session.crypto.attachments.ManaToDecrypt
 import org.matrix.android.sdk.api.session.file.FileService
 import org.matrix.android.sdk.api.util.md5
 import org.matrix.android.sdk.internal.crypto.attachments.MXEncryptedAttachments
@@ -88,7 +88,7 @@ internal class DefaultFileService @Inject constructor(
             fileName: String,
             mimeType: String?,
             url: String?,
-            elementToDecrypt: ElementToDecrypt?
+            manaToDecrypt: ManaToDecrypt?
     ): File {
         url ?: throw IllegalArgumentException("url is null")
 
@@ -125,10 +125,10 @@ internal class DefaultFileService @Inject constructor(
                 // ensure we use unique file name by using URL (mapped to suitable file name)
                 // Also we need to add extension for the FileProvider, if not it lot's of app that it's
                 // shared with will not function well (even if mime type is passed in the intent)
-                val cachedFiles = getFiles(url, fileName, mimeType, elementToDecrypt != null)
+                val cachedFiles = getFiles(url, fileName, mimeType, manaToDecrypt != null)
 
                 if (!cachedFiles.file.exists()) {
-                    val resolvedMethod = contentUrlResolver.resolveForDownload(url, elementToDecrypt) ?: throw IllegalArgumentException("url is null")
+                    val resolvedMethod = contentUrlResolver.resolveForDownload(url, manaToDecrypt) ?: throw IllegalArgumentException("url is null")
 
                     val request = when (resolvedMethod) {
                         is ContentUrlResolver.ResolvedMethod.GET -> {
@@ -194,7 +194,7 @@ internal class DefaultFileService @Inject constructor(
                         atomicFileCreator.partFile.outputStream().buffered().use { outputStream ->
                             MXEncryptedAttachments.decryptAttachment(
                                     inputStream,
-                                    elementToDecrypt,
+                                    manaToDecrypt,
                                     outputStream,
                                     clock
                             )
@@ -251,9 +251,9 @@ internal class DefaultFileService @Inject constructor(
             mxcUrl: String?,
             fileName: String,
             mimeType: String?,
-            elementToDecrypt: ElementToDecrypt?
+            manaToDecrypt: ManaToDecrypt?
     ): Boolean {
-        return fileState(mxcUrl, fileName, mimeType, elementToDecrypt) is FileService.FileState.InCache
+        return fileState(mxcUrl, fileName, mimeType, manaToDecrypt) is FileService.FileState.InCache
     }
 
     internal data class CachedFiles(
@@ -292,10 +292,10 @@ internal class DefaultFileService @Inject constructor(
             mxcUrl: String?,
             fileName: String,
             mimeType: String?,
-            elementToDecrypt: ElementToDecrypt?
+            manaToDecrypt: ManaToDecrypt?
     ): FileService.FileState {
         mxcUrl ?: return FileService.FileState.Unknown
-        val files = getFiles(mxcUrl, fileName, mimeType, elementToDecrypt != null)
+        val files = getFiles(mxcUrl, fileName, mimeType, manaToDecrypt != null)
         if (files.file.exists()) {
             return FileService.FileState.InCache(
                     decryptedFileInCache = files.getClearFile().exists()
@@ -315,12 +315,12 @@ internal class DefaultFileService @Inject constructor(
             mxcUrl: String?,
             fileName: String,
             mimeType: String?,
-            elementToDecrypt: ElementToDecrypt?
+            manaToDecrypt: ManaToDecrypt?
     ): Uri? {
         mxcUrl ?: return null
         // this string could be extracted no?
         val authority = "${context.packageName}.mx-sdk.fileprovider"
-        val targetFile = getFiles(mxcUrl, fileName, mimeType, elementToDecrypt != null).getClearFile()
+        val targetFile = getFiles(mxcUrl, fileName, mimeType, manaToDecrypt != null).getClearFile()
         if (!targetFile.exists()) return null
         return FileProvider.getUriForFile(context, authority, targetFile)
     }

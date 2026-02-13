@@ -605,7 +605,7 @@
     <string name="crypto_error_withheld_unverified">Du får ikke tilgang til denne meldingen fordi økten ikke er klarert av avsenderen</string>
     <string name="crypto_error_withheld_generic">Du får ikke tilgang til denne meldingen fordi avsenderen med vilje ikke sendte nøklene</string>
     <string name="notice_crypto_unable_to_decrypt_merged">Venter på krypteringshistorikk</string>
-    <string name="disclaimer_title">Riot er nå Element!</string>
+    <string name="disclaimer_title">Riot er nå Mana!</string>
     <string name="disclaimer_content">Vi er glade for å kunngjøre at vi har byttet navn! Appen din er oppdatert, og du er logget på kontoen din.</string>
     <string name="save_recovery_key_chooser_hint">Lagre gjenopprettingsnøkkel i</string>
     <string name="loading_contact_book">Henter kontaktene dine…</string>
@@ -898,7 +898,7 @@
     <string name="login_msisdn_error_not_international">Internasjonale telefonnumre må starte med \'+\'</string>
     <string name="login_msisdn_error_other">Telefonnummeret virker ugyldig. Vennligst sjekk det</string>
     <string name="login_a11y_choose_matrix_org">Velg matrix.org</string>
-    <string name="login_a11y_choose_modular">Velg Element Matrix Services</string>
+    <string name="login_a11y_choose_modular">Velg Mana Matrix Services</string>
     <string name="login_connect_using_matrix_id_submit">Logg på med Matrix ID</string>
     <string name="login_signin_matrix_id_notice">Hvis du oppretter en konto på en hjemmeserver, bruker du Matrix-ID (f.eks. @Bruker:domene.com) og passord nedenfor.</string>
     <string name="login_signin_matrix_id_title">Logg på med Matrix ID</string>

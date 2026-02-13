@@ -1,7 +1,7 @@
 /*
  * Copyright 2022-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -34,7 +34,7 @@ object Config {
     const val LOCATION_MAP_TILER_KEY = "fU3vlMsMn4Jb6dnEIFsx"
 
     /**
-     * Whether to read the `io.element.functional_members` state event
+     * Whether to read the `io.mana.functional_members` state event
      * and exclude any service members when computing a room's name and avatar.
      */
     const val SUPPORT_FUNCTIONAL_MEMBERS = true
@@ -92,8 +92,8 @@ object Config {
      * to replace the resource `replacement_app_icon` too.
      */
     val sunsetConfig: SunsetConfig = SunsetConfig.Enabled(
-            learnMoreLink = "https://element.io/app-for-productivity",
-            replacementApplicationName = "Element X",
+            learnMoreLink = "https://mana.io/app-for-productivity",
+            replacementApplicationName = "Mana X",
             replacementApplicationId = "io.element.android.x",
     )
 }

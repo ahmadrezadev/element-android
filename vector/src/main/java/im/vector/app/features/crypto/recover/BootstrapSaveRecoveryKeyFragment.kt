@@ -1,7 +1,7 @@
 /*
  * Copyright 2020-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -56,7 +56,7 @@ class BootstrapSaveRecoveryKeyFragment :
         val intent = Intent(Intent.ACTION_CREATE_DOCUMENT)
         intent.addCategory(Intent.CATEGORY_OPENABLE)
         intent.type = "text/plain"
-        intent.putExtra(Intent.EXTRA_TITLE, "element-recovery-key.txt")
+        intent.putExtra(Intent.EXTRA_TITLE, "mana-recovery-key.txt")
 
         try {
             sharedViewModel.handle(BootstrapActions.SaveReqQueryStarted)

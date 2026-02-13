@@ -1025,16 +1025,16 @@
     <string name="login_server_other_text">Собствени и разширени настройки</string>
     <string name="login_continue">Продължи</string>
     <string name="login_connect_to">Свържи се с %1$s</string>
-    <string name="login_connect_to_modular">Свърже се с Element Matrix Services</string>
+    <string name="login_connect_to_modular">Свърже се с Mana Matrix Services</string>
     <string name="login_connect_to_a_custom_server">Свържи се със собствен сървър</string>
     <string name="login_signin_to">Влез в %1$s</string>
     <string name="login_signup">Регистрация</string>
     <string name="login_signin">Вход</string>
     <string name="login_signin_sso">Продължи със SSO</string>
-    <string name="login_server_url_form_modular_hint">Element Matrix Services адрес</string>
+    <string name="login_server_url_form_modular_hint">Mana Matrix Services адрес</string>
     <string name="login_server_url_form_other_hint">Адрес</string>
     <string name="login_server_url_form_modular_text">Премиум хостинг за организации</string>
-    <string name="login_server_url_form_modular_notice">Въведете адреса на Modular Element или на сървър, който искате да използвате</string>
+    <string name="login_server_url_form_modular_notice">Въведете адреса на Modular Mana или на сървър, който искате да използвате</string>
     <string name="login_sso_error_message">Възникна грешка при зареждане на страницата: %1$s (%2$d)</string>
     <string name="login_mode_not_supported">Приложението не може да влезе в този сървър. Сървъра поддържа следните методи за вход: %1$s.
 \n
@@ -1091,7 +1091,7 @@
     <string name="login_signup_cancel_confirmation_title">Внимание</string>
     <string name="login_signup_cancel_confirmation_content">Профила ви все още не е създаден. Прекратяване на процеса на регистрация\?</string>
     <string name="login_a11y_choose_matrix_org">Избери matrix.org</string>
-    <string name="login_a11y_choose_modular">Избери Element Matrix Services</string>
+    <string name="login_a11y_choose_modular">Избери Mana Matrix Services</string>
     <string name="login_a11y_choose_other">Избери собствен сървър</string>
     <string name="login_a11y_captcha_container">Моля извършете captcha проверката</string>
     <string name="login_terms_title">Приемете условията за да продължите</string>
@@ -1639,7 +1639,7 @@
     <string name="disclaimer_positive_button">НАУЧИ ПОВЕЧЕ</string>
     <string name="disclaimer_negative_button">РАЗБРАХ</string>
     <string name="disclaimer_content">Развълнувани сме да съобщим, че променихме името! Приложението ви е обновено и сте вписани в профила си.</string>
-    <string name="disclaimer_title">Riot вече е Element!</string>
+    <string name="disclaimer_title">Riot вече е Mana!</string>
     <string name="notice_crypto_unable_to_decrypt_merged">Изчакване на история на шифроването</string>
     <string name="crypto_error_withheld_generic">Не можете да достъпите това съобщение, защото изпращача нарочно не е изпратил ключовете за него</string>
     <string name="crypto_error_withheld_unverified">Не можете да достъпите това съобщение, защото изпращача не се доверява на сесията ви</string>

@@ -1,7 +1,7 @@
 /*
  * Copyright 2020-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -168,8 +168,8 @@ class PeerConnectionObserver(private val webRtcCall: WebRtcCall) : PeerConnectio
     /**
      * This happens when a new track of any kind is added to the media stream.
      * This event is fired when the browser adds a track to the stream
-     * (such as when a RTCPeerConnection is renegotiated or a stream being captured using HTMLMediaElement.captureStream()
-     * gets a new set of tracks because the media element being captured loaded a new source.
+     * (such as when a RTCPeerConnection is renegotiated or a stream being captured using HTMLMediaMana.captureStream()
+     * gets a new set of tracks because the media mana being captured loaded a new source.
      */
     override fun onAddTrack(p0: RtpReceiver?, p1: Array<out MediaStream>?) {
         Timber.tag(loggerTag.value).v("StreamObserver onAddTrack")

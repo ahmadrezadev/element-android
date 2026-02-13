@@ -2,7 +2,7 @@
 #
 # Copyright 2022-2024 New Vector Ltd.
 #
-# SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+# SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
 # Please see LICENSE files in the repository root for full details.
 #
 
@@ -57,7 +57,7 @@ if args.verbose:
     print(args)
 
 # Split the artifact URL to get information
-# Ex: https://github.com/element-hq/element-android/actions/runs/7460386865/artifacts/1156548729
+# Ex: https://github.com/mana-hq/mana-android/actions/runs/7460386865/artifacts/1156548729
 artifactUrl = args.artifactUrl
 
 url_regex = r"https://github.com/(.+?)/(.+?)/actions/runs/.+?/artifacts/(.+)"
@@ -66,7 +66,7 @@ result = re.search(url_regex, artifactUrl)
 if result is None:
     print(
         "❌ Invalid parameter --artifactUrl '%s'. Please check the format.\nIt should be something like: %s" %
-        (artifactUrl, 'https://github.com/element-hq/element-android/actions/runs/7460386865/artifacts/1156548729')
+        (artifactUrl, 'https://github.com/mana-hq/mana-android/actions/runs/7460386865/artifacts/1156548729')
     )
     exit(1)
 

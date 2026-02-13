@@ -1,9 +1,9 @@
-# Element Android design
+# Mana Android design
 
 <!--- TOC -->
 
 * [Introduction](#introduction)
-* [How to import from Figma to the Element Android project](#how-to-import-from-figma-to-the-element-android-project)
+* [How to import from Figma to the Mana Android project](#how-to-import-from-figma-to-the-mana-android-project)
   * [Colors](#colors)
   * [Text](#text)
   * [Dimension, position and margin](#dimension-position-and-margin)
@@ -28,22 +28,22 @@
 
 ## Introduction
 
-Design at element.io is done using Figma - https://www.figma.com
+Design at mana.io is done using Figma - https://www.figma.com
 
-## How to import from Figma to the Element Android project
+## How to import from Figma to the Mana Android project
 
 Integration should be done using the Android development best practice, and should follow the existing convention in the code.
 
 ### Colors
 
-Element Android already contains all the colors which can be used by the designer, in the module `ui-style`.
+Mana Android already contains all the colors which can be used by the designer, in the module `ui-style`.
 Some of them depend on the theme, so ensure to use theme attributes and not colors directly.
 
 ### Text
 
  - click on a text on Figma
  - on the right panel, information about the style and colors are displayed
- - in Element Android, text style are already defined, generally you should not create new style
+ - in Mana Android, text style are already defined, generally you should not create new style
  - apply the style and the color to the layout
 
 ### Dimension, position and margin
@@ -56,7 +56,7 @@ Some of them depend on the theme, so ensure to use theme attributes and not colo
 
 #### Export drawable from Figma
 
- - click on the element to export
+ - click on the mana to export
  - ensure that the correct layer is selected. Sometimes the parent layer has to be selected on the left panel
  - on the right panel, click on "export"
  - select SVG
@@ -91,7 +91,7 @@ https://developer.android.com/studio/write/convert-webp
 
 Figma links can be included in the layout, for future reference, but it is also OK to add a paragraph below here, to centralize the information
 
-Main entry point: https://www.figma.com/files/project/5612863/Element?fuid=779371459522484071
+Main entry point: https://www.figma.com/files/project/5612863/Mana?fuid=779371459522484071
 
 Note: all the Figma links are not publicly available.
 

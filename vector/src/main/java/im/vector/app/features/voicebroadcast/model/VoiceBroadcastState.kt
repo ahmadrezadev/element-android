@@ -2,7 +2,7 @@
  * Copyright 2024 New Vector Ltd.
  * Copyright 2020 The Matrix.org Foundation C.I.C.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -12,7 +12,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * Ref: https://github.com/element-hq/element-meta/discussions/632
+ * Ref: https://github.com/mana-hq/mana-meta/discussions/632
  */
 @JsonClass(generateAdapter = false)
 enum class VoiceBroadcastState(val value: String) {

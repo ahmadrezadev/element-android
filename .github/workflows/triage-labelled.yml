@@ -52,7 +52,7 @@ jobs:
     runs-on: ubuntu-latest
     # Skip in forks
     if: >
-      github.repository == 'element-hq/element-android' &&
+      github.repository == 'mana-hq/mana-android' &&
       contains(github.event.issue.labels.*.name, 'X-Needs-Design') &&
       (contains(github.event.issue.labels.*.name, 'S-Critical') &&
        (contains(github.event.issue.labels.*.name, 'O-Frequent') ||
@@ -63,7 +63,7 @@ jobs:
     steps:
       - uses: actions/add-to-project@main
         with:
-          project-url: https://github.com/orgs/element-hq/projects/18
+          project-url: https://github.com/orgs/mana-hq/projects/18
           github-token: ${{ secrets.ELEMENT_BOT_TOKEN }}
 
   add_product_issues:
@@ -74,6 +74,6 @@ jobs:
     steps:
       - uses: actions/add-to-project@main
         with:
-          project-url: https://github.com/orgs/element-hq/projects/28
+          project-url: https://github.com/orgs/mana-hq/projects/28
           github-token: ${{ secrets.ELEMENT_BOT_TOKEN }}
 

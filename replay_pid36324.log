@@ -10,8 +10,8 @@ instanceKlass org/jetbrains/kotlin/types/model/TypeSystemContext$iterator$1
 instanceKlass kotlin/jvm/internal/CharCompanionObject
 instanceKlass  @bci org/jetbrains/kotlin/types/expressions/FakeCallResolver$resolveFakeCall$result$1 invoke (Lorg/jetbrains/kotlin/psi/KtSimpleNameExpression;)V 144 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/types/expressions/FakeCallResolver$resolveFakeCall$result$1$$Lambda+0x000000002270bac0
 instanceKlass org/jetbrains/kotlin/resolve/diagnostics/SimpleGenericDiagnostics
-# instanceKlass org/jetbrains/kotlin/resolve/diagnostics/DiagnosticsElementsCache$$Lambda+0x000000002270b0a0
-instanceKlass org/jetbrains/kotlin/resolve/diagnostics/DiagnosticsElementsCache
+# instanceKlass org/jetbrains/kotlin/resolve/diagnostics/DiagnosticsManasCache$$Lambda+0x000000002270b0a0
+instanceKlass org/jetbrains/kotlin/resolve/diagnostics/DiagnosticsManasCache
 instanceKlass org/jetbrains/kotlin/resolve/diagnostics/DiagnosticsWithSuppression
 instanceKlass org/jetbrains/kotlin/types/expressions/FakeCallResolver$TracingStrategyForIteratorCall
 instanceKlass org/jetbrains/kotlin/types/expressions/FakeCallResolver$WhenMappings
@@ -90,7 +90,7 @@ instanceKlass org/jetbrains/kotlin/cfg/pseudocode/instructions/jumps/JumpInstruc
 instanceKlass org/jetbrains/kotlin/cfg/pseudocode/PseudocodeUtilsKt
 instanceKlass org/jetbrains/kotlin/cfg/pseudocode/instructions/eval/InstructionWithValue
 instanceKlass org/jetbrains/kotlin/cfg/pseudocode/instructions/InstructionImpl
-instanceKlass org/jetbrains/kotlin/cfg/pseudocode/instructions/KtElementInstruction
+instanceKlass org/jetbrains/kotlin/cfg/pseudocode/instructions/KtManaInstruction
 instanceKlass org/jetbrains/kotlin/cfg/pseudocode/instructions/Instruction
 instanceKlass org/jetbrains/kotlin/cfg/BlockInfo
 instanceKlass org/jetbrains/kotlin/cfg/pseudocode/instructions/BlockScope
@@ -117,7 +117,7 @@ instanceKlass org/jetbrains/kotlin/resolve/OverrideResolver$CheckOverrideReportS
 instanceKlass  @bci org/jetbrains/kotlin/resolve/lazy/descriptors/LazyClassDescriptor getDeclaredCallableMembers ()Ljava/util/Collection; 7 <appendix> argL0 ; # org/jetbrains/kotlin/resolve/lazy/descriptors/LazyClassDescriptor$$Lambda+0x00000000226ee9f8
 instanceKlass kotlin/sequences/DropSequence$iterator$1
 instanceKlass kotlin/sequences/DropSequence
-instanceKlass  @bci org/jetbrains/kotlin/types/expressions/BasicExpressionTypingVisitor lambda$visitObjectLiteralExpression$0 (Lorg/jetbrains/kotlin/psi/KtObjectLiteralExpression;[Lorg/jetbrains/kotlin/types/KotlinType;Lorg/jetbrains/kotlin/types/expressions/ExpressionTypingContext;Lorg/jetbrains/kotlin/util/slicedMap/WritableSlice;Lorg/jetbrains/kotlin/com/intellij/psi/PsiElement;Lorg/jetbrains/kotlin/descriptors/ClassDescriptor;)V 37 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/types/expressions/BasicExpressionTypingVisitor$$Lambda+0x00000000226ed7b8
+instanceKlass  @bci org/jetbrains/kotlin/types/expressions/BasicExpressionTypingVisitor lambda$visitObjectLiteralExpression$0 (Lorg/jetbrains/kotlin/psi/KtObjectLiteralExpression;[Lorg/jetbrains/kotlin/types/KotlinType;Lorg/jetbrains/kotlin/types/expressions/ExpressionTypingContext;Lorg/jetbrains/kotlin/util/slicedMap/WritableSlice;Lorg/jetbrains/kotlin/com/intellij/psi/PsiMana;Lorg/jetbrains/kotlin/descriptors/ClassDescriptor;)V 37 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/types/expressions/BasicExpressionTypingVisitor$$Lambda+0x00000000226ed7b8
 instanceKlass org/jetbrains/kotlin/types/expressions/LocalClassDescriptorHolder$getClassDescriptor$2$declarationProviderFactory$1
 instanceKlass org/jetbrains/kotlin/types/expressions/LocalClassDescriptorHolder$getClassDescriptor$2
 # instanceKlass java/lang/invoke/LambdaForm$MH+0x00000000226e8800
@@ -254,7 +254,7 @@ instanceKlass org/jetbrains/kotlin/resolve/InferenceSessionForExistingCandidates
 instanceKlass org/jetbrains/kotlin/types/AbstractStubType$Companion
 instanceKlass org/jetbrains/kotlin/resolve/calls/model/PartialCallContainer$Companion
 instanceKlass org/jetbrains/kotlin/resolve/calls/model/PartialCallContainer
-instanceKlass org/jetbrains/kotlin/psi/KtElementUtilsKt
+instanceKlass org/jetbrains/kotlin/psi/KtManaUtilsKt
 instanceKlass org/jetbrains/kotlin/resolve/calls/tower/FunctionLiteralTypes
 instanceKlass org/jetbrains/kotlin/resolve/calls/tower/FunctionLiteralTypes$ProcessedType
 instanceKlass org/jetbrains/kotlin/resolve/calls/CommonSuperTypeUtilsKt
@@ -428,8 +428,8 @@ instanceKlass org/jetbrains/kotlin/resolve/OverridingUtil$6
 instanceKlass org/jetbrains/kotlin/resolve/VisibilityUtilKt
 instanceKlass org/jetbrains/kotlin/resolve/OverridingUtil$3
 instanceKlass org/jetbrains/kotlin/parsing/BindFirstShebangWithWhitespaceOnly
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/PsiFileImpl createTreeElementPointer (Lorg/jetbrains/kotlin/com/intellij/psi/impl/source/tree/FileElement;)Ljava/util/function/Supplier; 17 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/PsiFileImpl$$Lambda+0x000000002267e260
-instanceKlass org/jetbrains/kotlin/com/intellij/model/BranchableSyntheticPsiElement
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/PsiFileImpl createTreeManaPointer (Lorg/jetbrains/kotlin/com/intellij/psi/impl/source/tree/FileMana;)Ljava/util/function/Supplier; 17 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/PsiFileImpl$$Lambda+0x000000002267e260
+instanceKlass org/jetbrains/kotlin/com/intellij/model/BranchableSyntheticPsiMana
 instanceKlass  @bci org/jetbrains/kotlin/com/intellij/openapi/fileTypes/CharsetUtil extractCharsetFromFileContent (Lorg/jetbrains/kotlin/com/intellij/openapi/project/Project;Lorg/jetbrains/kotlin/com/intellij/openapi/vfs/VirtualFile;Lorg/jetbrains/kotlin/com/intellij/openapi/fileTypes/FileType;Ljava/lang/CharSequence;)Ljava/nio/charset/Charset; 25 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/com/intellij/openapi/fileTypes/CharsetUtil$$Lambda+0x000000002267d9b8
 instanceKlass org/jetbrains/kotlin/psi/KtPsiFactory$Companion
 instanceKlass org/jetbrains/kotlin/psi/KtPsiFactory
@@ -614,9 +614,9 @@ instanceKlass org/jetbrains/kotlin/resolve/calls/CallTransformer
 instanceKlass org/jetbrains/kotlin/resolve/calls/tower/AbstractInvokeTowerProcessor
 instanceKlass org/jetbrains/kotlin/resolve/calls/tower/PSICallResolver$FactoryProviderForInvoke
 instanceKlass org/jetbrains/kotlin/resolve/calls/tower/CandidateFactoryProviderForInvoke
-instanceKlass  @bci org/jetbrains/kotlin/resolve/calls/CallExpressionResolver getSafeOrUnsafeSelectorTypeInfo (Lorg/jetbrains/kotlin/resolve/scopes/receivers/Receiver;Lorg/jetbrains/kotlin/resolve/calls/CallExpressionElement;Lorg/jetbrains/kotlin/types/expressions/ExpressionTypingContext;)Lorg/jetbrains/kotlin/types/expressions/KotlinTypeInfo; 123 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/resolve/calls/CallExpressionResolver$$Lambda+0x00000000226447e0
-instanceKlass org/jetbrains/kotlin/resolve/calls/CallExpressionElement
-instanceKlass org/jetbrains/kotlin/resolve/calls/CallExpressionResolver$elementChain$1$WhenMappings
+instanceKlass  @bci org/jetbrains/kotlin/resolve/calls/CallExpressionResolver getSafeOrUnsafeSelectorTypeInfo (Lorg/jetbrains/kotlin/resolve/scopes/receivers/Receiver;Lorg/jetbrains/kotlin/resolve/calls/CallExpressionMana;Lorg/jetbrains/kotlin/types/expressions/ExpressionTypingContext;)Lorg/jetbrains/kotlin/types/expressions/KotlinTypeInfo; 123 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/resolve/calls/CallExpressionResolver$$Lambda+0x00000000226447e0
+instanceKlass org/jetbrains/kotlin/resolve/calls/CallExpressionMana
+instanceKlass org/jetbrains/kotlin/resolve/calls/CallExpressionResolver$manaChain$1$WhenMappings
 instanceKlass org/jetbrains/kotlin/diagnostics/DiagnosticWithParameters3Marker
 instanceKlass org/jetbrains/kotlin/resolve/calls/tower/ErrorCandidate
 instanceKlass org/jetbrains/kotlin/resolve/calls/tower/ErrorCandidateFactoryKt$WhenMappings
@@ -716,11 +716,11 @@ instanceKlass org/jetbrains/kotlin/resolve/lazy/ResolveSessionUtils
 instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/JavaPsiFacadeImpl findClass (Ljava/lang/String;Lorg/jetbrains/kotlin/com/intellij/psi/search/GlobalSearchScope;)Lorg/jetbrains/kotlin/com/intellij/psi/PsiClass; 24 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/JavaPsiFacadeImpl$$Lambda+0x000000002261fbd8
 instanceKlass org/jetbrains/kotlin/com/intellij/util/containers/EmptyIterator
 instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/ClassInnerStuffCache internMembers (Ljava/util/List;)Ljava/util/List; 2 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/ClassInnerStuffCache$$Lambda+0x000000002261f748
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/augment/PsiAugmentProvider collectAugments (Lorg/jetbrains/kotlin/com/intellij/psi/PsiElement;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/List; 36 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/com/intellij/psi/augment/PsiAugmentProvider$$Lambda+0x000000002261f518
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/augment/PsiAugmentProvider collectAugments (Lorg/jetbrains/kotlin/com/intellij/psi/PsiMana;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/List; 36 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/com/intellij/psi/augment/PsiAugmentProvider$$Lambda+0x000000002261f518
 instanceKlass  @cpi org/jetbrains/kotlin/com/intellij/psi/augment/PsiAugmentProvider 162 form vmentry <vmtarget> ; # java/lang/invoke/LambdaForm$DMH+0x000000002261cc00
 instanceKlass org/jetbrains/kotlin/com/intellij/util/CachedValueLeakChecker
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/util/CachedValuesManager$1
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/util/CachedValuesManager getProjectPsiDependentCache (Lorg/jetbrains/kotlin/com/intellij/psi/PsiElement;Ljava/util/function/Function;)Ljava/lang/Object; 31 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/com/intellij/psi/util/CachedValuesManager$$Lambda+0x000000002261eea0
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/util/CachedValuesManager getProjectPsiDependentCache (Lorg/jetbrains/kotlin/com/intellij/psi/PsiMana;Ljava/util/function/Function;)Ljava/lang/Object; 31 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/com/intellij/psi/util/CachedValuesManager$$Lambda+0x000000002261eea0
 instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/ClassInnerStuffCache getInnerClasses ()[Lorg/jetbrains/kotlin/com/intellij/psi/PsiClass; 5 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/ClassInnerStuffCache$$Lambda+0x000000002261ec50
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiDeclarationStatement
 instanceKlass org/jetbrains/kotlin/it/unimi/dsi/fastutil/objects/Object2IntOpenHashMap$MapIterator
@@ -730,7 +730,7 @@ instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/resolve/Re
 # instanceKlass java/lang/invoke/LambdaForm$DMH+0x000000002261c400
 instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/resolve/ResolveCache resolveWithCaching (Lorg/jetbrains/kotlin/com/intellij/psi/PsiPolyVariantReference;Lorg/jetbrains/kotlin/com/intellij/psi/impl/source/resolve/ResolveCache$PolyVariantContextResolver;ZZLorg/jetbrains/kotlin/com/intellij/psi/PsiFile;)[Lorg/jetbrains/kotlin/com/intellij/psi/ResolveResult; 76 <appendix> form vmentry <vmtarget> ; # java/lang/invoke/LambdaForm$DMH+0x000000002261c000
 instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/resolve/ResolveCache resolveWithCaching (Lorg/jetbrains/kotlin/com/intellij/psi/PsiPolyVariantReference;Lorg/jetbrains/kotlin/com/intellij/psi/impl/source/resolve/ResolveCache$PolyVariantContextResolver;ZZLorg/jetbrains/kotlin/com/intellij/psi/PsiFile;)[Lorg/jetbrains/kotlin/com/intellij/psi/ResolveResult; 76 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/resolve/ResolveCache$$Lambda+0x000000002261a598
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/compiled/ClsJavaCodeReferenceElementImpl$Resolver
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/compiled/ClsJavaCodeReferenceManaImpl$Resolver
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiNameHelper
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/cache/TypeAnnotationContainer
 instanceKlass  @bci org/jetbrains/kotlin/com/intellij/util/IdempotenceChecker <clinit> ()V 51 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/util/IdempotenceChecker$$Lambda+0x0000000022619830
@@ -790,7 +790,7 @@ instanceKlass org/jetbrains/kotlin/com/intellij/util/indexing/IndexedFile
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/compiled/ClsFileImpl$1
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/compiled/InnerClassSourceStrategy
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiCompiledFile
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiCompiledElement
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiCompiledMana
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiClassOwnerEx
 instanceKlass org/jetbrains/kotlin/com/intellij/openapi/extensions/impl/ExtensionPointImpl$1
 instanceKlass  @bci org/jetbrains/kotlin/com/intellij/openapi/extensions/impl/ExtensionProcessingHelper findFirstSafe (Ljava/util/function/Predicate;Ljava/lang/Iterable;)Ljava/lang/Object; 17 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/com/intellij/openapi/extensions/impl/ExtensionProcessingHelper$$Lambda+0x00000000225eeaf0
@@ -835,7 +835,7 @@ instanceKlass  @bci java/util/regex/CharPredicates category (I)Ljava/util/regex/
 instanceKlass org/jetbrains/kotlin/com/intellij/util/io/URLUtil
 instanceKlass org/jetbrains/kotlin/com/intellij/util/PathUtil
 instanceKlass org/jetbrains/kotlin/load/java/descriptors/UtilKt
-instanceKlass org/jetbrains/kotlin/load/kotlin/KotlinJvmBinaryPackageSourceElement
+instanceKlass org/jetbrains/kotlin/load/kotlin/KotlinJvmBinaryPackageSourceMana
 instanceKlass org/jetbrains/kotlin/descriptors/annotations/BuiltInAnnotationDescriptor
 instanceKlass org/jetbrains/kotlin/resolve/calls/checkers/CoroutineCallCheckerKt
 instanceKlass org/jetbrains/kotlin/load/java/components/JavaAnnotationMapper
@@ -854,7 +854,7 @@ instanceKlass org/jetbrains/kotlin/contracts/description/EffectDeclaration
 instanceKlass org/jetbrains/kotlin/contracts/description/EventOccurrencesRange$Companion
 instanceKlass org/jetbrains/kotlin/contracts/description/expressions/VariableReference
 instanceKlass org/jetbrains/kotlin/contracts/description/expressions/ContractDescriptionValue
-instanceKlass org/jetbrains/kotlin/contracts/description/ContractDescriptionElement
+instanceKlass org/jetbrains/kotlin/contracts/description/ContractDescriptionMana
 instanceKlass org/jetbrains/kotlin/contracts/ContractDeserializerImpl$ContractDeserializationWorker$WhenMappings
 instanceKlass org/jetbrains/kotlin/contracts/ContractDeserializerImpl$ContractDeserializationWorker
 instanceKlass org/jetbrains/kotlin/types/TypeAliasExpansionReportStrategy$DO_NOTHING
@@ -1134,7 +1134,7 @@ instanceKlass org/jetbrains/kotlin/storage/SingleThreadValue
 instanceKlass org/jetbrains/kotlin/types/AbstractTypeConstructor$Supertypes
 instanceKlass org/jetbrains/kotlin/types/TypeIntersector
 instanceKlass  @bci org/jetbrains/kotlin/resolve/DescriptorResolver resolveTypeParameterForDescriptor (Lorg/jetbrains/kotlin/descriptors/DeclarationDescriptor;Lorg/jetbrains/kotlin/resolve/scopes/LexicalScope;Lorg/jetbrains/kotlin/psi/KtTypeParameter;ILorg/jetbrains/kotlin/resolve/BindingTrace;)Lorg/jetbrains/kotlin/descriptors/impl/TypeParameterDescriptorImpl; 71 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/resolve/DescriptorResolver$$Lambda+0x0000000022591e58
-instanceKlass org/jetbrains/kotlin/util/OneElementArrayMap$iterator$1
+instanceKlass org/jetbrains/kotlin/util/OneManaArrayMap$iterator$1
 instanceKlass org/jetbrains/kotlin/descriptors/annotations/AnnotationDescriptorImpl
 # instanceKlass java/lang/invoke/LambdaForm$MH+0x0000000022594400
 # instanceKlass java/lang/invoke/LambdaForm$MH+0x0000000022594000
@@ -1147,7 +1147,7 @@ instanceKlass org/jetbrains/kotlin/resolve/scopes/receivers/ClassQualifier
 instanceKlass org/jetbrains/kotlin/resolve/scopes/receivers/ClassifierQualifier
 instanceKlass  @bci org/jetbrains/kotlin/resolve/DescriptorResolver resolveTypeAliasDescriptor (Lorg/jetbrains/kotlin/descriptors/DeclarationDescriptor;Lorg/jetbrains/kotlin/resolve/scopes/LexicalScope;Lorg/jetbrains/kotlin/psi/KtTypeAlias;Lorg/jetbrains/kotlin/resolve/BindingTrace;)Lorg/jetbrains/kotlin/descriptors/TypeAliasDescriptor; 454 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/resolve/DescriptorResolver$$Lambda+0x000000002258b8b8
 instanceKlass  @bci org/jetbrains/kotlin/resolve/DescriptorResolver resolveTypeAliasDescriptor (Lorg/jetbrains/kotlin/descriptors/DeclarationDescriptor;Lorg/jetbrains/kotlin/resolve/scopes/LexicalScope;Lorg/jetbrains/kotlin/psi/KtTypeAlias;Lorg/jetbrains/kotlin/resolve/BindingTrace;)Lorg/jetbrains/kotlin/descriptors/TypeAliasDescriptor; 416 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/resolve/DescriptorResolver$$Lambda+0x000000002258b688
-instanceKlass org/jetbrains/kotlin/resolve/source/PsiSourceElementKt
+instanceKlass org/jetbrains/kotlin/resolve/source/PsiSourceManaKt
 instanceKlass org/jetbrains/kotlin/descriptors/impl/AbstractTypeAliasDescriptor$typeConstructor$1
 instanceKlass org/jetbrains/kotlin/resolve/lazy/descriptors/LazyTypeAliasDescriptor$Companion
 instanceKlass org/jetbrains/kotlin/resolve/calls/inference/CapturedTypeConstructorKt
@@ -1250,7 +1250,7 @@ instanceKlass org/jetbrains/kotlin/resolve/AnalyzingUtils
 instanceKlass org/jetbrains/kotlin/resolve/extensions/ExtraImportsProviderExtension$Companion$CompoundExtraImportsProviderExtension
 instanceKlass org/jetbrains/kotlin/resolve/scopes/HierarchicalScope$DefaultImpls
 instanceKlass org/jetbrains/kotlin/resolve/scopes/LexicalScope$DefaultImpls
-instanceKlass  @bci org/jetbrains/kotlin/psi/KtTypeElement <clinit> ()V 7 <appendix> argL0 ; # org/jetbrains/kotlin/psi/KtTypeElement$$Lambda+0x00000000225674b0
+instanceKlass  @bci org/jetbrains/kotlin/psi/KtTypeMana <clinit> ()V 7 <appendix> argL0 ; # org/jetbrains/kotlin/psi/KtTypeMana$$Lambda+0x00000000225674b0
 instanceKlass org/jetbrains/kotlin/com/google/common/collect/Lists
 instanceKlass org/jetbrains/kotlin/resolve/scopes/AbstractLocalRedeclarationChecker
 instanceKlass kotlin/jvm/functions/Function5
@@ -1265,12 +1265,12 @@ instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiClassLevelDeclarationStat
 instanceKlass java/util/ComparableTimSort
 instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/augment/PsiAugmentProvider transformModifierProperties (Lorg/jetbrains/kotlin/com/intellij/psi/PsiModifierList;Lorg/jetbrains/kotlin/com/intellij/openapi/project/Project;Ljava/util/Set;)Ljava/util/Set; 35 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/com/intellij/psi/augment/PsiAugmentProvider$$Lambda+0x000000002255f078
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/source/PsiModifierListImpl$ModifierCache
-instanceKlass org/jetbrains/kotlin/load/java/structure/impl/JavaElementUtil
-instanceKlass org/jetbrains/kotlin/load/java/structure/impl/JavaElementCollectionFromPsiArrayUtil
+instanceKlass org/jetbrains/kotlin/load/java/structure/impl/JavaManaUtil
+instanceKlass org/jetbrains/kotlin/load/java/structure/impl/JavaManaCollectionFromPsiArrayUtil
 instanceKlass org/jetbrains/kotlin/com/intellij/openapi/project/ProjectCoreUtil
 instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/PsiTypeParameter <clinit> ()V 7 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/PsiTypeParameter$$Lambda+0x000000002255d378
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/PsiImplUtil
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/RecursiveTreeElementWalkingVisitor$ASTTreeGuide
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/RecursiveTreeManaWalkingVisitor$ASTTreeGuide
 instanceKlass org/jetbrains/kotlin/com/intellij/util/WalkingState
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaSourceUtil
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/ChildRole
@@ -1284,16 +1284,16 @@ instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/java/PsiMet
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiMethodCallExpression
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiCallExpression
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiCall
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/PsiTypeElement <clinit> ()V 7 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/PsiTypeElement$$Lambda+0x000000002254fd80
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/PsiTypeMana <clinit> ()V 7 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/PsiTypeMana$$Lambda+0x000000002254fd80
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/source/ClassReferencePointer
 instanceKlass org/jetbrains/kotlin/com/intellij/lang/jvm/types/JvmArrayType
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiReferenceParameterList
 instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/PsiReference <clinit> ()V 7 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/PsiReference$$Lambda+0x0000000022549d40
-instanceKlass org/jetbrains/kotlin/com/intellij/patterns/ElementPattern
+instanceKlass org/jetbrains/kotlin/com/intellij/patterns/ManaPattern
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/source/resolve/ResolveCache$PolyVariantContextResolver
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/filters/ElementFilter
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/filters/ManaFilter
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/source/SourceJavaCodeReference
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiAnnotatedJavaCodeReferenceElement
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiAnnotatedJavaCodeReferenceMana
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiPackageStatement
 instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/javadoc/PsiDocCommentImpl <clinit> ()V 40 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/javadoc/PsiDocCommentImpl$$Lambda+0x0000000022545ec8
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/javadoc/PsiDocTag
@@ -1318,73 +1318,73 @@ instanceKlass org/jetbrains/kotlin/com/intellij/lang/java/parser/JavaParserUtil$
 instanceKlass org/jetbrains/kotlin/com/intellij/lang/java/parser/JavaParserUtil$PrecedingWhitespacesAndCommentsBinder
 instanceKlass org/jetbrains/kotlin/com/intellij/lang/java/parser/JavaParserUtil
 instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/PsiClass <clinit> ()V 7 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/PsiClass$$Lambda+0x0000000022540400
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$TypeTextElementType$1
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$4 <init> (Ljava/lang/String;Lorg/jetbrains/kotlin/com/intellij/lang/Language;)V 7 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$4$$Lambda+0x000000002253e330
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$3 <init> (Ljava/lang/String;Lorg/jetbrains/kotlin/com/intellij/lang/Language;)V 7 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$3$$Lambda+0x000000002253e108
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$2 <init> (Ljava/lang/String;Lorg/jetbrains/kotlin/com/intellij/lang/Language;)V 7 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$2$$Lambda+0x000000002253dee0
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$1 <init> (Ljava/lang/String;Lorg/jetbrains/kotlin/com/intellij/lang/Language;)V 7 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$1$$Lambda+0x000000002253dcb8
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 1385 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x000000002253da90
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 1366 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x000000002253d868
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 1347 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x000000002253d640
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 1328 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x000000002253d418
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 1309 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x000000002253d1f0
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 1290 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x000000002253cfc8
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 1271 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x000000002253cda0
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 1252 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x000000002253cb78
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 1233 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x000000002253c950
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 1214 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x000000002253c728
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 1195 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x000000002253c500
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 1176 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x000000002253c2d8
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 1157 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x000000002253c0b0
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 1138 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x000000002253be88
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 1119 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x000000002253bc60
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 1100 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x000000002253ba38
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 1081 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x000000002253b810
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 1062 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x000000002253b5e8
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 1043 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x000000002253b3c0
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 1024 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x000000002253b198
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 1005 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x000000002253af70
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 986 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x000000002253ad48
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 967 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x000000002253ab20
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 948 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x000000002253a8f8
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 929 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x000000002253a6d0
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 910 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x000000002253a4a8
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 891 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x000000002253a280
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 872 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x000000002253a058
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 853 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x0000000022539e30
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 834 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x0000000022539c08
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 815 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x00000000225399e0
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 796 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x00000000225397b8
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 777 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x0000000022539590
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 758 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x0000000022539368
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 739 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x0000000022539140
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 720 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x0000000022538f18
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 700 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x0000000022538cf0
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 680 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x0000000022538ac8
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 661 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x00000000225388a0
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 642 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x0000000022538678
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 623 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x0000000022538450
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 604 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x0000000022538228
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 585 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x0000000022538000
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 566 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x0000000022537c40
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 547 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x0000000022537a18
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 528 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x00000000225377f0
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 509 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x00000000225375c8
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 490 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x00000000225373a0
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 471 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x0000000022537178
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 452 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x0000000022536f50
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 433 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x0000000022536d28
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 414 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x0000000022536b00
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 395 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x00000000225368d8
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 376 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x00000000225366b0
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 357 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x0000000022536488
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 338 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x0000000022536260
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 319 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x0000000022536038
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 300 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x0000000022535e10
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 280 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x0000000022535be8
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 261 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x00000000225359c0
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 242 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x0000000022535798
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType <clinit> ()V 223 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType$$Lambda+0x0000000022535570
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$TypeTextManaType$1
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$4 <init> (Ljava/lang/String;Lorg/jetbrains/kotlin/com/intellij/lang/Language;)V 7 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$4$$Lambda+0x000000002253e330
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$3 <init> (Ljava/lang/String;Lorg/jetbrains/kotlin/com/intellij/lang/Language;)V 7 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$3$$Lambda+0x000000002253e108
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$2 <init> (Ljava/lang/String;Lorg/jetbrains/kotlin/com/intellij/lang/Language;)V 7 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$2$$Lambda+0x000000002253dee0
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$1 <init> (Ljava/lang/String;Lorg/jetbrains/kotlin/com/intellij/lang/Language;)V 7 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$1$$Lambda+0x000000002253dcb8
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 1385 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x000000002253da90
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 1366 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x000000002253d868
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 1347 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x000000002253d640
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 1328 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x000000002253d418
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 1309 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x000000002253d1f0
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 1290 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x000000002253cfc8
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 1271 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x000000002253cda0
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 1252 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x000000002253cb78
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 1233 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x000000002253c950
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 1214 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x000000002253c728
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 1195 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x000000002253c500
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 1176 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x000000002253c2d8
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 1157 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x000000002253c0b0
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 1138 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x000000002253be88
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 1119 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x000000002253bc60
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 1100 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x000000002253ba38
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 1081 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x000000002253b810
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 1062 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x000000002253b5e8
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 1043 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x000000002253b3c0
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 1024 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x000000002253b198
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 1005 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x000000002253af70
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 986 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x000000002253ad48
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 967 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x000000002253ab20
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 948 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x000000002253a8f8
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 929 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x000000002253a6d0
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 910 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x000000002253a4a8
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 891 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x000000002253a280
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 872 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x000000002253a058
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 853 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x0000000022539e30
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 834 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x0000000022539c08
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 815 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x00000000225399e0
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 796 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x00000000225397b8
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 777 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x0000000022539590
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 758 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x0000000022539368
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 739 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x0000000022539140
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 720 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x0000000022538f18
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 700 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x0000000022538cf0
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 680 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x0000000022538ac8
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 661 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x00000000225388a0
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 642 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x0000000022538678
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 623 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x0000000022538450
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 604 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x0000000022538228
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 585 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x0000000022538000
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 566 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x0000000022537c40
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 547 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x0000000022537a18
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 528 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x00000000225377f0
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 509 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x00000000225375c8
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 490 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x00000000225373a0
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 471 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x0000000022537178
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 452 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x0000000022536f50
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 433 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x0000000022536d28
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 414 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x0000000022536b00
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 395 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x00000000225368d8
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 376 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x00000000225366b0
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 357 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x0000000022536488
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 338 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x0000000022536260
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 319 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x0000000022536038
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 300 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x0000000022535e10
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 280 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x0000000022535be8
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 261 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x00000000225359c0
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 242 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x0000000022535798
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType <clinit> ()V 223 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType$$Lambda+0x0000000022535570
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/java/stubs/PsiImportStatementStub
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/java/stubs/PsiClassReferenceListStub
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiReferenceList
@@ -1419,7 +1419,7 @@ instanceKlass org/jetbrains/kotlin/com/intellij/lang/jvm/JvmTypeParameter
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/java/stubs/PsiParameterStub
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/java/stubs/PsiParameterListStub
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiParameterList
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/java/stubs/MethodReferenceElementType <clinit> ()V 0 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/java/stubs/MethodReferenceElementType$$Lambda+0x0000000022530e38
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/java/stubs/MethodReferenceManaType <clinit> ()V 0 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/java/stubs/MethodReferenceManaType$$Lambda+0x0000000022530e38
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiMethodReferenceExpression
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiLambdaExpression
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiFunctionalExpression
@@ -1433,8 +1433,8 @@ instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/java/stubs/PsiAnnotatio
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiAnnotationParameterList
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/java/stubs/PsiAnnotationStub
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/java/stubs/PsiModifierListStub
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/java/stubs/JavaStubElementTypes
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/tree/ILightLazyParseableElementType
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/java/stubs/JavaStubManaTypes
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/tree/ILightLazyParseableManaType
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/source/Constants
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/source/PsiJavaFileBaseImpl$MyCacheBuilder
 instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/PsiJavaFileBaseImpl <clinit> ()V 40 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/PsiJavaFileBaseImpl$$Lambda+0x0000000022524ac0
@@ -1468,7 +1468,7 @@ instanceKlass org/jetbrains/kotlin/load/java/UtilsKt
 instanceKlass org/jetbrains/kotlin/load/java/structure/impl/JavaModifierListOwnerImpl
 instanceKlass org/jetbrains/kotlin/load/java/structure/impl/JavaAnnotationOwnerImpl
 instanceKlass org/jetbrains/kotlin/load/java/lazy/LazyJavaTypeParameterResolver
-instanceKlass org/jetbrains/kotlin/load/java/components/JavaSourceElementImpl
+instanceKlass org/jetbrains/kotlin/load/java/components/JavaSourceManaImpl
 instanceKlass org/jetbrains/kotlin/load/java/lazy/descriptors/LazyJavaClassDescriptor$Companion
 instanceKlass org/jetbrains/kotlin/load/java/structure/impl/classFiles/BinaryJavaValueParameter
 instanceKlass org/jetbrains/kotlin/load/java/structure/JavaValueParameter
@@ -1512,14 +1512,14 @@ instanceKlass  @bci org/jetbrains/kotlin/com/intellij/openapi/util/NotNullLazyVa
 instanceKlass  @bci org/jetbrains/kotlin/resolve/lazy/descriptors/LazyClassDescriptor <init> (Lorg/jetbrains/kotlin/resolve/lazy/LazyClassContext;Lorg/jetbrains/kotlin/descriptors/DeclarationDescriptor;Lorg/jetbrains/kotlin/name/Name;Lorg/jetbrains/kotlin/resolve/lazy/data/KtClassLikeInfo;Z)V 259 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/resolve/lazy/descriptors/LazyClassDescriptor$$Lambda+0x0000000022505868
 instanceKlass  @bci org/jetbrains/kotlin/resolve/lazy/descriptors/LazyClassDescriptor$LazyClassTypeConstructor <init> (Lorg/jetbrains/kotlin/resolve/lazy/descriptors/LazyClassDescriptor;)V 32 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/resolve/lazy/descriptors/LazyClassDescriptor$LazyClassTypeConstructor$$Lambda+0x0000000022505638
 instanceKlass  @bci org/jetbrains/kotlin/resolve/lazy/descriptors/LazyClassDescriptor createScopesHolderForClass (Lorg/jetbrains/kotlin/resolve/lazy/LazyClassContext;Lorg/jetbrains/kotlin/resolve/lazy/declarations/ClassMemberDeclarationProvider;)Lorg/jetbrains/kotlin/descriptors/ScopesHolderForClass; 42 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/resolve/lazy/descriptors/LazyClassDescriptor$$Lambda+0x0000000022505118
-instanceKlass org/jetbrains/kotlin/resolve/source/KotlinSourceElementKt
+instanceKlass org/jetbrains/kotlin/resolve/source/KotlinSourceManaKt
 instanceKlass  @bci org/jetbrains/kotlin/resolve/lazy/descriptors/LazyClassDescriptor <clinit> ()V 16 <appendix> argL0 ; # org/jetbrains/kotlin/resolve/lazy/descriptors/LazyClassDescriptor$$Lambda+0x0000000022504648
 instanceKlass org/jetbrains/kotlin/descriptors/ValueClassRepresentation
 instanceKlass org/jetbrains/kotlin/resolve/lazy/data/KtClassOrObjectInfo
 instanceKlass org/jetbrains/kotlin/resolve/lazy/data/KtClassInfoUtil
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/search/PsiElementProcessor$CollectElements
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/search/PsiElementProcessor$FindElement
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/search/PsiElementProcessor
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/search/PsiManaProcessor$CollectManas
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/search/PsiManaProcessor$FindMana
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/search/PsiManaProcessor
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/util/PsiTreeUtil
 instanceKlass org/jetbrains/kotlin/com/google/common/collect/LinkedHashMultimap$ValueSet$1
 instanceKlass org/jetbrains/kotlin/com/google/common/collect/AbstractMapBasedMultimap$WrappedCollection$WrappedIterator
@@ -1543,7 +1543,7 @@ instanceKlass org/jetbrains/kotlin/builtins/jvm/JavaToKotlinClassMap
 instanceKlass org/jetbrains/kotlin/resolve/PlatformClassesMappedToKotlinChecker
 instanceKlass org/jetbrains/kotlin/resolve/QualifiedExpressionResolverKt
 instanceKlass org/jetbrains/kotlin/metadata/jvm/deserialization/JvmNameResolverBase$WhenMappings
-instanceKlass org/jetbrains/kotlin/load/kotlin/KotlinJvmBinarySourceElement
+instanceKlass org/jetbrains/kotlin/load/kotlin/KotlinJvmBinarySourceMana
 instanceKlass org/jetbrains/kotlin/serialization/deserialization/descriptors/DeserializedContainerSource
 instanceKlass org/jetbrains/kotlin/metadata/jvm/deserialization/JvmNameResolverKt
 instanceKlass org/jetbrains/kotlin/metadata/jvm/JvmProtoBuf$StringTableTypes$Record$Operation$1
@@ -1584,17 +1584,17 @@ instanceKlass org/jetbrains/kotlin/load/kotlin/KotlinBinaryClassCache$RequestCac
 instanceKlass org/jetbrains/kotlin/cli/jvm/compiler/KotlinCliJavaFileManagerImpl$WhenMappings
 instanceKlass org/jetbrains/kotlin/load/java/lazy/descriptors/LazyJavaPackageScope$KotlinClassLookupResult
 instanceKlass org/jetbrains/kotlin/load/java/lazy/descriptors/LazyJavaPackageScope$FindClassRequest
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaDocElementType$3 <init> (Ljava/lang/String;Lorg/jetbrains/kotlin/com/intellij/lang/Language;)V 7 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaDocElementType$3$$Lambda+0x00000000224ae170
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaDocElementType$2 <init> (Ljava/lang/String;)V 7 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaDocElementType$2$$Lambda+0x00000000224adf48
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaDocElementType$1 <init> (Ljava/lang/String;)V 7 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaDocElementType$1$$Lambda+0x00000000224add20
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaDocElementType <clinit> ()V 60 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaDocElementType$$Lambda+0x00000000224adaf8
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaDocElementType <clinit> ()V 42 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaDocElementType$$Lambda+0x00000000224ad8d0
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaDocElementType <clinit> ()V 24 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaDocElementType$$Lambda+0x00000000224ad6a8
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaDocElementType <clinit> ()V 6 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaDocElementType$$Lambda+0x00000000224ad480
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaDocManaType$3 <init> (Ljava/lang/String;Lorg/jetbrains/kotlin/com/intellij/lang/Language;)V 7 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaDocManaType$3$$Lambda+0x00000000224ae170
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaDocManaType$2 <init> (Ljava/lang/String;)V 7 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaDocManaType$2$$Lambda+0x00000000224adf48
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaDocManaType$1 <init> (Ljava/lang/String;)V 7 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaDocManaType$1$$Lambda+0x00000000224add20
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaDocManaType <clinit> ()V 60 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaDocManaType$$Lambda+0x00000000224adaf8
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaDocManaType <clinit> ()V 42 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaDocManaType$$Lambda+0x00000000224ad8d0
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaDocManaType <clinit> ()V 24 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaDocManaType$$Lambda+0x00000000224ad6a8
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaDocManaType <clinit> ()V 6 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaDocManaType$$Lambda+0x00000000224ad480
 instanceKlass org/jetbrains/kotlin/com/intellij/lang/java/lexer/_JavaLexer
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/ElementType
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaElementType
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaDocElementType
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/ManaType
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaManaType
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/JavaDocManaType
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/JavaTokenType
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/JavaDocTokenType
 instanceKlass org/jetbrains/kotlin/cli/jvm/index/SingleJavaFileRootsIndex$JavaSourceClassIdReader$Companion
@@ -1613,12 +1613,12 @@ instanceKlass org/jetbrains/kotlin/resolve/scopes/receivers/QualifierKt
 instanceKlass org/jetbrains/kotlin/resolve/scopes/receivers/PackageQualifier
 instanceKlass org/jetbrains/kotlin/util/slicedMap/OpenAddressLinearProbingHashTableKt
 instanceKlass org/jetbrains/kotlin/util/slicedMap/OpenAddressLinearProbingHashTable$Companion
-instanceKlass org/jetbrains/kotlin/load/java/structure/JavaElementsKt
-instanceKlass org/jetbrains/kotlin/load/java/structure/impl/source/JavaElementPsiSource
-instanceKlass org/jetbrains/kotlin/load/java/structure/impl/JavaElementImpl
+instanceKlass org/jetbrains/kotlin/load/java/structure/JavaManasKt
+instanceKlass org/jetbrains/kotlin/load/java/structure/impl/source/JavaManaPsiSource
+instanceKlass org/jetbrains/kotlin/load/java/structure/impl/JavaManaImpl
 instanceKlass org/jetbrains/kotlin/load/java/structure/impl/source/JavaSourceFactoryOwner
 instanceKlass org/jetbrains/kotlin/load/java/structure/MapBasedJavaAnnotationOwner
-instanceKlass org/jetbrains/kotlin/load/java/structure/impl/source/JavaElementSourceFactory$Companion
+instanceKlass org/jetbrains/kotlin/load/java/structure/impl/source/JavaManaSourceFactory$Companion
 instanceKlass org/jetbrains/kotlin/cli/jvm/index/JvmDependenciesIndexImpl$FindClassRequest
 instanceKlass org/jetbrains/kotlin/cli/jvm/index/JvmDependenciesIndexImpl$WhenMappings
 instanceKlass gnu/trove/PrimeFinder
@@ -1628,7 +1628,7 @@ instanceKlass org/jetbrains/kotlin/cli/jvm/index/JvmDependenciesIndexImpl$Traver
 instanceKlass org/jetbrains/kotlin/cli/jvm/index/JvmDependenciesIndexImpl$SearchRequest
 instanceKlass org/jetbrains/kotlin/cli/jvm/compiler/KotlinCliJavaFileManagerImplKt
 instanceKlass kotlin/jvm/internal/Ref$BooleanRef
-instanceKlass  @bci org/jetbrains/kotlin/resolve/jvm/KotlinJavaPsiFacade calcFinders ()[Lorg/jetbrains/kotlin/resolve/jvm/KotlinJavaPsiFacade$KotlinPsiElementFinderWrapper; 149 <appendix> argL0 ; # org/jetbrains/kotlin/resolve/jvm/KotlinJavaPsiFacade$$Lambda+0x000000002249d4a0
+instanceKlass  @bci org/jetbrains/kotlin/resolve/jvm/KotlinJavaPsiFacade calcFinders ()[Lorg/jetbrains/kotlin/resolve/jvm/KotlinJavaPsiFacade$KotlinPsiManaFinderWrapper; 149 <appendix> argL0 ; # org/jetbrains/kotlin/resolve/jvm/KotlinJavaPsiFacade$$Lambda+0x000000002249d4a0
 instanceKlass org/jetbrains/kotlin/resolve/jvm/KotlinSafeClassFinder
 instanceKlass org/jetbrains/kotlin/com/intellij/util/containers/ImmutableList$Itr
 instanceKlass org/jetbrains/kotlin/resolve/jvm/KotlinJavaPsiFacade$CliFinder
@@ -1642,8 +1642,8 @@ instanceKlass kotlin/jvm/internal/markers/KMutableListIterator
 instanceKlass java/util/AbstractList$SubList$1
 instanceKlass  @bci java/util/regex/CharPredicates range (II)Ljava/util/regex/Pattern$CharPredicate; 2 <appendix> member <vmtarget> ; # java/util/regex/CharPredicates$$Lambda+0x000000002203fab0
 instanceKlass org/jetbrains/kotlin/psi/psiUtil/KtPsiUtilKt
-instanceKlass org/jetbrains/kotlin/resolve/source/KotlinSourceElement
-instanceKlass org/jetbrains/kotlin/resolve/source/PsiSourceElement
+instanceKlass org/jetbrains/kotlin/resolve/source/KotlinSourceMana
+instanceKlass org/jetbrains/kotlin/resolve/source/PsiSourceMana
 instanceKlass org/jetbrains/kotlin/resolve/PackageFragmentWithCustomSource
 instanceKlass org/jetbrains/kotlin/psi/KtCodeFragmentBase
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/JavaCodeFragment
@@ -1703,11 +1703,11 @@ instanceKlass org/jetbrains/kotlin/com/intellij/openapi/progress/impl/NonCancela
 instanceKlass org/jetbrains/kotlin/com/intellij/openapi/progress/StandardProgressIndicator
 instanceKlass  @bci org/jetbrains/kotlin/com/intellij/openapi/progress/impl/CoreProgressManager executeNonCancelableSection (Ljava/lang/Runnable;)V 10 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/com/intellij/openapi/progress/impl/CoreProgressManager$$Lambda+0x00000000224865a0
 instanceKlass org/jetbrains/kotlin/com/intellij/openapi/util/ThrowableComputable
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/LazyParseableElement setChildren (Lorg/jetbrains/kotlin/com/intellij/psi/impl/source/tree/TreeElement;)V 13 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/LazyParseableElement$$Lambda+0x0000000022486168
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/LazyParseableMana setChildren (Lorg/jetbrains/kotlin/com/intellij/psi/impl/source/tree/TreeMana;)V 13 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/LazyParseableMana$$Lambda+0x0000000022486168
 instanceKlass org/jetbrains/kotlin/kdoc/psi/api/KDoc
-instanceKlass org/jetbrains/kotlin/kdoc/psi/api/KDocElement
+instanceKlass org/jetbrains/kotlin/kdoc/psi/api/KDocMana
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiDocCommentBase
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/tree/ILeafElementType
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/tree/ILeafManaType
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/tree/ICustomParsingType
 instanceKlass org/jetbrains/kotlin/com/intellij/lang/WhitespacesAndCommentsBinder$RecursiveBinder
 instanceKlass org/jetbrains/kotlin/com/intellij/lang/impl/PsiBuilderImpl$RelativeTokenTextView
@@ -1784,11 +1784,11 @@ instanceKlass org/jetbrains/kotlin/com/intellij/util/diff/ShallowNodeComparator
 instanceKlass org/jetbrains/kotlin/com/intellij/util/diff/DiffTreeChangeBuilder
 instanceKlass org/jetbrains/kotlin/com/intellij/openapi/util/UnprotectedUserDataHolder
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/DebugUtil
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/LazyParseableElement ensureParsed ()V 135 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/LazyParseableElement$$Lambda+0x00000000224652f8
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/LazyParseableMana ensureParsed ()V 135 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/LazyParseableMana$$Lambda+0x00000000224652f8
 instanceKlass org/jetbrains/kotlin/com/intellij/util/ThrowableRunnable
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/TreeUtil
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/LazyParseableElement <init> (Lorg/jetbrains/kotlin/com/intellij/psi/tree/IElementType;Ljava/lang/CharSequence;)V 57 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/LazyParseableElement$$Lambda+0x00000000224645f0
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/LazyParseableElement <clinit> ()V 24 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/LazyParseableElement$$Lambda+0x0000000022463dc8
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/LazyParseableMana <init> (Lorg/jetbrains/kotlin/com/intellij/psi/tree/IManaType;Ljava/lang/CharSequence;)V 57 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/LazyParseableMana$$Lambda+0x00000000224645f0
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/LazyParseableMana <clinit> ()V 24 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/LazyParseableMana$$Lambda+0x0000000022463dc8
 instanceKlass org/jetbrains/kotlin/com/intellij/lang/LighterAST
 instanceKlass  @bci org/jetbrains/kotlin/com/intellij/util/AstLoadingFilter <clinit> ()V 18 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/util/AstLoadingFilter$$Lambda+0x0000000022462870
 instanceKlass org/jetbrains/kotlin/com/intellij/util/AstLoadingFilter
@@ -2477,7 +2477,7 @@ instanceKlass org/jetbrains/kotlin/load/kotlin/AbstractBinaryClassAnnotationLoad
 instanceKlass org/jetbrains/kotlin/serialization/deserialization/ProtoContainer
 instanceKlass org/jetbrains/kotlin/load/java/typeEnhancement/JavaTypeEnhancement
 instanceKlass org/jetbrains/kotlin/load/java/typeEnhancement/NullabilityQualifierWithMigrationStatus
-instanceKlass org/jetbrains/kotlin/load/java/JavaTypeQualifiersByElementType
+instanceKlass org/jetbrains/kotlin/load/java/JavaTypeQualifiersByManaType
 instanceKlass org/jetbrains/kotlin/serialization/deserialization/ClassData
 instanceKlass org/jetbrains/kotlin/load/kotlin/KotlinJvmBinaryClass
 instanceKlass org/jetbrains/kotlin/load/java/typeEnhancement/SignatureEnhancement
@@ -2486,9 +2486,9 @@ instanceKlass org/jetbrains/kotlin/load/java/lazy/JavaResolverComponents
 instanceKlass org/jetbrains/kotlin/resolve/inline/ReasonableInlineRule
 instanceKlass org/jetbrains/kotlin/resolve/AnalyzerExtensions
 instanceKlass org/jetbrains/kotlin/resolve/ControlFlowAnalyzer
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/templateLanguages/OuterLanguageElement
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/templateLanguages/OuterLanguageMana
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiPlainTextFile
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiErrorElement
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiErrorMana
 instanceKlass org/jetbrains/kotlin/resolve/calls/context/CallPosition
 instanceKlass org/jetbrains/kotlin/resolve/calls/context/TemporaryTraceAndCache
 instanceKlass org/jetbrains/kotlin/builtins/PlatformSpecificCastChecker$Default
@@ -2641,7 +2641,7 @@ instanceKlass org/jetbrains/kotlin/resolve/jvm/modules/JavaModule
 instanceKlass org/jetbrains/kotlin/load/java/descriptors/JavaClassDescriptor
 instanceKlass org/jetbrains/kotlin/mpp/MppJavaImplicitActualizatorMarker
 instanceKlass org/jetbrains/kotlin/builtins/jvm/JvmBuiltIns$Settings
-instanceKlass org/jetbrains/kotlin/load/java/sources/JavaSourceElement
+instanceKlass org/jetbrains/kotlin/load/java/sources/JavaSourceMana
 instanceKlass org/jetbrains/kotlin/descriptors/SimpleFunctionDescriptor
 instanceKlass org/jetbrains/kotlin/mpp/SimpleFunctionSymbolMarker
 instanceKlass org/jetbrains/kotlin/load/java/structure/JavaPackage
@@ -2765,8 +2765,8 @@ instanceKlass org/jetbrains/kotlin/load/java/JavaClassesTracker$Default
 instanceKlass org/jetbrains/kotlin/load/java/JavaClassesTracker
 instanceKlass org/jetbrains/kotlin/resolve/jvm/multiplatform/OptionalAnnotationPackageFragmentProvider
 instanceKlass org/jetbrains/kotlin/serialization/deserialization/AbstractDeserializedPackageFragmentProvider
-instanceKlass org/jetbrains/kotlin/load/java/components/JavaSourceElementFactoryImpl
-instanceKlass org/jetbrains/kotlin/load/java/sources/JavaSourceElementFactory
+instanceKlass org/jetbrains/kotlin/load/java/components/JavaSourceManaFactoryImpl
+instanceKlass org/jetbrains/kotlin/load/java/sources/JavaSourceManaFactory
 instanceKlass org/jetbrains/kotlin/load/java/components/AbstractJavaResolverCache
 instanceKlass org/jetbrains/kotlin/load/java/components/JavaResolverCache
 instanceKlass org/jetbrains/kotlin/load/java/AbstractJavaClassFinder
@@ -3358,8 +3358,8 @@ instanceKlass org/jetbrains/kotlin/renderer/DescriptorRendererOptionsImpl
 instanceKlass org/jetbrains/kotlin/renderer/DescriptorRendererOptions
 instanceKlass org/jetbrains/kotlin/renderer/DescriptorRenderer$Companion
 instanceKlass org/jetbrains/kotlin/renderer/DescriptorRenderer
-instanceKlass org/jetbrains/kotlin/descriptors/SourceElement$1
-instanceKlass org/jetbrains/kotlin/descriptors/SourceElement
+instanceKlass org/jetbrains/kotlin/descriptors/SourceMana$1
+instanceKlass org/jetbrains/kotlin/descriptors/SourceMana
 instanceKlass org/jetbrains/kotlin/descriptors/PackageFragmentDescriptor
 instanceKlass org/jetbrains/kotlin/descriptors/ClassOrPackageFragmentDescriptor
 instanceKlass org/jetbrains/kotlin/builtins/jvm/JavaToKotlinClassMapper
@@ -3476,9 +3476,9 @@ instanceKlass org/jetbrains/kotlin/com/intellij/openapi/vfs/VirtualFileVisitor
 instanceKlass org/jetbrains/kotlin/com/intellij/openapi/vfs/VfsUtilCore
 instanceKlass org/jetbrains/kotlin/cli/jvm/compiler/TopDownAnalyzerFacadeForJVM
 instanceKlass org/jetbrains/kotlin/psi/KtOperationExpression
-instanceKlass org/jetbrains/kotlin/BlockExpressionElementType$Companion
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/tree/IReparseableElementTypeBase
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/tree/ICompositeElementType
+instanceKlass org/jetbrains/kotlin/BlockExpressionManaType$Companion
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/tree/IReparseableManaTypeBase
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/tree/ICompositeManaType
 instanceKlass org/jetbrains/kotlin/KtNodeTypes
 instanceKlass org/jetbrains/kotlin/com/intellij/lang/PsiParser
 instanceKlass org/jetbrains/kotlin/kdoc/lexer/KDocTokens
@@ -3599,13 +3599,13 @@ instanceKlass kotlin/reflect/jvm/internal/KPropertyImpl$Companion
 instanceKlass kotlin/reflect/jvm/internal/KCallableImpl
 instanceKlass kotlin/reflect/KMutableProperty$Setter
 instanceKlass org/jetbrains/kotlin/resolve/multiplatform/IsCommonSourceKt
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/util/PsiUtilCore$NullPsiElement
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/util/PsiUtilCore$NullPsiMana
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/util/PsiUtilCore
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/FileTrees noStub (Lorg/jetbrains/kotlin/com/intellij/psi/impl/source/tree/FileElement;Lorg/jetbrains/kotlin/com/intellij/psi/impl/source/PsiFileImpl;)Lorg/jetbrains/kotlin/com/intellij/psi/impl/source/FileTrees; 15 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/FileTrees$$Lambda+0x000000002225fb58
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/FileTrees noStub (Lorg/jetbrains/kotlin/com/intellij/psi/impl/source/tree/FileMana;Lorg/jetbrains/kotlin/com/intellij/psi/impl/source/PsiFileImpl;)Lorg/jetbrains/kotlin/com/intellij/psi/impl/source/FileTrees; 15 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/com/intellij/psi/impl/source/FileTrees$$Lambda+0x000000002225fb58
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/source/FileTrees
 instanceKlass org/jetbrains/kotlin/psi/stubs/KotlinScriptStub
 instanceKlass org/jetbrains/kotlin/psi/stubs/KotlinPlaceHolderWithTextStub
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/tree/IReparseableLeafElementType
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/tree/IReparseableLeafManaType
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/TokenType
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/LiteralTextEscaper
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/ContributedReferenceHost
@@ -3613,7 +3613,7 @@ instanceKlass org/jetbrains/kotlin/psi/stubs/KotlinCollectionLiteralExpressionSt
 instanceKlass org/jetbrains/kotlin/psi/stubs/KotlinClassLiteralExpressionStub
 instanceKlass org/jetbrains/kotlin/psi/KtDoubleColonExpression
 instanceKlass org/jetbrains/kotlin/psi/stubs/KotlinConstantExpressionStub
-instanceKlass org/jetbrains/kotlin/psi/stubs/elements/KtConstantExpressionElementType$Companion
+instanceKlass org/jetbrains/kotlin/psi/stubs/manas/KtConstantExpressionManaType$Companion
 instanceKlass org/jetbrains/kotlin/psi/stubs/KotlinContextReceiverStub
 instanceKlass org/jetbrains/kotlin/psi/LambdaArgument
 instanceKlass org/jetbrains/kotlin/psi/stubs/KotlinContractEffectStub
@@ -3629,7 +3629,7 @@ instanceKlass org/jetbrains/kotlin/psi/KtReferenceExpression
 instanceKlass org/jetbrains/kotlin/psi/stubs/impl/KotlinTypeBean
 instanceKlass org/jetbrains/kotlin/types/model/KotlinTypeMarker
 instanceKlass org/jetbrains/kotlin/psi/stubs/KotlinUserTypeStub
-instanceKlass org/jetbrains/kotlin/psi/KtTypeElement
+instanceKlass org/jetbrains/kotlin/psi/KtTypeMana
 instanceKlass org/jetbrains/kotlin/psi/stubs/KotlinModifierListStub
 instanceKlass org/jetbrains/kotlin/psi/stubs/KotlinImportAliasStub
 instanceKlass org/jetbrains/kotlin/psi/KtImportInfo$ImportContent
@@ -3637,7 +3637,7 @@ instanceKlass org/jetbrains/kotlin/psi/KtImportInfo
 instanceKlass org/jetbrains/kotlin/psi/stubs/KotlinImportDirectiveStub
 instanceKlass org/jetbrains/kotlin/psi/KtAnnotationsContainer
 instanceKlass org/jetbrains/kotlin/psi/stubs/KotlinAnnotationUseSiteTargetStub
-instanceKlass org/jetbrains/kotlin/psi/KtCallElement
+instanceKlass org/jetbrains/kotlin/psi/KtCallMana
 instanceKlass org/jetbrains/kotlin/psi/stubs/KotlinAnnotationEntryStub
 instanceKlass org/jetbrains/kotlin/psi/stubs/KotlinTypeParameterStub
 instanceKlass org/jetbrains/kotlin/psi/stubs/KotlinParameterStub
@@ -3657,14 +3657,14 @@ instanceKlass org/jetbrains/kotlin/psi/KtCallableDeclaration
 instanceKlass org/jetbrains/kotlin/psi/KtDeclarationWithInitializer
 instanceKlass org/jetbrains/kotlin/psi/stubs/KotlinFunctionStub
 instanceKlass org/jetbrains/kotlin/psi/stubs/KotlinCallableStubBase
-instanceKlass  @bci org/jetbrains/kotlin/psi/stubs/elements/KtStubElementType <init> (Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Class;)V 125 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/psi/stubs/elements/KtStubElementType$$Lambda+0x00000000221eecf0
+instanceKlass  @bci org/jetbrains/kotlin/psi/stubs/manas/KtStubManaType <init> (Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Class;)V 125 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/psi/stubs/manas/KtStubManaType$$Lambda+0x00000000221eecf0
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/source/SubstrateRef
 instanceKlass org/jetbrains/kotlin/psi/stubs/KotlinClassStub
 instanceKlass org/jetbrains/kotlin/psi/stubs/KotlinClassOrObjectStub
 instanceKlass org/jetbrains/kotlin/psi/stubs/KotlinStubWithFqName
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/stubs/NamedStub
 instanceKlass org/jetbrains/kotlin/psi/stubs/KotlinClassifierStub
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/StubBasedPsiElement
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/StubBasedPsiMana
 instanceKlass org/jetbrains/kotlin/psi/KtTypeParameterListOwner
 instanceKlass org/jetbrains/kotlin/psi/KtPureClassOrObject
 instanceKlass org/jetbrains/kotlin/psi/KtClassLikeDeclaration
@@ -3674,8 +3674,8 @@ instanceKlass org/jetbrains/kotlin/psi/KtNamed
 instanceKlass org/jetbrains/kotlin/psi/KtDeclaration
 instanceKlass org/jetbrains/kotlin/psi/KtModifierListOwner
 instanceKlass org/jetbrains/kotlin/psi/KtExpression
-instanceKlass org/jetbrains/kotlin/psi/stubs/elements/KtStubElementTypes
-instanceKlass org/jetbrains/kotlin/psi/stubs/elements/KtTokenSets
+instanceKlass org/jetbrains/kotlin/psi/stubs/manas/KtStubManaTypes
+instanceKlass org/jetbrains/kotlin/psi/stubs/manas/KtTokenSets
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/tree/TokenSet
 instanceKlass org/jetbrains/kotlin/psi/KtFile$Companion
 instanceKlass  @bci java/util/Comparator comparing (Ljava/util/function/Function;)Ljava/util/Comparator; 6 <appendix> member <vmtarget> ; # java/util/Comparator$$Lambda+0x000000002202cc00
@@ -3687,11 +3687,11 @@ instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/source/PsiFileImp
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/source/StubbedSpine
 instanceKlass org/jetbrains/kotlin/psi/KtDeclarationContainer
 instanceKlass org/jetbrains/kotlin/psi/KtAnnotated
-instanceKlass org/jetbrains/kotlin/psi/KtElement
-instanceKlass org/jetbrains/kotlin/psi/KtPureElement
+instanceKlass org/jetbrains/kotlin/psi/KtMana
+instanceKlass org/jetbrains/kotlin/psi/KtPureMana
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiModifiableCodeBlock
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiClassOwner
-instanceKlass org/jetbrains/kotlin/com/intellij/util/keyFMap/PairElementsFMap
+instanceKlass org/jetbrains/kotlin/com/intellij/util/keyFMap/PairManasFMap
 instanceKlass  @bci org/jetbrains/kotlin/com/intellij/util/ConcurrencyUtil cacheOrGet (Ljava/util/concurrent/atomic/AtomicReference;Ljava/lang/Object;)Ljava/lang/Object; 40 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/com/intellij/util/ConcurrencyUtil$$Lambda+0x00000000221cefa0
 instanceKlass java/util/function/UnaryOperator
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/AbstractFileViewProvider$VirtualFileContent
@@ -3729,22 +3729,22 @@ instanceKlass  @bci org/jetbrains/kotlin/resolve/jvm/KotlinJavaPsiFacade <init> 
 instanceKlass  @cpi org/jetbrains/kotlin/resolve/jvm/KotlinJavaPsiFacade 121 form vmentry <vmtarget> ; # java/lang/invoke/LambdaForm$DMH+0x00000000221c4000
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiModifierList
 instanceKlass org/jetbrains/kotlin/resolve/jvm/NotFoundPackagesCachingStrategy$Default
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/PsiElement <clinit> ()V 7 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/PsiElement$$Lambda+0x00000000221c0240
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/ElementBase <clinit> ()V 16 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/ElementBase$$Lambda+0x00000000221c0000
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/ElementBase <clinit> ()V 8 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/ElementBase$$Lambda+0x00000000221bfd58
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/ElementBase$ElementIconRequest
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/PsiMana <clinit> ()V 7 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/PsiMana$$Lambda+0x00000000221c0240
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/ManaBase <clinit> ()V 16 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/ManaBase$$Lambda+0x00000000221c0000
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/ManaBase <clinit> ()V 8 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/ManaBase$$Lambda+0x00000000221bfd58
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/ManaBase$ManaIconRequest
 instanceKlass org/jetbrains/kotlin/load/java/structure/JavaClass
 instanceKlass org/jetbrains/kotlin/load/java/structure/JavaTypeParameterListOwner
 instanceKlass org/jetbrains/kotlin/load/java/structure/JavaModifierListOwner
 instanceKlass org/jetbrains/kotlin/load/java/structure/JavaClassifier
-instanceKlass org/jetbrains/kotlin/load/java/structure/JavaNamedElement
+instanceKlass org/jetbrains/kotlin/load/java/structure/JavaNamedMana
 instanceKlass org/jetbrains/kotlin/load/java/structure/JavaAnnotationOwner
-instanceKlass org/jetbrains/kotlin/load/java/structure/JavaElement
-instanceKlass org/jetbrains/kotlin/resolve/jvm/KotlinJavaPsiFacade$KotlinPsiElementFinderWrapperImpl
-instanceKlass org/jetbrains/kotlin/resolve/jvm/KotlinJavaPsiFacade$KotlinPsiElementFinderWrapper
+instanceKlass org/jetbrains/kotlin/load/java/structure/JavaMana
+instanceKlass org/jetbrains/kotlin/resolve/jvm/KotlinJavaPsiFacade$KotlinPsiManaFinderWrapperImpl
+instanceKlass org/jetbrains/kotlin/resolve/jvm/KotlinJavaPsiFacade$KotlinPsiManaFinderWrapper
 instanceKlass org/jetbrains/kotlin/resolve/jvm/NotFoundPackagesCachingStrategy
 instanceKlass org/jetbrains/kotlin/resolve/jvm/KotlinJavaPsiFacade
-instanceKlass org/jetbrains/kotlin/load/java/structure/impl/source/JavaElementSourceFactory
+instanceKlass org/jetbrains/kotlin/load/java/structure/impl/source/JavaManaSourceFactory
 instanceKlass org/jetbrains/kotlin/cli/common/CliModuleVisibilityManagerImpl
 instanceKlass org/jetbrains/kotlin/load/kotlin/ModuleVisibilityManager
 instanceKlass org/jetbrains/kotlin/compiler/plugin/CompilerPluginRegistrarKt
@@ -3831,7 +3831,7 @@ instanceKlass org/jetbrains/kotlin/com/intellij/codeInsight/InferredAnnotationsM
 instanceKlass org/jetbrains/kotlin/com/intellij/codeInsight/ExternalAnnotationsListener
 instanceKlass org/jetbrains/kotlin/com/intellij/codeInsight/ExternalAnnotationsManager
 instanceKlass org/jetbrains/kotlin/com/intellij/util/Processor
-instanceKlass org/jetbrains/kotlin/asJava/finder/JavaElementFinder$Companion
+instanceKlass org/jetbrains/kotlin/asJava/finder/JavaManaFinder$Companion
 instanceKlass org/jetbrains/kotlin/resolve/jvm/KotlinFinderMarker
 instanceKlass org/jetbrains/kotlin/asJava/KotlinAsJavaSupport$Companion
 instanceKlass org/jetbrains/kotlin/asJava/KotlinAsJavaSupport
@@ -3895,12 +3895,12 @@ instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiInferenceHelper
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/scope/processor/FilterScopeProcessor
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/scope/PsiScopeProcessor
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/scope/NameHint
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/scope/ElementClassHint
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/scope/ManaClassHint
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/source/resolve/PsiResolveHelperImpl
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiResolveHelper
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/JavaPsiImplementationHelper
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/PsiElementFactoryImpl$1
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/PsiElementFactoryImpl <clinit> ()V 16 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/PsiElementFactoryImpl$$Lambda+0x000000002218d000
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/PsiManaFactoryImpl$1
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/PsiManaFactoryImpl <clinit> ()V 16 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/PsiManaFactoryImpl$$Lambda+0x000000002218d000
 instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/PsiType <clinit> ()V 135 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/PsiType$$Lambda+0x000000002218fc98
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/TypeAnnotationProvider$1
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/TypeAnnotationProvider$Static
@@ -3926,13 +3926,13 @@ instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/PsiJavaParserFaca
 instanceKlass  @cpi org/jetbrains/kotlin/com/intellij/psi/impl/compiled/ClsParsingUtil 405 form vmentry <vmtarget> ; # java/lang/invoke/LambdaForm$DMH+0x000000002218c000
 instanceKlass org/jetbrains/kotlin/com/intellij/lang/java/parser/JavaParserUtil$ParserWrapper
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiImportStatementBase
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiTypeElement
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiTypeMana
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiReferenceExpression
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiExpression
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiCaseLabelElement
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiCaseLabelMana
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiAnnotationMemberValue
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiJavaCodeReferenceElement
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiQualifiedReferenceElement
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiJavaCodeReferenceMana
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiQualifiedReferenceMana
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiQualifiedReference
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiJavaReference
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiPolyVariantReference
@@ -3942,9 +3942,9 @@ instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiType
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiAnnotationOwner
 instanceKlass org/jetbrains/kotlin/com/intellij/lang/jvm/types/JvmType
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/PsiJavaParserFacadeImpl
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiElementFactory
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiManaFactory
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiJavaParserFacade
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/JVMElementFactory
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/JVMManaFactory
 instanceKlass org/jetbrains/kotlin/com/intellij/lang/injection/InjectedLanguageManager
 instanceKlass org/jetbrains/kotlin/com/intellij/mock/MockDumbUtil
 instanceKlass org/jetbrains/kotlin/com/intellij/openapi/project/DumbUtil
@@ -3959,12 +3959,12 @@ instanceKlass org/jetbrains/kotlin/com/intellij/psi/util/ParameterizedCachedValu
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/PsiCachedValuesFactory
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/util/CachedValueProvider
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/util/CachedValuesManager
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/TreeElementVisitor
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/source/tree/TreeManaVisitor
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiFileFactory
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/PsiToDocumentSynchronizer
 instanceKlass  @bci org/jetbrains/kotlin/com/intellij/openapi/editor/event/DocumentListener <clinit> ()V 7 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/openapi/editor/event/DocumentListener$$Lambda+0x000000002217d718
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiRecursiveVisitor
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiElementVisitor
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiManaVisitor
 instanceKlass org/jetbrains/kotlin/com/intellij/openapi/editor/event/DocumentListener
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiDocumentManager
 instanceKlass org/jetbrains/kotlin/com/intellij/core/MockDocumentCommitProcessor
@@ -4013,8 +4013,8 @@ instanceKlass  @bci org/jetbrains/kotlin/com/intellij/util/containers/Concurrent
 instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/impl/PsiModificationTrackerImpl <init> (Lorg/jetbrains/kotlin/com/intellij/openapi/project/Project;)V 35 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/impl/PsiModificationTrackerImpl$$Lambda+0x0000000022172f70
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/PsiModificationTrackerImpl
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/util/PsiModificationTracker
-instanceKlass org/jetbrains/kotlin/com/intellij/lang/jvm/facade/JvmElementProvider
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiElementFinder
+instanceKlass org/jetbrains/kotlin/com/intellij/lang/jvm/facade/JvmManaProvider
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiManaFinder
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/PsiTreeChangePreprocessor
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/file/impl/JavaFileManager
 instanceKlass org/jetbrains/kotlin/com/intellij/openapi/roots/PackageIndex
@@ -4035,7 +4035,7 @@ instanceKlass org/jetbrains/kotlin/parsing/KotlinParserDefinition$Companion
 instanceKlass org/jetbrains/kotlin/parsing/KotlinParserDefinition
 instanceKlass  @bci org/jetbrains/kotlin/idea/KotlinFileType <init> ()V 8 <appendix> argL0 ; # org/jetbrains/kotlin/idea/KotlinFileType$$Lambda+0x000000002216e310
 instanceKlass javax/swing/Icon
-instanceKlass org/jetbrains/kotlin/com/intellij/util/keyFMap/OneElementFMap
+instanceKlass org/jetbrains/kotlin/com/intellij/util/keyFMap/OneManaFMap
 instanceKlass org/jetbrains/kotlin/com/intellij/openapi/extensions/impl/ExtensionProcessingHelper
 instanceKlass  @bci org/jetbrains/kotlin/com/intellij/lang/LanguageUtil matchingMetaLanguages (Lorg/jetbrains/kotlin/com/intellij/lang/Language;)Ljava/util/Collection; 94 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/com/intellij/lang/LanguageUtil$$Lambda+0x000000002216b578
 instanceKlass  @cpi org/jetbrains/kotlin/util/slicedMap/SlicedMapImpl 189 form vmentry <vmtarget> ; # java/lang/invoke/LambdaForm$DMH+0x000000002216c000
@@ -4050,7 +4050,7 @@ instanceKlass org/jetbrains/kotlin/com/fasterxml/aalto/in/ByteBasedPNameTable$Bu
 instanceKlass org/jetbrains/kotlin/com/intellij/openapi/extensions/ExtensionPointDescriptor
 instanceKlass org/jetbrains/kotlin/com/fasterxml/aalto/util/DataUtil
 instanceKlass kotlin/_Assertions
-instanceKlass org/jetbrains/kotlin/com/fasterxml/aalto/in/ElementScope
+instanceKlass org/jetbrains/kotlin/com/fasterxml/aalto/in/ManaScope
 instanceKlass org/jetbrains/kotlin/com/fasterxml/aalto/in/ByteBasedPNameFactory
 instanceKlass org/jetbrains/kotlin/com/intellij/ide/plugins/ModuleDependenciesDescriptor$Companion
 instanceKlass org/jetbrains/kotlin/com/intellij/ide/plugins/ModuleDependenciesDescriptor
@@ -4153,7 +4153,7 @@ instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiTarget
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiNameIdentifierOwner
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiDocCommentOwner
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiMember
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiJavaDocumentedElement
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiJavaDocumentedMana
 instanceKlass org/jetbrains/kotlin/com/intellij/pom/PomRenameableTarget
 instanceKlass org/jetbrains/kotlin/com/intellij/pom/PomNamedTarget
 instanceKlass org/jetbrains/kotlin/com/intellij/pom/PomTarget
@@ -4165,15 +4165,15 @@ instanceKlass org/jetbrains/kotlin/com/intellij/navigation/ItemPresentation
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/presentation/java/PackagePresentationProvider
 instanceKlass org/jetbrains/kotlin/com/intellij/navigation/ItemPresentationProvider
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiPackage
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiQualifiedNamedElement
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiQualifiedNamedMana
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiJvmModifiersOwner
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiModifierListOwner
 instanceKlass org/jetbrains/kotlin/com/intellij/lang/jvm/JvmModifiersOwner
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiDirectoryContainer
 instanceKlass org/jetbrains/kotlin/com/intellij/lang/jvm/JvmPackage
-instanceKlass org/jetbrains/kotlin/com/intellij/lang/jvm/JvmNamedElement
-instanceKlass org/jetbrains/kotlin/com/intellij/lang/jvm/JvmAnnotatedElement
-instanceKlass org/jetbrains/kotlin/com/intellij/lang/jvm/JvmElement
+instanceKlass org/jetbrains/kotlin/com/intellij/lang/jvm/JvmNamedMana
+instanceKlass org/jetbrains/kotlin/com/intellij/lang/jvm/JvmAnnotatedMana
+instanceKlass org/jetbrains/kotlin/com/intellij/lang/jvm/JvmMana
 instanceKlass org/jetbrains/kotlin/com/intellij/openapi/projectRoots/JavaVersionService
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/JavaDirectoryService
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiSubstitutor
@@ -4195,7 +4195,7 @@ instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/java/stubs/PsiJavaFileS
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/stubs/PsiClassHolderFileStub
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/stubs/LightStubBuilder
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/stubs/PsiFileStub
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/stubs/StubElement
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/stubs/StubMana
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/stubs/Stub
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/StubBuilder
 instanceKlass org/jetbrains/kotlin/com/intellij/openapi/util/ClearableLazyValue
@@ -4217,10 +4217,10 @@ instanceKlass org/jetbrains/kotlin/com/intellij/openapi/util/Condition$2
 instanceKlass org/jetbrains/kotlin/com/intellij/openapi/util/Condition$1
 instanceKlass org/jetbrains/kotlin/com/intellij/openapi/util/Condition
 instanceKlass org/jetbrains/kotlin/com/intellij/openapi/util/Conditions
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/tree/IElementType <clinit> ()V 23 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/tree/IElementType$$Lambda+0x0000000022142bf8
-instanceKlass  @cpi org/jetbrains/kotlin/com/intellij/psi/tree/IElementType 362 form vmentry <vmtarget> ; # java/lang/invoke/LambdaForm$DMH+0x000000002213b400
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/tree/IElementType$Predicate
-instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/tree/IElementType <clinit> ()V 15 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/tree/IElementType$$Lambda+0x00000000221427c8
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/tree/IManaType <clinit> ()V 23 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/tree/IManaType$$Lambda+0x0000000022142bf8
+instanceKlass  @cpi org/jetbrains/kotlin/com/intellij/psi/tree/IManaType 362 form vmentry <vmtarget> ; # java/lang/invoke/LambdaForm$DMH+0x000000002213b400
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/tree/IManaType$Predicate
+instanceKlass  @bci org/jetbrains/kotlin/com/intellij/psi/tree/IManaType <clinit> ()V 15 <appendix> argL0 ; # org/jetbrains/kotlin/com/intellij/psi/tree/IManaType$$Lambda+0x00000000221427c8
 instanceKlass org/jetbrains/kotlin/com/intellij/lexer/Lexer
 instanceKlass org/jetbrains/kotlin/com/intellij/openapi/fileTypes/PlainTextParserDefinition
 instanceKlass  @bci org/jetbrains/kotlin/com/intellij/openapi/util/KeyedExtensionCollector addExplicitExtension (Ljava/lang/Object;Ljava/lang/Object;Lorg/jetbrains/kotlin/com/intellij/openapi/Disposable;)V 36 <appendix> member <vmtarget> ; # org/jetbrains/kotlin/com/intellij/openapi/util/KeyedExtensionCollector$$Lambda+0x0000000022141208
@@ -4289,9 +4289,9 @@ instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiReferenceService
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/stubs/ObjectStubTree
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiFile
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiFileSystemItem
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiCheckedRenameElement
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiNamedElement
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/NavigatablePsiElement
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiCheckedRenameMana
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiNamedMana
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/NavigatablePsiMana
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/stubs/StubTreeLoader
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiReferenceProviderBean
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiReferenceContributor
@@ -4327,9 +4327,9 @@ instanceKlass org/jetbrains/kotlin/com/intellij/model/psi/PsiExternalReferenceHo
 instanceKlass org/jetbrains/kotlin/com/intellij/navigation/NavigationItem
 instanceKlass org/jetbrains/kotlin/com/intellij/pom/Navigatable
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiWhiteSpace
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiElement
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/tree/ILazyParseableElementTypeBase
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/tree/IElementType
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiMana
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/tree/ILazyParseableManaTypeBase
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/tree/IManaType
 instanceKlass org/jetbrains/kotlin/com/intellij/lang/FileASTNode
 instanceKlass org/jetbrains/kotlin/com/intellij/openapi/util/Iconable
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/ReparseableASTNode
@@ -4806,13 +4806,13 @@ instanceKlass org/jetbrains/kotlin/ir/declarations/IrMetadataSourceOwner
 instanceKlass org/jetbrains/kotlin/ir/declarations/IrMemberWithContainerSource
 instanceKlass org/jetbrains/kotlin/ir/declarations/IrDeclarationWithName
 instanceKlass org/jetbrains/kotlin/ir/declarations/IrAttributeContainer
-instanceKlass org/jetbrains/kotlin/ir/IrElementBase
+instanceKlass org/jetbrains/kotlin/ir/IrManaBase
 instanceKlass org/jetbrains/kotlin/ir/declarations/IrDeclaration
 instanceKlass org/jetbrains/kotlin/ir/declarations/IrSymbolOwner
 instanceKlass org/jetbrains/kotlin/ir/declarations/IrMutableAnnotationContainer
 instanceKlass org/jetbrains/kotlin/ir/declarations/IrAnnotationContainer
 instanceKlass org/jetbrains/kotlin/ir/IrStatement
-instanceKlass org/jetbrains/kotlin/ir/IrElement
+instanceKlass org/jetbrains/kotlin/ir/IrMana
 instanceKlass org/jetbrains/kotlin/backend/jvm/lower/JvmStaticAnnotationLoweringKt
 instanceKlass org/jetbrains/kotlin/backend/jvm/lower/StaticDefaultFunctionLoweringKt
 instanceKlass org/jetbrains/kotlin/backend/jvm/lower/ObjectClassLoweringKt
@@ -5350,7 +5350,7 @@ instanceKlass kotlin/reflect/KDeclarationContainer
 instanceKlass kotlin/jvm/internal/CallableReference
 instanceKlass kotlin/reflect/KFunction
 instanceKlass kotlin/reflect/KCallable
-instanceKlass kotlin/reflect/KAnnotatedElement
+instanceKlass kotlin/reflect/KAnnotatedMana
 instanceKlass kotlin/jvm/internal/FunctionBase
 instanceKlass kotlin/jvm/functions/Function1
 instanceKlass kotlin/Function
@@ -5446,7 +5446,7 @@ instanceKlass java/lang/classfile/instruction/LocalVariableType
 instanceKlass java/lang/classfile/instruction/LocalVariable
 instanceKlass java/lang/classfile/instruction/CharacterRange
 instanceKlass java/lang/classfile/PseudoInstruction
-instanceKlass java/lang/classfile/CodeElement
+instanceKlass java/lang/classfile/CodeMana
 instanceKlass jdk/internal/classfile/impl/TerminalCodeBuilder
 instanceKlass jdk/internal/classfile/impl/LabelContext
 instanceKlass java/lang/classfile/CodeBuilder
@@ -5483,13 +5483,13 @@ instanceKlass jdk/internal/classfile/impl/AbstractAttributeMapper
 instanceKlass java/lang/classfile/AttributeMapper
 instanceKlass java/lang/classfile/Attributes
 instanceKlass jdk/internal/classfile/impl/Util$Writable
-instanceKlass jdk/internal/classfile/impl/AbstractElement
+instanceKlass jdk/internal/classfile/impl/AbstractMana
 instanceKlass java/lang/classfile/attribute/RuntimeVisibleAnnotationsAttribute
-instanceKlass java/lang/classfile/FieldElement
-instanceKlass java/lang/classfile/MethodElement
-instanceKlass java/lang/classfile/ClassElement
+instanceKlass java/lang/classfile/FieldMana
+instanceKlass java/lang/classfile/MethodMana
+instanceKlass java/lang/classfile/ClassMana
 instanceKlass java/lang/classfile/Attribute
-instanceKlass java/lang/classfile/ClassFileElement
+instanceKlass java/lang/classfile/ClassFileMana
 instanceKlass java/lang/classfile/constantpool/Utf8Entry
 instanceKlass java/lang/classfile/constantpool/AnnotationConstantValueEntry
 instanceKlass java/lang/classfile/constantpool/PoolEntry
@@ -5498,7 +5498,7 @@ instanceKlass jdk/internal/classfile/impl/TemporaryConstantPool
 instanceKlass java/lang/classfile/constantpool/ConstantPoolBuilder
 instanceKlass java/lang/classfile/constantpool/ConstantPool
 instanceKlass java/lang/classfile/Annotation
-instanceKlass java/lang/classfile/AnnotationElement
+instanceKlass java/lang/classfile/AnnotationMana
 instanceKlass java/lang/invoke/InvokerBytecodeGenerator
 instanceKlass java/lang/invoke/LambdaForm$Holder
 instanceKlass java/lang/invoke/LambdaForm$Name
@@ -5826,7 +5826,7 @@ instanceKlass java/lang/StackWalker$StackFrame
 instanceKlass java/lang/StackStreamFactory$AbstractStackWalker
 instanceKlass java/lang/StackWalker
 instanceKlass java/nio/Buffer
-instanceKlass java/lang/StackTraceElement
+instanceKlass java/lang/StackTraceMana
 instanceKlass java/util/RandomAccess
 instanceKlass java/util/List
 instanceKlass java/util/SequencedCollection
@@ -5895,7 +5895,7 @@ instanceKlass java/lang/invoke/TypeDescriptor$OfField
 instanceKlass java/lang/invoke/TypeDescriptor
 instanceKlass java/lang/reflect/Type
 instanceKlass java/lang/reflect/GenericDeclaration
-instanceKlass java/lang/reflect/AnnotatedElement
+instanceKlass java/lang/reflect/AnnotatedMana
 instanceKlass java/lang/String
 instanceKlass java/lang/constant/ConstantDesc
 instanceKlass java/lang/constant/Constable
@@ -5960,12 +5960,12 @@ instanceKlass java/lang/ref/Reference$ReferenceHandler
 instanceKlass java/lang/BaseVirtualThread
 ciInstanceKlass java/lang/Thread 1 1 761 9 7 12 1 1 1 9 7 12 1 1 1 9 12 1 9 12 1 10 12 1 1 9 12 1 1 10 100 12 1 1 10 12 1 10 100 12 1 1 100 1 8 1 10 12 1 1 9 12 1 1 9 12 1 9 12 1 1 100 1 10 12 1 1 10 12 1 100 1 10 12 10 12 1 1 9 12 1 1 10 12 1 100 1 10 12 1 10 12 1 1 10 12 1 1 10 12 1 10 12 1 1 100 1 8 1 10 9 100 12 1 1 1 10 12 1 1 10 3 8 1 100 1 5 0 10 7 12 1 1 1 9 12 1 10 12 1 1 10 7 1 100 1 8 1 10 10 12 1 10 12 1 1 10 12 1 1 10 7 12 1 1 10 12 1 10 12 1 10 7 12 1 1 5 0 9 12 1 10 7 12 1 1 1 10 12 1 1 9 12 1 1 10 100 12 1 1 10 100 12 1 1 1 10 12 1 10 12 1 1 9 12 1 1 10 7 12 1 1 9 12 1 8 1 9 100 12 1 1 1 5 0 100 1 10 100 1 10 100 1 10 100 1 10 8 1 10 12 1 1 10 100 12 1 10 12 1 10 12 1 100 1 8 1 10 10 12 1 10 12 1 1 10 100 12 1 1 1 10 100 12 1 1 1 10 12 1 7 1 9 12 1 1 100 1 10 10 12 1 9 12 1 1 10 12 1 1 10 12 1 1 10 12 1 10 12 1 9 12 1 1 10 10 12 1 1 10 12 1 1 11 7 12 1 1 10 100 12 1 1 9 12 1 1 9 12 1 1 10 100 12 1 1 10 12 1 1 10 12 1 10 100 12 1 1 10 12 1 100 1 10 9 12 1 1 10 12 1 11 100 12 1 1 11 12 1 10 12 1 10 12 1 10 12 1 9 12 1 10 10 12 1 10 12 1 1 9 12 1 9 12 10 12 1 8 1 10 12 1 10 12 1 10 12 1 10 12 1 10 12 1 1 10 12 1 10 12 1 1 10 100 12 1 1 10 12 1 10 12 1 10 12 1 10 12 1 1 9 7 12 1 1 1 8 1 10 9 12 1 10 12 1 100 1 8 1 10 10 12 1 8 1 10 12 1 1 9 12 8 1 10 10 12 1 10 12 1 8 1 10 12 1 10 8 1 9 12 1 1 10 12 1 1 10 10 12 1 10 12 1 100 10 7 12 1 1 1 10 12 1 1 10 12 1 1 10 100 12 1 1 1 11 100 12 1 1 1 10 12 1 1 9 12 1 10 12 1 10 12 1 1 11 100 12 1 1 1 10 12 1 1 1 1 3 1 3 1 3 1 3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 100 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 100 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 100 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 100 100 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 100 1 100 1 100 1 1 1 1 100 1 1 1 1 1 1 1 1 1 1 1 1
 staticfield java/lang/Thread NEW_THREAD_BINDINGS Ljava/lang/Object; java/lang/Class
-staticfield java/lang/Thread EMPTY_STACK_TRACE [Ljava/lang/StackTraceElement; 0 [Ljava/lang/StackTraceElement;
+staticfield java/lang/Thread EMPTY_STACK_TRACE [Ljava/lang/StackTraceMana; 0 [Ljava/lang/StackTraceMana;
 ciInstanceKlass java/lang/Runnable 1 0 11 100 1 100 1 1 1 1 1 1 1
 ciInstanceKlass java/lang/Class 1 1 1652 10 7 12 1 1 1 10 7 12 1 1 9 12 1 1 9 12 1 1 9 12 1 1 9 12 1 1 9 12 1 1 10 12 1 1 8 1 10 12 1 8 1 8 1 10 12 1 1 10 7 12 1 1 1 10 12 1 100 1 10 10 12 1 10 12 1 1 10 12 1 1 10 12 1 1 10 7 12 1 1 10 12 1 10 12 1 10 12 1 1 10 12 1 8 1 10 12 1 8 1 10 12 1 8 1 8 1 10 12 1 1 10 100 12 1 1 1 18 12 1 1 11 100 12 1 1 1 8 1 8 1 8 1 10 100 12 1 1 1 11 12 1 1 8 1 10 12 1 10 10 12 1 1 10 12 1 8 1 10 12 1 1 8 1 10 12 1 10 12 1 1 11 100 12 1 1 1 11 100 12 1 1 1 11 8 1 18 8 1 10 12 1 10 7 12 1 1 10 12 1 1 10 7 12 1 1 1 10 12 1 1 10 12 1 1 10 7 12 1 1 1 10 7 12 1 10 12 1 1 10 7 1 10 12 1 8 1 10 8 1 8 1 8 1 8 1 8 1 8 1 8 1 8 1 9 100 12 1 1 9 100 1 9 100 1 9 100 1 9 100 1 9 100 1 9 100 1 9 100 1 9 100 1 9 12 1 1 7 1 8 1 10 12 1 10 12 1 1 100 1 10 12 1 1 10 7 12 1 1 1 10 7 12 1 1 1 7 1 7 1 10 10 12 1 1 10 12 1 1 100 1 10 100 12 1 1 1 10 12 1 1 10 12 1 1 10 12 9 12 1 1 10 12 1 9 12 1 1 9 12 1 1 10 12 1 1 10 7 1 10 12 1 10 12 1 1 10 9 12 1 10 12 1 8 1 10 12 1 1 10 12 1 1 10 12 1 10 12 1 10 12 1 1 9 7 12 1 1 1 10 12 1 10 7 12 1 1 10 12 1 10 12 1 10 12 1 10 12 1 9 100 12 1 1 1 9 12 1 10 12 1 10 12 1 1 9 12 1 1 10 7 10 12 1 1 10 100 12 1 1 10 12 1 10 12 1 1 10 100 12 1 1 1 10 12 1 10 12 1 1 10 12 1 10 12 1 10 12 1 1 10 7 1 10 10 12 1 1 10 12 1 1 10 12 10 10 12 1 1 100 1 8 1 10 10 12 1 1 10 12 1 100 1 11 12 1 10 12 1 10 12 1 10 100 12 1 1 10 10 12 1 1 8 1 10 12 1 8 1 9 12 1 10 12 1 10 12 1 10 12 1 10 12 100 1 9 12 1 10 12 1 9 12 1 10 12 1 10 12 1 10 12 1 10 10 12 1 10 12 1 10 12 1 10 12 1 10 12 1 10 12 1 7 1 10 10 12 1 10 12 1 11 100 12 1 1 11 12 1 1 10 12 1 1 10 12 1 1 10 12 1 1 10 12 1 1 10 12 1 1 10 12 1 1 7 1 10 10 12 1 1 10 12 1 1 10 12 1 1 10 10 12 1 10 12 1 1 10 12 1 1 10 12 1 1 10 12 1 1 10 12 10 12 1 1 10 7 12 1 1 1 10 12 1 10 12 1 1 10 12 1 10 100 12 1 1 1 10 12 1 1 10 10 12 1 1 100 1 10 10 12 1 1 10 100 12 1 1 1 100 1 100 1 10 12 1 1 10 12 1 10 10 12 1 1 10 12 1 10 12 1 10 12 1 10 100 12 1 1 1 11 7 12 1 1 10 12 1 10 12 1 9 100 12 1 1 8 1 10 12 1 10 12 1 10 12 1 10 12 1 1 9 12 1 9 12 1 1 10 7 12 1 1 9 12 1 10 12 1 1 10 10 12 1 10 7 12 1 1 1 10 100 12 1 1 10 100 12 1 1 9 12 1 1 10 12 1 9 12 1 10 12 1 10 12 1 1 9 12 1 1 9 12 1 10 12 1 10 12 1 1 9 12 1 7 1 10 10 12 1 1 7 1 10 7 11 7 1 9 12 1 1 9 12 1 10 12 1 9 12 1 1 9 12 1 10 12 1 10 12 1 1 9 12 1 7 1 10 10 12 1 1 10 10 12 1 10 12 10 10 12 1 9 12 1 10 12 1 1 10 12 1 8 10 7 8 1 18 8 1 8 1 10 12 1 9 12 1 9 12 1 1 10 12 1 7 1 7 1 10 12 1 9 12 1 1 10 10 12 1 9 12 1 8 1 10 12 1 10 10 12 1 1 100 1 100 1 9 12 1 100 1 8 1 10 10 7 12 1 1 1 10 12 11 7 12 1 1 1 10 12 1 10 12 1 1 10 8 1 10 12 1 8 1 10 12 1 1 9 7 12 1 1 11 12 7 1 11 7 12 1 1 9 12 1 10 100 12 1 1 1 10 7 12 1 1 10 12 1 1 9 12 1 9 10 12 1 1 10 12 1 1 10 12 1 1 10 12 1 1 10 12 1 1 11 12 1 11 12 1 1 11 7 12 1 1 11 12 1 7 1 11 12 1 10 7 12 1 1 1 10 12 1 11 12 1 10 100 12 1 1 1 10 12 1 10 100 12 1 1 1 11 12 1 11 12 1 1 10 12 1 10 12 1 1 9 12 1 1 10 12 1 10 100 12 1 1 1 10 12 1 1 10 12 1 10 12 1 10 12 1 10 7 12 1 1 1 10 12 1 8 1 10 12 1 10 12 1 10 12 1 8 1 8 1 10 7 12 1 1 10 100 12 1 1 100 1 10 12 10 100 12 1 1 1 10 100 12 1 1 1 10 12 1 1 10 12 1 18 12 1 1 11 12 1 1 18 11 12 1 18 12 1 11 12 1 10 12 1 10 12 1 10 12 1 10 12 10 12 1 8 1 10 12 1 7 1 9 12 1 1 100 1 100 1 100 1 100 1 1 1 3 1 3 1 3 1 1 1 1 1 1 1 1 1 5 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 100 1 1 1 1 1 1 1 1 1 1 1 100 1 1 1 1 1 7 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 100 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 100 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 100 1 100 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 16 15 10 12 16 15 11 12 16 1 15 10 12 16 16 15 10 12 16 15 16 1 15 10 12 16 15 10 100 12 1 1 1 1 1 100 1 1 1 1 1 1 1 1 100 1 1 100 1 100 1 1 100 1 100 1 1
 staticfield java/lang/Class EMPTY_CLASS_ARRAY [Ljava/lang/Class; 0 [Ljava/lang/Class;
 staticfield java/lang/Class serialPersistentFields [Ljava/io/ObjectStreamField; 0 [Ljava/io/ObjectStreamField;
-ciInstanceKlass java/lang/reflect/AnnotatedElement 1 1 165 11 7 12 1 1 1 11 12 1 1 100 1 10 100 12 1 1 1 10 12 1 1 10 12 1 1 10 12 1 10 100 12 1 1 1 11 12 1 1 11 100 12 1 1 10 100 12 1 1 1 10 12 1 10 100 12 1 1 1 18 12 1 1 11 100 12 1 1 18 12 1 18 12 1 1 10 100 12 1 1 1 11 100 12 1 1 1 100 1 10 100 12 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 100 1 1 1 1 1 1 1 1 1 1 1 16 15 16 1 16 1 15 11 12 16 16 1 15 10 100 12 1 1 1 16 1 15 10 100 12 1 1 1 1 100 1 100 1 1
+ciInstanceKlass java/lang/reflect/AnnotatedMana 1 1 165 11 7 12 1 1 1 11 12 1 1 100 1 10 100 12 1 1 1 10 12 1 1 10 12 1 1 10 12 1 10 100 12 1 1 1 11 12 1 1 11 100 12 1 1 10 100 12 1 1 1 10 12 1 10 100 12 1 1 1 18 12 1 1 11 100 12 1 1 18 12 1 18 12 1 1 10 100 12 1 1 1 11 100 12 1 1 1 100 1 10 100 12 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 100 1 1 1 1 1 1 1 1 1 1 1 16 15 16 1 16 1 15 11 12 16 16 1 15 10 100 12 1 1 1 16 1 15 10 100 12 1 1 1 1 100 1 100 1 1
 ciInstanceKlass java/lang/reflect/Type 1 1 17 11 100 12 1 1 1 100 1 1 1 1 1 1 1 1 1
 ciInstanceKlass java/lang/invoke/TypeDescriptor 1 0 17 100 1 100 1 1 1 1 1 1 100 1 100 1 1 1 1
 ciInstanceKlass java/lang/invoke/TypeDescriptor$OfField 1 0 21 100 1 100 1 100 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
@@ -6055,7 +6055,7 @@ instanceKlass org/jetbrains/kotlin/load/java/structure/impl/classFiles/BinaryCla
 instanceKlass java/lang/Exception
 instanceKlass java/lang/Error
 ciInstanceKlass java/lang/Throwable 1 1 403 10 7 12 1 1 1 9 7 12 1 1 1 9 12 1 1 9 12 1 9 12 1 1 9 12 1 10 12 1 1 9 12 1 1 10 12 1 1 10 100 12 1 1 1 9 12 1 1 10 12 1 1 10 12 1 100 1 7 1 10 8 1 10 12 1 1 8 1 10 100 12 1 1 10 10 12 1 100 1 8 1 10 10 7 12 1 1 10 12 1 8 1 9 100 12 1 1 1 10 12 1 1 100 1 10 12 10 12 1 100 1 10 10 7 12 1 1 1 11 100 12 1 1 1 10 100 12 1 1 1 10 12 1 1 10 12 1 1 8 1 10 12 1 10 12 1 1 8 1 8 1 10 12 1 1 10 12 1 8 1 8 1 9 12 1 10 100 12 1 1 100 1 10 11 12 1 8 1 8 1 10 7 12 1 1 8 1 10 12 1 8 1 100 1 10 12 1 9 12 1 1 10 12 1 10 100 12 1 9 12 1 1 10 12 1 1 100 1 8 1 10 12 1 10 100 12 1 1 10 12 1 1 100 1 10 100 12 1 1 1 10 12 1 11 100 12 1 1 1 11 100 12 1 1 1 11 12 1 8 1 10 12 1 1 8 1 10 10 9 100 12 1 1 1 8 1 10 12 1 1 11 10 100 1 8 1 10 11 12 1 1 8 1 9 12 1 10 100 12 1 1 11 9 12 1 1 11 12 1 1 100 10 12 1 10 12 1 1 100 1 1 1 1 5 0 1 1 1 1 1 1 1 1 1 1 1 1 100 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 100 1 100 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-staticfield java/lang/Throwable UNASSIGNED_STACK [Ljava/lang/StackTraceElement; 0 [Ljava/lang/StackTraceElement;
+staticfield java/lang/Throwable UNASSIGNED_STACK [Ljava/lang/StackTraceMana; 0 [Ljava/lang/StackTraceMana;
 staticfield java/lang/Throwable SUPPRESSED_SENTINEL Ljava/util/List; java/util/Collections$EmptyList
 staticfield java/lang/Throwable EMPTY_THROWABLE_ARRAY [Ljava/lang/Throwable; 0 [Ljava/lang/Throwable;
 staticfield java/lang/Throwable $assertionsDisabled Z 1
@@ -6277,7 +6277,7 @@ instanceKlass java/lang/ReflectiveOperationException
 instanceKlass java/lang/RuntimeException
 ciInstanceKlass java/lang/Exception 1 1 40 10 7 12 1 1 1 10 12 1 10 12 1 10 12 1 10 12 1 100 1 1 1 1 5 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/compiled/OutOfOrderInnerClassException
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/compiled/ClsElementImpl$InvalidMirrorException
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/compiled/ClsManaImpl$InvalidMirrorException
 instanceKlass org/jetbrains/kotlin/lexer/KotlinLexerException
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/text/BlockSupport$ReparsedSuccessfullyException
 instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/DebugUtil$IncorrectTreeStructureException
@@ -6289,7 +6289,7 @@ instanceKlass org/jetbrains/kotlin/com/intellij/openapi/util/RecursionManager$Ca
 instanceKlass org/jetbrains/kotlin/com/intellij/core/CoreJavaCodeStyleManager$1CancelException
 instanceKlass org/jetbrains/kotlin/com/intellij/openapi/util/StackOverflowPreventedException
 instanceKlass org/jetbrains/kotlin/com/intellij/openapi/vfs/InvalidVirtualFileAccessException
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiInvalidElementAccessException
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/PsiInvalidManaAccessException
 instanceKlass org/jetbrains/kotlin/com/fasterxml/aalto/UncheckedStreamException
 instanceKlass org/jetbrains/kotlin/com/intellij/diagnostic/PluginException
 instanceKlass java/io/UncheckedIOException
@@ -6314,7 +6314,7 @@ instanceKlass org/jetbrains/kotlin/com/intellij/util/IncorrectOperationException
 instanceKlass org/jetbrains/kotlin/utils/WrappedValues$WrappedProcessCanceledException
 instanceKlass java/util/ConcurrentModificationException
 instanceKlass java/lang/reflect/UndeclaredThrowableException
-instanceKlass java/util/NoSuchElementException
+instanceKlass java/util/NoSuchManaException
 instanceKlass kotlin/NoWhenBranchMatchedException
 instanceKlass java/lang/UnsupportedOperationException
 instanceKlass kotlin/UninitializedPropertyAccessException
@@ -6376,7 +6376,7 @@ ciInstanceKlass java/lang/VirtualMachineError 1 1 34 10 100 12 1 1 1 10 12 1 10 
 ciInstanceKlass java/lang/NoClassDefFoundError 0 0 26 10 100 12 1 1 1 10 12 1 100 1 1 1 1 5 0 1 1 1 1 1 1 1 1 1
 ciInstanceKlass java/lang/OutOfMemoryError 1 1 26 10 100 12 1 1 1 10 12 1 100 1 1 1 1 5 0 1 1 1 1 1 1 1 1 1
 ciInstanceKlass java/lang/StackOverflowError 1 1 26 10 100 12 1 1 1 10 12 1 100 1 1 1 1 5 0 1 1 1 1 1 1 1 1 1
-ciInstanceKlass java/lang/StackTraceElement 0 0 235 10 100 12 1 1 1 10 100 12 1 1 9 12 1 1 9 12 1 1 9 12 1 9 12 1 8 1 10 100 12 1 1 1 100 1 9 12 1 8 1 9 12 1 9 12 1 9 12 1 1 10 12 1 1 10 12 1 8 1 10 100 12 1 1 1 100 1 10 12 1 10 12 1 1 10 12 1 10 12 1 1 10 12 1 10 12 1 10 10 12 1 8 1 10 12 1 10 12 1 1 10 12 1 1 10 12 1 10 12 1 10 12 1 9 12 1 1 10 100 12 1 1 1 10 12 1 1 100 1 10 12 1 1 10 100 12 1 1 10 100 12 1 1 1 10 100 12 1 1 10 100 12 1 1 10 10 12 1 1 10 12 1 1 10 12 1 1 10 12 1 100 1 1 1 1 1 1 1 3 1 3 1 1 5 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 100 1 100 1 1 1 1 1 1 1 100 1 1 1 1 1 1 1 1 1
+ciInstanceKlass java/lang/StackTraceMana 0 0 235 10 100 12 1 1 1 10 100 12 1 1 9 12 1 1 9 12 1 1 9 12 1 9 12 1 8 1 10 100 12 1 1 1 100 1 9 12 1 8 1 9 12 1 9 12 1 9 12 1 1 10 12 1 1 10 12 1 8 1 10 100 12 1 1 1 100 1 10 12 1 10 12 1 1 10 12 1 10 12 1 1 10 12 1 10 12 1 10 10 12 1 8 1 10 12 1 10 12 1 1 10 12 1 1 10 12 1 10 12 1 10 12 1 9 12 1 1 10 100 12 1 1 1 10 12 1 1 100 1 10 12 1 1 10 100 12 1 1 10 100 12 1 1 1 10 100 12 1 1 10 100 12 1 1 10 10 12 1 1 10 12 1 1 10 12 1 1 10 12 1 100 1 1 1 1 1 1 1 3 1 3 1 1 5 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 100 1 100 1 1 1 1 1 1 1 100 1 1 1 1 1 1 1 1 1
 instanceKlass java/util/concurrent/locks/AbstractQueuedLongSynchronizer
 instanceKlass java/util/concurrent/locks/AbstractQueuedSynchronizer
 ciInstanceKlass java/util/concurrent/locks/AbstractOwnableSynchronizer 1 1 32 10 7 12 1 1 1 9 7 12 1 1 1 100 1 1 1 1 5 0 1 1 1 1 1 1 1 1 1 1 1 1
@@ -6481,7 +6481,7 @@ instanceKlass org/jetbrains/kotlin/resolve/scopes/LexicalScopeKind
 instanceKlass org/jetbrains/kotlin/metadata/ProtoBuf$Effect$InvocationKind
 instanceKlass org/jetbrains/kotlin/metadata/ProtoBuf$Expression$ConstantValue
 instanceKlass org/jetbrains/kotlin/metadata/ProtoBuf$Effect$EffectType
-instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/source/PsiJavaCodeReferenceElementImpl$Kind
+instanceKlass org/jetbrains/kotlin/com/intellij/psi/impl/source/PsiJavaCodeReferenceManaImpl$Kind
 instanceKlass org/jetbrains/kotlin/com/intellij/lang/java/parser/ExpressionParser$ExprType
 instanceKlass org/jetbrains/kotlin/com/intellij/lang/java/parser/DeclarationParser$Context
 instanceKlass javaslang/collection/HashArrayMappedTrieModule$Action
@@ -6492,7 +6492,7 @@ instanceKlass org/jetbrains/kotlin/metadata/ProtoBuf$VersionRequirement$Level
 instanceKlass org/jetbrains/kotlin/resolve/jvm/JvmPrimitiveType
 instanceKlass org/jetbrains/kotlin/serialization/deserialization/descriptors/DeserializedContainerAbiStability
 instanceKlass org/jetbrains/kotlin/metadata/jvm/JvmProtoBuf$StringTableTypes$Record$Operation
-instanceKlass java/lang/annotation/ElementType
+instanceKlass java/lang/annotation/ManaType
 instanceKlass org/jetbrains/kotlin/load/java/structure/LightClassOriginKind
 instanceKlass org/jetbrains/kotlin/resolve/jvm/NotFoundPackagesCachingStrategy$CacheType
 instanceKlass org/jetbrains/kotlin/parsing/KotlinParsing$PropertyComponentKind
@@ -6865,7 +6865,7 @@ ciMethod java/util/Map get (Ljava/lang/Object;)Ljava/lang/Object; 0 0 1 0 -1
 ciInstanceKlass java/lang/AssertionError 0 0 79 10 100 12 1 1 1 10 12 1 10 100 12 1 1 1 10 100 1 100 1 10 12 1 1 10 12 1 10 12 1 10 12 1 10 12 1 10 12 1 10 12 1 10 12 1 1 1 1 5 0 1 1 1 1 1 1 1 1 1 1 100 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 ciInstanceKlass kotlin/jvm/internal/Intrinsics 1 1 278 10 7 10 10 10 10 10 10 100 10 10 10 100 10 10 100 10 8 8 10 100 10 10 100 10 10 100 10 10 8 8 8 8 10 10 10 10 10 100 10 10 10 10 8 8 10 10 10 8 10 100 10 10 10 10 100 8 8 10 8 10 10 10 100 10 7 100 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 100 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 100 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 100 1 1 1 12 1 12 12 12 12 12 1 12 12 1 1 1 1 12 1 12 1 1 1 1 1 1 12 12 12 100 12 12 1 100 12 100 12 100 12 12 1 1 100 12 100 12 1 12 1 12 12 12 1 1 1 12 1 12 100 100 12 12 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 ciInstanceKlass kotlin/jvm/internal/markers/KMappedMarker 1 0 22 1 100 1 100 1 1 3 3 3 1 1 3 1 1 1 1 1 1 1 1 1
-ciInstanceKlass kotlin/reflect/KAnnotatedElement 1 0 29 1 100 1 100 1 1 1 1 1 1 3 3 3 1 1 3 1 1 1 1 1 1 1 1 1 1 1 1
+ciInstanceKlass kotlin/reflect/KAnnotatedMana 1 0 29 1 100 1 100 1 1 1 1 1 1 3 3 3 1 1 3 1 1 1 1 1 1 1 1 1 1 1 1
 ciInstanceKlass kotlin/reflect/KCallable 1 0 78 1 100 1 1 100 1 100 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 3 3 3 1 1 3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 100 1 1 1 1 1 1 1 1
 instanceKlass kotlin/text/StringsKt__StringsJVMKt
 ciInstanceKlass kotlin/text/StringsKt__StringNumberConversionsKt 1 1 172 1 100 1 100 1 1 1 1 1 1 1 1 8 1 7 1 1 12 10 1 7 1 12 10 1 1 1 1 12 10 1 7 1 1 12 10 1 100 1 1 12 10 1 1 1 1 1 1 12 10 1 1 100 1 12 10 1 1 1 7 1 1 12 10 1 7 1 12 10 1 1 12 10 1 1 12 10 3 3 3 1 1 12 10 1 12 10 1 1 1 1 1 1 1 1 1 1 1 1 1 1 12 10 1 5 0 5 0 5 0 1 100 1 12 10 1 1 1 1 8 1 100 1 100 1 1 12 10 1 8 1 1 12 10 1 12 10 1 1 12 10 1 12 10 10 1 1 1 1 3 3 3 1 3 1 3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
@@ -7105,7 +7105,7 @@ ciInstanceKlass org/jetbrains/kotlin/util/AttributeArrayOwner 1 1 164 1 7 1 1 7 
 ciInstanceKlass org/jetbrains/kotlin/types/TypeAttributes 1 1 245 1 7 1 1 7 1 7 1 100 1 1 1 3 3 3 1 1 3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 7 1 1 1 1 1 1 12 10 1 7 1 1 12 11 1 7 1 1 12 11 1 1 12 11 1 7 1 1 12 10 1 1 12 10 1 1 1 1 7 1 1 12 10 12 10 1 8 1 7 1 1 12 10 1 12 10 1 7 10 12 9 1 1 12 10 1 7 11 1 7 1 1 12 10 1 1 12 10 1 7 1 1 12 10 1 12 10 1 7 1 1 12 10 1 1 12 10 1 1 1 1 1 1 1 1 1 1 1 12 10 1 1 12 10 1 1 1 1 8 1 1 12 10 1 1 1 12 10 12 10 1 1 12 10 1 12 10 1 11 1 1 12 10 1 100 1 12 11 1 12 11 1 12 10 1 1 1 1 1 1 1 1 1 1 1 1 7 1 1 12 9 1 1 1 1 1 12 10 1 1 12 10 1 1 1 1 1 1 1 1 1 1 1
 staticfield org/jetbrains/kotlin/types/TypeAttributes Companion Lorg/jetbrains/kotlin/types/TypeAttributes$Companion; org/jetbrains/kotlin/types/TypeAttributes$Companion
 staticfield org/jetbrains/kotlin/types/TypeAttributes Empty Lorg/jetbrains/kotlin/types/TypeAttributes; org/jetbrains/kotlin/types/TypeAttributes
-instanceKlass org/jetbrains/kotlin/util/OneElementArrayMap
+instanceKlass org/jetbrains/kotlin/util/OneManaArrayMap
 instanceKlass org/jetbrains/kotlin/util/EmptyArrayMap
 ciInstanceKlass org/jetbrains/kotlin/util/ArrayMap 1 1 72 1 7 1 1 7 1 100 1 100 1 1 1 3 3 3 1 1 3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 12 10 1 1 1 1 1 1 1 1 1 1 1 100 1 8 1 12 10 1 10 1 1 1 1 1 1 1 1 1 1
 ciInstanceKlass org/jetbrains/kotlin/util/EmptyArrayMap 1 1 82 1 7 1 7 1 1 1 3 3 3 1 1 3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 7 1 1 1 1 12 10 1 1 8 1 100 1 1 12 10 1 100 12 10 1 1 1 1 1 1 10 1 7 1 1 100 12 10 1 1 12 10 1 10 12 9 1 1 1 1 1 1 1 1
@@ -7252,7 +7252,7 @@ ciInstanceKlass org/jetbrains/kotlin/types/DeferredType 1 1 203 1 7 1 7 1 1 100 
 staticfield org/jetbrains/kotlin/types/DeferredType RECURSION_PREVENTER Lkotlin/jvm/functions/Function1; org/jetbrains/kotlin/types/DeferredType$$Lambda+0x0000000022583760
 ciInstanceKlass org/jetbrains/kotlin/types/NullableSimpleType 1 1 54 1 100 1 7 1 1 1 3 3 3 1 1 3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 8 1 7 1 1 12 10 12 10 1 1 1 10 1 12 10 1 100 1 1 1 1 1 1 1
 ciInstanceKlass org/jetbrains/kotlin/descriptors/impl/AbstractTypeParameterDescriptor$TypeParameterTypeConstructor 1 1 169 1 7 1 7 1 1 7 1 1 1 1 1 1 1 1 1 1 12 10 12 9 1 12 10 12 9 1 1 1 1 1 1 1 1 1 12 10 1 100 1 1 1 7 1 12 10 1 1 1 1 1 1 1 1 100 1 12 10 1 100 1 1 1 1 12 10 1 100 12 10 1 1 1 100 1 1 12 10 1 1 1 1 1 1 12 10 1 1 1 1 1 1 1 100 1 1 12 9 1 100 1 100 1 1 12 10 1 1 1 100 1 100 1 1 12 9 1 1 12 10 1 1 1 8 1 8 1 100 1 100 8 8 8 8 8 8 8 8 8 8 8 8 8 8 1 1 12 10 1 100 1 12 10 1 100 10 1 100 1 1 1 1 1 1 1 1 1 1
-ciInstanceKlass org/jetbrains/kotlin/util/OneElementArrayMap 1 1 93 1 7 1 1 7 1 1 1 3 3 3 1 1 3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 7 1 1 1 1 1 8 1 7 1 1 12 10 1 12 10 12 9 12 9 1 1 1 1 100 1 12 10 1 1 1 100 1 1 12 10 1 1 1 12 10 1 7 1 1 1 1 1 1 1 1 1 1
+ciInstanceKlass org/jetbrains/kotlin/util/OneManaArrayMap 1 1 93 1 7 1 1 7 1 1 1 3 3 3 1 1 3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 7 1 1 1 1 1 8 1 7 1 1 12 10 1 12 10 12 9 12 9 1 1 1 1 100 1 12 10 1 1 1 100 1 1 12 10 1 1 1 12 10 1 7 1 1 1 1 1 1 1 1 1 1
 ciInstanceKlass org/jetbrains/kotlin/types/SimpleTypeWithAttributes 1 1 62 1 7 1 7 1 1 1 3 3 3 1 1 3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 8 1 7 1 1 12 10 8 1 12 10 12 9 1 1 1 12 10 12 10 1 12 10 1 100 1 1 1 1 1 1 1
 ciInstanceKlass org/jetbrains/kotlin/types/AbbreviatedType 1 1 113 1 7 1 7 1 1 1 3 3 3 1 1 3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 8 1 7 1 1 12 10 8 1 12 10 12 9 12 9 1 12 10 1 8 1 7 12 10 12 10 1 1 12 10 1 1 1 1 8 1 100 1 100 1 1 12 10 1 8 1 12 10 1 10 1 7 12 10 1 1 12 10 1 12 10 1 1 1 100 1 1 1 1 1 1 1
 ciInstanceKlass org/jetbrains/kotlin/types/FlexibleTypesKt 1 1 219 1 100 1 100 1 1 1 3 3 3 1 3 1 3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 8 1 7 1 1 12 10 1 7 1 1 12 10 1 7 1 1 1 8 1 12 10 1 1 1 12 10 1 7 1 1 12 10 1 12 10 1 1 1 1 1 1 7 1 1 12 11 1 7 1 7 1 1 12 10 1 1 12 11 1 100 1 12 11 1 1 12 11 1 12 11 1 1 12 10 1 100 1 1 12 9 1 1 12 10 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 100 1 100 1 1 12 10 1 1 12 10 1 1 12 11 1 1 12 11 1 100 1 1 12 10 1 100 11 1 1 12 11 12 10 1 100 1 12 10 1 100 1 12 10 1 1 1 1 1 1 1 1 1 1 1 1 1 1 100 1 100 1 12 10 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
@@ -7533,7 +7533,7 @@ ciMethod org/jetbrains/kotlin/util/NullableArrayMapAccessor getValue (Ljava/lang
 ciMethod org/jetbrains/kotlin/util/AbstractArrayMapOwner$AbstractArrayMapAccessor extractValue (Lorg/jetbrains/kotlin/util/AbstractArrayMapOwner;)Ljava/lang/Object; 512 0 31600 0 0
 ciMethod org/jetbrains/kotlin/descriptors/impl/AbstractTypeParameterDescriptor$TypeParameterTypeConstructor getDeclarationDescriptor ()Lorg/jetbrains/kotlin/descriptors/ClassifierDescriptor; 518 0 5406 0 104
 ciMethod org/jetbrains/kotlin/descriptors/impl/AbstractTypeParameterDescriptor$TypeParameterTypeConstructor $$$reportNull$$$0 (I)V 0 0 1 0 -1
-ciMethod org/jetbrains/kotlin/util/OneElementArrayMap get (I)Ljava/lang/Object; 526 0 1297 0 0
+ciMethod org/jetbrains/kotlin/util/OneManaArrayMap get (I)Ljava/lang/Object; 526 0 1297 0 0
 ciMethod org/jetbrains/kotlin/types/FlexibleTypesKt isFlexible (Lorg/jetbrains/kotlin/types/KotlinType;)Z 512 0 18047 0 0
 ciMethod org/jetbrains/kotlin/types/FlexibleTypesKt asFlexibleType (Lorg/jetbrains/kotlin/types/KotlinType;)Lorg/jetbrains/kotlin/types/FlexibleType; 134 0 1491 0 0
 ciMethod org/jetbrains/kotlin/descriptors/annotations/Annotations$DefaultImpls hasAnnotation (Lorg/jetbrains/kotlin/descriptors/annotations/Annotations;Lorg/jetbrains/kotlin/name/FqName;)Z 512 0 9072 0 144
@@ -7561,7 +7561,7 @@ ciMethodData kotlin/text/StringsKt__StringsKt indexOf$default (Ljava/lang/CharSe
 ciMethodData org/jetbrains/kotlin/types/AnnotationsTypeAttributeKt getAnnotationsAttribute (Lorg/jetbrains/kotlin/types/TypeAttributes;)Lorg/jetbrains/kotlin/types/AnnotationsTypeAttribute; 2 31344 orig 80 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 data 23 0x30002 0x7a70 0xf0005 0x0 0x1387844d2d8 0x7a70 0x0 0x0 0x140104 0x0 0x1387844b118 0x469 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x9 0x1 0xffffffffffffffff oops 2 4 org/jetbrains/kotlin/util/NullableArrayMapAccessor 10 org/jetbrains/kotlin/types/AnnotationsTypeAttribute methods 0
 ciMethodData org/jetbrains/kotlin/util/NullableArrayMapAccessor getValue (Ljava/lang/Object;Lkotlin/reflect/KProperty;)Ljava/lang/Object; 2 31344 orig 80 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 data 23 0x20004 0x0 0x13878449c30 0x1 0x0 0x0 0x60005 0x1 0x1387844d2d8 0x7a6f 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x9 0x3 0x0 0x0 0x0 oops 2 2 org/jetbrains/kotlin/types/TypeAttributes 8 org/jetbrains/kotlin/util/NullableArrayMapAccessor methods 0
 ciMethodData org/jetbrains/kotlin/util/NullableArrayMapAccessor getValue (Lorg/jetbrains/kotlin/util/AbstractArrayMapOwner;Lkotlin/reflect/KProperty;)Ljava/lang/Object; 2 31344 orig 80 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 data 21 0x30002 0x7a70 0x90002 0x7a70 0xe0005 0x1 0x1387844d2d8 0x7a6f 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x9 0x3 0x0 0x0 0x0 oops 1 6 org/jetbrains/kotlin/util/NullableArrayMapAccessor methods 0
-ciMethodData org/jetbrains/kotlin/util/AbstractArrayMapOwner$AbstractArrayMapAccessor extractValue (Lorg/jetbrains/kotlin/util/AbstractArrayMapOwner;)Ljava/lang/Object; 2 31344 orig 80 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 data 24 0x30002 0x7a70 0x70005 0x0 0x13878449c30 0x7a70 0x0 0x0 0xe0005 0x0 0x13801b21358 0x7607 0x13801b21400 0x469 0x0 0x0 0x0 0x0 0x0 0x0 0x9 0x2 0x0 0x0 oops 3 4 org/jetbrains/kotlin/types/TypeAttributes 10 org/jetbrains/kotlin/util/EmptyArrayMap 12 org/jetbrains/kotlin/util/OneElementArrayMap methods 0
+ciMethodData org/jetbrains/kotlin/util/AbstractArrayMapOwner$AbstractArrayMapAccessor extractValue (Lorg/jetbrains/kotlin/util/AbstractArrayMapOwner;)Ljava/lang/Object; 2 31344 orig 80 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 data 24 0x30002 0x7a70 0x70005 0x0 0x13878449c30 0x7a70 0x0 0x0 0xe0005 0x0 0x13801b21358 0x7607 0x13801b21400 0x469 0x0 0x0 0x0 0x0 0x0 0x0 0x9 0x2 0x0 0x0 oops 3 4 org/jetbrains/kotlin/types/TypeAttributes 10 org/jetbrains/kotlin/util/EmptyArrayMap 12 org/jetbrains/kotlin/util/OneManaArrayMap methods 0
 ciMethodData org/jetbrains/kotlin/types/AnnotationsTypeAttributeKt getAnnotations (Lorg/jetbrains/kotlin/types/TypeAttributes;)Lorg/jetbrains/kotlin/descriptors/annotations/Annotations; 2 30564 orig 80 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 data 33 0x30002 0x7764 0x70002 0x7764 0xb0007 0x736d 0x70 0x3f7 0xe0005 0x0 0x1387844b118 0x3f7 0x0 0x0 0x120007 0x3f7 0x50 0x0 0x190005 0x0 0x1387844b598 0x736d 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x9 0x1 0xffffffffffffffff oops 2 10 org/jetbrains/kotlin/types/AnnotationsTypeAttribute 20 org/jetbrains/kotlin/descriptors/annotations/Annotations$Companion methods 0
 ciMethodData org/jetbrains/kotlin/types/KotlinType getAnnotations ()Lorg/jetbrains/kotlin/descriptors/annotations/Annotations; 2 43206 orig 80 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 data 17 0x10005 0x1617 0x13878496fe0 0x7bd5 0x13878497088 0x16e0 0x40002 0xa8cc 0x800000040001000d 0x1387844a160 0x800000040001000d 0x1387844a380 0x0 0x0 0x9 0x1 0xffffffffffffffff oops 2 2 org/jetbrains/kotlin/types/SimpleTypeImpl 4 org/jetbrains/kotlin/types/NullableSimpleType methods 2 9 org/jetbrains/kotlin/resolve/calls/inference/model/NewConstraintSystemImpl hasExactAnnotation (Lorg/jetbrains/kotlin/types/model/KotlinTypeMarker;)Z 11 org/jetbrains/kotlin/resolve/calls/inference/components/TypeCheckerStateForConstraintSystem isTypeVariableWithExact (Lorg/jetbrains/kotlin/types/model/KotlinTypeMarker;)Z
 ciMethodData org/jetbrains/kotlin/util/EmptyArrayMap get (I)Ljava/lang/Object; 2 5137 orig 80 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 data 16 0x20005 0x0 0x13801b21358 0x1411 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x9 0x2 0x0 0x0 oops 1 2 org/jetbrains/kotlin/util/EmptyArrayMap methods 0
@@ -7634,7 +7634,7 @@ ciMethodData org/jetbrains/kotlin/load/kotlin/TypeSignatureMappingKt mapBuiltInT
 ciMethodData org/jetbrains/kotlin/load/kotlin/TypeSignatureMappingKt boxTypeIfNeeded (Lorg/jetbrains/kotlin/load/kotlin/JvmTypeFactory;Ljava/lang/Object;Z)Ljava/lang/Object; 2 4575 orig 80 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 data 28 0x30002 0x11df 0x90002 0x11df 0xd0007 0x11a3 0x68 0x3c 0x120005 0x0 0x1387db1cff0 0x39 0x1387db1d098 0x3 0x170003 0x3c 0x18 0x0 0x0 0x0 0x0 0x0 0x0 0x9 0x3 0x0 0x0 0x0 oops 2 10 org/jetbrains/kotlin/load/kotlin/JvmTypeFactoryImpl 12 org/jetbrains/kotlin/codegen/signature/AsmTypeFactory methods 0
 ciMethodData org/jetbrains/kotlin/types/checker/SimpleClassicTypeSystemContext getPrimitiveType (Lorg/jetbrains/kotlin/types/model/TypeConstructorMarker;)Lorg/jetbrains/kotlin/builtins/PrimitiveType; 2 4513 orig 80 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 data 12 0x20002 0x11a1 0x0 0x0 0x0 0x0 0x0 0x0 0x9 0x2 0x0 0x0 oops 0 methods 0
 ciMethodData org/jetbrains/kotlin/types/checker/ClassicTypeSystemContext$DefaultImpls getPrimitiveType (Lorg/jetbrains/kotlin/types/checker/ClassicTypeSystemContext;Lorg/jetbrains/kotlin/types/model/TypeConstructorMarker;)Lorg/jetbrains/kotlin/builtins/PrimitiveType; 2 4511 orig 80 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 data 98 0x30002 0x119f 0x70004 0x0 0x1387394fcf0 0xd0a 0x1387f0fffe8 0x495 0xa0007 0x119f 0x1a0 0x0 0x180002 0x0 0x1d0005 0x0 0x0 0x0 0x0 0x0 0x210005 0x0 0x0 0x0 0x0 0x0 0x260005 0x0 0x0 0x0 0x0 0x0 0x2a0005 0x0 0x0 0x0 0x0 0x0 0x2d0002 0x0 0x300005 0x0 0x0 0x0 0x0 0x0 0x330005 0x0 0x0 0x0 0x0 0x0 0x3c0005 0x0 0x0 0x0 0x0 0x0 0x3f0002 0x0 0x440004 0x0 0x1387394fcf0 0xd0a 0x1387f0fffe8 0x495 0x470005 0x0 0x1387394fcf0 0xd0a 0x1387f0fffe8 0x495 0x500002 0x119f 0x530004 0x0 0x1387f100090 0xd0a 0x1387f100138 0x495 0x560004 0x0 0x1387f100090 0xd0a 0x1387f100138 0x495 0x590002 0x119f 0x0 0x0 0x0 0x0 0x0 0x0 0x9 0x2 0x0 0x0 oops 10 4 org/jetbrains/kotlin/serialization/deserialization/descriptors/DeserializedClassDescriptor$DeserializedClassTypeConstructor 6 org/jetbrains/kotlin/load/java/lazy/descriptors/LazyJavaClassDescriptor$LazyJavaClassTypeConstructor 62 org/jetbrains/kotlin/serialization/deserialization/descriptors/DeserializedClassDescriptor$DeserializedClassTypeConstructor 64 org/jetbrains/kotlin/load/java/lazy/descriptors/LazyJavaClassDescriptor$LazyJavaClassTypeConstructor 68 org/jetbrains/kotlin/serialization/deserialization/descriptors/DeserializedClassDescriptor$DeserializedClassTypeConstructor 70 org/jetbrains/kotlin/load/java/lazy/descriptors/LazyJavaClassDescriptor$LazyJavaClassTypeConstructor 76 org/jetbrains/kotlin/serialization/deserialization/descriptors/DeserializedClassDescriptor 78 org/jetbrains/kotlin/load/java/lazy/descriptors/LazyJavaClassDescriptor 82 org/jetbrains/kotlin/serialization/deserialization/descriptors/DeserializedClassDescriptor 84 org/jetbrains/kotlin/load/java/lazy/descriptors/LazyJavaClassDescriptor methods 0
-ciMethodData org/jetbrains/kotlin/util/OneElementArrayMap get (I)Ljava/lang/Object; 2 1034 orig 80 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 data 15 0x50007 0x0 0x38 0x40a 0xc0003 0x40a 0x18 0x0 0x0 0x0 0x0 0x9 0x2 0x0 0x0 oops 0 methods 0
+ciMethodData org/jetbrains/kotlin/util/OneManaArrayMap get (I)Ljava/lang/Object; 2 1034 orig 80 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 data 15 0x50007 0x0 0x38 0x40a 0xc0003 0x40a 0x18 0x0 0x0 0x0 0x0 0x9 0x2 0x0 0x0 oops 0 methods 0
 ciMethodData org/jetbrains/kotlin/types/checker/SimpleClassicTypeSystemContext hasAnnotation (Lorg/jetbrains/kotlin/types/model/KotlinTypeMarker;Lorg/jetbrains/kotlin/name/FqName;)Z 2 4408 orig 80 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 data 13 0x30002 0x1138 0x0 0x0 0x0 0x0 0x0 0x0 0x9 0x3 0x0 0x0 0x0 oops 0 methods 0
 ciMethodData org/jetbrains/kotlin/types/checker/ClassicTypeSystemContext$DefaultImpls hasAnnotation (Lorg/jetbrains/kotlin/types/checker/ClassicTypeSystemContext;Lorg/jetbrains/kotlin/types/model/KotlinTypeMarker;Lorg/jetbrains/kotlin/name/FqName;)Z 2 4408 orig 80 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 data 91 0x30002 0x1138 0xa0002 0x1138 0xe0004 0xb 0x13878496fe0 0x10f0 0x1387f1fd100 0x3d 0x110007 0x1138 0x1a0 0x0 0x200002 0x0 0x250005 0x0 0x0 0x0 0x0 0x0 0x2a0005 0x0 0x0 0x0 0x0 0x0 0x2f0005 0x0 0x0 0x0 0x0 0x0 0x340005 0x0 0x0 0x0 0x0 0x0 0x370002 0x0 0x3a0005 0x0 0x0 0x0 0x0 0x0 0x3d0005 0x0 0x0 0x0 0x0 0x0 0x460005 0x0 0x0 0x0 0x0 0x0 0x490002 0x0 0x4e0004 0xb 0x13878496fe0 0x10f0 0x1387f1fd100 0x3d 0x510005 0xb 0x13878496fe0 0x10f0 0x1387f1fd100 0x3d 0x550005 0x7 0x13878448bc0 0x112d 0x13878448c68 0x4 0x0 0x0 0x0 0x0 0x0 0x0 0x9 0x3 0x0 0x0 0x0 oops 8 6 org/jetbrains/kotlin/types/SimpleTypeImpl 8 org/jetbrains/kotlin/types/DeferredType 64 org/jetbrains/kotlin/types/SimpleTypeImpl 66 org/jetbrains/kotlin/types/DeferredType 70 org/jetbrains/kotlin/types/SimpleTypeImpl 72 org/jetbrains/kotlin/types/DeferredType 76 org/jetbrains/kotlin/descriptors/annotations/Annotations$Companion$EMPTY$1 78 org/jetbrains/kotlin/serialization/deserialization/descriptors/DeserializedAnnotations methods 0
 ciMethodData org/jetbrains/kotlin/types/checker/SimpleClassicTypeSystemContext getPrimitiveArrayType (Lorg/jetbrains/kotlin/types/model/TypeConstructorMarker;)Lorg/jetbrains/kotlin/builtins/PrimitiveType; 2 3137 orig 80 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 data 12 0x20002 0xc41 0x0 0x0 0x0 0x0 0x0 0x0 0x9 0x2 0x0 0x0 oops 0 methods 0
@@ -7647,4 +7647,4 @@ ciMethodData org/jetbrains/kotlin/types/checker/ClassicTypeSystemContext$Default
 ciMethodData org/jetbrains/kotlin/types/checker/SimpleClassicTypeSystemContext isNullableType (Lorg/jetbrains/kotlin/types/model/KotlinTypeMarker;)Z 2 1143 orig 80 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 data 12 0x20002 0x477 0x0 0x0 0x0 0x0 0x0 0x0 0x9 0x2 0x0 0x0 oops 0 methods 0
 ciMethodData org/jetbrains/kotlin/load/kotlin/JvmTypeFactoryImpl createPrimitiveType (Lorg/jetbrains/kotlin/builtins/PrimitiveType;)Ljava/lang/Object; 1 927 orig 80 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 data 16 0x20005 0x0 0x1387db1cff0 0x39f 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x9 0x2 0x0 0x0 oops 1 2 org/jetbrains/kotlin/load/kotlin/JvmTypeFactoryImpl methods 0
 ciMethod org/jetbrains/kotlin/codegen/AsmUtil boxType (Lorg/jetbrains/org/objectweb/asm/Type;)Lorg/jetbrains/org/objectweb/asm/Type; 6 0 3 0 -1
-compile org/jetbrains/kotlin/load/kotlin/TypeSignatureMappingKt mapBuiltInType (Lorg/jetbrains/kotlin/types/TypeSystemCommonBackendContext;Lorg/jetbrains/kotlin/types/model/KotlinTypeMarker;Lorg/jetbrains/kotlin/load/kotlin/JvmTypeFactory;Lorg/jetbrains/kotlin/load/kotlin/TypeMappingMode;)Ljava/lang/Object; -1 4 inline 252 0 -1 0 org/jetbrains/kotlin/load/kotlin/TypeSignatureMappingKt mapBuiltInType (Lorg/jetbrains/kotlin/types/TypeSystemCommonBackendContext;Lorg/jetbrains/kotlin/types/model/KotlinTypeMarker;Lorg/jetbrains/kotlin/load/kotlin/JvmTypeFactory;Lorg/jetbrains/kotlin/load/kotlin/TypeMappingMode;)Ljava/lang/Object; 1 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 1 9 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 1 15 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 1 21 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 1 26 0 org/jetbrains/kotlin/types/model/TypeSystemContext typeConstructor (Lorg/jetbrains/kotlin/types/model/KotlinTypeMarker;)Lorg/jetbrains/kotlin/types/model/TypeConstructorMarker; 2 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 2 9 0 org/jetbrains/kotlin/types/checker/SimpleClassicTypeSystemContext asSimpleType (Lorg/jetbrains/kotlin/types/model/KotlinTypeMarker;)Lorg/jetbrains/kotlin/types/model/SimpleTypeMarker; 3 2 0 org/jetbrains/kotlin/types/checker/ClassicTypeSystemContext$DefaultImpls asSimpleType (Lorg/jetbrains/kotlin/types/checker/ClassicTypeSystemContext;Lorg/jetbrains/kotlin/types/model/KotlinTypeMarker;)Lorg/jetbrains/kotlin/types/model/SimpleTypeMarker; 4 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 2 21 0 org/jetbrains/kotlin/types/model/TypeSystemContext lowerBoundIfFlexible (Lorg/jetbrains/kotlin/types/model/KotlinTypeMarker;)Lorg/jetbrains/kotlin/types/model/SimpleTypeMarker; 3 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 3 8 0 org/jetbrains/kotlin/types/checker/SimpleClassicTypeSystemContext asFlexibleType (Lorg/jetbrains/kotlin/types/model/KotlinTypeMarker;)Lorg/jetbrains/kotlin/types/model/FlexibleTypeMarker; 4 2 0 org/jetbrains/kotlin/types/checker/ClassicTypeSystemContext$DefaultImpls asFlexibleType (Lorg/jetbrains/kotlin/types/checker/ClassicTypeSystemContext;Lorg/jetbrains/kotlin/types/model/KotlinTypeMarker;)Lorg/jetbrains/kotlin/types/model/FlexibleTypeMarker; 5 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 3 19 0 org/jetbrains/kotlin/types/checker/SimpleClassicTypeSystemContext lowerBound (Lorg/jetbrains/kotlin/types/model/FlexibleTypeMarker;)Lorg/jetbrains/kotlin/types/model/SimpleTypeMarker; 4 2 0 org/jetbrains/kotlin/types/checker/ClassicTypeSystemContext$DefaultImpls lowerBound (Lorg/jetbrains/kotlin/types/checker/ClassicTypeSystemContext;Lorg/jetbrains/kotlin/types/model/FlexibleTypeMarker;)Lorg/jetbrains/kotlin/types/model/SimpleTypeMarker; 5 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 5 71 0 org/jetbrains/kotlin/types/FlexibleType getLowerBound ()Lorg/jetbrains/kotlin/types/SimpleType; 3 31 0 org/jetbrains/kotlin/types/checker/SimpleClassicTypeSystemContext asSimpleType (Lorg/jetbrains/kotlin/types/model/KotlinTypeMarker;)Lorg/jetbrains/kotlin/types/model/SimpleTypeMarker; 4 2 0 org/jetbrains/kotlin/types/checker/ClassicTypeSystemContext$DefaultImpls asSimpleType (Lorg/jetbrains/kotlin/types/checker/ClassicTypeSystemContext;Lorg/jetbrains/kotlin/types/model/KotlinTypeMarker;)Lorg/jetbrains/kotlin/types/model/SimpleTypeMarker; 5 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 3 37 0 kotlin/jvm/internal/Intrinsics checkNotNull (Ljava/lang/Object;)V 2 26 0 org/jetbrains/kotlin/types/checker/SimpleClassicTypeSystemContext typeConstructor (Lorg/jetbrains/kotlin/types/model/SimpleTypeMarker;)Lorg/jetbrains/kotlin/types/model/TypeConstructorMarker; 3 2 0 org/jetbrains/kotlin/types/checker/ClassicTypeSystemContext$DefaultImpls typeConstructor (Lorg/jetbrains/kotlin/types/checker/ClassicTypeSystemContext;Lorg/jetbrains/kotlin/types/model/SimpleTypeMarker;)Lorg/jetbrains/kotlin/types/model/TypeConstructorMarker; 4 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 1 36 0 org/jetbrains/kotlin/types/checker/SimpleClassicTypeSystemContext isClassTypeConstructor (Lorg/jetbrains/kotlin/types/model/TypeConstructorMarker;)Z 2 2 0 org/jetbrains/kotlin/types/checker/ClassicTypeSystemContext$DefaultImpls isClassTypeConstructor (Lorg/jetbrains/kotlin/types/checker/ClassicTypeSystemContext;Lorg/jetbrains/kotlin/types/model/TypeConstructorMarker;)Z 3 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 1 49 0 org/jetbrains/kotlin/types/checker/SimpleClassicTypeSystemContext getPrimitiveType (Lorg/jetbrains/kotlin/types/model/TypeConstructorMarker;)Lorg/jetbrains/kotlin/builtins/PrimitiveType; 2 2 0 org/jetbrains/kotlin/types/checker/ClassicTypeSystemContext$DefaultImpls getPrimitiveType (Lorg/jetbrains/kotlin/types/checker/ClassicTypeSystemContext;Lorg/jetbrains/kotlin/types/model/TypeConstructorMarker;)Lorg/jetbrains/kotlin/builtins/PrimitiveType; 3 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 3 71 0 org/jetbrains/kotlin/serialization/deserialization/descriptors/DeserializedClassDescriptor$DeserializedClassTypeConstructor getDeclarationDescriptor ()Lorg/jetbrains/kotlin/descriptors/ClassifierDescriptor; 4 1 0 org/jetbrains/kotlin/serialization/deserialization/descriptors/DeserializedClassDescriptor$DeserializedClassTypeConstructor getDeclarationDescriptor ()Lorg/jetbrains/kotlin/serialization/deserialization/descriptors/DeserializedClassDescriptor; 3 71 0 org/jetbrains/kotlin/load/java/lazy/descriptors/LazyJavaClassDescriptor$LazyJavaClassTypeConstructor getDeclarationDescriptor ()Lorg/jetbrains/kotlin/descriptors/ClassifierDescriptor; 4 1 0 org/jetbrains/kotlin/load/java/lazy/descriptors/LazyJavaClassDescriptor$LazyJavaClassTypeConstructor getDeclarationDescriptor ()Lorg/jetbrains/kotlin/descriptors/ClassDescriptor; 3 80 0 kotlin/jvm/internal/Intrinsics checkNotNull (Ljava/lang/Object;Ljava/lang/String;)V 1 64 0 org/jetbrains/kotlin/load/kotlin/JvmTypeFactoryImpl createPrimitiveType (Lorg/jetbrains/kotlin/builtins/PrimitiveType;)Ljava/lang/Object; 1 64 0 org/jetbrains/kotlin/codegen/signature/AsmTypeFactory createPrimitiveType (Lorg/jetbrains/kotlin/builtins/PrimitiveType;)Ljava/lang/Object; 1 73 0 org/jetbrains/kotlin/types/checker/SimpleClassicTypeSystemContext isNullableType (Lorg/jetbrains/kotlin/types/model/KotlinTypeMarker;)Z 2 2 0 org/jetbrains/kotlin/types/checker/ClassicTypeSystemContext$DefaultImpls isNullableType (Lorg/jetbrains/kotlin/types/checker/ClassicTypeSystemContext;Lorg/jetbrains/kotlin/types/model/KotlinTypeMarker;)Z 3 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 3 71 0 org/jetbrains/kotlin/types/TypeUtils isNullableType (Lorg/jetbrains/kotlin/types/KotlinType;)Z 4 10 0 org/jetbrains/kotlin/types/SimpleTypeImpl isMarkedNullable ()Z 4 19 0 org/jetbrains/kotlin/types/FlexibleTypesKt isFlexible (Lorg/jetbrains/kotlin/types/KotlinType;)Z 5 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 4 26 0 org/jetbrains/kotlin/types/FlexibleTypesKt asFlexibleType (Lorg/jetbrains/kotlin/types/KotlinType;)Lorg/jetbrains/kotlin/types/FlexibleType; 5 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 5 13 0 kotlin/jvm/internal/Intrinsics checkNotNull (Ljava/lang/Object;Ljava/lang/String;)V 4 29 0 org/jetbrains/kotlin/types/FlexibleType getUpperBound ()Lorg/jetbrains/kotlin/types/SimpleType; 4 41 0 org/jetbrains/kotlin/types/SpecialTypesKt isDefinitelyNotNullType (Lorg/jetbrains/kotlin/types/KotlinType;)Z 5 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 5 7 0 org/jetbrains/kotlin/types/UnwrappedType unwrap ()Lorg/jetbrains/kotlin/types/UnwrappedType; 4 50 0 org/jetbrains/kotlin/types/TypeUtils isTypeParameter (Lorg/jetbrains/kotlin/types/KotlinType;)Z 5 10 0 org/jetbrains/kotlin/types/TypeUtils getTypeParameterDescriptorOrNull (Lorg/jetbrains/kotlin/types/KotlinType;)Lorg/jetbrains/kotlin/descriptors/TypeParameterDescriptor; 6 10 0 org/jetbrains/kotlin/types/SimpleTypeImpl getConstructor ()Lorg/jetbrains/kotlin/types/TypeConstructor; 6 25 0 org/jetbrains/kotlin/types/SimpleTypeImpl getConstructor ()Lorg/jetbrains/kotlin/types/TypeConstructor; 5 17 0 org/jetbrains/kotlin/types/SimpleTypeImpl getConstructor ()Lorg/jetbrains/kotlin/types/TypeConstructor; 4 106 0 org/jetbrains/kotlin/types/SimpleTypeImpl getConstructor ()Lorg/jetbrains/kotlin/types/TypeConstructor; 1 83 0 org/jetbrains/kotlin/load/java/typeEnhancement/TypeEnhancementUtilsKt hasEnhancedNullability (Lorg/jetbrains/kotlin/types/TypeSystemCommonBackendContext;Lorg/jetbrains/kotlin/types/model/KotlinTypeMarker;)Z 2 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 2 9 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 2 20 0 kotlin/jvm/internal/Intrinsics checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V 2 23 0 org/jetbrains/kotlin/types/checker/SimpleClassicTypeSystemContext hasAnnotation (Lorg/jetbrains/kotlin/types/model/KotlinTypeMarker;Lorg/jetbrains/kotlin/name/FqName;)Z 3 3 0 org/jetbrains/kotlin/types/checker/ClassicTypeSystemContext$DefaultImpls hasAnnotation (Lorg/jetbrains/kotlin/types/checker/ClassicTypeSystemContext;Lorg/jetbrains/kotlin/types/model/KotlinTypeMarker;Lorg/jetbrains/kotlin/name/FqName;)Z 4 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 4 10 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 4 81 0 org/jetbrains/kotlin/types/KotlinType getAnnotations ()Lorg/jetbrains/kotlin/descriptors/annotations/Annotations; 5 4 0 org/jetbrains/kotlin/types/AnnotationsTypeAttributeKt getAnnotations (Lorg/jetbrains/kotlin/types/TypeAttributes;)Lorg/jetbrains/kotlin/descriptors/annotations/Annotations; 6 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 6 7 0 org/jetbrains/kotlin/types/AnnotationsTypeAttributeKt getAnnotationsAttribute (Lorg/jetbrains/kotlin/types/TypeAttributes;)Lorg/jetbrains/kotlin/types/AnnotationsTypeAttribute; 7 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 7 15 0 org/jetbrains/kotlin/util/NullableArrayMapAccessor getValue (Ljava/lang/Object;Lkotlin/reflect/KProperty;)Ljava/lang/Object; 8 6 0 org/jetbrains/kotlin/util/NullableArrayMapAccessor getValue (Lorg/jetbrains/kotlin/util/AbstractArrayMapOwner;Lkotlin/reflect/KProperty;)Ljava/lang/Object; 9 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 9 9 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 9 14 0 org/jetbrains/kotlin/util/AbstractArrayMapOwner$AbstractArrayMapAccessor extractValue (Lorg/jetbrains/kotlin/util/AbstractArrayMapOwner;)Ljava/lang/Object; 10 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 10 7 0 org/jetbrains/kotlin/util/AttributeArrayOwner getArrayMap ()Lorg/jetbrains/kotlin/util/ArrayMap; 10 14 0 org/jetbrains/kotlin/util/EmptyArrayMap get (I)Ljava/lang/Object; 11 2 0 org/jetbrains/kotlin/util/EmptyArrayMap get (I)Ljava/lang/Void; 10 14 0 org/jetbrains/kotlin/util/OneElementArrayMap get (I)Ljava/lang/Object; 6 14 0 org/jetbrains/kotlin/types/AnnotationsTypeAttribute getAnnotations ()Lorg/jetbrains/kotlin/descriptors/annotations/Annotations; 6 25 0 org/jetbrains/kotlin/descriptors/annotations/Annotations$Companion getEMPTY ()Lorg/jetbrains/kotlin/descriptors/annotations/Annotations; 4 85 0 org/jetbrains/kotlin/descriptors/annotations/Annotations$Companion$EMPTY$1 hasAnnotation (Lorg/jetbrains/kotlin/name/FqName;)Z 5 2 0 org/jetbrains/kotlin/descriptors/annotations/Annotations$DefaultImpls hasAnnotation (Lorg/jetbrains/kotlin/descriptors/annotations/Annotations;Lorg/jetbrains/kotlin/name/FqName;)Z 6 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 6 8 0 org/jetbrains/kotlin/descriptors/annotations/Annotations$Companion$EMPTY$1 findAnnotation (Lorg/jetbrains/kotlin/name/FqName;)Lorg/jetbrains/kotlin/descriptors/annotations/AnnotationDescriptor; 7 2 0 org/jetbrains/kotlin/descriptors/annotations/Annotations$Companion$EMPTY$1 findAnnotation (Lorg/jetbrains/kotlin/name/FqName;)Ljava/lang/Void; 8 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 1 101 0 org/jetbrains/kotlin/load/kotlin/TypeSignatureMappingKt boxTypeIfNeeded (Lorg/jetbrains/kotlin/load/kotlin/JvmTypeFactory;Ljava/lang/Object;Z)Ljava/lang/Object; 2 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 2 9 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 2 18 0 org/jetbrains/kotlin/load/kotlin/JvmTypeFactoryImpl boxType (Ljava/lang/Object;)Ljava/lang/Object; 2 18 0 org/jetbrains/kotlin/codegen/signature/AsmTypeFactory boxType (Ljava/lang/Object;)Ljava/lang/Object; 1 108 0 org/jetbrains/kotlin/types/checker/SimpleClassicTypeSystemContext getPrimitiveArrayType (Lorg/jetbrains/kotlin/types/model/TypeConstructorMarker;)Lorg/jetbrains/kotlin/builtins/PrimitiveType; 2 2 0 org/jetbrains/kotlin/types/checker/ClassicTypeSystemContext$DefaultImpls getPrimitiveArrayType (Lorg/jetbrains/kotlin/types/checker/ClassicTypeSystemContext;Lorg/jetbrains/kotlin/types/model/TypeConstructorMarker;)Lorg/jetbrains/kotlin/builtins/PrimitiveType; 3 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 3 71 0 org/jetbrains/kotlin/serialization/deserialization/descriptors/DeserializedClassDescriptor$DeserializedClassTypeConstructor getDeclarationDescriptor ()Lorg/jetbrains/kotlin/descriptors/ClassifierDescriptor; 4 1 0 org/jetbrains/kotlin/serialization/deserialization/descriptors/DeserializedClassDescriptor$DeserializedClassTypeConstructor getDeclarationDescriptor ()Lorg/jetbrains/kotlin/serialization/deserialization/descriptors/DeserializedClassDescriptor; 3 71 0 org/jetbrains/kotlin/load/java/lazy/descriptors/LazyJavaClassDescriptor$LazyJavaClassTypeConstructor getDeclarationDescriptor ()Lorg/jetbrains/kotlin/descriptors/ClassifierDescriptor; 4 1 0 org/jetbrains/kotlin/load/java/lazy/descriptors/LazyJavaClassDescriptor$LazyJavaClassTypeConstructor getDeclarationDescriptor ()Lorg/jetbrains/kotlin/descriptors/ClassDescriptor; 3 80 0 kotlin/jvm/internal/Intrinsics checkNotNull (Ljava/lang/Object;Ljava/lang/String;)V 1 125 0 java/lang/StringBuilder <init> ()V 1 147 0 org/jetbrains/kotlin/load/kotlin/JvmTypeFactoryImpl createFromString (Ljava/lang/String;)Ljava/lang/Object; 1 156 0 org/jetbrains/kotlin/types/checker/SimpleClassicTypeSystemContext isUnderKotlinPackage (Lorg/jetbrains/kotlin/types/model/TypeConstructorMarker;)Z 2 2 0 org/jetbrains/kotlin/types/checker/ClassicTypeSystemContext$DefaultImpls isUnderKotlinPackage (Lorg/jetbrains/kotlin/types/checker/ClassicTypeSystemContext;Lorg/jetbrains/kotlin/types/model/TypeConstructorMarker;)Z 3 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 3 71 0 org/jetbrains/kotlin/serialization/deserialization/descriptors/DeserializedClassDescriptor$DeserializedClassTypeConstructor getDeclarationDescriptor ()Lorg/jetbrains/kotlin/descriptors/ClassifierDescriptor; 4 1 0 org/jetbrains/kotlin/serialization/deserialization/descriptors/DeserializedClassDescriptor$DeserializedClassTypeConstructor getDeclarationDescriptor ()Lorg/jetbrains/kotlin/serialization/deserialization/descriptors/DeserializedClassDescriptor; 3 71 0 org/jetbrains/kotlin/load/java/lazy/descriptors/LazyJavaClassDescriptor$LazyJavaClassTypeConstructor getDeclarationDescriptor ()Lorg/jetbrains/kotlin/descriptors/ClassifierDescriptor; 4 1 0 org/jetbrains/kotlin/load/java/lazy/descriptors/LazyJavaClassDescriptor$LazyJavaClassTypeConstructor getDeclarationDescriptor ()Lorg/jetbrains/kotlin/descriptors/ClassDescriptor; 3 88 0 org/jetbrains/kotlin/builtins/KotlinBuiltIns isUnderKotlinPackage (Lorg/jetbrains/kotlin/descriptors/DeclarationDescriptor;)Z 4 34 0 org/jetbrains/kotlin/name/FqName startsWith (Lorg/jetbrains/kotlin/name/Name;)Z 5 14 0 org/jetbrains/kotlin/name/FqNameUnsafe startsWith (Lorg/jetbrains/kotlin/name/Name;)Z 6 10 0 org/jetbrains/kotlin/name/FqNameUnsafe isRoot ()Z 7 4 0 java/lang/String isEmpty ()Z 6 24 0 java/lang/String indexOf (I)I 7 1 0 java/lang/String isLatin1 ()Z 7 18 0 java/lang/StringLatin1 indexOf ([BIII)I 8 1 0 java/lang/StringLatin1 canEncode (I)Z 6 29 0 org/jetbrains/kotlin/name/Name asString ()Ljava/lang/String; 6 49 0 java/lang/String length ()I 7 6 0 java/lang/String coder ()B 6 53 0 java/lang/String length ()I 7 6 0 java/lang/String coder ()B 6 63 0 java/lang/String regionMatches (ILjava/lang/String;II)Z 7 11 0 java/lang/String length ()I 8 6 0 java/lang/String coder ()B 7 26 0 java/lang/String length ()I 8 6 0 java/lang/String coder ()B 7 60 0 java/lang/String coder ()B 7 68 0 java/lang/String coder ()B 7 102 0 jdk/internal/util/ArraysSupport mismatch ([BI[BII)I 1 167 0 org/jetbrains/kotlin/types/checker/SimpleClassicTypeSystemContext getClassFqNameUnsafe (Lorg/jetbrains/kotlin/types/model/TypeConstructorMarker;)Lorg/jetbrains/kotlin/name/FqNameUnsafe; 2 2 0 org/jetbrains/kotlin/types/checker/ClassicTypeSystemContext$DefaultImpls getClassFqNameUnsafe (Lorg/jetbrains/kotlin/types/checker/ClassicTypeSystemContext;Lorg/jetbrains/kotlin/types/model/TypeConstructorMarker;)Lorg/jetbrains/kotlin/name/FqNameUnsafe; 3 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 3 71 0 org/jetbrains/kotlin/serialization/deserialization/descriptors/DeserializedClassDescriptor$DeserializedClassTypeConstructor getDeclarationDescriptor ()Lorg/jetbrains/kotlin/descriptors/ClassifierDescriptor; 4 1 0 org/jetbrains/kotlin/serialization/deserialization/descriptors/DeserializedClassDescriptor$DeserializedClassTypeConstructor getDeclarationDescriptor ()Lorg/jetbrains/kotlin/serialization/deserialization/descriptors/DeserializedClassDescriptor; 3 80 0 kotlin/jvm/internal/Intrinsics checkNotNull (Ljava/lang/Object;Ljava/lang/String;)V 3 89 0 org/jetbrains/kotlin/resolve/descriptorUtil/DescriptorUtilsKt getFqNameUnsafe (Lorg/jetbrains/kotlin/descriptors/DeclarationDescriptor;)Lorg/jetbrains/kotlin/name/FqNameUnsafe; 4 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 4 14 0 kotlin/jvm/internal/Intrinsics checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V 1 194 0 org/jetbrains/kotlin/builtins/jvm/JavaToKotlinClassMap mapKotlinToJava (Lorg/jetbrains/kotlin/name/FqNameUnsafe;)Lorg/jetbrains/kotlin/name/ClassId; 2 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 2 12 0 org/jetbrains/kotlin/builtins/jvm/JavaToKotlinClassMap isKotlinFunctionWithBigArity (Lorg/jetbrains/kotlin/name/FqNameUnsafe;Ljava/lang/String;)Z 3 1 0 org/jetbrains/kotlin/name/FqNameUnsafe asString ()Ljava/lang/String; 3 7 0 kotlin/jvm/internal/Intrinsics checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V 3 13 0 kotlin/text/StringsKt__StringsKt substringAfter (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String; 4 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 4 10 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 4 17 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 4 30 0 kotlin/text/StringsKt__StringsKt indexOf$default (Ljava/lang/CharSequence;Ljava/lang/String;IZILjava/lang/Object;)I 5 22 0 kotlin/text/StringsKt__StringsKt indexOf (Ljava/lang/CharSequence;Ljava/lang/String;IZ)I 6 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 6 10 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 6 53 0 java/lang/String indexOf (Ljava/lang/String;I)I 7 5 0 java/lang/String coder ()B 7 9 0 java/lang/String length ()I 8 6 0 java/lang/String coder ()B 7 14 0 java/lang/String indexOf ([BBILjava/lang/String;I)I 8 5 0 java/lang/Math clamp (JII)I 8 11 0 java/lang/String length ()I 9 6 0 java/lang/String coder ()B 8 42 0 java/lang/String coder ()B 3 21 0 java/lang/String length ()I 4 6 0 java/lang/String coder ()B 2 29 0 org/jetbrains/kotlin/builtins/jvm/JavaToKotlinClassMap isKotlinFunctionWithBigArity (Lorg/jetbrains/kotlin/name/FqNameUnsafe;Ljava/lang/String;)Z 3 1 0 org/jetbrains/kotlin/name/FqNameUnsafe asString ()Ljava/lang/String; 3 7 0 kotlin/jvm/internal/Intrinsics checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V 3 13 0 kotlin/text/StringsKt__StringsKt substringAfter (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String; 4 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 4 10 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 4 17 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 4 30 0 kotlin/text/StringsKt__StringsKt indexOf$default (Ljava/lang/CharSequence;Ljava/lang/String;IZILjava/lang/Object;)I 5 22 0 kotlin/text/StringsKt__StringsKt indexOf (Ljava/lang/CharSequence;Ljava/lang/String;IZ)I 6 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 6 10 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 6 53 0 java/lang/String indexOf (Ljava/lang/String;I)I 7 5 0 java/lang/String coder ()B 7 9 0 java/lang/String length ()I 8 6 0 java/lang/String coder ()B 7 14 0 java/lang/String indexOf ([BBILjava/lang/String;I)I 8 5 0 java/lang/Math clamp (JII)I 8 11 0 java/lang/String length ()I 9 6 0 java/lang/String coder ()B 8 42 0 java/lang/String coder ()B 3 21 0 java/lang/String length ()I 4 6 0 java/lang/String coder ()B 2 46 0 org/jetbrains/kotlin/builtins/jvm/JavaToKotlinClassMap isKotlinFunctionWithBigArity (Lorg/jetbrains/kotlin/name/FqNameUnsafe;Ljava/lang/String;)Z 3 1 0 org/jetbrains/kotlin/name/FqNameUnsafe asString ()Ljava/lang/String; 3 7 0 kotlin/jvm/internal/Intrinsics checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V 3 13 0 kotlin/text/StringsKt__StringsKt substringAfter (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String; 4 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 4 10 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 4 17 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 4 30 0 kotlin/text/StringsKt__StringsKt indexOf$default (Ljava/lang/CharSequence;Ljava/lang/String;IZILjava/lang/Object;)I 5 22 0 kotlin/text/StringsKt__StringsKt indexOf (Ljava/lang/CharSequence;Ljava/lang/String;IZ)I 6 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 6 10 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 6 53 0 java/lang/String indexOf (Ljava/lang/String;I)I 7 5 0 java/lang/String coder ()B 7 9 0 java/lang/String length ()I 8 6 0 java/lang/String coder ()B 7 14 0 java/lang/String indexOf ([BBILjava/lang/String;I)I 8 5 0 java/lang/Math clamp (JII)I 8 11 0 java/lang/String length ()I 9 6 0 java/lang/String coder ()B 8 42 0 java/lang/String coder ()B 3 21 0 java/lang/String length ()I 4 6 0 java/lang/String coder ()B 2 63 0 org/jetbrains/kotlin/builtins/jvm/JavaToKotlinClassMap isKotlinFunctionWithBigArity (Lorg/jetbrains/kotlin/name/FqNameUnsafe;Ljava/lang/String;)Z 3 1 0 org/jetbrains/kotlin/name/FqNameUnsafe asString ()Ljava/lang/String; 3 7 0 kotlin/jvm/internal/Intrinsics checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V 3 13 0 kotlin/text/StringsKt__StringsKt substringAfter (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String; 4 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 4 10 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 4 17 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 4 30 0 kotlin/text/StringsKt__StringsKt indexOf$default (Ljava/lang/CharSequence;Ljava/lang/String;IZILjava/lang/Object;)I 5 22 0 kotlin/text/StringsKt__StringsKt indexOf (Ljava/lang/CharSequence;Ljava/lang/String;IZ)I 6 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 6 10 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 6 53 0 java/lang/String indexOf (Ljava/lang/String;I)I 7 5 0 java/lang/String coder ()B 7 9 0 java/lang/String length ()I 8 6 0 java/lang/String coder ()B 7 14 0 java/lang/String indexOf ([BBILjava/lang/String;I)I 8 5 0 java/lang/Math clamp (JII)I 8 11 0 java/lang/String length ()I 9 6 0 java/lang/String coder ()B 8 42 0 java/lang/String coder ()B 3 21 0 java/lang/String length ()I 4 6 0 java/lang/String coder ()B 2 79 0 java/util/HashMap get (Ljava/lang/Object;)Ljava/lang/Object; 3 2 0 java/util/HashMap getNode (Ljava/lang/Object;)Ljava/util/HashMap$Node; 4 23 0 java/util/HashMap hash (Ljava/lang/Object;)I 5 9 0 org/jetbrains/kotlin/name/FqNameUnsafe hashCode ()I 6 4 0 java/lang/String hashCode ()I 7 17 0 java/lang/String isLatin1 ()Z 7 27 0 java/lang/StringLatin1 hashCode ([B)I 8 5 0 jdk/internal/util/ArraysSupport hashCodeOfUnsigned ([BIII)I 9 39 0 java/lang/Byte toUnsignedInt (B)I 1 210 0 org/jetbrains/kotlin/load/kotlin/TypeMappingMode getKotlinCollectionsToJavaCollections ()Z 1 319 0 org/jetbrains/kotlin/resolve/jvm/JvmClassName byClassId (Lorg/jetbrains/kotlin/name/ClassId;)Lorg/jetbrains/kotlin/resolve/jvm/JvmClassName; 2 9 0 org/jetbrains/kotlin/name/ClassId getPackageFqName ()Lorg/jetbrains/kotlin/name/FqName; 2 14 0 org/jetbrains/kotlin/name/ClassId getRelativeClassName ()Lorg/jetbrains/kotlin/name/FqName; 2 17 0 org/jetbrains/kotlin/name/FqName asString ()Ljava/lang/String; 3 4 0 org/jetbrains/kotlin/name/FqNameUnsafe asString ()Ljava/lang/String; 2 24 0 java/lang/String replace (CC)Ljava/lang/String; 3 6 0 java/lang/String isLatin1 ()Z 3 18 0 java/lang/StringLatin1 replace ([BCC)Ljava/lang/String; 4 1 0 java/lang/StringLatin1 canEncode (C)Z
+compile org/jetbrains/kotlin/load/kotlin/TypeSignatureMappingKt mapBuiltInType (Lorg/jetbrains/kotlin/types/TypeSystemCommonBackendContext;Lorg/jetbrains/kotlin/types/model/KotlinTypeMarker;Lorg/jetbrains/kotlin/load/kotlin/JvmTypeFactory;Lorg/jetbrains/kotlin/load/kotlin/TypeMappingMode;)Ljava/lang/Object; -1 4 inline 252 0 -1 0 org/jetbrains/kotlin/load/kotlin/TypeSignatureMappingKt mapBuiltInType (Lorg/jetbrains/kotlin/types/TypeSystemCommonBackendContext;Lorg/jetbrains/kotlin/types/model/KotlinTypeMarker;Lorg/jetbrains/kotlin/load/kotlin/JvmTypeFactory;Lorg/jetbrains/kotlin/load/kotlin/TypeMappingMode;)Ljava/lang/Object; 1 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 1 9 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 1 15 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 1 21 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 1 26 0 org/jetbrains/kotlin/types/model/TypeSystemContext typeConstructor (Lorg/jetbrains/kotlin/types/model/KotlinTypeMarker;)Lorg/jetbrains/kotlin/types/model/TypeConstructorMarker; 2 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 2 9 0 org/jetbrains/kotlin/types/checker/SimpleClassicTypeSystemContext asSimpleType (Lorg/jetbrains/kotlin/types/model/KotlinTypeMarker;)Lorg/jetbrains/kotlin/types/model/SimpleTypeMarker; 3 2 0 org/jetbrains/kotlin/types/checker/ClassicTypeSystemContext$DefaultImpls asSimpleType (Lorg/jetbrains/kotlin/types/checker/ClassicTypeSystemContext;Lorg/jetbrains/kotlin/types/model/KotlinTypeMarker;)Lorg/jetbrains/kotlin/types/model/SimpleTypeMarker; 4 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 2 21 0 org/jetbrains/kotlin/types/model/TypeSystemContext lowerBoundIfFlexible (Lorg/jetbrains/kotlin/types/model/KotlinTypeMarker;)Lorg/jetbrains/kotlin/types/model/SimpleTypeMarker; 3 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 3 8 0 org/jetbrains/kotlin/types/checker/SimpleClassicTypeSystemContext asFlexibleType (Lorg/jetbrains/kotlin/types/model/KotlinTypeMarker;)Lorg/jetbrains/kotlin/types/model/FlexibleTypeMarker; 4 2 0 org/jetbrains/kotlin/types/checker/ClassicTypeSystemContext$DefaultImpls asFlexibleType (Lorg/jetbrains/kotlin/types/checker/ClassicTypeSystemContext;Lorg/jetbrains/kotlin/types/model/KotlinTypeMarker;)Lorg/jetbrains/kotlin/types/model/FlexibleTypeMarker; 5 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 3 19 0 org/jetbrains/kotlin/types/checker/SimpleClassicTypeSystemContext lowerBound (Lorg/jetbrains/kotlin/types/model/FlexibleTypeMarker;)Lorg/jetbrains/kotlin/types/model/SimpleTypeMarker; 4 2 0 org/jetbrains/kotlin/types/checker/ClassicTypeSystemContext$DefaultImpls lowerBound (Lorg/jetbrains/kotlin/types/checker/ClassicTypeSystemContext;Lorg/jetbrains/kotlin/types/model/FlexibleTypeMarker;)Lorg/jetbrains/kotlin/types/model/SimpleTypeMarker; 5 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 5 71 0 org/jetbrains/kotlin/types/FlexibleType getLowerBound ()Lorg/jetbrains/kotlin/types/SimpleType; 3 31 0 org/jetbrains/kotlin/types/checker/SimpleClassicTypeSystemContext asSimpleType (Lorg/jetbrains/kotlin/types/model/KotlinTypeMarker;)Lorg/jetbrains/kotlin/types/model/SimpleTypeMarker; 4 2 0 org/jetbrains/kotlin/types/checker/ClassicTypeSystemContext$DefaultImpls asSimpleType (Lorg/jetbrains/kotlin/types/checker/ClassicTypeSystemContext;Lorg/jetbrains/kotlin/types/model/KotlinTypeMarker;)Lorg/jetbrains/kotlin/types/model/SimpleTypeMarker; 5 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 3 37 0 kotlin/jvm/internal/Intrinsics checkNotNull (Ljava/lang/Object;)V 2 26 0 org/jetbrains/kotlin/types/checker/SimpleClassicTypeSystemContext typeConstructor (Lorg/jetbrains/kotlin/types/model/SimpleTypeMarker;)Lorg/jetbrains/kotlin/types/model/TypeConstructorMarker; 3 2 0 org/jetbrains/kotlin/types/checker/ClassicTypeSystemContext$DefaultImpls typeConstructor (Lorg/jetbrains/kotlin/types/checker/ClassicTypeSystemContext;Lorg/jetbrains/kotlin/types/model/SimpleTypeMarker;)Lorg/jetbrains/kotlin/types/model/TypeConstructorMarker; 4 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 1 36 0 org/jetbrains/kotlin/types/checker/SimpleClassicTypeSystemContext isClassTypeConstructor (Lorg/jetbrains/kotlin/types/model/TypeConstructorMarker;)Z 2 2 0 org/jetbrains/kotlin/types/checker/ClassicTypeSystemContext$DefaultImpls isClassTypeConstructor (Lorg/jetbrains/kotlin/types/checker/ClassicTypeSystemContext;Lorg/jetbrains/kotlin/types/model/TypeConstructorMarker;)Z 3 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 1 49 0 org/jetbrains/kotlin/types/checker/SimpleClassicTypeSystemContext getPrimitiveType (Lorg/jetbrains/kotlin/types/model/TypeConstructorMarker;)Lorg/jetbrains/kotlin/builtins/PrimitiveType; 2 2 0 org/jetbrains/kotlin/types/checker/ClassicTypeSystemContext$DefaultImpls getPrimitiveType (Lorg/jetbrains/kotlin/types/checker/ClassicTypeSystemContext;Lorg/jetbrains/kotlin/types/model/TypeConstructorMarker;)Lorg/jetbrains/kotlin/builtins/PrimitiveType; 3 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 3 71 0 org/jetbrains/kotlin/serialization/deserialization/descriptors/DeserializedClassDescriptor$DeserializedClassTypeConstructor getDeclarationDescriptor ()Lorg/jetbrains/kotlin/descriptors/ClassifierDescriptor; 4 1 0 org/jetbrains/kotlin/serialization/deserialization/descriptors/DeserializedClassDescriptor$DeserializedClassTypeConstructor getDeclarationDescriptor ()Lorg/jetbrains/kotlin/serialization/deserialization/descriptors/DeserializedClassDescriptor; 3 71 0 org/jetbrains/kotlin/load/java/lazy/descriptors/LazyJavaClassDescriptor$LazyJavaClassTypeConstructor getDeclarationDescriptor ()Lorg/jetbrains/kotlin/descriptors/ClassifierDescriptor; 4 1 0 org/jetbrains/kotlin/load/java/lazy/descriptors/LazyJavaClassDescriptor$LazyJavaClassTypeConstructor getDeclarationDescriptor ()Lorg/jetbrains/kotlin/descriptors/ClassDescriptor; 3 80 0 kotlin/jvm/internal/Intrinsics checkNotNull (Ljava/lang/Object;Ljava/lang/String;)V 1 64 0 org/jetbrains/kotlin/load/kotlin/JvmTypeFactoryImpl createPrimitiveType (Lorg/jetbrains/kotlin/builtins/PrimitiveType;)Ljava/lang/Object; 1 64 0 org/jetbrains/kotlin/codegen/signature/AsmTypeFactory createPrimitiveType (Lorg/jetbrains/kotlin/builtins/PrimitiveType;)Ljava/lang/Object; 1 73 0 org/jetbrains/kotlin/types/checker/SimpleClassicTypeSystemContext isNullableType (Lorg/jetbrains/kotlin/types/model/KotlinTypeMarker;)Z 2 2 0 org/jetbrains/kotlin/types/checker/ClassicTypeSystemContext$DefaultImpls isNullableType (Lorg/jetbrains/kotlin/types/checker/ClassicTypeSystemContext;Lorg/jetbrains/kotlin/types/model/KotlinTypeMarker;)Z 3 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 3 71 0 org/jetbrains/kotlin/types/TypeUtils isNullableType (Lorg/jetbrains/kotlin/types/KotlinType;)Z 4 10 0 org/jetbrains/kotlin/types/SimpleTypeImpl isMarkedNullable ()Z 4 19 0 org/jetbrains/kotlin/types/FlexibleTypesKt isFlexible (Lorg/jetbrains/kotlin/types/KotlinType;)Z 5 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 4 26 0 org/jetbrains/kotlin/types/FlexibleTypesKt asFlexibleType (Lorg/jetbrains/kotlin/types/KotlinType;)Lorg/jetbrains/kotlin/types/FlexibleType; 5 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 5 13 0 kotlin/jvm/internal/Intrinsics checkNotNull (Ljava/lang/Object;Ljava/lang/String;)V 4 29 0 org/jetbrains/kotlin/types/FlexibleType getUpperBound ()Lorg/jetbrains/kotlin/types/SimpleType; 4 41 0 org/jetbrains/kotlin/types/SpecialTypesKt isDefinitelyNotNullType (Lorg/jetbrains/kotlin/types/KotlinType;)Z 5 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 5 7 0 org/jetbrains/kotlin/types/UnwrappedType unwrap ()Lorg/jetbrains/kotlin/types/UnwrappedType; 4 50 0 org/jetbrains/kotlin/types/TypeUtils isTypeParameter (Lorg/jetbrains/kotlin/types/KotlinType;)Z 5 10 0 org/jetbrains/kotlin/types/TypeUtils getTypeParameterDescriptorOrNull (Lorg/jetbrains/kotlin/types/KotlinType;)Lorg/jetbrains/kotlin/descriptors/TypeParameterDescriptor; 6 10 0 org/jetbrains/kotlin/types/SimpleTypeImpl getConstructor ()Lorg/jetbrains/kotlin/types/TypeConstructor; 6 25 0 org/jetbrains/kotlin/types/SimpleTypeImpl getConstructor ()Lorg/jetbrains/kotlin/types/TypeConstructor; 5 17 0 org/jetbrains/kotlin/types/SimpleTypeImpl getConstructor ()Lorg/jetbrains/kotlin/types/TypeConstructor; 4 106 0 org/jetbrains/kotlin/types/SimpleTypeImpl getConstructor ()Lorg/jetbrains/kotlin/types/TypeConstructor; 1 83 0 org/jetbrains/kotlin/load/java/typeEnhancement/TypeEnhancementUtilsKt hasEnhancedNullability (Lorg/jetbrains/kotlin/types/TypeSystemCommonBackendContext;Lorg/jetbrains/kotlin/types/model/KotlinTypeMarker;)Z 2 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 2 9 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 2 20 0 kotlin/jvm/internal/Intrinsics checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V 2 23 0 org/jetbrains/kotlin/types/checker/SimpleClassicTypeSystemContext hasAnnotation (Lorg/jetbrains/kotlin/types/model/KotlinTypeMarker;Lorg/jetbrains/kotlin/name/FqName;)Z 3 3 0 org/jetbrains/kotlin/types/checker/ClassicTypeSystemContext$DefaultImpls hasAnnotation (Lorg/jetbrains/kotlin/types/checker/ClassicTypeSystemContext;Lorg/jetbrains/kotlin/types/model/KotlinTypeMarker;Lorg/jetbrains/kotlin/name/FqName;)Z 4 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 4 10 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 4 81 0 org/jetbrains/kotlin/types/KotlinType getAnnotations ()Lorg/jetbrains/kotlin/descriptors/annotations/Annotations; 5 4 0 org/jetbrains/kotlin/types/AnnotationsTypeAttributeKt getAnnotations (Lorg/jetbrains/kotlin/types/TypeAttributes;)Lorg/jetbrains/kotlin/descriptors/annotations/Annotations; 6 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 6 7 0 org/jetbrains/kotlin/types/AnnotationsTypeAttributeKt getAnnotationsAttribute (Lorg/jetbrains/kotlin/types/TypeAttributes;)Lorg/jetbrains/kotlin/types/AnnotationsTypeAttribute; 7 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 7 15 0 org/jetbrains/kotlin/util/NullableArrayMapAccessor getValue (Ljava/lang/Object;Lkotlin/reflect/KProperty;)Ljava/lang/Object; 8 6 0 org/jetbrains/kotlin/util/NullableArrayMapAccessor getValue (Lorg/jetbrains/kotlin/util/AbstractArrayMapOwner;Lkotlin/reflect/KProperty;)Ljava/lang/Object; 9 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 9 9 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 9 14 0 org/jetbrains/kotlin/util/AbstractArrayMapOwner$AbstractArrayMapAccessor extractValue (Lorg/jetbrains/kotlin/util/AbstractArrayMapOwner;)Ljava/lang/Object; 10 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 10 7 0 org/jetbrains/kotlin/util/AttributeArrayOwner getArrayMap ()Lorg/jetbrains/kotlin/util/ArrayMap; 10 14 0 org/jetbrains/kotlin/util/EmptyArrayMap get (I)Ljava/lang/Object; 11 2 0 org/jetbrains/kotlin/util/EmptyArrayMap get (I)Ljava/lang/Void; 10 14 0 org/jetbrains/kotlin/util/OneManaArrayMap get (I)Ljava/lang/Object; 6 14 0 org/jetbrains/kotlin/types/AnnotationsTypeAttribute getAnnotations ()Lorg/jetbrains/kotlin/descriptors/annotations/Annotations; 6 25 0 org/jetbrains/kotlin/descriptors/annotations/Annotations$Companion getEMPTY ()Lorg/jetbrains/kotlin/descriptors/annotations/Annotations; 4 85 0 org/jetbrains/kotlin/descriptors/annotations/Annotations$Companion$EMPTY$1 hasAnnotation (Lorg/jetbrains/kotlin/name/FqName;)Z 5 2 0 org/jetbrains/kotlin/descriptors/annotations/Annotations$DefaultImpls hasAnnotation (Lorg/jetbrains/kotlin/descriptors/annotations/Annotations;Lorg/jetbrains/kotlin/name/FqName;)Z 6 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 6 8 0 org/jetbrains/kotlin/descriptors/annotations/Annotations$Companion$EMPTY$1 findAnnotation (Lorg/jetbrains/kotlin/name/FqName;)Lorg/jetbrains/kotlin/descriptors/annotations/AnnotationDescriptor; 7 2 0 org/jetbrains/kotlin/descriptors/annotations/Annotations$Companion$EMPTY$1 findAnnotation (Lorg/jetbrains/kotlin/name/FqName;)Ljava/lang/Void; 8 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 1 101 0 org/jetbrains/kotlin/load/kotlin/TypeSignatureMappingKt boxTypeIfNeeded (Lorg/jetbrains/kotlin/load/kotlin/JvmTypeFactory;Ljava/lang/Object;Z)Ljava/lang/Object; 2 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 2 9 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 2 18 0 org/jetbrains/kotlin/load/kotlin/JvmTypeFactoryImpl boxType (Ljava/lang/Object;)Ljava/lang/Object; 2 18 0 org/jetbrains/kotlin/codegen/signature/AsmTypeFactory boxType (Ljava/lang/Object;)Ljava/lang/Object; 1 108 0 org/jetbrains/kotlin/types/checker/SimpleClassicTypeSystemContext getPrimitiveArrayType (Lorg/jetbrains/kotlin/types/model/TypeConstructorMarker;)Lorg/jetbrains/kotlin/builtins/PrimitiveType; 2 2 0 org/jetbrains/kotlin/types/checker/ClassicTypeSystemContext$DefaultImpls getPrimitiveArrayType (Lorg/jetbrains/kotlin/types/checker/ClassicTypeSystemContext;Lorg/jetbrains/kotlin/types/model/TypeConstructorMarker;)Lorg/jetbrains/kotlin/builtins/PrimitiveType; 3 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 3 71 0 org/jetbrains/kotlin/serialization/deserialization/descriptors/DeserializedClassDescriptor$DeserializedClassTypeConstructor getDeclarationDescriptor ()Lorg/jetbrains/kotlin/descriptors/ClassifierDescriptor; 4 1 0 org/jetbrains/kotlin/serialization/deserialization/descriptors/DeserializedClassDescriptor$DeserializedClassTypeConstructor getDeclarationDescriptor ()Lorg/jetbrains/kotlin/serialization/deserialization/descriptors/DeserializedClassDescriptor; 3 71 0 org/jetbrains/kotlin/load/java/lazy/descriptors/LazyJavaClassDescriptor$LazyJavaClassTypeConstructor getDeclarationDescriptor ()Lorg/jetbrains/kotlin/descriptors/ClassifierDescriptor; 4 1 0 org/jetbrains/kotlin/load/java/lazy/descriptors/LazyJavaClassDescriptor$LazyJavaClassTypeConstructor getDeclarationDescriptor ()Lorg/jetbrains/kotlin/descriptors/ClassDescriptor; 3 80 0 kotlin/jvm/internal/Intrinsics checkNotNull (Ljava/lang/Object;Ljava/lang/String;)V 1 125 0 java/lang/StringBuilder <init> ()V 1 147 0 org/jetbrains/kotlin/load/kotlin/JvmTypeFactoryImpl createFromString (Ljava/lang/String;)Ljava/lang/Object; 1 156 0 org/jetbrains/kotlin/types/checker/SimpleClassicTypeSystemContext isUnderKotlinPackage (Lorg/jetbrains/kotlin/types/model/TypeConstructorMarker;)Z 2 2 0 org/jetbrains/kotlin/types/checker/ClassicTypeSystemContext$DefaultImpls isUnderKotlinPackage (Lorg/jetbrains/kotlin/types/checker/ClassicTypeSystemContext;Lorg/jetbrains/kotlin/types/model/TypeConstructorMarker;)Z 3 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 3 71 0 org/jetbrains/kotlin/serialization/deserialization/descriptors/DeserializedClassDescriptor$DeserializedClassTypeConstructor getDeclarationDescriptor ()Lorg/jetbrains/kotlin/descriptors/ClassifierDescriptor; 4 1 0 org/jetbrains/kotlin/serialization/deserialization/descriptors/DeserializedClassDescriptor$DeserializedClassTypeConstructor getDeclarationDescriptor ()Lorg/jetbrains/kotlin/serialization/deserialization/descriptors/DeserializedClassDescriptor; 3 71 0 org/jetbrains/kotlin/load/java/lazy/descriptors/LazyJavaClassDescriptor$LazyJavaClassTypeConstructor getDeclarationDescriptor ()Lorg/jetbrains/kotlin/descriptors/ClassifierDescriptor; 4 1 0 org/jetbrains/kotlin/load/java/lazy/descriptors/LazyJavaClassDescriptor$LazyJavaClassTypeConstructor getDeclarationDescriptor ()Lorg/jetbrains/kotlin/descriptors/ClassDescriptor; 3 88 0 org/jetbrains/kotlin/builtins/KotlinBuiltIns isUnderKotlinPackage (Lorg/jetbrains/kotlin/descriptors/DeclarationDescriptor;)Z 4 34 0 org/jetbrains/kotlin/name/FqName startsWith (Lorg/jetbrains/kotlin/name/Name;)Z 5 14 0 org/jetbrains/kotlin/name/FqNameUnsafe startsWith (Lorg/jetbrains/kotlin/name/Name;)Z 6 10 0 org/jetbrains/kotlin/name/FqNameUnsafe isRoot ()Z 7 4 0 java/lang/String isEmpty ()Z 6 24 0 java/lang/String indexOf (I)I 7 1 0 java/lang/String isLatin1 ()Z 7 18 0 java/lang/StringLatin1 indexOf ([BIII)I 8 1 0 java/lang/StringLatin1 canEncode (I)Z 6 29 0 org/jetbrains/kotlin/name/Name asString ()Ljava/lang/String; 6 49 0 java/lang/String length ()I 7 6 0 java/lang/String coder ()B 6 53 0 java/lang/String length ()I 7 6 0 java/lang/String coder ()B 6 63 0 java/lang/String regionMatches (ILjava/lang/String;II)Z 7 11 0 java/lang/String length ()I 8 6 0 java/lang/String coder ()B 7 26 0 java/lang/String length ()I 8 6 0 java/lang/String coder ()B 7 60 0 java/lang/String coder ()B 7 68 0 java/lang/String coder ()B 7 102 0 jdk/internal/util/ArraysSupport mismatch ([BI[BII)I 1 167 0 org/jetbrains/kotlin/types/checker/SimpleClassicTypeSystemContext getClassFqNameUnsafe (Lorg/jetbrains/kotlin/types/model/TypeConstructorMarker;)Lorg/jetbrains/kotlin/name/FqNameUnsafe; 2 2 0 org/jetbrains/kotlin/types/checker/ClassicTypeSystemContext$DefaultImpls getClassFqNameUnsafe (Lorg/jetbrains/kotlin/types/checker/ClassicTypeSystemContext;Lorg/jetbrains/kotlin/types/model/TypeConstructorMarker;)Lorg/jetbrains/kotlin/name/FqNameUnsafe; 3 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 3 71 0 org/jetbrains/kotlin/serialization/deserialization/descriptors/DeserializedClassDescriptor$DeserializedClassTypeConstructor getDeclarationDescriptor ()Lorg/jetbrains/kotlin/descriptors/ClassifierDescriptor; 4 1 0 org/jetbrains/kotlin/serialization/deserialization/descriptors/DeserializedClassDescriptor$DeserializedClassTypeConstructor getDeclarationDescriptor ()Lorg/jetbrains/kotlin/serialization/deserialization/descriptors/DeserializedClassDescriptor; 3 80 0 kotlin/jvm/internal/Intrinsics checkNotNull (Ljava/lang/Object;Ljava/lang/String;)V 3 89 0 org/jetbrains/kotlin/resolve/descriptorUtil/DescriptorUtilsKt getFqNameUnsafe (Lorg/jetbrains/kotlin/descriptors/DeclarationDescriptor;)Lorg/jetbrains/kotlin/name/FqNameUnsafe; 4 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 4 14 0 kotlin/jvm/internal/Intrinsics checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V 1 194 0 org/jetbrains/kotlin/builtins/jvm/JavaToKotlinClassMap mapKotlinToJava (Lorg/jetbrains/kotlin/name/FqNameUnsafe;)Lorg/jetbrains/kotlin/name/ClassId; 2 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 2 12 0 org/jetbrains/kotlin/builtins/jvm/JavaToKotlinClassMap isKotlinFunctionWithBigArity (Lorg/jetbrains/kotlin/name/FqNameUnsafe;Ljava/lang/String;)Z 3 1 0 org/jetbrains/kotlin/name/FqNameUnsafe asString ()Ljava/lang/String; 3 7 0 kotlin/jvm/internal/Intrinsics checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V 3 13 0 kotlin/text/StringsKt__StringsKt substringAfter (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String; 4 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 4 10 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 4 17 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 4 30 0 kotlin/text/StringsKt__StringsKt indexOf$default (Ljava/lang/CharSequence;Ljava/lang/String;IZILjava/lang/Object;)I 5 22 0 kotlin/text/StringsKt__StringsKt indexOf (Ljava/lang/CharSequence;Ljava/lang/String;IZ)I 6 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 6 10 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 6 53 0 java/lang/String indexOf (Ljava/lang/String;I)I 7 5 0 java/lang/String coder ()B 7 9 0 java/lang/String length ()I 8 6 0 java/lang/String coder ()B 7 14 0 java/lang/String indexOf ([BBILjava/lang/String;I)I 8 5 0 java/lang/Math clamp (JII)I 8 11 0 java/lang/String length ()I 9 6 0 java/lang/String coder ()B 8 42 0 java/lang/String coder ()B 3 21 0 java/lang/String length ()I 4 6 0 java/lang/String coder ()B 2 29 0 org/jetbrains/kotlin/builtins/jvm/JavaToKotlinClassMap isKotlinFunctionWithBigArity (Lorg/jetbrains/kotlin/name/FqNameUnsafe;Ljava/lang/String;)Z 3 1 0 org/jetbrains/kotlin/name/FqNameUnsafe asString ()Ljava/lang/String; 3 7 0 kotlin/jvm/internal/Intrinsics checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V 3 13 0 kotlin/text/StringsKt__StringsKt substringAfter (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String; 4 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 4 10 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 4 17 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 4 30 0 kotlin/text/StringsKt__StringsKt indexOf$default (Ljava/lang/CharSequence;Ljava/lang/String;IZILjava/lang/Object;)I 5 22 0 kotlin/text/StringsKt__StringsKt indexOf (Ljava/lang/CharSequence;Ljava/lang/String;IZ)I 6 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 6 10 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 6 53 0 java/lang/String indexOf (Ljava/lang/String;I)I 7 5 0 java/lang/String coder ()B 7 9 0 java/lang/String length ()I 8 6 0 java/lang/String coder ()B 7 14 0 java/lang/String indexOf ([BBILjava/lang/String;I)I 8 5 0 java/lang/Math clamp (JII)I 8 11 0 java/lang/String length ()I 9 6 0 java/lang/String coder ()B 8 42 0 java/lang/String coder ()B 3 21 0 java/lang/String length ()I 4 6 0 java/lang/String coder ()B 2 46 0 org/jetbrains/kotlin/builtins/jvm/JavaToKotlinClassMap isKotlinFunctionWithBigArity (Lorg/jetbrains/kotlin/name/FqNameUnsafe;Ljava/lang/String;)Z 3 1 0 org/jetbrains/kotlin/name/FqNameUnsafe asString ()Ljava/lang/String; 3 7 0 kotlin/jvm/internal/Intrinsics checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V 3 13 0 kotlin/text/StringsKt__StringsKt substringAfter (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String; 4 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 4 10 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 4 17 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 4 30 0 kotlin/text/StringsKt__StringsKt indexOf$default (Ljava/lang/CharSequence;Ljava/lang/String;IZILjava/lang/Object;)I 5 22 0 kotlin/text/StringsKt__StringsKt indexOf (Ljava/lang/CharSequence;Ljava/lang/String;IZ)I 6 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 6 10 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 6 53 0 java/lang/String indexOf (Ljava/lang/String;I)I 7 5 0 java/lang/String coder ()B 7 9 0 java/lang/String length ()I 8 6 0 java/lang/String coder ()B 7 14 0 java/lang/String indexOf ([BBILjava/lang/String;I)I 8 5 0 java/lang/Math clamp (JII)I 8 11 0 java/lang/String length ()I 9 6 0 java/lang/String coder ()B 8 42 0 java/lang/String coder ()B 3 21 0 java/lang/String length ()I 4 6 0 java/lang/String coder ()B 2 63 0 org/jetbrains/kotlin/builtins/jvm/JavaToKotlinClassMap isKotlinFunctionWithBigArity (Lorg/jetbrains/kotlin/name/FqNameUnsafe;Ljava/lang/String;)Z 3 1 0 org/jetbrains/kotlin/name/FqNameUnsafe asString ()Ljava/lang/String; 3 7 0 kotlin/jvm/internal/Intrinsics checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V 3 13 0 kotlin/text/StringsKt__StringsKt substringAfter (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String; 4 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 4 10 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 4 17 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 4 30 0 kotlin/text/StringsKt__StringsKt indexOf$default (Ljava/lang/CharSequence;Ljava/lang/String;IZILjava/lang/Object;)I 5 22 0 kotlin/text/StringsKt__StringsKt indexOf (Ljava/lang/CharSequence;Ljava/lang/String;IZ)I 6 3 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 6 10 0 kotlin/jvm/internal/Intrinsics checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V 6 53 0 java/lang/String indexOf (Ljava/lang/String;I)I 7 5 0 java/lang/String coder ()B 7 9 0 java/lang/String length ()I 8 6 0 java/lang/String coder ()B 7 14 0 java/lang/String indexOf ([BBILjava/lang/String;I)I 8 5 0 java/lang/Math clamp (JII)I 8 11 0 java/lang/String length ()I 9 6 0 java/lang/String coder ()B 8 42 0 java/lang/String coder ()B 3 21 0 java/lang/String length ()I 4 6 0 java/lang/String coder ()B 2 79 0 java/util/HashMap get (Ljava/lang/Object;)Ljava/lang/Object; 3 2 0 java/util/HashMap getNode (Ljava/lang/Object;)Ljava/util/HashMap$Node; 4 23 0 java/util/HashMap hash (Ljava/lang/Object;)I 5 9 0 org/jetbrains/kotlin/name/FqNameUnsafe hashCode ()I 6 4 0 java/lang/String hashCode ()I 7 17 0 java/lang/String isLatin1 ()Z 7 27 0 java/lang/StringLatin1 hashCode ([B)I 8 5 0 jdk/internal/util/ArraysSupport hashCodeOfUnsigned ([BIII)I 9 39 0 java/lang/Byte toUnsignedInt (B)I 1 210 0 org/jetbrains/kotlin/load/kotlin/TypeMappingMode getKotlinCollectionsToJavaCollections ()Z 1 319 0 org/jetbrains/kotlin/resolve/jvm/JvmClassName byClassId (Lorg/jetbrains/kotlin/name/ClassId;)Lorg/jetbrains/kotlin/resolve/jvm/JvmClassName; 2 9 0 org/jetbrains/kotlin/name/ClassId getPackageFqName ()Lorg/jetbrains/kotlin/name/FqName; 2 14 0 org/jetbrains/kotlin/name/ClassId getRelativeClassName ()Lorg/jetbrains/kotlin/name/FqName; 2 17 0 org/jetbrains/kotlin/name/FqName asString ()Ljava/lang/String; 3 4 0 org/jetbrains/kotlin/name/FqNameUnsafe asString ()Ljava/lang/String; 2 24 0 java/lang/String replace (CC)Ljava/lang/String; 3 6 0 java/lang/String isLatin1 ()Z 3 18 0 java/lang/StringLatin1 replace ([BCC)Ljava/lang/String; 4 1 0 java/lang/StringLatin1 canEncode (C)Z

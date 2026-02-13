@@ -9,7 +9,7 @@ jobs:
   sync-emojis:
     runs-on: ubuntu-latest
     # Skip in forks
-    if: github.repository == 'element-hq/element-android'
+    if: github.repository == 'mana-hq/mana-android'
     # No concurrency required, runs every time on a schedule.
     steps:
       - uses: actions/checkout@v4
@@ -36,7 +36,7 @@ jobs:
   sync-sas-strings:
     runs-on: ubuntu-latest
     # Skip in forks
-    if: github.repository == 'element-hq/element-android'
+    if: github.repository == 'mana-hq/mana-android'
     # No concurrency required, runs every time on a schedule.
     steps:
       - uses: actions/checkout@v4

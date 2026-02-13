@@ -14,7 +14,7 @@
 ## Overview
 
 - Screenshot tests are tests which record the content of a rendered screen and verify subsequent runs to check if the screen renders differently.
-- Element uses [Paparazzi](https://github.com/cashapp/paparazzi) to render, record and verify android layouts. 
+- Mana uses [Paparazzi](https://github.com/cashapp/paparazzi) to render, record and verify android layouts. 
 - The screenshot verification occurs on every pull request as part of the `tests.yml` workflow.
 
 ## Setup
@@ -23,7 +23,7 @@
 - Install the Git LFS hooks into the project.
 
 ```bash
-# with element-android as the current working directory
+# with mana-android as the current working directory
 git lfs install --local
 ```
 

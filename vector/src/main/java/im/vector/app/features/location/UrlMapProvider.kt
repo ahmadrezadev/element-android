@@ -1,13 +1,13 @@
 /*
  * Copyright 2022-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
 package im.vector.app.features.location
 
-import im.vector.app.features.raw.wellknown.getElementWellknown
+import im.vector.app.features.raw.wellknown.getManaWellknown
 import org.matrix.android.sdk.api.extensions.tryOrNull
 import org.matrix.android.sdk.api.raw.RawService
 import org.matrix.android.sdk.api.session.Session
@@ -26,7 +26,7 @@ class UrlMapProvider @Inject constructor(
     }
 
     suspend fun getMapUrl(): String {
-        val upstreamMapUrl = tryOrNull { rawService.getElementWellknown(session.sessionParams) }
+        val upstreamMapUrl = tryOrNull { rawService.getManaWellknown(session.sessionParams) }
                 ?.getBestMapTileServerConfig()
                 ?.mapStyleUrl
         return upstreamMapUrl ?: fallbackMapUrl

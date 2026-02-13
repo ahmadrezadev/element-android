@@ -1,7 +1,7 @@
 /*
  * Copyright 2020-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -144,9 +144,9 @@ class PreviewUrlRetriever(
 
         private val blockedDomains = listOf(
                 "https://matrix.to",
-                "https://app.element.io",
-                "https://staging.element.io",
-                "https://develop.element.io"
+                "https://app.mana.io",
+                "https://staging.mana.io",
+                "https://develop.mana.io"
         )
     }
 }

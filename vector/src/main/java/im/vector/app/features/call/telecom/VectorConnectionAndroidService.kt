@@ -1,7 +1,7 @@
 /*
  * Copyright 2020-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -57,7 +57,7 @@ import im.vector.app.core.services.CallAndroidService
         connection.connectionCapabilities = Connection.CAPABILITY_MUTE
         connection.audioModeIsVoip = true
         connection.setAddress(Uri.fromParts("tel", "+905000000000", null), TelecomManager.PRESENTATION_ALLOWED)
-        connection.setCallerDisplayName("Element Caller", TelecomManager.PRESENTATION_ALLOWED)
+        connection.setCallerDisplayName("Mana Caller", TelecomManager.PRESENTATION_ALLOWED)
         connection.statusHints = StatusHints("Testing Hint...", null, null)
 
         bindService(Intent(applicationContext, CallAndroidService::class.java), CallServiceConnection(connection), 0)

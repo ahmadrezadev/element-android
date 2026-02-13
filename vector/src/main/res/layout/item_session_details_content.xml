@@ -29,7 +29,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/sessionDetailsContentTitle"
         app:layout_constraintTop_toTopOf="@id/sessionDetailsContentTop"
-        tools:text="app.element.io: Firefox on macOS" />
+        tools:text="app.mana.io: Firefox on macOS" />
 
     <View
         android:id="@+id/sessionDetailsContentDivider"

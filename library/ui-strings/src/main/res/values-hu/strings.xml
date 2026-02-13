@@ -1003,16 +1003,16 @@ A Visszaállítási Kulcsot tartsd biztonságos helyen, mint pl. egy jelszókeze
     <string name="login_server_other_text">Egyéni és speciális beállítások</string>
     <string name="login_continue">Folytatás</string>
     <string name="login_connect_to">Csatlakozás ide: %1$s</string>
-    <string name="login_connect_to_modular">Csatlakozás Element Matrix Services hoz</string>
+    <string name="login_connect_to_modular">Csatlakozás Mana Matrix Services hoz</string>
     <string name="login_connect_to_a_custom_server">Kapcsolódás egyéni kiszolgálóhoz</string>
     <string name="login_signin_to">Bejelentkezés ide: %1$s</string>
     <string name="login_signup">Fiók készítés</string>
     <string name="login_signin">Bejelentkezés</string>
     <string name="login_signin_sso">SSO-val való folytatás</string>
-    <string name="login_server_url_form_modular_hint">Element Matrix Services Cím</string>
+    <string name="login_server_url_form_modular_hint">Mana Matrix Services Cím</string>
     <string name="login_server_url_form_other_hint">Cím</string>
     <string name="login_server_url_form_modular_text">Prémium kiszolgáló-üzemeltetés a szervezetek részére</string>
-    <string name="login_server_url_form_modular_notice">Adja meg a használni kívánt Modular Element vagy kiszolgáló címét</string>
+    <string name="login_server_url_form_modular_notice">Adja meg a használni kívánt Modular Mana vagy kiszolgáló címét</string>
     <string name="login_sso_error_message">Az oldal betöltésekor hiba történt: %1$s (%2$d)</string>
     <string name="login_registration_disabled">Ez a kiszolgáló nem fogad új fiókokat.</string>
     <string name="login_login_with_email_error">Ez az e-mail cím egyik fiókhoz sincs társítva.</string>
@@ -1069,7 +1069,7 @@ A Visszaállítási Kulcsot tartsd biztonságos helyen, mint pl. egy jelszókeze
     <string name="login_signup_cancel_confirmation_title">Figyelmeztetés</string>
     <string name="login_signup_cancel_confirmation_content">A felhasználói fiókod még nincs kész. Félbehagyod a regisztrációt\?</string>
     <string name="login_a11y_choose_matrix_org">A következő kiválasztása: matrix.org</string>
-    <string name="login_a11y_choose_modular">Element Matrix Services kiválasztása</string>
+    <string name="login_a11y_choose_modular">Mana Matrix Services kiválasztása</string>
     <string name="login_a11y_choose_other">Egyéni saját kiszolgáló kiválasztása</string>
     <string name="login_a11y_captcha_container">Kérlek old meg a captcha-t</string>
     <string name="login_terms_title">Folytatáshoz fogadd el a feltételeket</string>
@@ -1547,7 +1547,7 @@ A Visszaállítási Kulcsot tartsd biztonságos helyen, mint pl. egy jelszókeze
     <string name="crypto_error_withheld_unverified">Nem érheted el ezt az üzenetet, mert a feladó nem bízik a munkamenetedben</string>
     <string name="crypto_error_withheld_generic">Nem érheted el ezt az üzenetet, mert a feladó szándékosan nem küldte el a kulcsokat</string>
     <string name="notice_crypto_unable_to_decrypt_merged">Várakozás a titkosítási előzményekre</string>
-    <string name="disclaimer_title">A Riot mostantól Element!</string>
+    <string name="disclaimer_title">A Riot mostantól Mana!</string>
     <string name="disclaimer_content">Örömmel jelentjük be, hogy nevet változtattunk! Az alkalmazás naprakész, és be vagy jelentkezve a fiókodba.</string>
     <string name="disclaimer_negative_button">ÉRTEM</string>
     <string name="disclaimer_positive_button">TOVÁBBI INFORMÁCIÓK</string>
@@ -1901,7 +1901,7 @@ A Visszaállítási Kulcsot tartsd biztonságos helyen, mint pl. egy jelszókeze
     <string name="settings_security_pin_code_change_pin_summary">Jelenlegi PIN kód megváltoztatása</string>
     <string name="settings_security_pin_code_change_pin_title">PIN megváltoztatása</string>
     <string name="settings_security_pin_code_grace_period_summary_off">${app_name} megnyitásához mindig PIN kód szükséges.</string>
-    <string name="settings_security_pin_code_grace_period_summary_on">Ha 2 percnél hosszabb ideig nem használod az ${app_name} Element alkalmazást, PIN kódot fog kérni.</string>
+    <string name="settings_security_pin_code_grace_period_summary_on">Ha 2 percnél hosszabb ideig nem használod az ${app_name} Mana alkalmazást, PIN kódot fog kérni.</string>
     <string name="settings_security_pin_code_grace_period_title">2 perc elteltével PIN szükséges</string>
     <string name="settings_security_pin_code_use_biometrics_summary_on">Eszköz specifikus biometrikus azonosítás engedélyezése, mint ujjlenyomat vagy arcfelismerés.</string>
     <plurals name="entries">
@@ -2543,7 +2543,7 @@ A Visszaállítási Kulcsot tartsd biztonságos helyen, mint pl. egy jelszókeze
     <string name="ftue_auth_terms_subtitle">Olvassa el a(z) %s kiszolgáló házirendjét</string>
     <string name="ftue_auth_terms_title">Kiszolgáló házirendje</string>
     <string name="ftue_auth_choose_server_ems_cta">Kapcsolatfelvétel</string>
-    <string name="ftue_auth_choose_server_ems_subtitle">Az Element Matrix Services (EMS) egy robosztus és megbízható kiszolgáló üzemeltetési szolgáltatás a gyors és biztonságos kommunikáció céljaira. Tudjon meg többet itt: <a href="${ftue_ems_url}">element.io/ems</a></string>
+    <string name="ftue_auth_choose_server_ems_subtitle">Az Mana Matrix Services (EMS) egy robosztus és megbízható kiszolgáló üzemeltetési szolgáltatás a gyors és biztonságos kommunikáció céljaira. Tudjon meg többet itt: <a href="${ftue_ems_url}">mana.io/ems</a></string>
     <string name="ftue_auth_choose_server_ems_title">Szeretne saját kiszolgálót üzemeltetni\?</string>
     <string name="ftue_auth_choose_server_entry_hint">Kiszolgáló webcím</string>
     <string name="ftue_auth_choose_server_sign_in_subtitle">Mi a kiszolgálójának a címe\?</string>
@@ -2558,8 +2558,8 @@ A Visszaállítási Kulcsot tartsd biztonságos helyen, mint pl. egy jelszókeze
     <string name="ftue_auth_create_account_choose_server_header">Itt lesznek tárolva a beszélgetéseid</string>
     <string name="ftue_auth_choose_server_subtitle">Mi a kiszolgálójának a címe\? Ez olyan, mint egy „otthon” az Ön összes adatának</string>
     <string name="auth_reset_password_error_unverified">Az e-mail-cím nem lett hitelesítve, nézze meg a beérkező leveleit</string>
-    <string name="labs_enable_element_call_permission_shortcuts_summary">Element Call kisalkalmazás kamera és mikrofon használatának automatikus engedélyezése</string>
-    <string name="labs_enable_element_call_permission_shortcuts">Element Call jogosultságok engedélyezése</string>
+    <string name="labs_enable_mana_call_permission_shortcuts_summary">Mana Call kisalkalmazás kamera és mikrofon használatának automatikus engedélyezése</string>
+    <string name="labs_enable_mana_call_permission_shortcuts">Mana Call jogosultságok engedélyezése</string>
     <plurals name="room_removed_messages">
         <item quantity="one">%d üzenet eltávolítva</item>
         <item quantity="other">%d üzenet eltávolítva</item>
@@ -2697,7 +2697,7 @@ A Visszaállítási Kulcsot tartsd biztonságos helyen, mint pl. egy jelszókeze
     <string name="device_manager_verification_status_detail_current_session_verified">Az aktuális munkamenet készen áll a biztonságos üzenetküldésre.</string>
     <string name="labs_enable_deferred_dm_summary">Közvetlen beszélgetés indítása csak az első üzenettel</string>
     <string name="labs_enable_deferred_dm_title">Késleltetett közvetlen üzenetek engedélyezése</string>
-    <string name="labs_enable_new_app_layout_summary">Egyszerűsített Element nem kötelező lapokkal</string>
+    <string name="labs_enable_new_app_layout_summary">Egyszerűsített Mana nem kötelező lapokkal</string>
     <string name="labs_enable_new_app_layout_title">Új kinézet engedélyezése</string>
     <string name="device_manager_learn_more_session_rename">Más felhasználók akikkel közvetlenül vagy szobában beszélgetsz látják a teljes listát a munkameneteidről.
 \n

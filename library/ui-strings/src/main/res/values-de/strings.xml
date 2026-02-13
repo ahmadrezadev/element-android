@@ -1067,13 +1067,13 @@
     <string name="error_handling_incoming_share">Konnte zu teilende Daten nicht verarbeiten</string>
     <string name="login_splash_text3">Erweitere und personalisiere deine Erfahrung</string>
     <string name="login_connect_to">Mit %1$s verbinden</string>
-    <string name="login_connect_to_modular">Mit Element Matrix Services verbinden</string>
+    <string name="login_connect_to_modular">Mit Mana Matrix Services verbinden</string>
     <string name="login_connect_to_a_custom_server">Mit einem anderen Server verbinden</string>
     <string name="login_signin_to">Bei %1$s anmelden</string>
     <string name="login_signup">Registrieren</string>
     <string name="login_signin">Anmelden</string>
     <string name="login_signin_sso">Mit einmaligem Anmelden fortfahren</string>
-    <string name="login_server_url_form_modular_hint">Element Matrix Services-Adresse</string>
+    <string name="login_server_url_form_modular_hint">Mana Matrix Services-Adresse</string>
     <string name="login_server_url_form_other_hint">Adresse</string>
     <string name="login_sso_error_message">Ein Fehler beim Laden der Seite %1$s (%2$d) ist aufgetreten</string>
     <string name="login_registration_disabled">Es tut uns leid. Dieser Server akzeptiert keine neuen Benutzerkonten.</string>
@@ -1123,7 +1123,7 @@
     <string name="room_join_rules_invite">%1$s hat den Raum auf \"nur-einladen\" gestellt.</string>
     <string name="login_splash_title">Es ist deine Konversation. Mache sie dir zu eigen.</string>
     <string name="login_server_url_form_modular_text">Premium-Hosting für Organisationen</string>
-    <string name="login_server_url_form_modular_notice">Gib die Adresse des Modular Element oder Servers ein, den du verwenden möchtest</string>
+    <string name="login_server_url_form_modular_notice">Gib die Adresse des Modular Mana oder Servers ein, den du verwenden möchtest</string>
     <string name="login_mode_not_supported">Die Anwendung kann sich nicht bei diesem Heim-Server anmelden. Der Heim-Server unterstützt die folgenden Anmeldemöglichkeiten: %1$s.
 \n
 \nMöchtest du dich mit einer Web-Anwendung anmelden\?</string>
@@ -1591,7 +1591,7 @@
     <string name="crypto_error_withheld_unverified">Du kannst auf diese Nachricht nicht zugreifen, weil der Sender deiner Sitzung nicht vertraut</string>
     <string name="crypto_error_withheld_generic">Du kannst auf diese Nachricht nicht zugreifen, weil der Sender absichtlich die Schlüssel nicht gesendet hat</string>
     <string name="notice_crypto_unable_to_decrypt_merged">Warte auf Verschlüsselungshistorie</string>
-    <string name="disclaimer_title">Riot heißt nun Element!</string>
+    <string name="disclaimer_title">Riot heißt nun Mana!</string>
     <string name="disclaimer_content">Wir sind begeistert unsere Namensänderung mitteilen zu können! Deine App ist auf dem neusten Stand und du bist mit deinem Account angemeldet.</string>
     <string name="disclaimer_negative_button">VERSTANDEN</string>
     <string name="disclaimer_positive_button">MEHR ERFAHREN</string>
@@ -2543,8 +2543,8 @@
         <item quantity="one">%d Nachricht gelöscht</item>
         <item quantity="other">%d Nachrichten gelöscht</item>
     </plurals>
-    <string name="labs_enable_element_call_permission_shortcuts">Keine Element-Call-Berechtigungsabfragen</string>
-    <string name="labs_enable_element_call_permission_shortcuts_summary">Bestätige automatisch Element-Call-Widgets und erlaube Kamera- und Mikrofonzugriff</string>
+    <string name="labs_enable_mana_call_permission_shortcuts">Keine Mana-Call-Berechtigungsabfragen</string>
+    <string name="labs_enable_mana_call_permission_shortcuts_summary">Bestätige automatisch Mana-Call-Widgets und erlaube Kamera- und Mikrofonzugriff</string>
     <string name="create_room_action_go">Los</string>
     <string name="ftue_auth_create_account_edit_server_selection">Bearbeiten</string>
     <string name="ftue_auth_create_account_sso_section_header">Oder</string>
@@ -2604,7 +2604,7 @@
     <string name="ftue_auth_phone_title">Gib deine Telefonnummer ein</string>
     <string name="ftue_auth_email_subtitle">%s muss dein Konto verifizieren</string>
     <string name="ftue_auth_choose_server_ems_cta">Kontakt aufnehmen</string>
-    <string name="ftue_auth_choose_server_ems_subtitle">Element Matrix Services (EMS) ist ein robuster und zuverlässiger Hosting-Dienst für schnelle und sichere Echtzeitkommunikation. Erfahre mehr unter <a href="${ftue_ems_url}">element.io/ems</a></string>
+    <string name="ftue_auth_choose_server_ems_subtitle">Mana Matrix Services (EMS) ist ein robuster und zuverlässiger Hosting-Dienst für schnelle und sichere Echtzeitkommunikation. Erfahre mehr unter <a href="${ftue_ems_url}">mana.io/ems</a></string>
     <string name="ftue_auth_choose_server_ems_title">Willst du deinen eigenen Server betreiben\?</string>
     <string name="a11y_device_manager_device_type_web">Web</string>
     <string name="a11y_device_manager_device_type_mobile">Mobil</string>
@@ -2692,7 +2692,7 @@
     <string name="device_manager_verification_status_detail_other_session_verified">Diese Sitzung ist für sichere Kommunikation bereit.</string>
     <string name="a11y_device_manager_device_type_desktop">Desktop</string>
     <string name="invites_empty_message">Hier erscheinen deine neuen Anfragen und Einladungen.</string>
-    <string name="labs_enable_new_app_layout_summary">Ein vereinfachtes Element mit optionalen Tabs</string>
+    <string name="labs_enable_new_app_layout_summary">Ein vereinfachtes Mana mit optionalen Tabs</string>
     <string name="labs_enable_new_app_layout_title">Neues Layout aktivieren</string>
     <string name="device_manager_session_details_session_last_activity">Neueste Aktivität</string>
     <string name="device_manager_session_last_activity">Neueste Aktivität %1$s</string>
@@ -2833,7 +2833,7 @@
     <string name="error_voice_broadcast_blocked_by_someone_else_message">Jemand anderes nimmt bereits eine Sprachübertragung auf. Warte auf das Ende der Übertragung, bevor du eine neue startest.</string>
     <string name="a11y_voice_broadcast_fast_forward">30 Sekunden vorspulen</string>
     <string name="a11y_voice_broadcast_fast_backward">30 Sekunden zurückspulen</string>
-    <string name="device_manager_learn_more_sessions_verified_description">Auf verifizierte Sitzungen kannst du überall mit deinem Konto zugreifen, wenn du deine Passphrase eingegeben oder Element mit einer anderen Sitzung verifiziert hast.
+    <string name="device_manager_learn_more_sessions_verified_description">Auf verifizierte Sitzungen kannst du überall mit deinem Konto zugreifen, wenn du deine Passphrase eingegeben oder Mana mit einer anderen Sitzung verifiziert hast.
 \n
 \nDies bedeutet, dass du alle Schlüssel zum Entsperren deiner verschlüsselten Nachrichten hast und anderen bestätigst, dieser Sitzung zu vertrauen.</string>
     <plurals name="device_manager_other_sessions_multi_signout_all">
@@ -2969,5 +2969,5 @@
 \nWenn du keine Inhalte mehr von dieser Person sehen möchtest, kannst du sie ignorieren, um ihre Nachrichten auszublenden.</string>
     <string name="microphone_in_use_title">Mikrofon wird benutzt</string>
     <string name="call_unsupported">Nicht unterstützter Anruf</string>
-    <string name="call_unsupported_matrix_rtc_call">Nicht unterstützter Anruf. Die neue Element X-App wird benötigt, um diesem Anruf beizutreten.</string>
+    <string name="call_unsupported_matrix_rtc_call">Nicht unterstützter Anruf. Die neue Mana X-App wird benötigt, um diesem Anruf beizutreten.</string>
 </resources>

@@ -1,7 +1,7 @@
 /*
  * Copyright 2019-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -32,7 +32,7 @@ class TimelineItemFactory @Inject constructor(
         private val widgetItemFactory: WidgetItemFactory,
         private val verificationConclusionItemFactory: VerificationItemFactory,
         private val callItemFactory: CallItemFactory,
-        private val elementCallItemFactory: ElementCallItemFactory,
+        private val manaCallItemFactory: ManaCallItemFactory,
         private val decryptionFailureTracker: DecryptionFailureTracker,
         private val timelineEventVisibilityHelper: TimelineEventVisibilityHelper,
         private val session: Session,
@@ -120,8 +120,8 @@ class TimelineItemFactory @Inject constructor(
                             noticeItemFactory.create(params)
                         }
                     }
-                    // Element Call
-                    in EventType.ELEMENT_CALL_NOTIFY.values -> elementCallItemFactory.create(params)
+                    // Mana Call
+                    in EventType.ELEMENT_CALL_NOTIFY.values -> manaCallItemFactory.create(params)
                     // Calls
                     EventType.CALL_INVITE,
                     EventType.CALL_HANGUP,

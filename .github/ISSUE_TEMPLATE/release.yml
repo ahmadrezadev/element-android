@@ -1,6 +1,6 @@
 name: Release checklist
 description: Checklist for each release. This template is only for the core team.
-title: "[Release] Element Android v"
+title: "[Release] Mana Android v"
 labels: [🚀 Release]
 assignees:
   - bmarty
@@ -19,7 +19,7 @@ body:
         - [ ] Check the update of the store descriptions (using Google Translate if necessary) to ensure that the changes are acceptable to be published to the stores.
         - [ ] While Weblate is locked, and after the PR from Weblate has been merged, handle all the TODOs in the main `strings.xml` file
         - [ ] Run the script `./tools/release/pushPlayStoreMetaData.sh`. You can check in the GooglePlay console the Activity log to check the effect.
-        - [ ] Ensure all [the required PRs](https://github.com/element-hq/element-android/pulls?q=is%3Aopen+is%3Apr+label%3AZ-NextRelease) have been merged
+        - [ ] Ensure all [the required PRs](https://github.com/mana-hq/mana-android/pulls?q=is%3Aopen+is%3Apr+label%3AZ-NextRelease) have been merged
 
         ### Do the release
 
@@ -45,9 +45,9 @@ body:
 
         ### After at least 2 days (generally next Monday)
 
-        - [ ] Check the [rageshakes](https://github.com/matrix-org/element-android-rageshakes/issues)
+        - [ ] Check the [rageshakes](https://github.com/matrix-org/mana-android-rageshakes/issues)
         - [ ] Check the crash reports on the GooglePlay console
-        - [ ] Check the Android Element room for any reported issues on the new version
+        - [ ] Check the Android Mana room for any reported issues on the new version
         - [ ] If all is OK, promote the open testing release to production. Generally using a 100% roll out, but can be a smaller value depending on the release content.
         - [ ] The application is available to the PlayStore users (live). Google can take (again!) between 1 hour and up to 7 days to approve the release.
 
@@ -58,7 +58,7 @@ body:
 
         ### Android SDK2
 
-        The SDK2 and the sample app are released only when Element has been pushed to production.
+        The SDK2 and the sample app are released only when Mana has been pushed to production.
 
         - [ ] On the [SDK2 project](https://github.com/matrix-org/matrix-android-sdk2), run the script ./tools/releaseScript.sh and follow the instructions.
 

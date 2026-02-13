@@ -1,7 +1,7 @@
 /*
  * Copyright 2020-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -69,7 +69,7 @@ class WidgetArgsBuilder @Inject constructor(
         )
     }
 
-    fun buildElementCallWidgetArgs(roomId: String, widget: Widget): WidgetArgs {
+    fun buildManaCallWidgetArgs(roomId: String, widget: Widget): WidgetArgs {
         return buildRoomWidgetArgs(roomId, widget)
                 .copy(
                         kind = WidgetKind.ELEMENT_CALL

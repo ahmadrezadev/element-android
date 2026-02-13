@@ -29,7 +29,7 @@ private val DEFINED_TYPES by lazy {
             WidgetType.Grafana,
             WidgetType.Custom,
             WidgetType.IntegrationManager,
-            WidgetType.ElementCall,
+            WidgetType.ManaCall,
     )
 }
 
@@ -48,7 +48,7 @@ sealed class WidgetType(open val preferred: String, open val legacy: String = pr
     object Grafana : WidgetType("m.grafana")
     object Custom : WidgetType("m.custom")
     object IntegrationManager : WidgetType("m.integration_manager")
-    object ElementCall : WidgetType("io.element.call")
+    object ManaCall : WidgetType("io.mana.call")
     data class Fallback(override val preferred: String) : WidgetType(preferred)
 
     fun matches(type: String): Boolean {

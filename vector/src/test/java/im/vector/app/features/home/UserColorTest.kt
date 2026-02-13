@@ -1,7 +1,7 @@
 /*
  * Copyright 2019-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -16,19 +16,19 @@ class UserColorTest {
 
     @Test
     fun testNull() {
-        assertEquals(R.color.element_name_01, getColorFromUserId(null))
+        assertEquals(R.color.mana_name_01, getColorFromUserId(null))
     }
 
     @Test
     fun testEmpty() {
-        assertEquals(R.color.element_name_01, getColorFromUserId(""))
+        assertEquals(R.color.mana_name_01, getColorFromUserId(""))
     }
 
     @Test
     fun testName() {
-        assertEquals(R.color.element_name_01, getColorFromUserId("@ganfra:matrix.org"))
-        assertEquals(R.color.element_name_04, getColorFromUserId("@benoit0816:matrix.org"))
-        assertEquals(R.color.element_name_05, getColorFromUserId("@hubert:uhoreg.ca"))
-        assertEquals(R.color.element_name_07, getColorFromUserId("@nadonomy:matrix.org"))
+        assertEquals(R.color.mana_name_01, getColorFromUserId("@ganfra:matrix.org"))
+        assertEquals(R.color.mana_name_04, getColorFromUserId("@benoit0816:matrix.org"))
+        assertEquals(R.color.mana_name_05, getColorFromUserId("@hubert:uhoreg.ca"))
+        assertEquals(R.color.mana_name_07, getColorFromUserId("@nadonomy:matrix.org"))
     }
 }

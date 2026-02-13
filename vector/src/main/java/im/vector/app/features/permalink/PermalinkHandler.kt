@@ -1,7 +1,7 @@
 /*
  * Copyright 2019-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -241,7 +241,7 @@ class PermalinkHandler @Inject constructor(
     }
 
     companion object {
-        const val MATRIX_TO_CUSTOM_SCHEME_URL_BASE = "element://"
+        const val MATRIX_TO_CUSTOM_SCHEME_URL_BASE = "mana://"
         const val ROOM_LINK_PREFIX = "${MATRIX_TO_CUSTOM_SCHEME_URL_BASE}room/"
         const val USER_LINK_PREFIX = "${MATRIX_TO_CUSTOM_SCHEME_URL_BASE}user/"
     }

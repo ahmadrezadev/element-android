@@ -1,7 +1,7 @@
 /*
  * Copyright 2021-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -9,7 +9,7 @@ package im.vector.app.features.createdirect
 
 import im.vector.app.features.analytics.AnalyticsTracker
 import im.vector.app.features.analytics.plan.CreatedRoom
-import im.vector.app.features.raw.wellknown.getElementWellknown
+import im.vector.app.features.raw.wellknown.getManaWellknown
 import im.vector.app.features.raw.wellknown.isE2EByDefault
 import im.vector.app.features.settings.VectorPreferences
 import org.matrix.android.sdk.api.extensions.orFalse
@@ -32,7 +32,7 @@ class DirectRoomHelper @Inject constructor(
         if (existingRoomId != null) {
             roomId = existingRoomId
         } else {
-            val adminE2EByDefault = rawService.getElementWellknown(session.sessionParams)
+            val adminE2EByDefault = rawService.getManaWellknown(session.sessionParams)
                     ?.isE2EByDefault()
                     ?: true
 

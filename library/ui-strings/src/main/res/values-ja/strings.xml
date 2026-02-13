@@ -1243,7 +1243,7 @@
     <string name="login_signin_sso">シングルサインオンで続行</string>
     <string name="login_signin">サインイン</string>
     <string name="login_signup">サインアップ</string>
-    <string name="login_connect_to_modular">Element Matrix Servicesに接続</string>
+    <string name="login_connect_to_modular">Mana Matrix Servicesに接続</string>
     <string name="login_signin_matrix_id_title">Matrix IDでサインイン</string>
     <string name="login_connect_using_matrix_id_submit">Matrix IDでサインイン</string>
     <string name="login_server_modular_learn_more">詳細を表示</string>
@@ -1809,7 +1809,7 @@
     <string name="settings_server_name">サーバー名</string>
     <string name="login_msisdn_error_other">電話番号が正しくないようです。確認してください</string>
     <string name="login_a11y_choose_other">ユーザー定義のホームサーバーを選択</string>
-    <string name="login_a11y_choose_modular">Element Matrix Servicesを選択</string>
+    <string name="login_a11y_choose_modular">Mana Matrix Servicesを選択</string>
     <string name="login_msisdn_confirm_send_again">再送信</string>
     <string name="login_msisdn_confirm_hint">コードを入力</string>
     <string name="login_set_msisdn_mandatory_hint">電話番号</string>
@@ -1918,7 +1918,7 @@
     <string name="login_set_msisdn_title">電話番号を設定</string>
     <string name="login_reset_password_success_notice">パスワードを再設定しました。</string>
     <string name="login_reset_password_on">%1$sでパスワードを再設定</string>
-    <string name="login_server_url_form_modular_hint">Element Matrix Servicesのアドレス</string>
+    <string name="login_server_url_form_modular_hint">Mana Matrix Servicesのアドレス</string>
     <string name="login_signin_to">%1$sにサインイン</string>
     <string name="ftue_auth_use_case_title">誰と最もよく会話しますか？</string>
     <string name="this_space_has_no_rooms_not_admin">非公開で招待が必要なルームは表示されていません。
@@ -1963,7 +1963,7 @@
 \nウェブクライアントを使用してサインインしますか？</string>
     <string name="login_sso_error_message">ページ %1$s を読み込んでいる際にエラーが発生しました（%2$d）</string>
     <string name="login_server_url_form_common_notice">使用したいサーバーのアドレスを入力してください</string>
-    <string name="login_server_url_form_modular_notice">使用したいModular Elementまたはサーバーのアドレスを入力してください</string>
+    <string name="login_server_url_form_modular_notice">使用したいModular Manaまたはサーバーのアドレスを入力してください</string>
     <string name="ftue_auth_use_case_skip">迷っていますか？%s</string>
     <string name="ftue_auth_use_case_subtitle">みんなと繋がる手助けをいたします</string>
     <string name="user_code_my_code">自分のコード</string>
@@ -1999,7 +1999,7 @@
     <string name="failed_to_unban">ユーザーのブロックの解除に失敗しました</string>
     <string name="three_pid_revoke_invite_dialog_content">%1$sへの招待を取り消しますか？</string>
     <string name="loading_contact_book">連絡先を取得しています…</string>
-    <string name="disclaimer_title">RiotはElementになりました！</string>
+    <string name="disclaimer_title">RiotはManaになりました！</string>
     <string name="notice_crypto_unable_to_decrypt_final">このメッセージにアクセスできません</string>
     <string name="room_settings_set_avatar">アバターを設定</string>
     <string name="identity_server_set_alternative_notice_no_default">IDサーバーのURLを入力してください</string>
@@ -2490,7 +2490,7 @@
     <string name="thread_list_not_available">あなたのホームサーバーはスレッドの一覧表示をまだサポートしていません。</string>
     <string name="invites_empty_message">ここに新しいリクエストと招待が表示されます。</string>
     <string name="labs_enable_rich_text_editor_summary">リッチテキストエディターを試してみる（プレーンテキストモードは近日公開）</string>
-    <string name="labs_enable_new_app_layout_summary">タブを使用してElementの表示をシンプルにする</string>
+    <string name="labs_enable_new_app_layout_summary">タブを使用してManaの表示をシンプルにする</string>
     <string name="device_manager_session_details_title">セッションの詳細</string>
     <plurals name="device_manager_filter_option_inactive_description">
         <item quantity="other">%1$d日以上使用されていません</item>
@@ -2743,7 +2743,7 @@
     <string name="send_your_first_msg_to_invite">最初のメッセージを送信すると、%sを会話に招待</string>
     <string name="settings_nightly_build">Nightly build</string>
     <string name="verification_scan_self_notice">あなたの他の端末でコードをスキャンするか、もしくは反対に、この端末でスキャンしてください</string>
-    <string name="ftue_auth_choose_server_ems_subtitle">Element Matrix Services（EMS）は、高速、安全でリアルタイムのコミュニケーション向きの、堅牢で安定したホスティングサービスです。&lt;a href=\"${ftue_ems_url}\"&gt;element.io/ems&lt;/a&gt;で方法を調べましょう。</string>
+    <string name="ftue_auth_choose_server_ems_subtitle">Mana Matrix Services（EMS）は、高速、安全でリアルタイムのコミュニケーション向きの、堅牢で安定したホスティングサービスです。&lt;a href=\"${ftue_ems_url}\"&gt;mana.io/ems&lt;/a&gt;で方法を調べましょう。</string>
     <string name="ftue_auth_sign_in_choose_server_header">アカウントにサインインするサーバー</string>
     <string name="ftue_auth_create_account_choose_server_header">アカウントを作成するサーバー</string>
     <string name="send_feedback_threads_info">スレッド機能については、改良した通知など新機能の追加などを行っています。フィードバックをお聞かせください！</string>
@@ -2808,8 +2808,8 @@
     <string name="device_manager_other_sessions_description_verified">認証済・直近のオンライン日時 %1$s</string>
     <string name="device_manager_verification_status_detail_other_session_unknown">現在のセッションを認証すると、このセッションの認証の状態を確認できます。</string>
     <string name="device_manager_sessions_other_description">セキュリティーを最大限に高めるには、セッションを認証し、不明なセッションや使用していないセッションからサインアウトしてください。</string>
-    <string name="labs_enable_element_call_permission_shortcuts_summary">Element Callウィジェットを自動で承認し、カメラまたはマイクのアクセス権を付与</string>
-    <string name="labs_enable_element_call_permission_shortcuts">Element Callの権限のショートカットを有効にする</string>
+    <string name="labs_enable_mana_call_permission_shortcuts_summary">Mana Callウィジェットを自動で承認し、カメラまたはマイクのアクセス権を付与</string>
+    <string name="labs_enable_mana_call_permission_shortcuts">Mana Callの権限のショートカットを有効にする</string>
     <string name="settings_troubleshoot_test_current_gateway">現在のゲートウェイ：%s</string>
     <string name="settings_troubleshoot_test_current_gateway_title">ゲートウェイ</string>
     <plurals name="settings_troubleshoot_test_distributors_many">

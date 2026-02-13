@@ -16,7 +16,7 @@
 
 package org.matrix.android.sdk.api.session.content
 
-import org.matrix.android.sdk.api.session.crypto.attachments.ElementToDecrypt
+import org.matrix.android.sdk.api.session.crypto.attachments.ManaToDecrypt
 
 /**
  * This interface defines methods for accessing content from the current session.
@@ -45,10 +45,10 @@ interface ContentUrlResolver {
      * Get the ResolvedMethod to download a URL.
      *
      * @param contentUrl the Matrix media content URI (in the form of "mxc://...").
-     * @param elementToDecrypt Encryption data may be required if you use a content scanner
+     * @param manaToDecrypt Encryption data may be required if you use a content scanner
      * @return the Method to access resource, or null if invalid
      */
-    fun resolveForDownload(contentUrl: String?, elementToDecrypt: ElementToDecrypt? = null): ResolvedMethod?
+    fun resolveForDownload(contentUrl: String?, manaToDecrypt: ManaToDecrypt? = null): ResolvedMethod?
 
     /**
      * Get the actual URL for accessing the thumbnail image of a given Matrix media content URI.

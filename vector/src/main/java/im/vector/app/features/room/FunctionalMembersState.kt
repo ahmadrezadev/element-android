@@ -1,7 +1,7 @@
 /*
  * Copyright 2023, 2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -13,7 +13,7 @@ import org.matrix.android.sdk.api.query.QueryStringValue
 import org.matrix.android.sdk.api.session.events.model.toModel
 import org.matrix.android.sdk.api.session.room.state.StateService
 
-private const val FUNCTIONAL_MEMBERS_STATE_EVENT_TYPE = "io.element.functional_members"
+private const val FUNCTIONAL_MEMBERS_STATE_EVENT_TYPE = "io.mana.functional_members"
 
 @JsonClass(generateAdapter = true)
 data class FunctionalMembersContent(

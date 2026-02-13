@@ -1,7 +1,7 @@
 /*
  * Copyright 2019-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -402,7 +402,7 @@ class TimelineFragment :
                 RoomDetailViewEvents.StopChatEffects -> handleStopChatEffects()
                 is RoomDetailViewEvents.DisplayAndAcceptCall -> acceptIncomingCall(it)
                 RoomDetailViewEvents.RoomReplacementStarted -> handleRoomReplacement()
-                RoomDetailViewEvents.OpenElementCallWidget -> handleOpenElementCallWidget()
+                RoomDetailViewEvents.OpenManaCallWidget -> handleOpenManaCallWidget()
                 RoomDetailViewEvents.DisplayPromptToStopVoiceBroadcast -> displayPromptToStopVoiceBroadcast()
                 is RoomDetailViewEvents.RevokeFilePermission -> revokeFilePermission(it)
             }
@@ -814,7 +814,7 @@ class TimelineFragment :
                 else -> state.isAllowedToManageWidgets
             }
             menu.findItem(R.id.video_call).icon?.alpha = if (callButtonsEnabled) 0xFF else 0x40
-            menu.findItem(R.id.voice_call).icon?.alpha = if (callButtonsEnabled || state.hasActiveElementCallWidget()) 0xFF else 0x40
+            menu.findItem(R.id.voice_call).icon?.alpha = if (callButtonsEnabled || state.hasActiveManaCallWidget()) 0xFF else 0x40
 
             val matrixAppsMenuItem = menu.findItem(R.id.open_matrix_apps)
             val widgetsCount = state.activeRoomWidgets.invoke()?.size ?: 0
@@ -2028,10 +2028,10 @@ class TimelineFragment :
                 .show(childFragmentManager, "ROOM_WIDGETS_BOTTOM_SHEET")
     }
 
-    private fun handleOpenElementCallWidget() = withState(timelineViewModel) { state ->
+    private fun handleOpenManaCallWidget() = withState(timelineViewModel) { state ->
         state
                 .activeRoomWidgets()
-                ?.find { it.type == WidgetType.ElementCall }
+                ?.find { it.type == WidgetType.ManaCall }
                 ?.also { widget ->
                     navigator.openRoomWidget(requireContext(), state.roomId, widget)
                 }

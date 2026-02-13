@@ -1,7 +1,7 @@
 /*
  * Copyright 2021-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -38,7 +38,7 @@ class CreateSubSpaceController @Inject constructor(
         buildForm(viewState, viewState.asyncCreateRoomRequest !is Loading)
     }
 
-    private fun buildForm(data: CreateRoomViewState, enableFormElement: Boolean) {
+    private fun buildForm(data: CreateRoomViewState, enableFormMana: Boolean) {
         val host = this
 
         genericPillItem {
@@ -50,7 +50,7 @@ class CreateSubSpaceController @Inject constructor(
 
         formEditableSquareAvatarItem {
             id("avatar")
-            enabled(enableFormElement)
+            enabled(enableFormMana)
             imageUri(data.avatarUri)
             clickListener { host.listener?.onAvatarChange() }
             deleteListener { host.listener?.onAvatarDelete() }
@@ -58,7 +58,7 @@ class CreateSubSpaceController @Inject constructor(
 
         formEditTextItem {
             id("name")
-            enabled(enableFormElement)
+            enabled(enableFormMana)
             enabled(true)
             value(data.roomName)
             hint(host.stringProvider.getString(CommonStrings.create_room_name_hint))
@@ -70,7 +70,7 @@ class CreateSubSpaceController @Inject constructor(
         if (data.roomJoinRules == RoomJoinRules.PUBLIC) {
             formEditTextItem {
                 id("alias")
-                enabled(enableFormElement)
+                enabled(enableFormMana)
                 value(data.aliasLocalPart)
                 hint(host.stringProvider.getString(CommonStrings.create_space_alias_hint))
                 suffixText(":" + data.homeServerName)
@@ -89,7 +89,7 @@ class CreateSubSpaceController @Inject constructor(
 
         formMultiLineEditTextItem {
             id("topic")
-            enabled(enableFormElement)
+            enabled(enableFormMana)
             value(data.roomTopic)
             hint(host.stringProvider.getString(CommonStrings.create_space_topic_hint))
             textSizeSp(16)
@@ -141,7 +141,7 @@ class CreateSubSpaceController @Inject constructor(
 
         formSubmitButtonItem {
             id("submit")
-            enabled(enableFormElement && data.roomName.isNullOrBlank().not())
+            enabled(enableFormMana && data.roomName.isNullOrBlank().not())
             buttonTitleId(CommonStrings.create_room_action_create)
             buttonClickListener { host.listener?.submit() }
         }

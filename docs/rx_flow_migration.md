@@ -3,7 +3,7 @@ Useful links:
 - https://ivanisidrowu.github.io/kotlin/2020/08/09/Kotlin-Flow-Migration-And-Testing.html
 
 
-Rx is now completely removed from Element dependencies.
+Rx is now completely removed from Mana dependencies.
 Some examples of the changes:
 
 ```

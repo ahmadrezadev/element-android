@@ -40,9 +40,9 @@ print("Extracting emojis...")
 for row in table.find_all('tr'):
     # Add "bigheads"  rows to categories
     if 'bighead' in next(row.children)['class']:
-        relevant_element = row.find('a')
-        category_id = relevant_element['name']
-        category_name = relevant_element.text
+        relevant_mana = row.find('a')
+        category_id = relevant_mana['name']
+        category_name = relevant_mana.text
         emoji_picker_datasource_categories.append({
             "id": category_id,
             "name": category_name,
@@ -53,17 +53,17 @@ for row in table.find_all('tr'):
     if row.find('td', class_='code'):
         # Get columns
         cols = row.find_all('td')
-        no_element = cols[0]
-        code_element = cols[1]
-        sample_element = cols[2]
-        cldr_element = cols[3]
-        keywords_element = cols[4]
+        no_mana = cols[0]
+        code_mana = cols[1]
+        sample_mana = cols[2]
+        cldr_mana = cols[3]
+        keywords_mana = cols[4]
 
         # Extract information from columns
         # Extract name and id
         # => Remove spaces, colons and unicode-characters
-        emoji_name = cldr_element.text
-        emoji_id = cldr_element.text.lower()
+        emoji_name = cldr_mana.text
+        emoji_id = cldr_mana.text.lower()
         emoji_id = re.sub(r'[^A-Za-z0-9 ]+', '', emoji_id, flags=re.UNICODE)  # Only keep alphanumeric, space characters
         emoji_id = emoji_id.strip()  # Remove leading/trailing whitespaces
         emoji_id = emoji_id.replace(' ', '-')
@@ -74,13 +74,13 @@ for row in table.find_all('tr'):
         emoji_name_cap = "".join([w.capitalize() if i == 0 or w not in capitalization_exclude else w for i, w in enumerate(re.split('(\W)', emoji_name))])
 
         # Extract emoji unicode-codepoint
-        emoji_code_raw = code_element.text
+        emoji_code_raw = code_mana.text
         emoji_code_list = emoji_code_raw.split(" ")
         emoji_code_list = [e[2:] for e in emoji_code_list]
         emoji_code = "-".join(emoji_code_list)
 
         # Extract keywords
-        emoji_keywords = keywords_element.text.split(" | ")
+        emoji_keywords = keywords_mana.text.split(" | ")
 
         # Add the emoji-id to the last entry in "categories"
         emoji_picker_datasource_categories[-1]["emojis"].append(emoji_id)

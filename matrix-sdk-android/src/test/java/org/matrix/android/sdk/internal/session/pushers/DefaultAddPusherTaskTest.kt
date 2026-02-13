@@ -35,11 +35,11 @@ private val A_JSON_PUSHER = JsonPusher(
         pushKey = "push-key",
         kind = "http",
         appId = "m.email",
-        appDisplayName = "Element",
+        appDisplayName = "Mana",
         deviceDisplayName = null,
         profileTag = "",
         lang = "en-GB",
-        data = JsonPusherData(brand = "Element")
+        data = JsonPusherData(brand = "Mana")
 )
 
 @ExperimentalCoroutinesApi

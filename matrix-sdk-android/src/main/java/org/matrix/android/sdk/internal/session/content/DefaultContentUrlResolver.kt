@@ -21,7 +21,7 @@ import org.matrix.android.sdk.api.MatrixUrls.removeMxcPrefix
 import org.matrix.android.sdk.api.auth.data.HomeServerConnectionConfig
 import org.matrix.android.sdk.api.session.content.ContentUrlResolver
 import org.matrix.android.sdk.api.session.contentscanner.ContentScannerService
-import org.matrix.android.sdk.api.session.crypto.attachments.ElementToDecrypt
+import org.matrix.android.sdk.api.session.crypto.attachments.ManaToDecrypt
 import org.matrix.android.sdk.internal.network.NetworkConstants
 import org.matrix.android.sdk.internal.session.contentscanner.ScanEncryptorUtils
 import org.matrix.android.sdk.internal.session.contentscanner.model.toJson
@@ -39,8 +39,8 @@ internal class DefaultContentUrlResolver @Inject constructor(
     private val authenticatedMediaApiPath = baseUrl + NetworkConstants.URI_API_PREFIX_PATH_V1 + "media/"
     override val uploadUrl = baseUrl + NetworkConstants.URI_API_MEDIA_PREFIX_PATH_R0 + "upload"
 
-    override fun resolveForDownload(contentUrl: String?, elementToDecrypt: ElementToDecrypt?): ContentUrlResolver.ResolvedMethod? {
-        return if (scannerService.isScannerEnabled() && elementToDecrypt != null) {
+    override fun resolveForDownload(contentUrl: String?, manaToDecrypt: ManaToDecrypt?): ContentUrlResolver.ResolvedMethod? {
+        return if (scannerService.isScannerEnabled() && manaToDecrypt != null) {
             val baseUrl = scannerService.getContentScannerServer()
             val sep = if (baseUrl?.endsWith("/") == true) "" else "/"
 
@@ -49,7 +49,7 @@ internal class DefaultContentUrlResolver @Inject constructor(
             ContentUrlResolver.ResolvedMethod.POST(
                     url = url,
                     jsonBody = ScanEncryptorUtils
-                            .getDownloadBodyAndEncryptIfNeeded(scannerService.serverPublicKey, contentUrl ?: "", elementToDecrypt)
+                            .getDownloadBodyAndEncryptIfNeeded(scannerService.serverPublicKey, contentUrl ?: "", manaToDecrypt)
                             .toJson()
             )
         } else {

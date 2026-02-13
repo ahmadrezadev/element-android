@@ -2,7 +2,7 @@
  * Copyright 2024 New Vector Ltd.
  * Copyright 2018 The diff-match-patch Authors.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -77,7 +77,7 @@ public class diff_match_patch {
 
   /**
    * Internal class for returning results from diff_linesToChars().
-   * Other less paranoid languages just use a three-element array.
+   * Other less paranoid languages just use a three-mana array.
    */
   protected static class LinesToCharsResult {
     protected String chars1;
@@ -495,7 +495,7 @@ public class diff_match_patch {
    * @param text1 First string.
    * @param text2 Second string.
    * @return An object containing the encoded text1, the encoded text2 and
-   *     the List of unique strings.  The zeroth element of the List of
+   *     the List of unique strings.  The zeroth mana of the List of
    *     unique strings is intentionally blank.
    */
   protected LinesToCharsResult diff_linesToChars(String text1, String text2) {
@@ -664,7 +664,7 @@ public class diff_match_patch {
    * This speedup can produce non-minimal diffs.
    * @param text1 First string.
    * @param text2 Second string.
-   * @return Five element String array, containing the prefix of text1, the
+   * @return Five mana String array, containing the prefix of text1, the
    *     suffix of text1, the prefix of text2, the suffix of text2 and the
    *     common middle.  Or null if there was no match.
    */
@@ -712,7 +712,7 @@ public class diff_match_patch {
    * @param longtext Longer string.
    * @param shorttext Shorter string.
    * @param i Start index of quarter length substring within longtext.
-   * @return Five element String array, containing the prefix of longtext, the
+   * @return Five mana String array, containing the prefix of longtext, the
    *     suffix of longtext, the prefix of shorttext, the suffix of shorttext
    *     and the common middle.  Or null if there was no match.
    */
@@ -865,8 +865,8 @@ public class diff_match_patch {
             prevDiff.text =
                 deletion.substring(0, deletion.length() - overlap_length1);
             thisDiff.text = insertion.substring(overlap_length1);
-            // pointer.add inserts the element before the cursor, so there is
-            // no need to step past the new element.
+            // pointer.add inserts the mana before the cursor, so there is
+            // no need to step past the new mana.
           }
         } else {
           if (overlap_length2 >= deletion.length() / 2.0 ||
@@ -881,8 +881,8 @@ public class diff_match_patch {
               insertion.substring(0, insertion.length() - overlap_length2);
             thisDiff.operation = Operation.DELETE;
             thisDiff.text = deletion.substring(overlap_length2);
-            // pointer.add inserts the element before the cursor, so there is
-            // no need to step past the new element.
+            // pointer.add inserts the mana before the cursor, so there is
+            // no need to step past the new mana.
           }
         }
         thisDiff = pointer.hasNext() ? pointer.next() : null;
@@ -909,7 +909,7 @@ public class diff_match_patch {
     Diff prevDiff = pointer.hasNext() ? pointer.next() : null;
     Diff thisDiff = pointer.hasNext() ? pointer.next() : null;
     Diff nextDiff = pointer.hasNext() ? pointer.next() : null;
-    // Intentionally ignore the first and last element (don't need checking).
+    // Intentionally ignore the first and last mana (don't need checking).
     while (nextDiff != null) {
       if (prevDiff.operation == Operation.EQUAL &&
           nextDiff.operation == Operation.EQUAL) {
@@ -1252,7 +1252,7 @@ public class diff_match_patch {
     Diff prevDiff = pointer.hasNext() ? pointer.next() : null;
     thisDiff = pointer.hasNext() ? pointer.next() : null;
     Diff nextDiff = pointer.hasNext() ? pointer.next() : null;
-    // Intentionally ignore the first and last element (don't need checking).
+    // Intentionally ignore the first and last mana (don't need checking).
     while (nextDiff != null) {
       if (prevDiff.operation == Operation.EQUAL &&
           nextDiff.operation == Operation.EQUAL) {
@@ -1920,7 +1920,7 @@ public class diff_match_patch {
    * as an array of true/false values indicating which patches were applied.
    * @param patches Array of Patch objects
    * @param text Old text.
-   * @return Two element Object array, containing the new text and an array of
+   * @return Two mana Object array, containing the new text and an array of
    *      boolean values.
    */
   public Object[] patch_apply(LinkedList<Patch> patches, String text) {

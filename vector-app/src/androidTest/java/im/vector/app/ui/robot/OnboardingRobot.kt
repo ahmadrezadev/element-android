@@ -1,7 +1,7 @@
 /*
  * Copyright 2020-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -35,7 +35,7 @@ class OnboardingRobot {
 
     private fun crawlCreateAccount() {
         if (defaultVectorFeatures.isOnboardingCombinedRegisterEnabled()) {
-            // TODO https://github.com/element-hq/element-android/issues/6652
+            // TODO https://github.com/mana-hq/mana-android/issues/6652
         } else {
             clickOn(R.id.loginSplashSubmit)
             assertDisplayed(R.id.useCaseHeaderTitle, CommonStrings.ftue_auth_use_case_title)
@@ -48,7 +48,7 @@ class OnboardingRobot {
 
     private fun crawlAlreadyHaveAccount() {
         if (defaultVectorFeatures.isOnboardingCombinedLoginEnabled()) {
-            // TODO https://github.com/element-hq/element-android/issues/6652
+            // TODO https://github.com/mana-hq/mana-android/issues/6652
         } else {
             clickOn(R.id.loginSplashAlreadyHaveAccount)
             OnboardingServersRobot().crawlSignIn()

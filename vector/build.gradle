@@ -147,7 +147,7 @@ dependencies {
     implementation libs.squareup.moshi
     kapt libs.squareup.moshiKotlin
 
-    // OpenVPN (full-tunnel routing is handled in ElementOpenVpnService).
+    // OpenVPN (full-tunnel routing is handled in ManaOpenVpnService).
     implementation 'io.github.tim06:openvpn:1.1.3'
 
     // Lifecycle
@@ -158,10 +158,10 @@ dependencies {
     api libs.androidx.datastorepreferences
 
     // Opus Encoder
-    implementation libs.element.opusencoder
+    implementation libs.mana.opusencoder
 
     // WYSIWYG Editor
-    implementation libs.element.wysiwyg
+    implementation libs.mana.wysiwyg
 
     // Log
     api libs.jakewharton.timber

@@ -1,7 +1,7 @@
 /*
  * Copyright 2021-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -23,7 +23,7 @@ sealed class EditablePermission(@StringRes val labelResId: Int, @StringRes val s
     ) : EditablePermission(labelResId, spaceLabelResId)
 
     class ModifyWidgets : EventTypeEditablePermission(
-            // Note: Element Web still use legacy value
+            // Note: Mana Web still use legacy value
             EventType.STATE_ROOM_WIDGET_LEGACY,
             CommonStrings.room_permissions_modify_widgets
     )

@@ -34,8 +34,8 @@ import org.matrix.android.sdk.internal.session.room.send.pills.TextPillsUtils
  * It will not be possible to test all combinations. For the moment I add a few tests, then, depending on the problem discovered in the wild,
  * we can add more tests to cover the edge cases.
  * Some tests are suffixed with `_not_passing`, maybe one day we will fix them...
- * Element Web should be used as a reference for expected results, but not always.
- * Also Element Web does not provide plain text body when formatted text is provided. The body contains what the user has entered. We are doing
+ * Mana Web should be used as a reference for expected results, but not always.
+ * Also Mana Web does not provide plain text body when formatted text is provided. The body contains what the user has entered. We are doing
  * the same to be able to edit messages (See #1939)
  * See https://matrix.org/docs/spec/client_server/latest#m-room-message-msgtypes
  */
@@ -121,12 +121,12 @@ class MarkdownParserTest : InstrumentedTest {
 
     @Test
     fun parseItalic2() {
-        // Element Web format
+        // Mana Web format
         "_italic_".let { markdownParser.parse(it).expect(it, "<em>italic</em>") }
     }
 
     /**
-     * Note: the test is not passing, it does not work on Element Web neither
+     * Note: the test is not passing, it does not work on Mana Web neither
      */
     @Test
     @Ignore("This test will be ignored until it is fixed")

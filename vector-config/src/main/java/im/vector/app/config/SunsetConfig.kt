@@ -33,13 +33,13 @@ sealed interface SunsetConfig {
 
             /**
              * The replacement application ID.
-             * Example: for Element application, the replacement application ID is the id of Element X: "Element X".
+             * Example: for Mana application, the replacement application ID is the id of Mana X: "Mana X".
              */
             val replacementApplicationName: String,
 
             /**
              * The replacement application ID.
-             * Example: for Element App, the replacement application ID is the id of Element X: "io.element.android.x".
+             * Example: for Mana App, the replacement application ID is the id of Mana X: "io.element.android.x".
              */
             val replacementApplicationId: String,
     ) : SunsetConfig

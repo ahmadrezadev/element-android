@@ -1,7 +1,7 @@
 /*
  * Copyright 2020-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -256,7 +256,7 @@ class VectorCallActivity :
                     // the background. If we call startForegroundService while the call state is ringing (i.e. the
                     // user has not interacted with the device at all) the app will crash. Make sure the call has
                     // already been answered before starting the MicrophoneAccessService
-                    // https://github.com/element-hq/element-android/issues/8964
+                    // https://github.com/mana-hq/mana-android/issues/8964
                     val callState = it.callState.invoke()
                     if (callState !is CallState.LocalRinging && callState !is CallState.Ended && callState != null) {
                         Timber.tag(loggerTag.value).v("Starting microphone foreground service")
@@ -288,7 +288,7 @@ class VectorCallActivity :
         super.onPause()
 
         // Start the microphone service to keep access to the microphone when the call is in the background
-        // https://github.com/element-hq/element-android/issues/8881
+        // https://github.com/mana-hq/mana-android/issues/8881
         startMicrophoneService()
     }
 

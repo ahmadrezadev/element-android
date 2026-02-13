@@ -1,7 +1,7 @@
 /*
  * Copyright 2019-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -52,7 +52,7 @@ class LoginSignUpSignInSelectionFragment :
                 views.loginSignupSigninText.text = getString(CommonStrings.login_server_matrix_org_text)
             }
             ServerType.EMS -> {
-                views.loginSignupSigninServerIcon.setImageResource(R.drawable.ic_logo_element_matrix_services)
+                views.loginSignupSigninServerIcon.setImageResource(R.drawable.ic_logo_mana_matrix_services)
                 views.loginSignupSigninServerIcon.isVisible = true
                 views.loginSignupSigninTitle.text = getString(CommonStrings.login_connect_to_modular)
                 views.loginSignupSigninText.text = state.homeServerUrlFromUser.toReducedUrl()

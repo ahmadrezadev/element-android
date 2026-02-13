@@ -16,7 +16,7 @@
 
 ---------------  S U M M A R Y ------------
 
-Command Line: org.jetbrains.kotlin.cli.jvm.K2JVMCompiler @C:\Users\ahmadrezadev-pc\source\repos\element-android\matrix-sdk-android\build\20260213_6497243013159815792.compiler.options
+Command Line: org.jetbrains.kotlin.cli.jvm.K2JVMCompiler @C:\Users\ahmadrezadev-pc\source\repos\mana-android\matrix-sdk-android\build\20260213_6497243013159815792.compiler.options
 
 Host: Intel(R) Core(TM) i7-14700K, 28 cores, 31G,  Windows 11 , 64 bit Build 26100 (10.0.26100.7705)
 Time: Fri Feb 13 10:51:11 2026 Iran Standard Time elapsed time: 4.583917 seconds (0d 0h 0m 4s)
@@ -206,7 +206,7 @@ Lock stack of current Java thread (top to bottom):
 ---------------  P R O C E S S  ---------------
 
 Threads class SMR info:
-_java_thread_list=0x000001387cbe4750, length=21, elements={
+_java_thread_list=0x000001387cbe4750, length=21, manas={
 0x000001384afe6c00, 0x0000013873671ee0, 0x00000138736727f0, 0x00000138736753a0,
 0x00000138736770a0, 0x000001387367a300, 0x000001387367ced0, 0x0000013873685dd0,
 0x0000013873693e30, 0x000001387376e310, 0x0000013873770740, 0x0000013873693620,
@@ -666,7 +666,7 @@ Event: 4.573 Thread 0x000001384afe6c00 Uncommon trap: reason=unstable_if action=
 Event: 4.573 Thread 0x000001384afe6c00 DEOPT PACKING pc=0x000001385db4b504 sp=0x0000003358afa430
 Event: 4.573 Thread 0x000001384afe6c00 DEOPT UNPACKING pc=0x000001385cd2fc02 sp=0x0000003358afa398 mode 2
 Event: 4.576 Thread 0x000001384afe6c00 Uncommon trap: trap_request=0xffffffc6 fr.pc=0x000001385d7c4b0c relative=0x000000000000090c
-Event: 4.576 Thread 0x000001384afe6c00 Uncommon trap: reason=bimorphic_or_optimized_type_check action=maybe_recompile pc=0x000001385d7c4b0c method=org.jetbrains.kotlin.com.intellij.extapi.psi.ASTDelegatePsiElement.findChildByType(Lorg/jetbrains/kotlin/com/intellij/psi/tree/IElementType;)Lorg/j
+Event: 4.576 Thread 0x000001384afe6c00 Uncommon trap: reason=bimorphic_or_optimized_type_check action=maybe_recompile pc=0x000001385d7c4b0c method=org.jetbrains.kotlin.com.intellij.extapi.psi.ASTDelegatePsiMana.findChildByType(Lorg/jetbrains/kotlin/com/intellij/psi/tree/IManaType;)Lorg/j
 Event: 4.576 Thread 0x000001384afe6c00 DEOPT PACKING pc=0x000001385d7c4b0c sp=0x0000003358afdb40
 Event: 4.576 Thread 0x000001384afe6c00 DEOPT UNPACKING pc=0x000001385cd2fc02 sp=0x0000003358afdb08 mode 2
 Event: 4.577 Thread 0x000001384afe6c00 Uncommon trap: trap_request=0xffffffc6 fr.pc=0x000001385daa1a10 relative=0x0000000000003910
@@ -857,7 +857,7 @@ dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
 symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Eclipse Adoptium\jdk-25.0.2.10-hotspot\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.7824_none_3e0870b2e3345462;C:\Program Files\Eclipse Adoptium\jdk-25.0.2.10-hotspot\bin\server
 
 VM Arguments:
-java_command: org.jetbrains.kotlin.cli.jvm.K2JVMCompiler @C:\Users\ahmadrezadev-pc\source\repos\element-android\matrix-sdk-android\build\20260213_6497243013159815792.compiler.options
+java_command: org.jetbrains.kotlin.cli.jvm.K2JVMCompiler @C:\Users\ahmadrezadev-pc\source\repos\mana-android\matrix-sdk-android\build\20260213_6497243013159815792.compiler.options
 java_class_path (initial): C:\Users\ahmadrezadev-pc\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-compiler-embeddable\1.9.24\78dab849090e6c5e2eadb6e59a11cdc28fb67a08\kotlin-compiler-embeddable-1.9.24.jar;C:\Users\ahmadrezadev-pc\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\1.9.24\9928532f12c66ad816a625b3f9984f8368ca6d2b\kotlin-stdlib-1.9.24.jar;C:\Users\ahmadrezadev-pc\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-script-runtime\1.9.24\96771497da90fbc5af1c90fce148db2595a62502\kotlin-script-runtime-1.9.24.jar;C:\Users\ahmadrezadev-pc\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-reflect\1.6.10\1cbe9c92c12a94eea200d23c2bbaedaf3daf5132\kotlin-reflect-1.6.10.jar;C:\Users\ahmadrezadev-pc\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-daemon-embeddable\1.9.24\86685b9c5e8d170925bd9ddbdc263374a6a73281\kotlin-daemon-embeddable-1.9.24.jar;C:\Users\ahmadrezadev-pc\.gradle\caches\modules-2\files-2.1\org.jetbrains.intellij.deps\trove4j\1.0.20200330\3afb14d5f9ceb459d724e907a21145e8ff394f02\trove4j-1.0.20200330.jar;C:\Users\ahmadrezadev-pc\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations\13.0\919f0dfe192fb4e063e7dacadee7f8bb9a2672a9\annotations-13.0.jar
 Launcher Type: SUN_STANDARD
 

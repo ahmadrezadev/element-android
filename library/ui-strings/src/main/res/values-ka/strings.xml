@@ -340,7 +340,7 @@
     <string name="home_layout_preferences_sort_by">სორტირება</string>
     <string name="home_layout_preferences_sort_activity">აქტივობა</string>
     <string name="home_layout_preferences_sort_name">ა - ჰ</string>
-    <string name="labs_enable_new_app_layout_summary">გარტავებული Element-ს მარტივი ტაბების ვარიანტით</string>
+    <string name="labs_enable_new_app_layout_summary">გარტავებული Mana-ს მარტივი ტაბების ვარიანტით</string>
     <string name="labs_enable_deferred_dm_summary">პირადი შეტყობინების შექმნა მხოლოდ პირველ შეტყობინებაზე</string>
     <string name="invitations_header">მოწვევები</string>
     <string name="low_priority_header">დაბალი პრიორიტეტი</string>
@@ -1448,11 +1448,11 @@
     <string name="login_social_continue">ან</string>
     <string name="login_social_signin_with">შესვლა %s-ით</string>
     <string name="login_continue">გაგრძელება</string>
-    <string name="login_connect_to_modular">დაკავშირება Element Matrix Services-თან</string>
+    <string name="login_connect_to_modular">დაკავშირება Mana Matrix Services-თან</string>
     <string name="login_signin_to">შედით %1$s-ში</string>
     <string name="login_signup">რეგისტრაცია</string>
     <string name="login_clear_homeserver_history">ისტორიის გაწმენდა</string>
-    <string name="login_server_url_form_modular_hint">Element Matrix Services მისამართი</string>
+    <string name="login_server_url_form_modular_hint">Mana Matrix Services მისამართი</string>
     <string name="login_server_url_form_other_hint">მისამართი</string>
     <string name="login_sso_error_message">დაფიქსირდა შეცდომა გვერდის ჩატვირთვისას: %1$s (%2$d)</string>
     <string name="login_login_with_email_error">ეს ელფოსტის მისამართი არ არის დაკავშირებული არცერთ ანგარიშთან.</string>
@@ -1983,7 +1983,7 @@
     <string name="ftue_auth_choose_server_title">აირჩიეთ თქვენი სერვერი</string>
     <string name="ftue_auth_choose_server_subtitle">რა არის თქვენი სერვერის მისამართი\? ეს არის თქვენი მონაცემების სახლი</string>
     <string name="ftue_auth_choose_server_ems_title">რა არის თქვენი სერვერის მისამართი\?</string>
-    <string name="ftue_auth_choose_server_ems_subtitle">Element Matrix Services (EMS) არის ძლიერი და საიმედო ჰოსტინგის სერვისი სწრაფი, უსაფრთხო და რეალურ დროში კომუნიკაციისთვის. გაიგეთ მეტი &lt;a href=\"${ftue_ems_url}\"&gt;element.io/ems&lt;/a&gt;-ზე</string>
+    <string name="ftue_auth_choose_server_ems_subtitle">Mana Matrix Services (EMS) არის ძლიერი და საიმედო ჰოსტინგის სერვისი სწრაფი, უსაფრთხო და რეალურ დროში კომუნიკაციისთვის. გაიგეთ მეტი &lt;a href=\"${ftue_ems_url}\"&gt;mana.io/ems&lt;/a&gt;-ზე</string>
     <string name="ftue_auth_terms_subtitle">გთხოვთ, წაიკითხოთ %s-ის წესები და პოლიტიკები</string>
     <string name="ftue_auth_email_subtitle">%s-ს სჭირდება თქვენი ანგარიშის ვერიფიკაცია</string>
     <string name="ftue_auth_phone_subtitle">%s-ს სჭირდება თქვენი ანგარიშის ვერიფიკაცია</string>
@@ -2050,7 +2050,7 @@
     <string name="login_signup_username_hint">მომხმარებლის სახელი</string>
     <string name="login_signup_error_user_in_use">ეს სახელი უკვე გამოყენებულია</string>
     <string name="login_signup_cancel_confirmation_content">თქვენი ანგარიში ჯერ არ შექმნილა. გსურთ რეგისტრაციის შეჩერება\?</string>
-    <string name="login_a11y_choose_modular">აირჩიეთ Element Matrix Services</string>
+    <string name="login_a11y_choose_modular">აირჩიეთ Mana Matrix Services</string>
     <string name="login_a11y_choose_other">აირჩიეთ მორგებული ჰოუმსერვერი</string>
     <string name="login_wait_for_email_title">გთხოვთ, შეამოწმოთ თქვენი ელფოსტა</string>
     <string name="login_wait_for_email_notice">ჩვენ ახლახანს გამოგიგზავნეთ ელფოსტა %1$s. 
@@ -2254,7 +2254,7 @@
     <string name="crypto_error_withheld_blacklisted">ვერ ხსნით ამ შეტყობინებას, რადგან გამგზავნმა დაგბლოკათ</string>
     <string name="crypto_error_withheld_generic">ვერ ხსნით ამ შეტყობინებას, რადგან გამგზავნმა სპეციალურად არ გამოგიგზავნათ გასაღებები</string>
     <string name="notice_crypto_unable_to_decrypt_merged">მიმდინარეობს დაშიფრული ისტორიის ლოდინი</string>
-    <string tools:ignore="UnusedResources" name="disclaimer_title">Riot ახლა არის Element!</string>
+    <string tools:ignore="UnusedResources" name="disclaimer_title">Riot ახლა არის Mana!</string>
     <string tools:ignore="UnusedResources" name="disclaimer_negative_button">მივიღე</string>
     <string tools:ignore="UnusedResources" name="disclaimer_positive_button">გაიგეთ მეტი</string>
     <string name="save_recovery_key_chooser_hint">შეინახეთ აღდგენის გასაღები</string>
@@ -2542,7 +2542,7 @@
     <string name="settings_troubleshoot_test_current_distributor">ამჟამად გამოყენებაშია %s.</string>
     <string name="settings_troubleshoot_test_current_endpoint_success">მიმდინარე ბოლო წერტილი: %s</string>
     <string name="settings_troubleshoot_test_current_endpoint_failed">ვერ მოიძებნა ბოლო წერტილი.</string>
-    <string name="labs_enable_element_call_permission_shortcuts">Element Call უფლებების სწრაფი გზების ჩართვა</string>
+    <string name="labs_enable_mana_call_permission_shortcuts">Mana Call უფლებების სწრაფი გზების ჩართვა</string>
     <string name="settings_troubleshoot_test_current_gateway_title">კარიბჭე</string>
     <string name="settings_troubleshoot_test_current_gateway">მიმდინარე კარიბჭე: %s</string>
     <string name="live_location_labs_promotion_title">ცოცხალი ადგილმდებარეობის გაზიარება</string>
@@ -2884,7 +2884,7 @@
     </plurals>
     <string name="settings_troubleshoot_test_current_endpoint_title">ბოლო წერტილი</string>
     <string name="live_location_labs_promotion_description">გთხოვთ გაითვალისწინოთ: ეს არის ლაბორატორიული ფუნქცია, რომელიც იყენებს დროებით განხორციელებას. ეს ნიშნავს, რომ თქვენ ვერ შეძლებთ თქვენი ადგილმდებარეობის ისტორიის წაშლას და მოწინავე მომხმარებლები შეძლებენ თქვენი ადგილმდებარეობის ისტორიის ნახვას, თუნდაც ცოცხალი ადგილმდებარეობის გაზიარების შეჩერების შემდეგ.</string>
-    <string name="labs_enable_element_call_permission_shortcuts_summary">Element Call ვიჯეტების ავტომატური დამტკიცება და კამერის/მიკროფონის დაშვება</string>
+    <string name="labs_enable_mana_call_permission_shortcuts_summary">Mana Call ვიჯეტების ავტომატური დამტკიცება და კამერის/მიკროფონის დაშვება</string>
     <string name="device_manager_sessions_other_description">უმჯობესია, გააუმჯობესოთ თქვენი უსაფრთხოება და გავიდეთ სესიებიდან, რომლებიც თქვენთვის არ არის ცნობილი ან აღარ იყენებთ.</string>
     <string name="device_manager_verification_status_detail_current_session_unverified">გადამოწმეთ თქვენი მიმდინარე სესია, რათა გააუმჯობესოთ უსაფრთხო შეტყობინებები.</string>
     <string name="device_manager_verification_status_detail_other_session_unknown">გადამოწმეთ თქვენი მიმდინარე სესია, რათა გამოავლინოთ ამ სესიის გადამოწმების სტატუსი.</string>
@@ -2967,6 +2967,6 @@
     <string name="settings_discovery_consent_notice_off_2">თქვენი კონტაქტები კერძოა. კონტაქტებიდან მომხმარებლების აღმოსაჩენად, საჭიროა თქვენი ნებართვა, რომ კონტაქტების ინფორმაცია გაგზავნოთ თქვენი იდენტობის სერვერზე.</string>
     <string name="ftue_personalize_lets_go">წავიდეთ</string>
     <string name="call_unsupported">მხარდაუჭერი ზარი</string>
-    <string name="call_unsupported_matrix_rtc_call">მხარდაუჭერი ზარი. ამ ზარში შესაერთებლად საჭიროა ახალი აპლიკაცია Element X.</string>
+    <string name="call_unsupported_matrix_rtc_call">მხარდაუჭერი ზარი. ამ ზარში შესაერთებლად საჭიროა ახალი აპლიკაცია Mana X.</string>
     <string name="pill_message_unknown_room_or_space">ოთახი/სივრცე</string>
 </resources>

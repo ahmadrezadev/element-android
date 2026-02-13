@@ -1,7 +1,7 @@
 /*
  * Copyright 2018-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -1055,7 +1055,7 @@ class NotificationUtils @Inject constructor(
                             .setContentTitle(buildMeta.applicationName)
                             .setContentText(stringProvider.getString(CommonStrings.settings_troubleshoot_test_push_notification_content))
                             .setSmallIcon(R.drawable.ic_notification)
-                            .setLargeIcon(getBitmap(context, im.vector.lib.ui.styles.R.drawable.element_logo_green))
+                            .setLargeIcon(getBitmap(context, im.vector.lib.ui.styles.R.drawable.mana_logo_green))
                             .setColor(ContextCompat.getColor(context, im.vector.lib.ui.styles.R.color.notification_accent_color))
                             .setPriority(NotificationCompat.PRIORITY_MAX)
                             .setCategory(NotificationCompat.CATEGORY_STATUS)

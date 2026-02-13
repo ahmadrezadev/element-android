@@ -41,7 +41,7 @@ internal fun <T> RealmList<T>.clearWith(delete: (T) -> Unit) {
     }
 
     if (isNotEmpty()) {
-        fatalError("`clearWith` MUST delete all elements of the RealmList")
+        fatalError("`clearWith` MUST delete all manas of the RealmList")
     }
 }
 

@@ -1,7 +1,7 @@
 /*
  * Copyright 2019-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -150,7 +150,7 @@ class EventHtmlRenderer @Inject constructor(
     /**
      * Workaround for https://github.com/noties/Markwon/issues/423
      */
-    private val removeLeadingNewlineForInlineElement = object : AbstractMarkwonPlugin() {
+    private val removeLeadingNewlineForInlineMana = object : AbstractMarkwonPlugin() {
         override fun afterSetText(textView: TextView) {
             super.afterSetText(textView)
 
@@ -185,7 +185,7 @@ class EventHtmlRenderer @Inject constructor(
     private val markwon = Markwon.builder(context)
             .usePlugin(HtmlRootTagPlugin())
             .usePlugin(HtmlPlugin.create(htmlConfigure))
-            .usePlugin(removeLeadingNewlineForInlineElement)
+            .usePlugin(removeLeadingNewlineForInlineMana)
             .usePlugin(glidePlugin)
             .apply {
                 if (vectorPreferences.latexMathsIsEnabled()) {

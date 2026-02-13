@@ -1,7 +1,7 @@
 /*
  * Copyright 2021-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 package im.vector.app.features.settings.legals
@@ -28,7 +28,7 @@ import javax.inject.Inject
 class LegalsController @Inject constructor(
         private val stringProvider: StringProvider,
         private val resources: Resources,
-        private val elementLegals: ElementLegals,
+        private val manaLegals: ManaLegals,
         private val errorFormatter: ErrorFormatter,
         private val flavorLegals: FlavorLegals,
 ) : TypedEpoxyController<LegalsState>() {
@@ -48,7 +48,7 @@ class LegalsController @Inject constructor(
             titleResId(CommonStrings.legals_application_title)
         }
 
-        buildPolicies("el", elementLegals.getData())
+        buildPolicies("el", manaLegals.getData())
     }
 
     private fun buildHomeserverSection(data: LegalsState) {

@@ -1,7 +1,7 @@
 /*
  * Copyright 2019-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -114,11 +114,11 @@ interface Navigator {
 
     fun openRoomProfile(context: Context, roomId: String, directAccess: Int? = null)
 
-    fun openBigImageViewer(activity: Activity, sharedElement: View?, matrixItem: MatrixItem) {
-        openBigImageViewer(activity, sharedElement, matrixItem.avatarUrl, matrixItem.getBestName())
+    fun openBigImageViewer(activity: Activity, sharedMana: View?, matrixItem: MatrixItem) {
+        openBigImageViewer(activity, sharedMana, matrixItem.avatarUrl, matrixItem.getBestName())
     }
 
-    fun openBigImageViewer(activity: Activity, sharedElement: View?, mxcUrl: String?, title: String?)
+    fun openBigImageViewer(activity: Activity, sharedMana: View?, mxcUrl: String?, title: String?)
 
     fun openAnalyticsOptIn(context: Context)
 

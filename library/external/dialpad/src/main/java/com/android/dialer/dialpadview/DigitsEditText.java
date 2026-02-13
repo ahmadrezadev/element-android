@@ -2,7 +2,7 @@
  * Copyright 2024 New Vector Ltd.
  * Copyright 2011 The Android Open Source Project
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 

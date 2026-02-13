@@ -1,7 +1,7 @@
 /*
  * Copyright 2026 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  *
  * Adapted from io.github.tim06:openvpn (Apache-2.0).
@@ -43,7 +43,7 @@ import java.net.InetAddress
 import java.net.UnknownHostException
 import java.util.Locale
 
-class ElementOpenVpnService : ProtocolsVpnService(), Handler.Callback, IOpenVPNService {
+class ManaOpenVpnService : ProtocolsVpnService(), Handler.Callback, IOpenVPNService {
 
     private var management: OpenVPNThreadv3? = null
     private var config: OpenVPNConfig? = null
@@ -157,7 +157,7 @@ class ElementOpenVpnService : ProtocolsVpnService(), Handler.Callback, IOpenVPNS
         val config = requireNotNull(config)
         val inlineConfig = config.configuration ?: config.buildConfig()
         Log.d(TAG, "startOpenVPN(): starting OpenVPN thread (configChars=${inlineConfig.length})")
-        val localManagement = ElementOpenVpnThread(
+        val localManagement = ManaOpenVpnThread(
                 this,
                 appContext = applicationContext,
                 inlineConfig = inlineConfig,
@@ -225,7 +225,7 @@ class ElementOpenVpnService : ProtocolsVpnService(), Handler.Callback, IOpenVPNS
                 try {
                     localIp?.let { addAddress(it.ip, it.len) }
                 } catch (iae: IllegalArgumentException) {
-                    OpenVPNLogger.e("ElementOpenVpnService", "Error: $localIp ${iae.localizedMessage}")
+                    OpenVPNLogger.e("ManaOpenVpnService", "Error: $localIp ${iae.localizedMessage}")
                     return null
                 }
             }
@@ -235,7 +235,7 @@ class ElementOpenVpnService : ProtocolsVpnService(), Handler.Callback, IOpenVPNS
                 try {
                     addAddress(ipv6parts[0], ipv6parts[1].toInt())
                 } catch (iae: IllegalArgumentException) {
-                    OpenVPNLogger.e("ElementOpenVpnService", "Error: $localIPv6 ${iae.localizedMessage}")
+                    OpenVPNLogger.e("ManaOpenVpnService", "Error: $localIPv6 ${iae.localizedMessage}")
                     return null
                 }
             }
@@ -258,14 +258,14 @@ class ElementOpenVpnService : ProtocolsVpnService(), Handler.Callback, IOpenVPNS
                     }
                     if (!dnsIncluded) {
                         OpenVPNLogger.e(
-                                "ElementOpenVpnService",
+                                "ManaOpenVpnService",
                                 "Samsung workaround: route to DNS ${dnsList[0]} was added to VPN routes"
                         )
                         positiveIPv4Routes.add(dnsServer)
                     }
                 } catch (failure: Exception) {
                     if (!dnsList[0].contains(":")) {
-                        OpenVPNLogger.e("ElementOpenVpnService", "Error parsing DNS server: ${dnsList[0]}")
+                        OpenVPNLogger.e("ManaOpenVpnService", "Error parsing DNS server: ${dnsList[0]}")
                     }
                 }
             }
@@ -292,14 +292,14 @@ class ElementOpenVpnService : ProtocolsVpnService(), Handler.Callback, IOpenVPNS
             // Restrict tunneled traffic only when explicit app allow-list is provided.
             applyAllowedApplications(this)
 
-            setSession("Element OpenVPN Session")
+            setSession("Mana OpenVPN Session")
         }
 
         return runCatching {
             builder.establish()
                     ?: throw NullPointerException("Android establish() returned null")
         }.getOrElse {
-            OpenVPNLogger.e("ElementOpenVpnService", "Failed to establish TUN: ${it.localizedMessage}")
+            OpenVPNLogger.e("ManaOpenVpnService", "Failed to establish TUN: ${it.localizedMessage}")
             null
         }
     }
@@ -310,7 +310,7 @@ class ElementOpenVpnService : ProtocolsVpnService(), Handler.Callback, IOpenVPNS
             runCatching { builder.addAllowedApplication(packageName) }
                     .onFailure {
                         OpenVPNLogger.e(
-                                "ElementOpenVpnService",
+                                "ManaOpenVpnService",
                                 "Failed to add allowed package '$packageName': ${it.localizedMessage}"
                         )
                     }
@@ -335,7 +335,7 @@ class ElementOpenVpnService : ProtocolsVpnService(), Handler.Callback, IOpenVPNS
                     builder.addRoute(included.prefix)
                 }
             } catch (failure: Exception) {
-                OpenVPNLogger.e("ElementOpenVpnService", "Failed to add route $included: ${failure.localizedMessage}")
+                OpenVPNLogger.e("ManaOpenVpnService", "Failed to add route $included: ${failure.localizedMessage}")
             }
         }
 
@@ -345,7 +345,7 @@ class ElementOpenVpnService : ProtocolsVpnService(), Handler.Callback, IOpenVPNS
                     builder.excludeRoute(excluded.prefix)
                 }
             } catch (failure: Exception) {
-                OpenVPNLogger.e("ElementOpenVpnService", "Failed to exclude route $excluded: ${failure.localizedMessage}")
+                OpenVPNLogger.e("ManaOpenVpnService", "Failed to exclude route $excluded: ${failure.localizedMessage}")
             }
         }
     }
@@ -363,7 +363,7 @@ class ElementOpenVpnService : ProtocolsVpnService(), Handler.Callback, IOpenVPNS
                     builder.addRoute(route.getIPv4Address(), route.networkMask)
                 }
             } catch (failure: IllegalArgumentException) {
-                OpenVPNLogger.e("ElementOpenVpnService", "Failed IPv4 route $route: ${failure.localizedMessage}")
+                OpenVPNLogger.e("ManaOpenVpnService", "Failed IPv4 route $route: ${failure.localizedMessage}")
             }
         }
 
@@ -371,7 +371,7 @@ class ElementOpenVpnService : ProtocolsVpnService(), Handler.Callback, IOpenVPNS
             try {
                 builder.addRoute(route.getIPv6Address(), route.networkMask)
             } catch (failure: IllegalArgumentException) {
-                OpenVPNLogger.e("ElementOpenVpnService", "Failed IPv6 route $route: ${failure.localizedMessage}")
+                OpenVPNLogger.e("ManaOpenVpnService", "Failed IPv6 route $route: ${failure.localizedMessage}")
             }
         }
     }
@@ -407,7 +407,7 @@ class ElementOpenVpnService : ProtocolsVpnService(), Handler.Callback, IOpenVPNS
         val gatewayIP = IpAddress(CIDRIP(gateway!!, 32), false)
         if (localIp == null) {
             OpenVPNLogger.e(
-                    "ElementOpenVpnService",
+                    "ManaOpenVpnService",
                     "Local IP is not set; opening TUN may fail"
             )
             return
@@ -418,7 +418,7 @@ class ElementOpenVpnService : ProtocolsVpnService(), Handler.Callback, IOpenVPNS
         if (gateway == "255.255.255.255") include = true
 
         if (route.normalise()) {
-            OpenVPNLogger.e("ElementOpenVpnService", "Route normalized: $dest")
+            OpenVPNLogger.e("ManaOpenVpnService", "Route normalized: $dest")
         }
 
         routesV4.addIP(route, include)
@@ -455,7 +455,7 @@ class ElementOpenVpnService : ProtocolsVpnService(), Handler.Callback, IOpenVPNS
             val mask = parts[1].toInt()
             routesV6.addIPv6(ip, mask, included)
         } catch (failure: UnknownHostException) {
-            OpenVPNLogger.e("ElementOpenVpnService", "Failed IPv6 route parse: ${failure.localizedMessage}")
+            OpenVPNLogger.e("ManaOpenVpnService", "Failed IPv6 route parse: ${failure.localizedMessage}")
         }
     }
 
@@ -541,7 +541,7 @@ class ElementOpenVpnService : ProtocolsVpnService(), Handler.Callback, IOpenVPNS
     }
 
     companion object {
-        private const val TAG = "ElementOpenVpnDiag"
+        private const val TAG = "ManaOpenVpnDiag"
         const val CONFIGURATION_KEY = "CONFIGURATION_KEY"
         const val USERNAME_KEY = "USERNAME_KEY"
         const val PASSWORD_KEY = "PASSWORD_KEY"
@@ -557,7 +557,7 @@ class ElementOpenVpnService : ProtocolsVpnService(), Handler.Callback, IOpenVPNS
                 password: String? = null,
                 privateKeyPassword: String? = null,
         ) {
-            val intent = Intent(context, ElementOpenVpnService::class.java).apply {
+            val intent = Intent(context, ManaOpenVpnService::class.java).apply {
                 setPackage(context.applicationContext.packageName)
                 putExtra(ACTION_KEY, ACTION_START_KEY)
                 putExtra(CONFIGURATION_KEY, config)
@@ -576,7 +576,7 @@ class ElementOpenVpnService : ProtocolsVpnService(), Handler.Callback, IOpenVPNS
         }
 
         fun stopService(context: Context) {
-            val intent = Intent(context, ElementOpenVpnService::class.java).apply {
+            val intent = Intent(context, ManaOpenVpnService::class.java).apply {
                 setPackage(context.applicationContext.packageName)
                 putExtra(ACTION_KEY, ACTION_STOP_KEY)
             }

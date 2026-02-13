@@ -2558,7 +2558,7 @@
     <string name="ftue_auth_terms_subtitle">لطفاً شرایط و سیاست‌های %s را بخوانید</string>
     <string name="ftue_auth_terms_title">سیاست‌های کارساز</string>
     <string name="ftue_auth_choose_server_ems_cta">در ارتباط بمانید</string>
-    <string name="ftue_auth_choose_server_ems_subtitle">خدمات ماتریکسی المنت (EMS) خدمتی مطمئن برای ارتباطات سریع، امن و زنده است. چگونگیش را در <a href="${ftue_ems_url}">element.io/ems</a> ببینید</string>
+    <string name="ftue_auth_choose_server_ems_subtitle">خدمات ماتریکسی المنت (EMS) خدمتی مطمئن برای ارتباطات سریع، امن و زنده است. چگونگیش را در <a href="${ftue_ems_url}">mana.io/ems</a> ببینید</string>
     <string name="ftue_auth_choose_server_ems_title">می‌خواهید کارساز خود را میزبانی کنید؟</string>
     <string name="ftue_auth_choose_server_entry_hint">نشانی کارساز</string>
     <string name="ftue_auth_choose_server_subtitle">نشانی کارسازتان چیست؟ چونان خانه‌ای برای تمامی داده‌هایتان است</string>
@@ -2574,8 +2574,8 @@
     <string name="font_size_section_manually">گزینش دستی</string>
     <string name="font_size_section_auto">تنظیم خودکار</string>
     <string name="font_size_title">گزینش اندازهٔ قلم</string>
-    <string name="labs_enable_element_call_permission_shortcuts_summary">تأیید خودکار ابزارک‌های تماس و اعطای دسترسی دوربین و میکروفون</string>
-    <string name="labs_enable_element_call_permission_shortcuts">به کار انداخت میان‌برهای اجازهٔ تماس المنت</string>
+    <string name="labs_enable_mana_call_permission_shortcuts_summary">تأیید خودکار ابزارک‌های تماس و اعطای دسترسی دوربین و میکروفون</string>
+    <string name="labs_enable_mana_call_permission_shortcuts">به کار انداخت میان‌برهای اجازهٔ تماس المنت</string>
     <string name="live_location_description">مکان زنده</string>
     <string name="verify_invalid_qr_notice">این رمز QR بدریخت به نظر می‌رسد. لطفاً تأیید با روشی دیگر را بیازمایید.</string>
     <string name="crosssigning_cannot_verify_this_session_desc">نخواهید توانست به تاریخچهٔ پیام رمزشده دست یابید. برای آغاز تازه، کلیدهای تأیید و پشتیبان پیام امنتان را بازنشانی کنید.</string>

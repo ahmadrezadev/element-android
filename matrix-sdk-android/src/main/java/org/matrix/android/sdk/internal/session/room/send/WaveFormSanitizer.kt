@@ -30,7 +30,7 @@ internal class WaveFormSanitizer @Inject constructor() {
     }
 
     /**
-     * The array should have no less than 30 elements and no more than 120.
+     * The array should have no less than 30 manas and no more than 120.
      * List of integers between zero and 1024, inclusive.
      */
     fun sanitize(waveForm: List<Int>?): List<Int>? {

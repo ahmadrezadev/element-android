@@ -1,7 +1,7 @@
 /*
  * Copyright 2019-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -78,7 +78,7 @@ import im.vector.lib.strings.CommonStrings
 import me.gujun.android.span.span
 import org.matrix.android.sdk.api.MatrixUrls.isMxcUrl
 import org.matrix.android.sdk.api.session.Session
-import org.matrix.android.sdk.api.session.crypto.attachments.toElementToDecrypt
+import org.matrix.android.sdk.api.session.crypto.attachments.toManaToDecrypt
 import org.matrix.android.sdk.api.session.events.model.RelationType
 import org.matrix.android.sdk.api.session.events.model.content.EncryptedEventContent
 import org.matrix.android.sdk.api.session.events.model.isThread
@@ -514,7 +514,7 @@ class MessageItemFactory @Inject constructor(
                 filename = messageContent.body,
                 mimeType = messageContent.mimeType,
                 url = messageContent.getFileUrl(),
-                elementToDecrypt = messageContent.encryptedFileInfo?.toElementToDecrypt(),
+                manaToDecrypt = messageContent.encryptedFileInfo?.toManaToDecrypt(),
                 height = messageContent.info?.height,
                 maxHeight = maxHeight,
                 width = messageContent.info?.width,
@@ -565,7 +565,7 @@ class MessageItemFactory @Inject constructor(
                 filename = messageContent.body,
                 mimeType = messageContent.mimeType,
                 url = messageContent.videoInfo?.getThumbnailUrl(),
-                elementToDecrypt = messageContent.videoInfo?.thumbnailFile?.toElementToDecrypt(),
+                manaToDecrypt = messageContent.videoInfo?.thumbnailFile?.toManaToDecrypt(),
                 height = messageContent.videoInfo?.height,
                 maxHeight = maxHeight,
                 width = messageContent.videoInfo?.width,
@@ -578,7 +578,7 @@ class MessageItemFactory @Inject constructor(
                 filename = messageContent.body,
                 mimeType = messageContent.mimeType,
                 url = messageContent.getFileUrl(),
-                elementToDecrypt = messageContent.encryptedFileInfo?.toElementToDecrypt(),
+                manaToDecrypt = messageContent.encryptedFileInfo?.toManaToDecrypt(),
                 thumbnailMediaData = thumbnailData
         )
 

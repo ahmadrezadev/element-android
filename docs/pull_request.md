@@ -86,13 +86,13 @@ Exceptions can occur:
 We use automatic assignment for PR reviews. **A PR is automatically routed by GitHub to one team member** using the round robin algorithm. Additional reviewers can be used for complex changes or when the first reviewer is not confident enough on the changes.
 The process is the following:
 
-- The PR creator selects the [element-android-reviewers](https://github.com/orgs/element-hq/teams/element-android-reviewers) team as a reviewer.
+- The PR creator selects the [mana-android-reviewers](https://github.com/orgs/mana-hq/teams/mana-android-reviewers) team as a reviewer.
 - GitHub automatically assign the reviewer. If the reviewer is not available (holiday, etc.), remove them and set again the team, GitHub will select another reviewer.
 - Alternatively, the PR creator can directly assign specific people if they have another Android developer in their team or they think a specific reviewer should take a look at their PR.
 - Reviewers get a notification to make the review: they review the code following the good practice (see the rest of this document).
 - After making their own review, if they feel not confident enough, they can ask another person for a full review, or they can tag someone within a PR comment to check specific lines.
 
-For PRs coming from the community, the issue wrangler can assign either the team [element-android-reviewers](https://github.com/orgs/element-hq/teams/element-android-reviewers) or any member directly.
+For PRs coming from the community, the issue wrangler can assign either the team [mana-android-reviewers](https://github.com/orgs/mana-hq/teams/mana-android-reviewers) or any member directly.
 
 ##### PR review time
 
@@ -141,7 +141,7 @@ Dependabot is a tool which maintain all our external dependencies up to date. A 
 
 To review such PR, you have to
  - **IMPORTANT** check the diff files (as always).
- - Check the release note. Some existing bugs in Element project may be fixed by the upgrade
+ - Check the release note. Some existing bugs in Mana project may be fixed by the upgrade
  - Make sure that the CI is happy
  - If the code does not compile (API break for instance), you have to checkout the branch and push new commits
  - Do some smoke test, depending of the library which has been upgraded
@@ -247,7 +247,7 @@ Note that you have to repeat the keyword in case of a list of issue
 When PR will be merged, such referenced issue will be automatically closed.
 It is up to the person who has merged the PR to go to the (closed) issue(s) and to add a comment to inform in which version the issue fix will be available. Use the current version of `develop` branch.
 
-> Closed in Element Android v1.x.y
+> Closed in Mana Android v1.x.y
 
 ### Merge conflict
 

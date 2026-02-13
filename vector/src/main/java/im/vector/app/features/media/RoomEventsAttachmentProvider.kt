@@ -1,7 +1,7 @@
 /*
  * Copyright 2020-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -12,7 +12,7 @@ import im.vector.app.core.resources.StringProvider
 import im.vector.lib.attachmentviewer.AttachmentInfo
 import kotlinx.coroutines.CoroutineScope
 import org.matrix.android.sdk.api.extensions.tryOrNull
-import org.matrix.android.sdk.api.session.crypto.attachments.toElementToDecrypt
+import org.matrix.android.sdk.api.session.crypto.attachments.toManaToDecrypt
 import org.matrix.android.sdk.api.session.events.model.toModel
 import org.matrix.android.sdk.api.session.file.FileService
 import org.matrix.android.sdk.api.session.room.model.message.MessageContent
@@ -54,7 +54,7 @@ class RoomEventsAttachmentProvider(
                         filename = content.body,
                         mimeType = content.mimeType,
                         url = content.getFileUrl(),
-                        elementToDecrypt = content.encryptedFileInfo?.toElementToDecrypt(),
+                        manaToDecrypt = content.encryptedFileInfo?.toManaToDecrypt(),
                         maxHeight = -1,
                         maxWidth = -1,
                         width = null,
@@ -81,7 +81,7 @@ class RoomEventsAttachmentProvider(
                         filename = content.body,
                         mimeType = content.mimeType,
                         url = content.getFileUrl(),
-                        elementToDecrypt = content.encryptedFileInfo?.toElementToDecrypt(),
+                        manaToDecrypt = content.encryptedFileInfo?.toManaToDecrypt(),
                         maxHeight = -1,
                         maxWidth = -1,
                         width = null,
@@ -108,7 +108,7 @@ class RoomEventsAttachmentProvider(
                         filename = content.body,
                         mimeType = content.mimeType,
                         url = content.videoInfo?.getThumbnailUrl(),
-                        elementToDecrypt = content.videoInfo?.thumbnailFile?.toElementToDecrypt(),
+                        manaToDecrypt = content.videoInfo?.thumbnailFile?.toManaToDecrypt(),
                         height = content.videoInfo?.height,
                         maxHeight = -1,
                         width = content.videoInfo?.width,
@@ -120,7 +120,7 @@ class RoomEventsAttachmentProvider(
                         filename = content.body,
                         mimeType = content.mimeType,
                         url = content.getFileUrl(),
-                        elementToDecrypt = content.encryptedFileInfo?.toElementToDecrypt(),
+                        manaToDecrypt = content.encryptedFileInfo?.toManaToDecrypt(),
                         thumbnailMediaData = thumbnailData,
                         allowNonMxcUrls = it.root.sendState.isSending()
                 )
@@ -160,7 +160,7 @@ class RoomEventsAttachmentProvider(
                                 fileName = messageContent.body,
                                 mimeType = messageContent.mimeType,
                                 url = messageContent.getFileUrl(),
-                                elementToDecrypt = messageContent.encryptedFileInfo?.toElementToDecrypt()
+                                manaToDecrypt = messageContent.encryptedFileInfo?.toManaToDecrypt()
                         )
                     }
                 }

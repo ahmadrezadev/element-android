@@ -159,7 +159,7 @@ It's worth noting that the response from the homeserver contains the userId of A
 
 ### Login with Msisdn
 
-Not supported yet in Element
+Not supported yet in Mana
 
 ### Login with SSO
 
@@ -184,9 +184,9 @@ curl -X GET 'https://homeserver.with.sso/_matrix/client/r0/login'
 
 In this case, the user can click on "Sign in with SSO" and the native web browser, or a ChromeCustomTab if the device supports it, will be launched on the page
 
-> https://homeserver.with.sso/_matrix/client/r0/login/sso/redirect?redirectUrl=element%3A%2F%element
+> https://homeserver.with.sso/_matrix/client/r0/login/sso/redirect?redirectUrl=mana%3A%2F%mana
 
-The parameter `redirectUrl` is set to `element://connect`.
+The parameter `redirectUrl` is set to `mana://connect`.
 
 ChromeCustomTabs are an intermediate way to display a WebPage, between a WebView and using the external browser. More info can be found [here](https://developer.chrome.com/multidevice/android/customtabs)
 
@@ -196,9 +196,9 @@ During the process, user may be asked to validate an email by clicking on a link
 
 Once the process is finished, the web page will call the `redirectUrl` with an extra parameter `loginToken`
 
-> element://connect?loginToken=MDAxOWxvY2F0aW9uIG1vemlsbGEub3JnCjAwMTNpZGVudGlmaWVy
+> mana://connect?loginToken=MDAxOWxvY2F0aW9uIG1vemlsbGEub3JnCjAwMTNpZGVudGlmaWVy
 
-This navigation is intercepted by Element by the `LoginActivity`, which will then ask the homeserver to convert this `loginToken` to an access token
+This navigation is intercepted by Mana by the `LoginActivity`, which will then ask the homeserver to convert this `loginToken` to an access token
 
 ```shell script
 curl -X POST --data $'{"type":"m.login.token","token":"MDAxOWxvY2F0aW9uIG1vemlsbGEub3JnCjAwMTNpZGVudGlmaWVy"}' 'https://homeserver.with.sso/_matrix/client/r0/login'

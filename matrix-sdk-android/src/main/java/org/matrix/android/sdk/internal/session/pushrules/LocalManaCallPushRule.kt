@@ -21,7 +21,7 @@ import org.matrix.android.sdk.api.session.pushrules.RuleIds
 import org.matrix.android.sdk.api.session.pushrules.rest.PushCondition
 import org.matrix.android.sdk.api.session.pushrules.rest.PushRule
 
-private val localElementCallPushRule = PushRule(
+private val localManaCallPushRule = PushRule(
         ruleId = RuleIds.RULE_ID_ELEMENT_CALL_NOTIFY,
         conditions = listOf(
                 PushCondition(
@@ -36,7 +36,7 @@ private val localElementCallPushRule = PushRule(
         enabled = true,
 )
 
-private val localElementCallPushRuleUnstable = PushRule(
+private val localManaCallPushRuleUnstable = PushRule(
         ruleId = RuleIds.RULE_ID_ELEMENT_CALL_NOTIFY_UNSTABLE,
         conditions = listOf(
                 PushCondition(
@@ -52,17 +52,17 @@ private val localElementCallPushRuleUnstable = PushRule(
 )
 
 /**
- * Ensure that the element call push rules are present.
+ * Ensure that the mana call push rules are present.
  */
-fun List<PushRule>.withElementCallPushRules(): List<PushRule> {
+fun List<PushRule>.withManaCallPushRules(): List<PushRule> {
     val ruleIds = map { it.ruleId }
     return buildList {
-        addAll(this@withElementCallPushRules)
-        if (!ruleIds.contains(localElementCallPushRule.ruleId)) {
-            add(localElementCallPushRule)
+        addAll(this@withManaCallPushRules)
+        if (!ruleIds.contains(localManaCallPushRule.ruleId)) {
+            add(localManaCallPushRule)
         }
-        if (!ruleIds.contains(localElementCallPushRuleUnstable.ruleId)) {
-            add(localElementCallPushRuleUnstable)
+        if (!ruleIds.contains(localManaCallPushRuleUnstable.ruleId)) {
+            add(localManaCallPushRuleUnstable)
         }
     }
 }

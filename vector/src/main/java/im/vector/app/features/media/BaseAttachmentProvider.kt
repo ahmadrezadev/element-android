@@ -1,7 +1,7 @@
 /*
  * Copyright 2020-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -135,7 +135,7 @@ abstract class BaseAttachmentProvider<Type>(
                             fileName = data.filename,
                             mimeType = data.mimeType,
                             url = data.url,
-                            elementToDecrypt = data.elementToDecrypt
+                            manaToDecrypt = data.manaToDecrypt
                     )
                 }
                 withContext(Dispatchers.Main) {

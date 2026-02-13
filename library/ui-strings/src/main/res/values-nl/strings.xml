@@ -1310,15 +1310,15 @@
 \nWil je inloggen met een webclient\?</string>
     <string name="login_sso_error_message">Er is een fout opgetreden bij het laden van de pagina: %1$s (%2$d)</string>
     <string name="login_server_url_form_common_notice">Voer het adres in van de server die je wil gebruiken</string>
-    <string name="login_server_url_form_modular_notice">Voer het adres in van de Modular Element of de server die je wil gebruiken</string>
+    <string name="login_server_url_form_modular_notice">Voer het adres in van de Modular Mana of de server die je wil gebruiken</string>
     <string name="login_server_url_form_modular_text">Premium hosting voor organisaties</string>
-    <string name="login_server_url_form_modular_hint">Element Matrix Services-adres</string>
+    <string name="login_server_url_form_modular_hint">Mana Matrix Services-adres</string>
     <string name="login_clear_homeserver_history">Geschiedenis wissen</string>
     <string name="login_signin_sso">Doorgaan met eenmalig inloggen</string>
     <string name="login_social_signin_with">Log in met %s</string>
     <string name="login_signin_to">Log in bij %1$s</string>
     <string name="login_connect_to_a_custom_server">Verbinding maken met een aangepaste server</string>
-    <string name="login_connect_to_modular">Verbinding maken met Element Matrix Services</string>
+    <string name="login_connect_to_modular">Verbinding maken met Mana Matrix Services</string>
     <string name="login_connect_to">Maak verbinding met %1$s</string>
     <string name="login_social_sso">eenmalig inloggen</string>
     <string name="login_social_signup_with">Meld je aan met %s</string>
@@ -1787,7 +1787,7 @@
     <string name="disclaimer_positive_button">LEER MEER</string>
     <string name="disclaimer_negative_button">BEGREPEN</string>
     <string name="disclaimer_content">We zijn verheugd om aan te kondigen dat we van naam zijn veranderd! Jouw app is up-to-date en je bent ingelogd op jouw account.</string>
-    <string name="disclaimer_title">Riot is nu Element!</string>
+    <string name="disclaimer_title">Riot is nu Mana!</string>
     <string name="notice_crypto_unable_to_decrypt_merged">Wachten op versleutelingsgeschiedenis</string>
     <string name="crypto_error_withheld_generic">Je hebt geen toegang tot dit bericht omdat de afzender de sleutels met opzet niet heeft verzonden</string>
     <string name="crypto_error_withheld_blacklisted">Je hebt geen toegang tot dit bericht omdat je bent geblokkeerd door de afzender</string>
@@ -2125,7 +2125,7 @@
     <string name="login_terms_title">Accepteer de voorwaarden om door te gaan</string>
     <string name="login_a11y_captcha_container">Voer de captcha uitdaging uit</string>
     <string name="login_a11y_choose_other">Selecteer een aangepaste server</string>
-    <string name="login_a11y_choose_modular">Selecteer Element Matrix Services</string>
+    <string name="login_a11y_choose_modular">Selecteer Mana Matrix Services</string>
     <string name="login_signup_cancel_confirmation_content">Jouw account is nog niet aangemaakt. Het registratieproces stoppen\?</string>
     <string name="login_signup_error_user_in_use">Deze inlognaam is in gebruik</string>
     <string name="login_signin_username_hint">Inlognaam of e-mailadres</string>
@@ -2558,7 +2558,7 @@
     <string name="ftue_auth_terms_subtitle">Lees de voorwaarden en het beleid van %s door</string>
     <string name="ftue_auth_terms_title">Serverbeleiden</string>
     <string name="ftue_auth_choose_server_ems_cta">Neem contact op</string>
-    <string name="ftue_auth_choose_server_ems_subtitle">Element Matrix Services (EMS) is een robuuste en betrouwbare hostingservice voor snelle, veilige en realtime communicatie. Ontdek hoe op <a href="${ftue_ems_url}">element.io/ems</a></string>
+    <string name="ftue_auth_choose_server_ems_subtitle">Mana Matrix Services (EMS) is een robuuste en betrouwbare hostingservice voor snelle, veilige en realtime communicatie. Ontdek hoe op <a href="${ftue_ems_url}">mana.io/ems</a></string>
     <string name="ftue_auth_choose_server_ems_title">Wil je jouw eigen server hosten\?</string>
     <string name="ftue_auth_choose_server_entry_hint">Server URL</string>
     <string name="ftue_auth_choose_server_subtitle">Wat is het adres van jouw server\? Dit is als een huis voor al jouw data</string>
@@ -2574,8 +2574,8 @@
     <string name="font_size_section_manually">Handmatig kiezen</string>
     <string name="font_size_section_auto">Automatisch instellen</string>
     <string name="font_size_title">Kies lettergrootte</string>
-    <string name="labs_enable_element_call_permission_shortcuts_summary">Keur automatisch Element Oproep widgets goed en verleen camera-/microfoontoegang</string>
-    <string name="labs_enable_element_call_permission_shortcuts">Snelkoppelingen voor Element Oproep machtigingen inschakelen</string>
+    <string name="labs_enable_mana_call_permission_shortcuts_summary">Keur automatisch Mana Oproep widgets goed en verleen camera-/microfoontoegang</string>
+    <string name="labs_enable_mana_call_permission_shortcuts">Snelkoppelingen voor Mana Oproep machtigingen inschakelen</string>
     <string name="live_location_description">Live locatie</string>
     <string name="verify_invalid_qr_notice">Deze QR-code lijkt misvormd. Probeer te verifiëren met een andere methode.</string>
     <string name="crosssigning_cannot_verify_this_session_desc">Je hebt geen toegang tot de gecodeerde berichtgeschiedenis. Reset je Veilige Berichten Back-up en verificatiesleutels om opnieuw te beginnen.</string>
@@ -2667,7 +2667,7 @@
     <string name="labs_enable_rich_text_editor_summary">Probeer de rich-text-editor (platte tekst-modus binnenkort beschikbaar)</string>
     <string name="labs_enable_rich_text_editor_title">Rich-text-editor inschakelen</string>
     <string name="labs_enable_deferred_dm_title">Uitgestelde privéberichten inschakelen</string>
-    <string name="labs_enable_new_app_layout_summary">Een vereenvoudigde Element met optionele tabs</string>
+    <string name="labs_enable_new_app_layout_summary">Een vereenvoudigde Mana met optionele tabs</string>
     <string name="labs_enable_new_app_layout_title">Nieuwe layout inschakelen</string>
     <string name="qr_code_login_confirm_security_code">Bevestigen</string>
     <string name="qr_code_login_try_again">Opnieuw proberen</string>

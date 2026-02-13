@@ -1,7 +1,7 @@
 /*
  * Copyright 2021-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -55,7 +55,7 @@ class FtueAuthUseCaseFragment :
     }
 
     private fun setupViews() {
-        // Connect to server relies on https://github.com/element-hq/element-android/issues/5782
+        // Connect to server relies on https://github.com/mana-hq/mana-android/issues/5782
         views.useCaseConnectToServerGroup.isGone = vectorFeatures.isOnboardingCombinedRegisterEnabled()
 
         views.useCaseOptionOne.renderUseCase(
@@ -68,7 +68,7 @@ class FtueAuthUseCaseFragment :
                 useCase = FtueUseCase.TEAMS,
                 label = CommonStrings.ftue_auth_use_case_option_two,
                 icon = R.drawable.ic_use_case_teams,
-                tint = im.vector.lib.ui.styles.R.color.palette_element_green
+                tint = im.vector.lib.ui.styles.R.color.palette_mana_green
         )
         views.useCaseOptionThree.renderUseCase(
                 useCase = FtueUseCase.COMMUNITIES,

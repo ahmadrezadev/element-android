@@ -1,7 +1,7 @@
 /*
  * Copyright 2026 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -20,7 +20,7 @@ import net.openvpn.ovpn3.ClientAPI_LogInfo
 import net.openvpn.ovpn3.ClientAPI_ProvideCreds
 import java.net.InetAddress
 
-internal class ElementOpenVpnThread(
+internal class ManaOpenVpnThread(
         service: IOpenVPNService,
         private val appContext: Context,
         private val inlineConfig: String,
@@ -143,7 +143,7 @@ internal class ElementOpenVpnThread(
     }
 
     private companion object {
-        private const val TAG = "ElementOpenVpnDiag"
+        private const val TAG = "ManaOpenVpnDiag"
         private val AUTH_USER_PASS_REGEX = Regex("(?im)^\\s*auth-user-pass\\b.*$")
     }
 

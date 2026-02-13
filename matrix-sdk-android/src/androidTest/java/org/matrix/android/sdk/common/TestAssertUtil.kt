@@ -33,7 +33,7 @@ fun assertListEquals(list1: List<Any>?, list2: List<Any>?) {
         assertEquals("List sizes must match", list1.size, list2!!.size)
 
         for (i in list1.indices) {
-            assertEquals("Elements at index $i are not equal", list1[i], list2[i])
+            assertEquals("Manas at index $i are not equal", list1[i], list2[i])
         }
     }
 }

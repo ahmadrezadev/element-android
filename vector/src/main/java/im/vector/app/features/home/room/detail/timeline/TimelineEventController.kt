@@ -1,7 +1,7 @@
 /*
  * Copyright 2019-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -340,7 +340,7 @@ class TimelineEventController @Inject constructor(
         if (hasReachedInvite && hasUTD) {
             return
         }
-        // Avoid displaying two loaders if there is no elements between them
+        // Avoid displaying two loaders if there is no manas between them
         val showBackwardsLoader = !showingForwardLoader || timelineModels.isNotEmpty()
         // We can hide the loader but still add the item to controller so it can trigger backwards pagination
         LoadingItem_()

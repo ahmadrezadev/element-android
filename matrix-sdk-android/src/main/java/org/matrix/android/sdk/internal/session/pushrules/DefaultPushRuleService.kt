@@ -103,7 +103,7 @@ internal class DefaultPushRuleService @Inject constructor(
         }
 
         return RuleSet(
-                content = contentRules.withElementCallPushRules(),
+                content = contentRules.withManaCallPushRules(),
                 override = overrideRules,
                 room = roomRules,
                 sender = senderRules,

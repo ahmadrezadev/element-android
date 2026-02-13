@@ -15,6 +15,6 @@ body:
     attributes:
       label: Description
       description: Report issue or ask for a feature in the [Android Matrix SDK](https://github.com/matrix-org/matrix-android-sdk2)
-      placeholder: This issue template should be used by third party application maintainers, to report a bug or to request a feature on the SDK module of the Element Android application.
+      placeholder: This issue template should be used by third party application maintainers, to report a bug or to request a feature on the SDK module of the Mana Android application.
     validations:
       required: true

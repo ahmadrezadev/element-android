@@ -701,7 +701,7 @@
     <string name="settings_show_join_leave_messages">События о вступлении/выходе</string>
     <string name="settings_show_avatar_display_name_changes_messages">События учётной записи</string>
     <string name="settings_show_avatar_display_name_changes_messages_summary">Включает изменения аватара и отображаемого имени.</string>
-    <string name="settings_labs_native_camera_summary">Использовать системную камеру вместо камеры Element.</string>
+    <string name="settings_labs_native_camera_summary">Использовать системную камеру вместо камеры Mana.</string>
     <string name="generic_label_and_value">%1$s: %2$s</string>
     <string name="x_plus">+%d</string>
     <string name="no_valid_google_play_services_apk">Не найден APK сервисов Google Play. Уведомления могут работать неправильно.</string>
@@ -1075,15 +1075,15 @@
     <string name="login_server_other_text">Пользовательские и расширенные настройки</string>
     <string name="login_continue">Продолжить</string>
     <string name="login_connect_to">Подключиться к %1$s</string>
-    <string name="login_connect_to_modular">Подключиться к Element Matrix Services</string>
+    <string name="login_connect_to_modular">Подключиться к Mana Matrix Services</string>
     <string name="login_connect_to_a_custom_server">Подключиться к пользовательскому серверу</string>
     <string name="login_signup">Зарегистрироваться</string>
     <string name="login_signin">Войти в систему</string>
     <string name="login_signin_sso">Продолжить с SSO</string>
-    <string name="login_server_url_form_modular_hint">Element Matrix Services Адрес</string>
+    <string name="login_server_url_form_modular_hint">Mana Matrix Services Адрес</string>
     <string name="login_server_url_form_other_hint">Адрес</string>
     <string name="login_server_url_form_modular_text">Премиум-хостинг для организаций</string>
-    <string name="login_server_url_form_modular_notice">Введите адрес Modular Element или Сервер, который вы хотите использовать</string>
+    <string name="login_server_url_form_modular_notice">Введите адрес Modular Mana или Сервер, который вы хотите использовать</string>
     <string name="login_sso_error_message">Произошла ошибка при загрузке страницы: %1$s (%2$d)</string>
     <string name="login_mode_not_supported">Приложение не может войти на этот домашний сервер. Домашний сервер поддерживает следующие типы входа: %1$s.
 \n
@@ -1138,7 +1138,7 @@
     <string name="login_signup_cancel_confirmation_title">Предупреждение</string>
     <string name="login_signup_cancel_confirmation_content">Ваш аккаунт еще не создан. Остановить процесс регистрации\?</string>
     <string name="login_a11y_choose_matrix_org">Выбрать matrix.org</string>
-    <string name="login_a11y_choose_modular">Выбрать Element Matrix Services</string>
+    <string name="login_a11y_choose_modular">Выбрать Mana Matrix Services</string>
     <string name="login_a11y_choose_other">Выбрать другой сервер</string>
     <string name="login_a11y_captcha_container">Пожалуйста, пройдите проверку капчей</string>
     <string name="login_terms_title">Примите условия для продолжения</string>
@@ -1636,7 +1636,7 @@
     <string name="crypto_error_withheld_unverified">Нет доступа к этому сообщению, так как отправитель не доверяет вашей сессии</string>
     <string name="crypto_error_withheld_generic">Вы не можете получить доступ к этому сообщению, потому что отправитель намеренно не отправил ключи</string>
     <string name="notice_crypto_unable_to_decrypt_merged">Ожидание истории шифрования</string>
-    <string name="disclaimer_title">Riot теперь Element!</string>
+    <string name="disclaimer_title">Riot теперь Mana!</string>
     <string name="disclaimer_content">Мы рады сообщить, что сменили имя! Ваше приложение обновлено, и вы вошли в свою учетную запись.</string>
     <string name="disclaimer_negative_button">ПОНЯТНО</string>
     <string name="disclaimer_positive_button">УЗНАТЬ БОЛЬШЕ</string>
@@ -2709,7 +2709,7 @@
     <string name="home_empty_no_unreads_message">Здесь будут отображаться непрочитанные сообщения, когда таковые будут.</string>
     <string name="font_size_use_system">Как в системе</string>
     <string name="change_space">Смена пространства</string>
-    <string name="labs_enable_new_app_layout_summary">Упрощённый Element с дополнительными вкладками</string>
+    <string name="labs_enable_new_app_layout_summary">Упрощённый Mana с дополнительными вкладками</string>
     <string name="onboarding_new_app_layout_welcome_title">Добро пожаловать в новый вид!</string>
     <string name="home_empty_space_no_rooms_title">%s
 \nвыглядит слегка пустовато.</string>
@@ -2898,8 +2898,8 @@
     </plurals>
     <string name="device_manager_verification_status_detail_other_session_unknown">Подтвердите текущую сессию, чтобы посмотреть её состояние подтверждения.</string>
     <string name="device_manager_verification_status_unknown">Неизвестное состояние проверки</string>
-    <string name="labs_enable_element_call_permission_shortcuts_summary">Автоматически принимать виджеты Element Call и давать доступ к микрофону/камере</string>
-    <string name="labs_enable_element_call_permission_shortcuts">Включить ярлыки разрешений Element Call</string>
+    <string name="labs_enable_mana_call_permission_shortcuts_summary">Автоматически принимать виджеты Mana Call и давать доступ к микрофону/камере</string>
+    <string name="labs_enable_mana_call_permission_shortcuts">Включить ярлыки разрешений Mana Call</string>
     <string name="attachment_type_selector_text_formatting">Форматирование текста</string>
     <string name="tooltip_attachment_voice_broadcast">Начать новую голосовую трансляцию</string>
     <string name="live_location_not_enough_permission_dialog_description">Вам необходимо иметь нужные разрешения, чтобы делиться местоположением в реальном времени в этой комнате.</string>
@@ -2929,7 +2929,7 @@
     <string name="ftue_auth_phone_subtitle">%s нуждается в подтверждении вашей учётной записи</string>
     <string name="ftue_auth_email_subtitle">%s нуждается в подтверждении вашей учётной записи</string>
     <string name="ftue_auth_choose_server_ems_cta">Связаться</string>
-    <string name="ftue_auth_choose_server_ems_subtitle">Element Matrix Services (EMS) — надёжная хостинговая служба для быстрой и безопасной связи в режиме реального времени. Узнайте больше на &lt;a href=\"${ftue_ems_url}\"&gt;element.io/ems&lt;/a&gt;</string>
+    <string name="ftue_auth_choose_server_ems_subtitle">Mana Matrix Services (EMS) — надёжная хостинговая служба для быстрой и безопасной связи в режиме реального времени. Узнайте больше на &lt;a href=\"${ftue_ems_url}\"&gt;mana.io/ems&lt;/a&gt;</string>
     <string name="a11y_open_spaces">Открыть список пространств</string>
     <string name="push_gateway_item_enabled">Включено:</string>
     <string name="error_check_network" tools:ignore="UnusedResources">Что-то пошло не так. Пожалуйста, проверьте соединение и попробуйте ещё раз.</string>
@@ -3075,5 +3075,5 @@
     <string name="create_room_unknown_users_dialog_submit">Всё равно начать беседу</string>
     <string name="microphone_in_use_title">Используется микрофон</string>
     <string name="call_unsupported">Неподдерживаемый вызов</string>
-    <string name="call_unsupported_matrix_rtc_call">Вызов не поддерживается. Для подключения к этому вызову необходимо новое приложение Element X.</string>
+    <string name="call_unsupported_matrix_rtc_call">Вызов не поддерживается. Для подключения к этому вызову необходимо новое приложение Mana X.</string>
 </resources>

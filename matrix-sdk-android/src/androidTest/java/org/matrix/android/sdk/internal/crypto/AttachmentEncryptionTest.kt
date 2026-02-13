@@ -26,7 +26,7 @@ import org.junit.Ignore
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.MethodSorters
-import org.matrix.android.sdk.api.session.crypto.attachments.toElementToDecrypt
+import org.matrix.android.sdk.api.session.crypto.attachments.toManaToDecrypt
 import org.matrix.android.sdk.api.session.crypto.model.EncryptedFileInfo
 import org.matrix.android.sdk.api.session.crypto.model.EncryptedFileKey
 import org.matrix.android.sdk.internal.crypto.attachments.MXEncryptedAttachments
@@ -60,7 +60,7 @@ class AttachmentEncryptionTest {
         val decryptedStream = ByteArrayOutputStream()
         val result = MXEncryptedAttachments.decryptAttachment(
                 attachmentStream = inputStream,
-                elementToDecrypt = encryptedFileInfo.toElementToDecrypt()!!,
+                manaToDecrypt = encryptedFileInfo.toManaToDecrypt()!!,
                 outputStream = decryptedStream,
                 clock = DefaultClock()
         )

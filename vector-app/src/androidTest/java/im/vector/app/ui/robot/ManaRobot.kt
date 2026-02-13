@@ -1,7 +1,7 @@
 /*
  * Copyright 2021-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -43,7 +43,7 @@ import im.vector.app.withIdlingResource
 import im.vector.lib.strings.CommonStrings
 import timber.log.Timber
 
-class ElementRobot(
+class ManaRobot(
         private val labsPreferences: LabFeaturesPreferences = LabFeaturesPreferences(true)
 ) {
     fun onboarding(block: OnboardingRobot.() -> Unit) {
@@ -229,7 +229,7 @@ class ElementRobot(
 
 private fun Boolean.toWarningType() = if (this) "shown" else "skipped"
 
-fun ElementRobot.withDeveloperMode(block: ElementRobot.() -> Unit) {
+fun ManaRobot.withDeveloperMode(block: ManaRobot.() -> Unit) {
     settings { toggleDeveloperMode() }
     block()
     settings { toggleDeveloperMode() }

@@ -5,7 +5,7 @@ ext.groups = [
                 group: [
                         'com.github.Armen101',
                         'com.github.chrisbanes',
-                        'com.github.element-hq',
+                        'com.github.mana-hq',
                         'com.github.hyuwah',
                         'com.github.jetradarmobile',
                         'com.github.MatrixFrog',

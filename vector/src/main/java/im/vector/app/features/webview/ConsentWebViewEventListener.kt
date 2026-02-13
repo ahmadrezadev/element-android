@@ -1,7 +1,7 @@
 /*
  * Copyright 2018-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -41,7 +41,7 @@ class ConsentWebViewEventListener(
      */
     private fun createRiotBotRoomIfNeeded() {
         safeActivity?.let {
-            /* We do not create a Room with RiotBot in Element for the moment
+            /* We do not create a Room with RiotBot in Mana for the moment
             val joinedRooms = session.dataHandler.store.rooms.filter {
                 it.isJoined
             }

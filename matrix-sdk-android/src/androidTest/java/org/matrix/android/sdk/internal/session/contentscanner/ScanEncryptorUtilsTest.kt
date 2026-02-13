@@ -20,14 +20,14 @@ import org.amshove.kluent.shouldBe
 import org.amshove.kluent.shouldBeEqualTo
 import org.amshove.kluent.shouldNotBe
 import org.junit.Test
-import org.matrix.android.sdk.api.session.crypto.attachments.ElementToDecrypt
+import org.matrix.android.sdk.api.session.crypto.attachments.ManaToDecrypt
 import org.matrix.android.sdk.api.session.crypto.model.EncryptedFileInfo
 import org.matrix.android.sdk.api.session.crypto.model.EncryptedFileKey
 import org.matrix.android.sdk.internal.session.contentscanner.model.DownloadBody
 
 class ScanEncryptorUtilsTest {
     private val anMxcUrl = "mxc://matrix.org/123456"
-    private val anElementToDecrypt = ElementToDecrypt(
+    private val anManaToDecrypt = ManaToDecrypt(
             k = "key",
             iv = "iv",
             sha256 = "sha256"
@@ -40,15 +40,15 @@ class ScanEncryptorUtilsTest {
         val result = ScanEncryptorUtils.getDownloadBodyAndEncryptIfNeeded(
                 publicServerKey = null,
                 mxcUrl = anMxcUrl,
-                elementToDecrypt = anElementToDecrypt
+                manaToDecrypt = anManaToDecrypt
         )
         result shouldBeEqualTo DownloadBody(
                 file = EncryptedFileInfo(
                         url = anMxcUrl,
-                        iv = anElementToDecrypt.iv,
-                        hashes = mapOf("sha256" to anElementToDecrypt.sha256),
+                        iv = anManaToDecrypt.iv,
+                        hashes = mapOf("sha256" to anManaToDecrypt.sha256),
                         key = EncryptedFileKey(
-                                k = anElementToDecrypt.k,
+                                k = anManaToDecrypt.k,
                                 alg = "A256CTR",
                                 keyOps = listOf("encrypt", "decrypt"),
                                 kty = "oct",
@@ -65,7 +65,7 @@ class ScanEncryptorUtilsTest {
         val result = ScanEncryptorUtils.getDownloadBodyAndEncryptIfNeeded(
                 publicServerKey = aPublicKey,
                 mxcUrl = anMxcUrl,
-                elementToDecrypt = anElementToDecrypt
+                manaToDecrypt = anManaToDecrypt
         )
         result.file shouldBe null
         // Note: we cannot check the members of EncryptedBody because they change on each call.
@@ -80,13 +80,13 @@ class ScanEncryptorUtilsTest {
         val clearInfo = ScanEncryptorUtils.getDownloadBodyAndEncryptIfNeeded(
                 publicServerKey = null,
                 mxcUrl = anMxcUrl,
-                elementToDecrypt = anElementToDecrypt
+                manaToDecrypt = anManaToDecrypt
         )
         // Uncomment to get a new encrypted body
         // val encryptedBody = ScanEncryptorUtils.getDownloadBodyAndEncryptIfNeeded(
         //         publicServerKey = aPublicKey,
         //         mxcUrl = anMxcUrl,
-        //         elementToDecrypt = anElementToDecrypt
+        //         manaToDecrypt = anManaToDecrypt
         // ).encryptedBody!!
         // println("libolmEncryptedBody: $encryptedBody")
         val libolmEncryptedBody = EncryptedBody(

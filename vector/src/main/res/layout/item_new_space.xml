@@ -38,7 +38,7 @@
         app:layout_constraintEnd_toStartOf="@id/unread_counter"
         app:layout_constraintStart_toEndOf="@id/avatar"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Element Corp" />
+        tools:text="Mana Corp" />
 
     <im.vector.app.features.home.room.list.UnreadCounterBadgeView
         android:id="@+id/unread_counter"

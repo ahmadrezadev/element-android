@@ -1,2 +1,2 @@
-Main changes in this version: Element Android is now using the Crypto Rust SDK.
-Full changelog: https://github.com/element-hq/element-android/releases
+Main changes in this version: Mana Android is now using the Crypto Rust SDK.
+Full changelog: https://github.com/mana-hq/mana-android/releases

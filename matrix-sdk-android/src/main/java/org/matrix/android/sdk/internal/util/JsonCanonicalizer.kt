@@ -51,21 +51,21 @@ internal object JsonCanonicalizer {
     }
 
     /**
-     * Canonicalize a JSON element.
+     * Canonicalize a JSON mana.
      *
      * @param any the src
-     * @return the canonicalize element
+     * @return the canonicalize mana
      */
     private fun canonicalizeRecursive(any: Any): String {
         when (any) {
             is JSONArray -> {
-                // Canonicalize each element of the array
+                // Canonicalize each mana of the array
                 return (0 until any.length()).joinToString(separator = ",", prefix = "[", postfix = "]") {
                     canonicalizeRecursive(any.get(it))
                 }
             }
             is JSONObject -> {
-                // Sort the attributes by name, and the canonicalize each element of the JSONObject
+                // Sort the attributes by name, and the canonicalize each mana of the JSONObject
 
                 val attributes = TreeSet<String>()
                 for (entry in any.keys()) {

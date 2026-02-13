@@ -147,7 +147,7 @@ allprojects {
             reporter(org.jlleitschuh.gradle.ktlint.reporter.ReporterType.CHECKSTYLE)
         }
         filter {
-            exclude { element -> element.file.path.contains("$buildDir/generated/") }
+            exclude { mana -> mana.file.path.contains("$buildDir/generated/") }
         }
         disabledRules = [
                 // TODO Re-enable these 4 rules after reformatting project
@@ -165,11 +165,11 @@ allprojects {
                 "wrapping",
                 // - Unnecessary trailing comma before ")"
                 "experimental:trailing-comma",
-                // - A block comment in between other elements on the same line is disallowed
+                // - A block comment in between other manas on the same line is disallowed
                 "experimental:comment-wrapping",
-                // - A KDoc comment after any other element on the same line must be separated by a new line
+                // - A KDoc comment after any other mana on the same line must be separated by a new line
                 "experimental:kdoc-wrapping",
-                // Ignore error "Redundant curly braces", since we use it to fix false positives, for instance in "elementLogs.${i}.txt"
+                // Ignore error "Redundant curly braces", since we use it to fix false positives, for instance in "manaLogs.${i}.txt"
                 "string-template",
         ]
     }
@@ -206,16 +206,16 @@ apply plugin: 'org.sonarqube'
 
 sonar {
     properties {
-        property "sonar.projectName", "element-android"
-        property "sonar.projectKey", "element-android"
+        property "sonar.projectName", "mana-android"
+        property "sonar.projectKey", "mana-android"
         property "sonar.host.url", "https://sonarcloud.io"
         property "sonar.projectVersion", project(":vector").android.defaultConfig.versionName
         property "sonar.sourceEncoding", "UTF-8"
-        property "sonar.links.homepage", "https://github.com/element-hq/element-android/"
-        property "sonar.links.ci", "https://github.com/element-hq/element-android/actions"
-        property "sonar.links.scm", "https://github.com/element-hq/element-android/"
-        property "sonar.links.issue", "https://github.com/element-hq/element-android/issues"
-        property "sonar.organization", "element-hq"
+        property "sonar.links.homepage", "https://github.com/mana-hq/mana-android/"
+        property "sonar.links.ci", "https://github.com/mana-hq/mana-android/actions"
+        property "sonar.links.scm", "https://github.com/mana-hq/mana-android/"
+        property "sonar.links.issue", "https://github.com/mana-hq/mana-android/issues"
+        property "sonar.organization", "mana-hq"
         property "sonar.java.coveragePlugin", "jacoco"
         property "sonar.coverage.jacoco.xmlReportPaths", "${project.buildDir}/reports/jacoco/generateCoverageReport/generateCoverageReport.xml"
         property "sonar.login", project.hasProperty("SONAR_LOGIN") ? SONAR_LOGIN : "invalid"

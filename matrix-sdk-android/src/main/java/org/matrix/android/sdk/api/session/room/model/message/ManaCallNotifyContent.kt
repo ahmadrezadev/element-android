@@ -20,7 +20,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
-data class ElementCallNotifyContent(
+data class ManaCallNotifyContent(
         @Json(name = "application") val application: String? = null,
         @Json(name = "call_id") val callId: String? = null,
         @Json(name = "m.mentions") val mentions: Mentions? = null,
@@ -33,7 +33,7 @@ data class Mentions(
         @Json(name = "user_ids") val userIds: List<String>? = null,
 )
 
-fun ElementCallNotifyContent.isUserMentioned(userId: String): Boolean {
+fun ManaCallNotifyContent.isUserMentioned(userId: String): Boolean {
     return mentions?.room == true ||
             mentions?.userIds?.contains(userId) == true
 }

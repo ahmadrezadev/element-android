@@ -4,16 +4,16 @@
     <!-- DARK THEME COLORS -->
 
     <style name="Base.Theme.Vector.Dark" parent="Theme.MaterialComponents.NoActionBar">
-        <!-- Element attribute for palette -->
+        <!-- Mana attribute for palette -->
         <!-- content colors -->
-        <item name="vctr_content_primary">@color/element_content_primary_dark</item>
-        <item name="vctr_content_secondary">@color/element_content_secondary_dark</item>
-        <item name="vctr_content_tertiary">@color/element_content_tertiary_dark</item>
-        <item name="vctr_content_quaternary">@color/element_content_quaternary_dark</item>
-        <item name="vctr_content_quinary">@color/element_content_quinary_dark</item>
+        <item name="vctr_content_primary">@color/mana_content_primary_dark</item>
+        <item name="vctr_content_secondary">@color/mana_content_secondary_dark</item>
+        <item name="vctr_content_tertiary">@color/mana_content_tertiary_dark</item>
+        <item name="vctr_content_quaternary">@color/mana_content_quaternary_dark</item>
+        <item name="vctr_content_quinary">@color/mana_content_quinary_dark</item>
 
         <!-- system colors -->
-        <item name="vctr_system">@color/element_system_dark</item>
+        <item name="vctr_system">@color/mana_system_dark</item>
 
         <!-- other colors -->
         <item name="vctr_fab_label_bg">@color/vctr_fab_label_bg_dark</item>
@@ -27,7 +27,7 @@
         <item name="vctr_reaction_background_on">@color/vctr_reaction_background_on_dark</item>
         <item name="vctr_waiting_background_color">@color/vctr_waiting_background_color_dark</item>
         <item name="vctr_chat_effect_snow_background">@color/vctr_chat_effect_snow_background_dark</item>
-        <item name="vctr_toolbar_background">@color/element_system_dark</item>
+        <item name="vctr_toolbar_background">@color/mana_system_dark</item>
         <item name="vctr_message_bubble_inbound">@color/vctr_message_bubble_inbound_dark</item>
         <item name="vctr_message_bubble_outbound">@color/vctr_message_bubble_outbound_dark</item>
         <item name="vctr_badge_color_border">@color/vctr_badge_color_border_dark</item>
@@ -36,9 +36,9 @@
         <item name="vctr_notice_secondary">#61708B</item>
         <item name="vctr_unsent_message_text_color">?colorError</item>
         <item name="vctr_message_text_color">@android:color/white</item>
-        <item name="vctr_notice_text_color">@color/element_content_primary_dark</item>
-        <item name="vctr_encrypting_message_text_color">@color/palette_element_green</item>
-        <item name="vctr_sending_message_text_color">@color/element_content_secondary_dark</item>
+        <item name="vctr_notice_text_color">@color/mana_content_primary_dark</item>
+        <item name="vctr_encrypting_message_text_color">@color/palette_mana_green</item>
+        <item name="vctr_sending_message_text_color">@color/mana_content_secondary_dark</item>
         <item name="vctr_markdown_block_background_color">@android:color/black</item>
         <item name="vctr_spoiler_background_color">#FFFFFFFF</item>
 
@@ -63,17 +63,17 @@
         <item name= "vctr_text_primary" >@color/vctr_text_primary_dark</item>
 
         <!-- Material color -->
-        <item name="colorPrimary">@color/element_accent_dark</item>
-        <item name="colorPrimaryVariant">@color/element_accent_dark</item>
+        <item name="colorPrimary">@color/mana_accent_dark</item>
+        <item name="colorPrimaryVariant">@color/mana_accent_dark</item>
         <item name="colorOnPrimary">@android:color/white</item>
-        <item name="colorSecondary">@color/element_accent_dark</item>
-        <item name="colorSecondaryVariant">@color/element_accent_dark</item>
+        <item name="colorSecondary">@color/mana_accent_dark</item>
+        <item name="colorSecondaryVariant">@color/mana_accent_dark</item>
         <item name="colorOnSecondary">@android:color/white</item>
-        <item name="colorError">@color/element_alert_dark</item>
+        <item name="colorError">@color/mana_alert_dark</item>
         <item name="colorOnError">@color/palette_white</item>
-        <item name="colorSurface">@color/element_system_dark</item>
+        <item name="colorSurface">@color/mana_system_dark</item>
         <item name="colorOnSurface">?vctr_content_primary</item>
-        <item name="android:colorBackground">@color/element_background_dark</item>
+        <item name="android:colorBackground">@color/mana_background_dark</item>
         <item name="colorOnBackground">?vctr_content_primary</item>
         <item name="fontFamily">@font/iran_yekan_x_regular</item>
         <item name="android:fontFamily">@font/iran_yekan_x_regular</item>
@@ -109,13 +109,13 @@
         <item name="bottomSheetDialogTheme">@style/Theme.Vector.BottomSheetDialog.Dark</item>
         <item name="materialAlertDialogTheme">@style/ThemeOverlay.Vector.MaterialAlertDialog</item>
 
-        <item name="android:textColorLink">@color/element_link_dark</item>
+        <item name="android:textColorLink">@color/mana_link_dark</item>
 
         <!-- Menu text color -->
         <item name="android:actionMenuTextColor">?colorSecondary</item>
 
         <!-- Default color for text View -->
-        <item name="android:textColorTertiary">@color/element_content_primary_dark</item>
+        <item name="android:textColorTertiary">@color/mana_content_primary_dark</item>
 
         <!-- ANDROID SUPPORT ATTRIBUTES -->
         <!-- disable the overscroll because setOverscrollHeader/Footer don't always work -->
@@ -138,12 +138,12 @@
         <!-- enable window content transitions -->
         <item name="android:windowContentTransitions">true</item>
 
-        <!-- specify shared element enter and exit transitions -->
+        <!-- specify shared mana enter and exit transitions -->
         <item name="android:windowSharedElementEnterTransition">@transition/image_preview_transition</item>
         <item name="android:windowSharedElementExitTransition">@transition/image_preview_transition</item>
 
         <!-- For Google button style, use same values than for light theme, for a better rendering (white background)
-        see https://github.com/element-hq/element-android/issues/4285#issuecomment-974270998 -->
+        see https://github.com/mana-hq/mana-android/issues/4285#issuecomment-974270998 -->
         <item name="vctr_social_login_button_google_style">@style/Widget.Vector.Button.Outlined.SocialLogin.Google.Light</item>
         <item name="vctr_social_login_button_github_style">@style/Widget.Vector.Button.Outlined.SocialLogin.Github.Dark</item>
         <item name="vctr_social_login_button_facebook_style">@style/Widget.Vector.Button.Outlined.SocialLogin.Facebook.Dark</item>

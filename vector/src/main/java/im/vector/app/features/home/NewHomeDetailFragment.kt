@@ -1,7 +1,7 @@
 /*
  * Copyright 2019-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -471,7 +471,7 @@ class NewHomeDetailFragment :
         openUrlInChromeCustomTab(
                 context = requireContext(),
                 session = null,
-                url = "https://docs.element.io/latest/element-support/device-verification/how-to-verify-devices",
+                url = "https://docs.mana.io/latest/mana-support/device-verification/how-to-verify-devices",
         )
     }
 

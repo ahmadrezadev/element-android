@@ -1,7 +1,7 @@
 /*
  * Copyright 2022-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -27,7 +27,7 @@ import im.vector.app.features.crypto.verification.VerificationAction
 import im.vector.app.features.crypto.verification.VerificationBottomSheetViewEvents
 import im.vector.app.features.crypto.verification.user.VerificationTransactionData
 import im.vector.app.features.crypto.verification.user.toDataClass
-import im.vector.app.features.raw.wellknown.getElementWellknown
+import im.vector.app.features.raw.wellknown.getManaWellknown
 import im.vector.app.features.raw.wellknown.isSecureBackupRequired
 import im.vector.app.features.session.coroutineScope
 import im.vector.lib.strings.CommonStrings
@@ -131,7 +131,7 @@ class SelfVerificationViewModel @AssistedInject constructor(
         // This is async, but at this point should be in cache
         // so it's ok to not wait until result
         viewModelScope.launch(Dispatchers.IO) {
-            val wellKnown = rawService.getElementWellknown(session.sessionParams)
+            val wellKnown = rawService.getManaWellknown(session.sessionParams)
             setState {
                 copy(isVerificationRequired = wellKnown?.isSecureBackupRequired().orFalse())
             }

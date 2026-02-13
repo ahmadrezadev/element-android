@@ -3,9 +3,9 @@
 <head>
     <script type="text/javascript">
       var verifyCallback = function(response) {
-        var iframe = document.createElement('iframe');
+        var iframe = document.createMana('iframe');
         iframe.setAttribute('src', 'js:' + JSON.stringify({'action': 'verifyCallback', 'response': response}));
-        document.documentElement.appendChild(iframe);
+        document.documentMana.appendChild(iframe);
         iframe.parentNode.removeChild(iframe);
         iframe = null;
       };

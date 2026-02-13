@@ -1,7 +1,7 @@
 /*
  * Copyright 2019-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -59,7 +59,7 @@ class FtueAuthSignUpSignInSelectionFragment :
                     subtitle = getString(CommonStrings.login_server_matrix_org_text)
             )
             ServerType.EMS -> renderServerInformation(
-                    icon = R.drawable.ic_logo_element_matrix_services,
+                    icon = R.drawable.ic_logo_mana_matrix_services,
                     title = getString(CommonStrings.login_connect_to_modular),
                     subtitle = state.selectedHomeserver.userFacingUrl.toReducedUrl()
             )

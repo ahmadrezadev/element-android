@@ -1,7 +1,7 @@
 /*
  * Copyright 2019-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -111,7 +111,7 @@ class ImageContentRendererDataFetcher(
                         fileName = data.filename,
                         mimeType = data.mimeType,
                         url = data.url,
-                        elementToDecrypt = data.elementToDecrypt
+                        manaToDecrypt = data.manaToDecrypt
                 )
             }
             withContext(Dispatchers.Main) {
@@ -135,8 +135,8 @@ class ImageContentRendererDataFetcher(
 //            callback.onLoadFailed(IOException("Unexpected code $response"))
 //            return
 //        }
-//        stream = if (data.elementToDecrypt != null && data.elementToDecrypt.k.isNotBlank()) {
-//            Matrix.decryptStream(inputStream, data.elementToDecrypt)
+//        stream = if (data.manaToDecrypt != null && data.manaToDecrypt.k.isNotBlank()) {
+//            Matrix.decryptStream(inputStream, data.manaToDecrypt)
 //        } else {
 //            inputStream
 //        }

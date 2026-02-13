@@ -1,7 +1,7 @@
 /*
  * Copyright 2022-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -14,43 +14,43 @@ import org.junit.Test
 
 private val A_USER_AGENT_LIST_FOR_ANDROID = listOf(
         // New User Agent Implementation
-        "Element dbg/1.5.0-dev (Xiaomi Mi 9T; Android 11; RKQ1.200826.002 test-keys; Flavour GooglePlay; MatrixAndroidSdk2 1.5.2)",
-        "Element/1.5.0 (Samsung SM-G960F; Android 6.0.1; RKQ1.200826.002; Flavour FDroid; MatrixAndroidSdk2 1.5.2)",
-        "Element/1.5.0 (Google Nexus 5; Android 7.0; RKQ1.200826.002 test test; Flavour FDroid; MatrixAndroidSdk2 1.5.2)",
-        "Element/1.5.0 (Google (Nexus) 5; Android 7.0; RKQ1.200826.002 test test; Flavour FDroid; MatrixAndroidSdk2 1.5.2)",
-        "Element/1.5.0 (Google (Nexus) (5); Android 7.0; RKQ1.200826.002 test test; Flavour FDroid; MatrixAndroidSdk2 1.5.2)",
+        "Mana dbg/1.5.0-dev (Xiaomi Mi 9T; Android 11; RKQ1.200826.002 test-keys; Flavour GooglePlay; MatrixAndroidSdk2 1.5.2)",
+        "Mana/1.5.0 (Samsung SM-G960F; Android 6.0.1; RKQ1.200826.002; Flavour FDroid; MatrixAndroidSdk2 1.5.2)",
+        "Mana/1.5.0 (Google Nexus 5; Android 7.0; RKQ1.200826.002 test test; Flavour FDroid; MatrixAndroidSdk2 1.5.2)",
+        "Mana/1.5.0 (Google (Nexus) 5; Android 7.0; RKQ1.200826.002 test test; Flavour FDroid; MatrixAndroidSdk2 1.5.2)",
+        "Mana/1.5.0 (Google (Nexus) (5); Android 7.0; RKQ1.200826.002 test test; Flavour FDroid; MatrixAndroidSdk2 1.5.2)",
         // Legacy User Agent Implementation
-        "Element/1.0.0 (Linux; U; Android 6.0.1; SM-A510F Build/MMB29; Flavour GPlay; MatrixAndroidSdk2 1.0)",
-        "Element/1.0.0 (Linux; Android 7.0; SM-G610M Build/NRD90M; Flavour GPlay; MatrixAndroidSdk2 1.0)",
+        "Mana/1.0.0 (Linux; U; Android 6.0.1; SM-A510F Build/MMB29; Flavour GPlay; MatrixAndroidSdk2 1.0)",
+        "Mana/1.0.0 (Linux; Android 7.0; SM-G610M Build/NRD90M; Flavour GPlay; MatrixAndroidSdk2 1.0)",
 )
 private val AN_EXPECTED_RESULT_LIST_FOR_ANDROID = listOf(
-        DeviceExtendedInfo(DeviceType.MOBILE, "Xiaomi Mi 9T", "Android 11", "Element dbg", "1.5.0-dev"),
-        DeviceExtendedInfo(DeviceType.MOBILE, "Samsung SM-G960F", "Android 6.0.1", "Element", "1.5.0"),
-        DeviceExtendedInfo(DeviceType.MOBILE, "Google Nexus 5", "Android 7.0", "Element", "1.5.0"),
-        DeviceExtendedInfo(DeviceType.MOBILE, "Google (Nexus) 5", "Android 7.0", "Element", "1.5.0"),
-        DeviceExtendedInfo(DeviceType.MOBILE, "Google (Nexus) (5)", "Android 7.0", "Element", "1.5.0"),
-        DeviceExtendedInfo(DeviceType.MOBILE, "SM-A510F Build/MMB29", "Android 6.0.1", "Element", "1.0.0"),
-        DeviceExtendedInfo(DeviceType.MOBILE, "SM-G610M Build/NRD90M", "Android 7.0", "Element", "1.0.0"),
+        DeviceExtendedInfo(DeviceType.MOBILE, "Xiaomi Mi 9T", "Android 11", "Mana dbg", "1.5.0-dev"),
+        DeviceExtendedInfo(DeviceType.MOBILE, "Samsung SM-G960F", "Android 6.0.1", "Mana", "1.5.0"),
+        DeviceExtendedInfo(DeviceType.MOBILE, "Google Nexus 5", "Android 7.0", "Mana", "1.5.0"),
+        DeviceExtendedInfo(DeviceType.MOBILE, "Google (Nexus) 5", "Android 7.0", "Mana", "1.5.0"),
+        DeviceExtendedInfo(DeviceType.MOBILE, "Google (Nexus) (5)", "Android 7.0", "Mana", "1.5.0"),
+        DeviceExtendedInfo(DeviceType.MOBILE, "SM-A510F Build/MMB29", "Android 6.0.1", "Mana", "1.0.0"),
+        DeviceExtendedInfo(DeviceType.MOBILE, "SM-G610M Build/NRD90M", "Android 7.0", "Mana", "1.0.0"),
 )
 
 private val A_USER_AGENT_LIST_FOR_IOS = listOf(
-        "Element/1.8.21 (iPhone; iOS 15.2; Scale/3.00)",
-        "Element/1.8.21 (iPhone XS Max; iOS 15.2; Scale/3.00)",
-        "Element/1.8.21 (iPad Pro (11-inch); iOS 15.2; Scale/3.00)",
-        "Element/1.8.21 (iPad Pro (12.9-inch) (3rd generation); iOS 15.2; Scale/3.00)",
+        "Mana/1.8.21 (iPhone; iOS 15.2; Scale/3.00)",
+        "Mana/1.8.21 (iPhone XS Max; iOS 15.2; Scale/3.00)",
+        "Mana/1.8.21 (iPad Pro (11-inch); iOS 15.2; Scale/3.00)",
+        "Mana/1.8.21 (iPad Pro (12.9-inch) (3rd generation); iOS 15.2; Scale/3.00)",
 )
 private val AN_EXPECTED_RESULT_LIST_FOR_IOS = listOf(
-        DeviceExtendedInfo(DeviceType.MOBILE, "iPhone", "iOS 15.2", "Element", "1.8.21"),
-        DeviceExtendedInfo(DeviceType.MOBILE, "iPhone XS Max", "iOS 15.2", "Element", "1.8.21"),
-        DeviceExtendedInfo(DeviceType.MOBILE, "iPad Pro (11-inch)", "iOS 15.2", "Element", "1.8.21"),
+        DeviceExtendedInfo(DeviceType.MOBILE, "iPhone", "iOS 15.2", "Mana", "1.8.21"),
+        DeviceExtendedInfo(DeviceType.MOBILE, "iPhone XS Max", "iOS 15.2", "Mana", "1.8.21"),
+        DeviceExtendedInfo(DeviceType.MOBILE, "iPad Pro (11-inch)", "iOS 15.2", "Mana", "1.8.21"),
         DeviceExtendedInfo(DeviceType.MOBILE, "iPad Pro (12.9-inch) (3rd generation)", "iOS 15.2",
-                "Element", "1.8.21"),
+                "Mana", "1.8.21"),
 )
 
 private val A_USER_AGENT_LIST_FOR_DESKTOP = listOf(
-        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) ElementNightly/2022091301 Chrome/104.0.5112.102" +
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) ManaNightly/2022091301 Chrome/104.0.5112.102" +
                 " Electron/20.1.1 Safari/537.36",
-        "Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) ElementNightly/2022091301 Chrome/104.0.5112.102 Electron/20.1.1 Safari/537.36",
+        "Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) ManaNightly/2022091301 Chrome/104.0.5112.102 Electron/20.1.1 Safari/537.36",
 )
 private val AN_EXPECTED_RESULT_LIST_FOR_DESKTOP = listOf(
         DeviceExtendedInfo(DeviceType.DESKTOP, null, "macOS", "Electron", "20.1.1"),

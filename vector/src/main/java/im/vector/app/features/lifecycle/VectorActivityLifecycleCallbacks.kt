@@ -1,7 +1,7 @@
 /*
  * Copyright 2019-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -55,7 +55,7 @@ class VectorActivityLifecycleCallbacks constructor(private val popupAlertManager
             val context = activity.applicationContext
             val packageManager: PackageManager = context.packageManager
 
-            // Get all activities from element android
+            // Get all activities from mana android
             val activities = packageManager
                     .getPackageInfoCompat(context.packageName, PackageManager.GET_ACTIVITIES)
                     .activities

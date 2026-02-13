@@ -1,7 +1,7 @@
 /*
  * Copyright 2021-2024 New Vector Ltd.
  *
- * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Mana-Commercial
  * Please see LICENSE files in the repository root for full details.
  */
 
@@ -59,7 +59,7 @@ class JitsiWidgetDataFactoryTest {
 
     private fun createWidgetV1(successful: Boolean): Widget {
         val url = buildString {
-            append("https://app.element.io/jitsi.html")
+            append("https://app.mana.io/jitsi.html")
             if (successful) {
                 appendParamToUrl("confId", CONF_ID)
             }

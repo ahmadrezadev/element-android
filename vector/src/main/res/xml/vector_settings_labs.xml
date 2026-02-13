@@ -80,8 +80,8 @@
     <im.vector.app.core.preference.VectorSwitchPreference
         android:defaultValue="false"
         android:key="SETTINGS_LABS_ENABLE_ELEMENT_CALL_PERMISSION_SHORTCUTS"
-        android:summary="@string/labs_enable_element_call_permission_shortcuts_summary"
-        android:title="@string/labs_enable_element_call_permission_shortcuts" />
+        android:summary="@string/labs_enable_mana_call_permission_shortcuts_summary"
+        android:title="@string/labs_enable_mana_call_permission_shortcuts" />
 
     <im.vector.app.core.preference.VectorSwitchPreference
         android:defaultValue="@bool/settings_labs_new_app_layout_default"
