@@ -51,7 +51,7 @@ object EspressoHelper {
     fun getCurrentActivity(): Activity? {
         var currentActivity: Activity? = null
         getInstrumentation().runOnMainSync {
-            currentActivity = ActivityLifecycleMonitorRegistry.getInstance().getActivitiesInStage(Stage.RESUMED).manaAtOrNull(0)
+            currentActivity = ActivityLifecycleMonitorRegistry.getInstance().getActivitiesInStage(Stage.RESUMED).elementAtOrNull(0)
         }
         return currentActivity
     }
